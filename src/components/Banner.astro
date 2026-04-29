@@ -1,0 +1,254 @@
+---
+// src/components/Banner.astro
+---
+<section class="banner">
+  <div class="container">
+    <div class="content">
+      <h1>Automatizá tus mensajes y <span>vendé más</span></h1>
+      <p>
+        MM SmartInbox centraliza tus conversaciones de WhatsApp, Instagram y Facebook con IA para clasificar prospectos y cerrar ventas mientras dormís.
+      </p>
+      <div class="buttons">
+        <a href="#prueba" class="btn btn-primary">Empezar Prueba Gratuita</a>
+        <a href="#demo" class="btn btn-secondary">Ver Demo</a>
+      </div>
+    </div>
+    <div class="graphic">
+      <div class="dashboard-mockup">
+        <div class="mockup-header">
+          <div class="icon-bot">
+             <svg viewBox="0 0 24 24" fill="none" width="24" height="24">
+               <path d="M12 2C8.13 2 5 5.13 5 9C5 10.42 5.43 11.73 6.16 12.84C5.9 14.38 5 16 5 16C5 16 7.5 15.65 9.17 14.73C10.05 14.9 11 15 12 15C15.87 15 19 11.87 19 8C19 4.13 15.87 2 12 2Z" fill="white"/>
+            </svg>
+          </div>
+          <div class="bot-info">
+             <strong>Nova</strong>
+             <span class="status">EN LÍNEA</span>
+          </div>
+        </div>
+        <div class="mockup-chat">
+          <div class="msg bubble-user">¡Hola! Estoy interesado en el plan Pro. ¿Qué incluye?</div>
+          <div class="msg bubble-bot">
+             <div class="check-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="var(--color-primary-green)"/></svg>
+             </div>
+             ¡Hola! El plan Pro incluye IA avanzada, integraciones ilimitadas y soporte 24/7. ¿Te gustaría agendar una demo?
+          </div>
+          <div class="tag-badge">Prospecto Caliente</div>
+        </div>
+      </div>
+      <div class="laptop-overlay">
+         <img src="/images/Banner.png" alt="Dashboard" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .banner {
+    padding: 6rem 0;
+    min-height: calc(100vh - 84px);
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 10% 50%, rgba(246,248,255,1) 0%, rgba(255,255,255,1) 80%);
+    margin-top: 84px;
+  }
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  .content {
+    flex: 1;
+    max-width: 550px;
+  }
+  h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #1a1a2e;
+    margin-bottom: 2rem;
+    letter-spacing: -1.5px;
+  }
+  h1 span {
+    color: var(--color-primary-blue);
+  }
+  p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--color-text-medium);
+    margin-bottom: 2.5rem;
+  }
+  .buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background-color: var(--color-primary-green);
+    color: white;
+    box-shadow: 0 4px 10px rgba(21, 198, 59, 0.2);
+  }
+  .btn-primary:hover {
+    background-color: #12ad33;
+    transform: translateY(-2px);
+  }
+  .btn-secondary {
+    background-color: #f6f7ff;
+    color: var(--color-primary-blue);
+    border: 1px solid #dbeafe;
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-primary-blue);
+    background-color: #ecf3ff;
+    transform: translateY(-2px);
+  }
+  
+  /* Right side graphic */
+  .graphic {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .dashboard-mockup {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #f1f5f9;
+    margin-bottom: 50px;
+  }
+  .mockup-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .icon-bot {
+    background: var(--color-primary-blue);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bot-info strong {
+    display: block;
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .bot-info .status {
+    color: var(--color-primary-green);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .mockup-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .msg {
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 85%;
+    position: relative;
+  }
+  .bubble-user {
+    background: #eef2f6;
+    color: #334155;
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+  }
+  .bubble-bot {
+    background: white;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    align-self: flex-start;
+  }
+  .check-icon {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: white;
+    border-radius: 50%;
+    padding: 0;
+  }
+  .tag-badge {
+    align-self: flex-start;
+    background: #e6f9ec;
+    color: var(--color-primary-green);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  
+  .laptop-overlay {
+    position: absolute;
+    bottom: -50px;
+    left: -20px;
+    width: 260px;
+    height: 200px;
+    z-index: 2;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    border: 6px solid #111;
+    background: #111;
+  }
+  
+  .laptop-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .content {
+      max-width: 100%;
+    }
+    .buttons {
+      justify-content: center;
+    }
+    .graphic {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    .laptop-overlay {
+       display: none;
+    }
+  }
+</style>

@@ -1,23 +1,53 @@
+---
+import Header from '../components/Header.astro';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>MM SmartInbox</title>
 	</head>
 	<body>
+		<Header />
+		<div class="header-spacer"></div>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	:root {
+		--color-primary-blue: #3A3DEE;
+		--color-primary-green: #15C63B;
+		--color-text-dark: #0f172a;
+		--color-text-medium: #475569;
+		--color-text-light: #64748B;
+		--color-bg: #FFFFFF;
+	}
+
+	* {
+		box-sizing: border-box;
 		margin: 0;
+		padding: 0;
+	}
+
+	html, body {
+		font-family: 'Inter', sans-serif;
+		background-color: var(--color-bg);
+		color: var(--color-text-dark);
 		width: 100%;
-		height: 100%;
+		min-height: 100%;
+		scroll-behavior: smooth;
+	}
+
+	.header-spacer {
+		height: 110px;
 	}
 </style>

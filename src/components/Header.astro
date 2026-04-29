@@ -1,0 +1,107 @@
+---
+// src/components/Header.astro
+---
+<div class="header-wrapper" id="header-wrapper">
+  <header class="header">
+    <div class="logo">
+      <img src="/images/Logo.png" alt="MM SmartInbox" />
+    </div>
+    <nav class="nav">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#precios">Precios</a>
+    </nav>
+    <div class="actions">
+      <a href="#start" class="btn btn-primary">Solicitar cotización</a>
+    </div>
+  </header>
+</div>
+
+<script>
+  const wrapper = document.getElementById('header-wrapper');
+  function updateShadow() {
+    if (window.scrollY > 10) {
+      wrapper?.classList.add('scrolled');
+    } else {
+      wrapper?.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateShadow, { passive: true });
+  updateShadow();
+</script>
+
+<style>
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.3s ease;
+  }
+  .header-wrapper.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+  }
+  .nav {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .nav a {
+    text-decoration: none;
+    color: var(--color-primary-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+  }
+  .nav a:hover {
+    opacity: 0.8;
+  }
+  .actions {
+    display: flex;
+  }
+  .btn.btn-primary {
+    background-color: var(--color-primary-green);
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(21, 198, 59, 0.2);
+  }
+  .btn.btn-primary:hover {
+    background-color: #12ad33;
+    transform: translateY(-1px);
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+  }
+</style>
