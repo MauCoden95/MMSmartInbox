@@ -6,20 +6,34 @@
     <div class="logo">
       <img src="/images/Logo.png" alt="MM SmartInbox" />
     </div>
-    <nav class="nav">
+    <nav class="nav" id="nav-menu">
       <a href="#nosotros">Nosotros</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#beneficios">Beneficios</a>
+      <a href="#testimonios">Testimonios</a>
       <a href="#precios">Precios</a>
+      <div class="mobile-cta">
+        <a href="#start" class="btn btn-primary">Solicitar cotización</a>
+      </div>
     </nav>
     <div class="actions">
       <a href="#start" class="btn btn-primary">Solicitar cotización</a>
     </div>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
   </header>
 </div>
 
 <script>
   const wrapper = document.getElementById('header-wrapper');
+  const toggle = document.getElementById('mobile-toggle');
+  const nav = document.getElementById('nav-menu');
+
   function updateShadow() {
     if (window.scrollY > 10) {
       wrapper?.classList.add('scrolled');
@@ -29,6 +43,16 @@
   }
   window.addEventListener('scroll', updateShadow, { passive: true });
   updateShadow();
+
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('active');
+  });
+
+  nav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav?.classList.remove('active');
+    });
+  });
 </script>
 
 <style>
@@ -99,9 +123,63 @@
     transform: translateY(-1px);
   }
   
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-primary-blue);
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .mobile-cta {
+    display: none;
+  }
+
   @media (max-width: 768px) {
-    .nav {
+    .actions {
       display: none;
+    }
+    .logo img {
+      height: 60px;
+    }
+    .mobile-toggle {
+      display: block;
+    }
+    .header {
+      padding: 1rem 0;
+    }
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: clip-path 0.3s ease-in-out;
+    }
+    .nav.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      border-top: 1px solid #f1f5f9;
+    }
+    .nav a:not(.btn) {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #f1f5f9;
+      display: block;
+      width: 100%;
+    }
+    .mobile-cta {
+      display: block;
+      padding: 1.5rem 2rem;
+    }
+    .mobile-cta .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
     }
   }
 </style>

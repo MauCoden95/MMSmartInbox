@@ -1,0 +1,89 @@
+---
+// src/components/Testimonials.astro
+---
+<section id="testimonios" class="testimonials">
+  <div class="test-container">
+    <div class="test-badge">Testimonios</div>
+    <h2>Lo que dicen <span>nuestros clientes</span></h2>
+    <p class="test-subtitle">Negocios reales que transformaron su atención al cliente con MM SmartInbox.</p>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Desde que usamos SmartInbox, nuestras ventas por WhatsApp aumentaron un 40%. El chatbot responde al instante y los clientes quedan encantados."</p>
+        <div class="author">
+          <div class="avatar" style="background: linear-gradient(135deg, #3A3DEE, #6366f1);">MC</div>
+          <div class="author-info">
+            <strong>María Castillo</strong>
+            <span>CEO - Boutique Eleganza</span>
+          </div>
+        </div>
+      </div>
+      <div class="test-card highlight">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Antes perdía el 70% de los mensajes nocturnos. Ahora el bot los clasifica y cuando llego a la oficina ya sé quiénes son prospectos calientes. Es un cambio total."</p>
+        <div class="author">
+          <div class="avatar" style="background: linear-gradient(135deg, var(--color-primary-green), #22c55e);">RL</div>
+          <div class="author-info">
+            <strong>Roberto López</strong>
+            <span>Fundador - TechStore AR</span>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"La bandeja unificada nos ahorró 3 horas diarias. Ya no saltamos entre apps. Todo centralizado, todo medible. Lo recomiendo 100%."</p>
+        <div class="author">
+          <div class="avatar" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">AS</div>
+          <div class="author-info">
+            <strong>Ana Suárez</strong>
+            <span>Directora - Inmobiliaria Horizonte</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trust-bar">
+      <div class="trust-item"><strong>+500</strong><span>Negocios activos</span></div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><strong>+2M</strong><span>Mensajes procesados</span></div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><strong>98%</strong><span>Satisfacción</span></div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><strong>24/7</strong><span>Disponibilidad</span></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials { padding: 7rem 0; background: linear-gradient(180deg, #f0fdf4 0%, #f8f9ff 50%, #ffffff 100%); position: relative; overflow: hidden; }
+  .testimonials::before { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(58,61,238,0.04) 0%, transparent 70%); pointer-events: none; }
+  .test-container { max-width: 1200px; width: 90%; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+  .test-badge { display: inline-block; background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(245,158,11,0.15)); color: #f59e0b; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.5rem; border: 1px solid rgba(245,158,11,0.12); }
+  h2 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; color: var(--color-text-dark); margin-bottom: 1.5rem; letter-spacing: -1px; }
+  h2 span { background: linear-gradient(135deg, var(--color-primary-blue), #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .test-subtitle { font-size: 1.15rem; line-height: 1.7; color: var(--color-text-medium); max-width: 550px; margin: 0 auto 4rem; }
+  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3.5rem; }
+  .test-card { background: white; border: 1px solid #f1f5f9; border-radius: 20px; padding: 2.25rem 2rem; text-align: left; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); position: relative; }
+  .test-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-primary-blue), var(--color-primary-green)); opacity: 0; transition: opacity 0.35s; border-radius: 20px 20px 0 0; }
+  .test-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.07); }
+  .test-card:hover::before { opacity: 1; }
+  .test-card.highlight { background: linear-gradient(135deg, #1e1b4b, #312e81); border-color: transparent; }
+  .test-card.highlight .stars { color: #fbbf24; }
+  .test-card.highlight .quote { color: rgba(255,255,255,0.85); }
+  .test-card.highlight .author-info strong { color: white; }
+  .test-card.highlight .author-info span { color: rgba(255,255,255,0.5); }
+  .test-card.highlight:hover { box-shadow: 0 20px 48px rgba(30,27,75,0.3); }
+  .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 1.25rem; letter-spacing: 2px; }
+  .quote { font-size: 0.95rem; line-height: 1.7; color: var(--color-text-medium); margin: 0 0 1.75rem; font-style: italic; }
+  .author { display: flex; align-items: center; gap: 0.85rem; }
+  .avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .author-info { display: flex; flex-direction: column; }
+  .author-info strong { font-size: 0.95rem; font-weight: 700; color: var(--color-text-dark); }
+  .author-info span { font-size: 0.8rem; color: var(--color-text-light); margin-top: 0.15rem; }
+  .trust-bar { display: flex; justify-content: center; align-items: center; gap: 2.5rem; background: white; border: 1px solid #f1f5f9; border-radius: 16px; padding: 2rem 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+  .trust-item { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+  .trust-item strong { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, var(--color-primary-blue), #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2; }
+  .trust-item span { font-size: 0.82rem; color: var(--color-text-medium); font-weight: 500; }
+  .trust-divider { width: 1px; height: 45px; background: linear-gradient(180deg, transparent, #e2e8f0, transparent); }
+  @media (max-width: 992px) { .test-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; margin-bottom: 3.5rem; } h2 { font-size: 2.2rem; } .trust-bar { flex-direction: column; gap: 1.5rem; padding: 2rem; } .trust-divider { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #e2e8f0, transparent); } }
+  @media (max-width: 768px) { .testimonials { padding: 4rem 0; } h2 { font-size: 2rem; } .test-subtitle { font-size: 1rem; } .trust-item strong { font-size: 1.5rem; } }
+</style>
