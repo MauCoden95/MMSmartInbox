@@ -1,0 +1,695 @@
+---
+// src/components/DemoModal.astro
+---
+
+<div id="demo-modal" class="demo-modal">
+  <div class="modal-overlay" id="demo-overlay"></div>
+  <div class="modal-content">
+    <button class="close-modal" id="close-demo" aria-label="Cerrar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <div class="demo-grid">
+      <!-- LEFT SIDE: MOBILE CHAT -->
+      <div class="demo-phone-col">
+        <div class="phone-frame">
+          <div class="phone-header">
+            <div class="phone-back">
+               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            </div>
+            <div class="phone-user-info">
+              <div class="avatar-placeholder">J</div>
+              <div class="user-details">
+                <span class="user-name">Juan Pérez</span>
+                <span class="user-status">en línea</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="phone-chat-body" id="demo-phone-chat">
+            <!-- Messages appear here -->
+          </div>
+          
+          <div class="phone-footer">
+            <div class="phone-input-sim">Escribe un mensaje...</div>
+            <div class="phone-mic">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+            </div>
+          </div>
+        </div>
+        <p class="col-caption">Vista del Cliente (WhatsApp)</p>
+      </div>
+
+      <!-- RIGHT SIDE: SMARTINBOX DASHBOARD -->
+      <div class="demo-dashboard-col">
+        <div class="dashboard-header">
+          <div class="nova-logo-small">
+            <img src="/images/Robot.png" alt="Nova" />
+            <span>Nova Engine v2.0</span>
+          </div>
+          <div class="engine-status">
+            <span class="status-dot"></span> PROCESANDO IA
+          </div>
+        </div>
+
+        <div class="dashboard-content">
+          <div class="ai-thought-process">
+            <div class="process-title">Razonamiento de Nova</div>
+            <div id="demo-process-steps" class="process-steps">
+               <!-- Steps appear here -->
+            </div>
+          </div>
+
+          <div class="ai-action-panel">
+             <div class="panel-section">
+                <label>Etiquetas Sugeridas</label>
+                <div id="demo-tags-container" class="tags-row">
+                  <!-- Tags appear here -->
+                </div>
+             </div>
+             <div class="panel-section">
+                <label>Respuesta Sugerida</label>
+                <div class="suggested-response-box">
+                   <div id="demo-suggested-text" class="suggested-text">
+                      Esperando entrada del cliente...
+                   </div>
+                   <div class="response-controls">
+                      <button class="btn-copy">Copiar</button>
+                      <button class="btn-send-auto">Enviar Auto <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div>
+        
+        <div class="cta-bottom">
+           <button id="demo-to-quote" class="btn-premium">
+              <span>¡Quiero esto para mi negocio!</span>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .demo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .demo-modal.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(12px);
+  }
+
+  .demo-modal .modal-content {
+    position: relative;
+    width: 95%;
+    max-width: 1040px;
+    height: 640px;
+    background: #f8fafc;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.7);
+    transform: translateY(40px) scale(0.98);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .demo-modal.active .modal-content {
+    transform: translateY(0) scale(1);
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #64748b;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .close-modal:hover {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+    transform: rotate(90deg);
+  }
+
+  .demo-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    height: 100%;
+  }
+
+  /* Phone Column */
+  .demo-phone-col {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #cbd5e1;
+  }
+
+  .phone-frame {
+    width: 100%;
+    max-width: 280px;
+    height: 520px;
+    background: #fff;
+    border-radius: 40px;
+    border: 12px solid #1e293b;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 30px 60px -12px rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  .phone-frame::before {
+     content: '';
+     position: absolute;
+     top: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 60px;
+     height: 4px;
+     background: #334155;
+     border-radius: 10px;
+     z-index: 10;
+  }
+
+  .phone-header {
+    background: #075e54;
+    color: white;
+    padding: 25px 15px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .avatar-placeholder {
+    width: 38px;
+    height: 38px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-name { font-size: 14px; font-weight: 600; }
+  .user-status { font-size: 11px; opacity: 0.9; }
+
+  .phone-chat-body {
+    flex: 1;
+    background: #e5ddd5 url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+  }
+
+  .msg-bubble {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.8) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .msg-customer {
+    background: white;
+    align-self: flex-start;
+    border-top-left-radius: 2px;
+  }
+
+  .msg-nova {
+    background: #dcf8c6;
+    align-self: flex-end;
+    border-top-right-radius: 2px;
+  }
+
+  .phone-footer {
+    padding: 10px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .phone-input-sim {
+    flex: 1;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 13px;
+    color: #94a3b8;
+  }
+
+  .phone-mic { color: #075e54; }
+
+  /* Dashboard Column */
+  .demo-dashboard-col {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: #fff;
+  }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 24px;
+  }
+
+  .nova-logo-small {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nova-logo-small img { width: 36px; height: 36px; }
+  .nova-logo-small span { font-weight: 800; color: #0f172a; font-size: 22px; letter-spacing: -0.5px; }
+
+  .engine-status {
+    font-size: 11px;
+    font-weight: 800;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+    animation: pulse-green 2s infinite;
+  }
+
+  @keyframes pulse-green {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+  }
+
+  .dashboard-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .ai-thought-process {
+    background: #fdf2f8;
+    border: 1px solid #fbcfe8;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .process-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #9d174d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .step-item {
+    font-size: 14px;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    animation: slideInRight 0.4s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .step-item svg { color: #22c55e; flex-shrink: 0; margin-top: 2px; }
+
+  .ai-action-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .panel-section label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 12px;
+  }
+
+  .tags-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .demo-tag {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #bfdbfe;
+    animation: popIn 0.3s ease-out;
+  }
+
+  .suggested-response-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .suggested-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #64748b;
+    font-style: italic;
+  }
+
+  .suggested-text.active {
+    font-style: normal;
+    color: #1e293b;
+    font-weight: 500;
+  }
+
+  .response-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .btn-copy {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #475569;
+  }
+
+  .btn-send-auto {
+    background: #1e293b;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .col-caption {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+
+  .cta-bottom { 
+    border-top: 1px solid #f1f5f9; 
+    padding-top: 32px; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-premium {
+    background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem 2.8rem;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(21, 198, 59, 0.3);
+  }
+
+  .btn-premium:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(21, 198, 59, 0.4);
+    background: linear-gradient(135deg, #10b981 0%, #22c55e 100%);
+  }
+
+  .btn-premium svg {
+    transition: transform 0.4s ease;
+  }
+
+  .btn-premium:hover svg {
+    transform: translateX(8px);
+  }
+
+  @media (max-width: 900px) {
+    .demo-grid { grid-template-columns: 1fr; }
+    .demo-phone-col { display: none; }
+    .dashboard-content { grid-template-columns: 1fr; }
+    .demo-modal .modal-content { height: auto; max-height: 95vh; overflow-y: auto; }
+    .demo-dashboard-col { padding: 32px 20px; }
+  }
+</style>
+
+<script>
+  const demoModal = document.getElementById('demo-modal');
+  const demoOverlay = document.getElementById('demo-overlay');
+  const closeDemo = document.getElementById('close-demo');
+  const demoToQuote = document.getElementById('demo-to-quote');
+  
+  const phoneChat = document.getElementById('demo-phone-chat');
+  const processSteps = document.getElementById('demo-process-steps');
+  const tagsContainer = document.getElementById('demo-tags-container');
+  const suggestedText = document.getElementById('demo-suggested-text');
+
+  let isDemoRunning = false;
+
+  const scenarios = [
+    {
+      customerMsg: "Hola, vi sus remeras en IG. ¿Hacen envíos a Mendoza y cuánto tarda?",
+      thoughts: [
+        "Identificada intención: Envío y Tiempo",
+        "Consultando base de datos logísticos...",
+        "Calculando tiempos por zona (Mendoza: 48-72hs)",
+        "Generando respuesta empática"
+      ],
+      tags: ["Consulta Envío", "Intención Compra"],
+      novaReply: "¡Hola! 👋 Sí, hacemos envíos a Mendoza por Correo Argentino. El tiempo estimado de entrega es de 48 a 72 horas hábiles. ¿Te interesó algún modelo en particular?"
+    },
+    {
+      customerMsg: "Hola una consulta, ¿reciben tarjeta de crédito y tienen cuotas?",
+      thoughts: [
+        "Identificada intención: Pagos / Financiación",
+        "Validando medios de pago (Visa, Master, Amex)",
+        "Verificando promoción (3 sin interés activa)",
+        "Redactando respuesta comercial"
+      ],
+      tags: ["Medios de Pago", "Cuotas"],
+      novaReply: "¡Hola! Sí, aceptamos todas las tarjetas. 💳 Actualmente tenemos **3 cuotas sin interés** en toda la tienda. ¿Querés que te pase el link?"
+    }
+  ];
+
+  async function wait(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  function addMsg(text: string, type: 'customer' | 'nova') {
+    if (!phoneChat) return;
+    const msg = document.createElement('div');
+    msg.className = `msg-bubble msg-${type}`;
+    msg.textContent = text;
+    phoneChat.appendChild(msg);
+    phoneChat.scrollTop = phoneChat.scrollHeight;
+  }
+
+  function addStep(text: string) {
+    if (!processSteps) return;
+    const step = document.createElement('div');
+    step.className = 'step-item';
+    step.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span>${text}</span>`;
+    processSteps.appendChild(step);
+  }
+
+  function addTag(text: string) {
+    if (!tagsContainer) return;
+    const tag = document.createElement('div');
+    tag.className = 'demo-tag';
+    tag.textContent = text;
+    tagsContainer.appendChild(tag);
+  }
+
+  async function runDemo() {
+    if (isDemoRunning) return;
+    isDemoRunning = true;
+
+    // Reset UI
+    if (phoneChat) phoneChat.innerHTML = '';
+    if (processSteps) processSteps.innerHTML = '';
+    if (tagsContainer) tagsContainer.innerHTML = '';
+    if (suggestedText) suggestedText.textContent = 'Esperando cliente...';
+    if (suggestedText) suggestedText.classList.remove('active');
+
+    for (const scenario of scenarios) {
+      if (!demoModal?.classList.contains('active')) break;
+      await wait(1500);
+      
+      // 1. Customer Message
+      addMsg(scenario.customerMsg, 'customer');
+      await wait(800);
+      
+      // 2. Nova Thinking
+      for (const thought of scenario.thoughts) {
+        if (!demoModal?.classList.contains('active')) break;
+        addStep(thought);
+        await wait(1000);
+      }
+      
+      // 3. Tags
+      scenario.tags.forEach(tag => addTag(tag));
+      await wait(600);
+      
+      // 4. Suggested Text Appearance
+      if (suggestedText) {
+        suggestedText.textContent = scenario.novaReply;
+        suggestedText.classList.add('active');
+      }
+      await wait(1200);
+      
+      // 5. Nova Replies in Chat
+      addMsg(scenario.novaReply, 'nova');
+      await wait(4000);
+      
+      // Clear for next or loop
+      if (processSteps) processSteps.innerHTML = '';
+      if (tagsContainer) tagsContainer.innerHTML = '';
+      if (suggestedText) suggestedText.classList.remove('active');
+    }
+    
+    isDemoRunning = false;
+    if (demoModal?.classList.contains('active')) {
+      runDemo(); // Loop
+    }
+  }
+
+  (window as any).openDemoModal = () => {
+    if (!demoModal) return;
+    demoModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (!isDemoRunning) {
+      runDemo();
+    }
+  };
+
+  function closeThisModal() {
+    demoModal?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  [closeDemo, demoOverlay].forEach(el => {
+    el?.addEventListener('click', closeThisModal);
+  });
+
+  demoToQuote?.addEventListener('click', () => {
+    closeThisModal();
+    // Dispatch custom event that QuoteModal listens specifically for
+    window.dispatchEvent(new CustomEvent('open-quote-modal'));
+  });
+
+</script>
