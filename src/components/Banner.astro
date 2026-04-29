@@ -10,7 +10,7 @@
       </p>
       <div class="buttons">
         <button id="start-trial-btn" type="button" class="btn btn-primary">Empezar Prueba Gratuita</button>
-        <a href="#demo" class="btn btn-secondary">Ver Demo</a>
+        <button id="open-demo-btn" type="button" class="btn btn-secondary">Ver Demo</button>
       </div>
     </div>
     <div class="graphic">
@@ -287,11 +287,17 @@
 
 <script>
   const startTrialBtn = document.getElementById('start-trial-btn');
+  const openDemoBtn = document.getElementById('open-demo-btn');
   
   startTrialBtn?.addEventListener('click', () => {
-    // Llamar directamente a la función global expuesta por TrialModal
     if (typeof (window as any).openTrialModal === 'function') {
       (window as any).openTrialModal();
+    }
+  });
+
+  openDemoBtn?.addEventListener('click', () => {
+    if (typeof (window as any).openDemoModal === 'function') {
+      (window as any).openDemoModal();
     }
   });
 </script>
