@@ -18,7 +18,7 @@
           <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5" stroke="var(--color-primary-green)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Chatbot básico</li>
           <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5" stroke="var(--color-primary-green)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Soporte por email</li>
         </ul>
-        <a href="#start" class="plan-btn">Empezar Gratis</a>
+        <button class="plan-btn" type="button" data-start-trial>Empezar Gratis</button>
       </div>
       <!-- Pro -->
       <div class="plan-card popular">
@@ -33,7 +33,7 @@
           <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5" stroke="var(--color-primary-green)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Reportes y analíticas</li>
           <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5" stroke="var(--color-primary-green)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Soporte prioritario</li>
         </ul>
-        <a href="#start" class="plan-btn primary-btn">Empezar con Pro</a>
+        <button class="plan-btn primary-btn" type="button" data-start-trial>Empezar con Pro</button>
       </div>
       <!-- Enterprise -->
       <div class="plan-card">
@@ -88,3 +88,15 @@
   @media (max-width: 992px) { .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } .plan-card.popular { transform: none; } .plan-card.popular:hover { transform: translateY(-6px); } h2 { font-size: 2.2rem; } }
   @media (max-width: 768px) { .pricing { padding: 4rem 0; } h2 { font-size: 2rem; } .pricing-subtitle { font-size: 1rem; } .amount { font-size: 2.8rem; } }
 </style>
+
+<script>
+  const trialButtons = document.querySelectorAll('[data-start-trial]');
+  
+  trialButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof (window as any).openTrialModal === 'function') {
+        (window as any).openTrialModal();
+      }
+    });
+  });
+</script>

@@ -3,10 +3,11 @@
 ---
 <div class="header-wrapper" id="header-wrapper">
   <header class="header">
-    <div class="logo">
+    <a href="#" class="logo">
       <img src="/images/Logo.png" alt="MM SmartInbox" />
-    </div>
+    </a>
     <nav class="nav" id="nav-menu">
+      <a href="#">Inicio</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#beneficios">Beneficios</a>
@@ -103,6 +104,11 @@
   }
   .nav a:hover {
     opacity: 0.8;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
   }
   .actions {
     display: flex;

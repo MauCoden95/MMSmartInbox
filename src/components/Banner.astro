@@ -9,7 +9,7 @@
         MM SmartInbox centraliza tus conversaciones de WhatsApp, Instagram y Facebook con IA para clasificar prospectos y cerrar ventas mientras dormís.
       </p>
       <div class="buttons">
-        <a href="#prueba" class="btn btn-primary">Empezar Prueba Gratuita</a>
+        <button id="start-trial-btn" type="button" class="btn btn-primary">Empezar Prueba Gratuita</button>
         <a href="#demo" class="btn btn-secondary">Ver Demo</a>
       </div>
     </div>
@@ -93,6 +93,8 @@
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.2s;
+    border: none;
+    cursor: pointer;
   }
   .btn-primary {
     background-color: var(--color-primary-green);
@@ -268,6 +270,9 @@
     .btn {
       width: 100%;
       text-align: center;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
     }
     .dashboard-mockup {
       padding: 1rem;
@@ -279,3 +284,14 @@
     }
   }
 </style>
+
+<script>
+  const startTrialBtn = document.getElementById('start-trial-btn');
+  
+  startTrialBtn?.addEventListener('click', () => {
+    // Llamar directamente a la función global expuesta por TrialModal
+    if (typeof (window as any).openTrialModal === 'function') {
+      (window as any).openTrialModal();
+    }
+  });
+</script>
