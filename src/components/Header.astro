@@ -13,11 +13,11 @@
       <a href="#testimonios">Testimonios</a>
       <a href="#precios">Precios</a>
       <div class="mobile-cta">
-        <a href="#start" class="btn btn-primary">Solicitar cotización</a>
+        <button class="btn btn-primary" data-open-quote>Solicitar cotización</button>
       </div>
     </nav>
     <div class="actions">
-      <a href="#start" class="btn btn-primary">Solicitar cotización</a>
+      <button class="btn btn-primary" data-open-quote>Solicitar cotización</button>
     </div>
     <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -117,6 +117,9 @@
     font-size: 0.95rem;
     transition: background-color 0.2s, transform 0.2s;
     box-shadow: 0 4px 10px rgba(21, 198, 59, 0.2);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
   }
   .btn.btn-primary:hover {
     background-color: #12ad33;
