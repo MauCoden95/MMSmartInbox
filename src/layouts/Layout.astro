@@ -18,6 +18,9 @@ import TrialModal from '../components/TrialModal.astro';
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>MM SmartInbox</title>
+		
+		<!-- AOS Animation Library -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	</head>
 	<body>
 		<Header />
@@ -27,6 +30,22 @@ import TrialModal from '../components/TrialModal.astro';
 		<ChatWidget />
 		<QuoteModal />
 		<TrialModal />
+
+		<!-- AOS Script -->
+		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script is:inline>
+			// Inicializar AOS
+			document.addEventListener('DOMContentLoaded', () => {
+				if (typeof AOS !== 'undefined') {
+					AOS.init({
+						duration: 800,
+						once: true,
+						offset: 100,
+						easing: 'ease-out-cubic'
+					});
+				}
+			});
+		</script>
 	</body>
 </html>
 
@@ -53,6 +72,7 @@ import TrialModal from '../components/TrialModal.astro';
 		width: 100%;
 		min-height: 100%;
 		scroll-behavior: smooth;
+		overflow-x: hidden;
 	}
 
 	.header-spacer {
