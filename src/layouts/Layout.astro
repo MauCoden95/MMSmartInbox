@@ -1,3 +1,4 @@
+---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.astro';
@@ -110,5 +111,30 @@ const {
 
 	.header-spacer {
 		height: 110px;
+	}
+
+	/* Scrollbar Personalizado */
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #f1f5f9; /* Gris claro de fondo */
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--color-primary-green); /* Verde principal */
+		border-radius: 10px;
+		border: 3px solid #f1f5f9; /* Crea un efecto de separación */
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #12ad33; /* Un verde un poco más oscuro al pasar el mouse */
+	}
+
+	/* Soporte para Firefox */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-primary-green) #f1f5f9;
 	}
 </style>
