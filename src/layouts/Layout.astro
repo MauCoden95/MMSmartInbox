@@ -4,6 +4,20 @@ import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.astro';
 import QuoteModal from '../components/QuoteModal.astro';
 import TrialModal from '../components/TrialModal.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	canonicalURL?: string;
+}
+
+const { 
+	title = "MM SmartInbox | Automatización de Ventas con IA",
+	description = "Centralizá tus mensajes de WhatsApp, Instagram y Facebook. Nuestra IA Nova clasifica tus prospectos y escala tus ventas automáticamente.",
+	image = "/images/Banner.png",
+	canonicalURL = "https://mmsmartinbox.com" // Cambiar por la URL real cuando esté definida
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -17,7 +31,30 @@ import TrialModal from '../components/TrialModal.astro';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>MM SmartInbox</title>
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="chatbot, inteligencia artificial, ventas, whatsapp automation, crm, inbox inteligente, pymes" />
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, canonicalURL)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, canonicalURL)} />
+		
+		<!-- AOS Animation Library -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	</head>
 	<body>
 		<Header />
@@ -27,6 +64,22 @@ import TrialModal from '../components/TrialModal.astro';
 		<ChatWidget />
 		<QuoteModal />
 		<TrialModal />
+
+		<!-- AOS Script -->
+		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script is:inline>
+			// Inicializar AOS
+			document.addEventListener('DOMContentLoaded', () => {
+				if (typeof AOS !== 'undefined') {
+					AOS.init({
+						duration: 800,
+						once: true,
+						offset: 100,
+						easing: 'ease-out-cubic'
+					});
+				}
+			});
+		</script>
 	</body>
 </html>
 
@@ -53,9 +106,35 @@ import TrialModal from '../components/TrialModal.astro';
 		width: 100%;
 		min-height: 100%;
 		scroll-behavior: smooth;
+		overflow-x: hidden;
 	}
 
 	.header-spacer {
 		height: 110px;
+	}
+
+	/* Scrollbar Personalizado */
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #f1f5f9; /* Gris claro de fondo */
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--color-primary-green); /* Verde principal */
+		border-radius: 10px;
+		border: 3px solid #f1f5f9; /* Crea un efecto de separación */
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #12ad33; /* Un verde un poco más oscuro al pasar el mouse */
+	}
+
+	/* Soporte para Firefox */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-primary-green) #f1f5f9;
 	}
 </style>
