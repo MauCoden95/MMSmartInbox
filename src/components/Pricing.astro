@@ -9,8 +9,8 @@
     <div class="pricing-grid">
       <!-- Starter -->
       <div class="plan-card" data-aos="fade-up">
-        <div class="plan-name">Starter</div>
-        <div class="plan-desc">Ideal para emprendedores que recién empiezan.</div>
+        <div class="plan-name">Starter <span class="free-month-badge">Primer mes gratis</span></div>
+        <div class="plan-desc">Ideal para emprendedores que recién empiezan. Luego del primer mes, se debe pasar a un plan de pago para continuar.</div>
         <div class="plan-price"><span class="currency">$</span><span class="amount">0</span><span class="period">/mes</span></div>
         <ul class="features">
           <li><svg viewBox="0 0 24 24" width="18" height="18"><path d="M20 6L9 17l-5-5" stroke="var(--color-primary-green)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>1 canal conectado</li>
@@ -67,7 +67,8 @@
   .plan-card.popular { background: linear-gradient(135deg, #1e1b4b, #312e81); border-color: transparent; transform: scale(1.04); }
   .plan-card.popular:hover { transform: scale(1.04) translateY(-6px); box-shadow: 0 24px 56px rgba(30,27,75,0.3); }
   .popular-badge { position: absolute; top: 1rem; right: 1rem; background: linear-gradient(135deg, var(--color-primary-green), #22c55e); color: white; padding: 0.3rem 0.85rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-  .plan-name { font-size: 1.2rem; font-weight: 700; color: var(--color-text-dark); margin-bottom: 0.5rem; }
+  .plan-name { display: flex; align-items: center; justify-content: space-between; font-size: 1.2rem; font-weight: 700; color: var(--color-text-dark); margin-bottom: 0.5rem; }
+  .free-month-badge { font-size: 0.65rem; background: rgba(34, 197, 94, 0.12); color: var(--color-primary-green); padding: 0.25rem 0.65rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
   .plan-card.popular .plan-name { color: white; }
   .plan-desc { font-size: 0.88rem; color: var(--color-text-medium); line-height: 1.5; margin-bottom: 1.5rem; }
   .plan-card.popular .plan-desc { color: rgba(255,255,255,0.6); }
