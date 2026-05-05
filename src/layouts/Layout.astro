@@ -80,6 +80,22 @@ const {
 				}
 			});
 		</script>
+		<!-- Script de contador de visitas (Invisible) -->
+		<script is:inline>
+			async function registrarVisitaInvaluable() {
+				// Utilizamos sessionStorage para contar 1 visita por sesión (y no contar cada vez que recarga la página)
+				if (!sessionStorage.getItem('visita_registrada_mm')) {
+					try {
+						// counterapi.dev es un servicio público y gratuito para contar simples Nros sin registros
+						await fetch('https://api.counterapi.dev/v1/mmsmartinbox_app/visitas_totales/up');
+						sessionStorage.setItem('visita_registrada_mm', 'true');
+					} catch (e) {
+						// Silencioso para no molestar a los usuarios
+					}
+				}
+			}
+			registrarVisitaInvaluable();
+		</script>
 	</body>
 </html>
 
