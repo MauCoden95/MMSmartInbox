@@ -31,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
           // Actualizamos el número, usando .toLocaleString para que se vea como 1,000 en vez de 1000
           elemento.innerText = data.count.toLocaleString();
       } catch (e) {
-          elemento.innerText = "Error";
+          elemento.innerText = "Error: " + e.message;
           console.error("No se pudo cargar el contador:", e);
       }
   }
