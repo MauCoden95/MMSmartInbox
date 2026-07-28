@@ -231,22 +231,32 @@
     object-fit: cover;
   }
 
-  @media (max-width: 1100px) and (min-width: 993px) {
+  /* Layout lado a lado desde 1000px hasta 1200px */
+  @media (max-width: 1200px) and (min-width: 1000px) {
     .container {
       gap: 2rem;
     }
     h1 {
-      font-size: 2.9rem;
+      font-size: 2.8rem;
+      letter-spacing: -1px;
+    }
+    p {
+      font-size: 1.05rem;
     }
     .content {
-      max-width: 480px;
+      max-width: 460px;
     }
     .dashboard-mockup {
       max-width: 400px;
     }
+    .laptop-overlay {
+      width: 210px;
+      height: 160px;
+    }
   }
 
-  @media (max-width: 992px) {
+  /* Por debajo de 1000px: apilado */
+  @media (max-width: 999px) {
     .container {
       flex-direction: column;
       text-align: center;
