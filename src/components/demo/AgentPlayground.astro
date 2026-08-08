@@ -352,6 +352,24 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
     height: 420px;
   }
 
+  .chat-placeholder-welcome {
+    text-align: center;
+    padding: 2rem 1.25rem;
+    color: var(--color-text-medium);
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+    margin: auto 0;
+  }
+  .chat-placeholder-welcome .placeholder-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .chat-placeholder-welcome p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
   /* Chat Message Item */
   .chat-msg {
     display: flex;
@@ -417,6 +435,14 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
     color: var(--color-text-dark);
     border: 1px solid #e2e8f0;
     border-bottom-left-radius: 4px;
+  }
+  .typing-in-bubble {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-medium);
+    font-style: italic;
   }
 
   /* Typing Indicator */
@@ -683,14 +709,17 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
       }
 
       // Reset Chat & Activity Stream
-      if (chatContainer) chatContainer.innerHTML = '';
+      if (chatContainer) {
+        chatContainer.innerHTML = `
+          <div class="chat-placeholder-welcome">
+            <div class="placeholder-icon">💬</div>
+            <p>Elegí una de las preguntas de prueba arriba o escribí un mensaje para ver al <strong>${config.systemRole}</strong> responder y ejecutar acciones en tiempo real.</p>
+          </div>
+        `;
+      }
       if (stepsTimeline) stepsTimeline.innerHTML = '';
       if (emptyFeed) emptyFeed.classList.remove('hidden');
       if (stepsCounter) stepsCounter.textContent = '0 pasos ejecutados';
-
-      // Auto load starter conversation
-      const starterMsg = config.starterPrompt;
-      handleSendMessage(starterMsg);
     }
 
     // Industry Selector Event Listeners
@@ -705,7 +734,13 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
 
     // Chat Message Handling
     function appendMessage(sender: 'user' | 'agent', text: string) {
-      if (!chatContainer) return;
+      if (!chatContainer) return null;
+
+      const welcomePlaceholder = chatContainer.querySelector('.chat-placeholder-welcome');
+      if (welcomePlaceholder) {
+        welcomePlaceholder.remove();
+      }
+
       const msgDiv = document.createElement('div');
       msgDiv.className = `chat-msg ${sender}`;
 
@@ -726,29 +761,34 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
 
       chatContainer.appendChild(msgDiv);
       chatContainer.scrollTop = chatContainer.scrollHeight;
+      return bubbleDiv;
     }
 
     async function handleSendMessage(messageText: string) {
       if (!messageText.trim()) return;
 
-      // Append User message
+      // 1. Append User message
       appendMessage('user', messageText);
       if (chatInput) chatInput.value = '';
 
-      // Show typing indicator
-      if (typingIndicator) typingIndicator.classList.remove('hidden');
+      // 2. Append Agent typing placeholder inside chat immediately
+      const agentBubble = appendMessage('agent', '⚡ Analizando solicitud...');
+      if (agentBubble) {
+        agentBubble.innerHTML = `<div class="typing-in-bubble"><span class="dot"></span><span class="dot"></span><span class="dot"></span> <span>Analizando solicitud y consultando datos...</span></div>`;
+      }
+
       if (emptyFeed) emptyFeed.classList.add('hidden');
 
-      // Get simulated agent response & activity steps
+      // 3. Get simulated agent response & activity steps
       const { responseText, steps, crmRecord } = simulateAgentResponse(activeIndustryId, messageText);
 
-      // Render Activity Steps Progressive Animation (500-700ms each)
+      // 4. Render Activity Steps Progressive Animation (550ms delay per step)
       if (stepsTimeline) {
         stepsTimeline.innerHTML = '';
         let stepCount = 0;
 
         for (let i = 0; i < steps.length; i++) {
-          await new Promise(res => setTimeout(res, 1200));
+          await new Promise(res => setTimeout(res, 550));
           const stepData = steps[i];
           stepCount++;
 
@@ -773,12 +813,16 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
         }
       }
 
-      // Hide typing indicator & append agent text response
-      await new Promise(res => setTimeout(res, 700));
-      if (typingIndicator) typingIndicator.classList.add('hidden');
-      appendMessage('agent', responseText);
+      // 5. Update agent bubble with final response text
+      await new Promise(res => setTimeout(res, 300));
+      if (agentBubble) {
+        agentBubble.textContent = responseText;
+      }
+      if (chatContainer) {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
 
-      // Dispatch custom event to update CRM preview component live!
+      // 6. Dispatch custom event to update CRM preview component live!
       if (crmRecord) {
         window.dispatchEvent(new CustomEvent('demo:crm-update', { detail: crmRecord }));
       }

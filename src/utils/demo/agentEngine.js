@@ -15,12 +15,21 @@ export function simulateAgentResponse(industryId, userMessage, conversationHisto
   const industry = getIndustryConfig(industryId);
 
   // 1. Check if message matches a preset prompt (exact or close match)
-  const presetIndex = industry.presetPrompts.findIndex(p =>
-    userMessage.trim().toLowerCase() === p.trim().toLowerCase()
-  );
+  const inputClean = userMessage.trim().toLowerCase();
+  const presetIndex = industry.presetPrompts.findIndex(p => {
+    const pClean = p.trim().toLowerCase();
+    return inputClean === pClean || 
+           (pClean.length > 10 && inputClean.includes(pClean.substring(0, 15))) || 
+           (inputClean.length > 10 && pClean.includes(inputClean.substring(0, 15)));
+  });
 
   if (presetIndex !== -1 && industry.presetResponses && industry.presetResponses[presetIndex]) {
-    return industry.presetResponses[presetIndex];
+    const res = industry.presetResponses[presetIndex];
+    return {
+      responseText: res.responseText || res.text || 'Procesamiento completado con éxito.',
+      steps: res.steps || [],
+      crmRecord: res.crmRecord || null
+    };
   }
 
   // 2. Also check if the starterPrompt was sent and return starter-specific response

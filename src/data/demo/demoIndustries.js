@@ -18,7 +18,7 @@ export const DEMO_INDUSTRIES = [
     ],
     presetResponses: [
       {
-        text: 'Encontré 3 propiedades que coinciden exactamente con tu búsqueda en Palermo y Belgrano, todas dentro de tu presupuesto de USD 120.000 y con balcón:\n\n1. Depto 2 amb con balcón corrido — Palermo Soho, 52 m² — USD 115.000\n2. Depto 2 amb luminoso — Belgrano, 48 m² — USD 118.000\n3. Depto 2 amb con amenities — Palermo Hollywood, 55 m² — USD 120.000\n\n¿Querés coordinar una visita a alguna de estas propiedades esta semana?',
+        responseText: 'Encontré 3 propiedades que coinciden exactamente con tu búsqueda en Palermo y Belgrano, todas dentro de tu presupuesto de USD 120.000 y con balcón:\n\n1. Depto 2 amb con balcón corrido — Palermo Soho, 52 m² — USD 115.000\n2. Depto 2 amb luminoso — Belgrano, 48 m² — USD 118.000\n3. Depto 2 amb con amenities — Palermo Hollywood, 55 m² — USD 120.000\n\n¿Querés coordinar una visita a alguna de estas propiedades esta semana?',
         steps: [
           { type: 'done', text: 'Solicitud recibida' },
           { type: 'done', text: 'Zona detectada: Palermo / Belgrano' },
