@@ -748,7 +748,7 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
         let stepCount = 0;
 
         for (let i = 0; i < steps.length; i++) {
-          await new Promise(res => setTimeout(res, 550));
+          await new Promise(res => setTimeout(res, 1200));
           const stepData = steps[i];
           stepCount++;
 
@@ -774,7 +774,7 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
       }
 
       // Hide typing indicator & append agent text response
-      await new Promise(res => setTimeout(res, 400));
+      await new Promise(res => setTimeout(res, 700));
       if (typingIndicator) typingIndicator.classList.add('hidden');
       appendMessage('agent', responseText);
 
