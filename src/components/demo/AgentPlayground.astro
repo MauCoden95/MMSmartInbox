@@ -1,0 +1,742 @@
+---
+// src/components/demo/AgentPlayground.astro
+import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
+---
+
+<section class="playground-section" id="demo-playground">
+  <div class="playground-header">
+    <div class="header-left">
+      <span class="step-badge">Etapa 3</span>
+      <h2 class="playground-title">Agente de IA en Acción</h2>
+      <p class="playground-desc">
+        Interactuá en el chat de la izquierda y observá en tiempo real cómo el agente analiza la información, consulta la base de datos y ejecuta acciones en el panel derecho.
+      </p>
+    </div>
+    <div class="active-industry-tag" id="current-industry-tag">
+      <span class="tag-label">Contexto activo:</span>
+      <span class="tag-name" id="current-industry-name">Inmobiliaria</span>
+    </div>
+  </div>
+
+  <div class="saas-window">
+    <!-- SaaS Top Header Bar -->
+    <div class="saas-header-bar">
+      <div class="window-controls">
+        <span class="control red"></span>
+        <span class="control yellow"></span>
+        <span class="control green"></span>
+      </div>
+      <div class="saas-title-box">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span id="saas-app-name">MM SmartInbox • Agente Inmobiliario</span>
+      </div>
+      <div class="agent-live-badge">
+        <span class="live-dot"></span>
+        <span>AGENTE EN VIVO</span>
+      </div>
+    </div>
+
+    <div class="saas-body-grid">
+      <!-- LEFT PANEL: CONVERSATION CHAT -->
+      <div class="chat-panel">
+        <div class="chat-panel-header">
+          <div class="agent-avatar">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path><rect x="4" y="8" width="16" height="12" rx="2"></rect><path d="M9 13v2"></path><path d="M15 13v2"></path></svg>
+          </div>
+          <div class="agent-info">
+            <span class="agent-name" id="agent-role-name">Agente Inmobiliario IA</span>
+            <span class="agent-status-text">Atención automática activa</span>
+          </div>
+        </div>
+
+        <!-- Preset prompts selector chips -->
+        <div class="preset-prompts-bar">
+          <span class="prompts-label">Mensajes de prueba rápidos:</span>
+          <div class="prompts-chips" id="prompts-chips-container">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div class="chat-messages-scroll" id="chat-messages-container">
+          <!-- Messages inserted dynamically -->
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator-row hidden" id="typing-indicator">
+          <div class="typing-bubble">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="typing-text">Agente evaluando solicitud...</span>
+        </div>
+
+        <form class="chat-input-form" id="chat-form">
+          <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Escribí un mensaje o elegí un ejemplo arriba..." 
+            autocomplete="off" 
+          />
+          <button type="submit" class="btn-send" id="btn-send-msg">
+            <span>Enviar</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- RIGHT PANEL: AGENT ACTIVITY STREAM -->
+      <div class="activity-panel">
+        <div class="activity-panel-header">
+          <div class="activity-title-box">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <span>Acciones del Agente en Tiempo Real</span>
+          </div>
+          <span class="activity-count" id="steps-counter">0 pasos ejecutados</span>
+        </div>
+
+        <div class="activity-feed-scroll" id="activity-feed">
+          <div class="empty-feed-state" id="empty-feed">
+            <div class="empty-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <p>Esperando interacción del cliente para iniciar razonamiento y acciones...</p>
+          </div>
+
+          <div class="steps-timeline" id="steps-timeline">
+            <!-- Animated steps appear here -->
+          </div>
+        </div>
+
+        <div class="activity-panel-footer">
+          <div class="system-status-indicator">
+            <span class="status-box-dot"></span>
+            <span>Sistema conectado a Base de Conocimiento y CRM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .playground-section {
+    padding: 3rem 1.5rem;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .playground-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .step-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #f1f5f9;
+    color: var(--color-text-medium);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  .playground-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+  }
+  .playground-desc {
+    font-size: 1rem;
+    color: var(--color-text-medium);
+    max-width: 700px;
+    line-height: 1.5;
+  }
+  .active-industry-tag {
+    background: rgba(58, 61, 238, 0.08);
+    border: 1px solid rgba(58, 61, 238, 0.2);
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .tag-label {
+    color: var(--color-text-medium);
+  }
+  .tag-name {
+    color: var(--color-primary-blue);
+    font-weight: 700;
+  }
+
+  /* SaaS Window */
+  .saas-window {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  .saas-header-bar {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .window-controls {
+    display: flex;
+    gap: 6px;
+  }
+  .control {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+  .control.red { background: #ff5f56; }
+  .control.yellow { background: #ffbd2e; }
+  .control.green { background: #27c93f; }
+
+  .saas-title-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+  .agent-live-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-primary-green);
+    background: rgba(21, 198, 59, 0.15);
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    border: 1px solid rgba(21, 198, 59, 0.3);
+  }
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-primary-green);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+
+  .saas-body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
+  }
+
+  /* Left Panel - Chat */
+  .chat-panel {
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    background: #f8fafc;
+  }
+  .chat-panel-header {
+    padding: 1rem 1.25rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .agent-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--color-primary-blue);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .agent-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .agent-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+  }
+  .agent-status-text {
+    font-size: 0.78rem;
+    color: var(--color-primary-green);
+    font-weight: 600;
+  }
+
+  .preset-prompts-bar {
+    padding: 0.75rem 1.25rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .prompts-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 0.4rem;
+  }
+  .prompts-chips {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+  }
+  .prompt-chip {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: var(--color-text-dark);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .prompt-chip:hover {
+    background: var(--color-primary-blue);
+    color: #ffffff;
+    border-color: var(--color-primary-blue);
+  }
+
+  .chat-messages-scroll {
+    flex-grow: 1;
+    padding: 1.25rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 400px;
+  }
+
+  /* Chat Message Bubbles */
+  .chat-msg {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+    animation: fadeInMsg 0.3s ease-out;
+  }
+  @keyframes fadeInMsg {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .chat-msg.user {
+    align-self: flex-end;
+  }
+  .chat-msg.agent {
+    align-self: flex-start;
+  }
+  .chat-msg .msg-sender {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 0.25rem;
+    padding: 0 0.25rem;
+  }
+  .chat-msg.user .msg-sender { text-align: right; }
+
+  .chat-msg .msg-bubble {
+    padding: 0.85rem 1.1rem;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    white-space: pre-wrap;
+  }
+  .chat-msg.user .msg-bubble {
+    background: var(--color-primary-blue);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+  }
+  .chat-msg.agent .msg-bubble {
+    background: #ffffff;
+    color: var(--color-text-dark);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    border-bottom-left-radius: 4px;
+  }
+
+  /* Typing Indicator */
+  .typing-indicator-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.25rem;
+    background: #ffffff;
+    border-top: 1px solid #f1f5f9;
+  }
+  .typing-indicator-row.hidden { display: none; }
+  .typing-bubble {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #f1f5f9;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary-blue);
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out both;
+  }
+  .dot:nth-child(1) { animation-delay: -0.32s; }
+  .dot:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes typingBounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+  }
+  .typing-text {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--color-text-light);
+  }
+
+  .chat-input-form {
+    padding: 1rem 1.25rem;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 0.75rem;
+  }
+  .chat-input-form input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+  }
+  .chat-input-form input:focus {
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 0 0 3px rgba(58, 61, 238, 0.1);
+  }
+  .btn-send {
+    background: var(--color-primary-blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .btn-send:hover {
+    background: #2f32c9;
+  }
+
+  /* Right Panel - Activity Log Stream */
+  .activity-panel {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  .activity-panel-header {
+    padding: 1rem 1.25rem;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .activity-title-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+  }
+  .activity-title-box svg {
+    color: var(--color-primary-blue);
+  }
+  .activity-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    background: #e2e8f0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+  }
+
+  .activity-feed-scroll {
+    flex-grow: 1;
+    padding: 1.25rem;
+    overflow-y: auto;
+    max-height: 460px;
+  }
+
+  .empty-feed-state {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: var(--color-text-light);
+  }
+  .empty-feed-state.hidden { display: none; }
+  .empty-icon {
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+  }
+  .empty-feed-state p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  /* Steps Timeline */
+  .steps-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    animation: stepSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes stepSlideIn {
+    from { opacity: 0; transform: translateX(12px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .step-item.done {
+    border-left: 4px solid var(--color-primary-green);
+  }
+  .step-item.active {
+    border-left: 4px solid var(--color-primary-blue);
+    background: rgba(58, 61, 238, 0.03);
+  }
+
+  .step-icon-status {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-item.done .step-icon-status {
+    background: rgba(21, 198, 59, 0.15);
+    color: var(--color-primary-green);
+  }
+  .step-item.active .step-icon-status {
+    background: rgba(58, 61, 238, 0.15);
+    color: var(--color-primary-blue);
+  }
+
+  .step-text {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    line-height: 1.4;
+  }
+
+  .activity-panel-footer {
+    padding: 0.75rem 1.25rem;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+  }
+  .system-status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--color-text-medium);
+  }
+  .status-box-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary-green);
+  }
+
+  @media (max-width: 900px) {
+    .saas-body-grid {
+      grid-template-columns: 1fr;
+    }
+    .chat-panel {
+      border-right: none;
+      border-bottom: 1px solid #e2e8f0;
+    }
+  }
+</style>
+
+<script>
+  import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
+  import { simulateAgentResponse, getIndustryConfig } from '../../utils/demo/agentEngine.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    let activeIndustryId = 'inmobiliaria';
+
+    const industryCards = document.querySelectorAll('.industry-card');
+    const currentIndustryTag = document.getElementById('current-industry-name');
+    const saasAppName = document.getElementById('saas-app-name');
+    const agentRoleName = document.getElementById('agent-role-name');
+    const promptsContainer = document.getElementById('prompts-chips-container');
+    const chatContainer = document.getElementById('chat-messages-container');
+    const typingIndicator = document.getElementById('typing-indicator');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input') as HTMLInputElement;
+    const emptyFeed = document.getElementById('empty-feed');
+    const stepsTimeline = document.getElementById('steps-timeline');
+    const stepsCounter = document.getElementById('steps-counter');
+
+    function loadIndustryContext(industryId: string, autoSendPrompt = false) {
+      activeIndustryId = industryId;
+      const config = getIndustryConfig(industryId);
+
+      // Update Header Tags
+      if (currentIndustryTag) currentIndustryTag.textContent = config.name;
+      if (saasAppName) saasAppName.textContent = `MM SmartInbox • ${config.systemRole}`;
+      if (agentRoleName) agentRoleName.textContent = config.systemRole;
+
+      // Update Preset Prompts
+      if (promptsContainer) {
+        promptsContainer.innerHTML = '';
+        config.presetPrompts.forEach((promptText: string) => {
+          const chip = document.createElement('button');
+          chip.className = 'prompt-chip';
+          chip.type = 'button';
+          chip.textContent = promptText;
+          chip.addEventListener('click', () => {
+            if (chatInput) chatInput.value = promptText;
+            handleSendMessage(promptText);
+          });
+          promptsContainer.appendChild(chip);
+        });
+      }
+
+      // Reset Chat & Activity Stream
+      if (chatContainer) chatContainer.innerHTML = '';
+      if (stepsTimeline) stepsTimeline.innerHTML = '';
+      if (emptyFeed) emptyFeed.classList.remove('hidden');
+      if (stepsCounter) stepsCounter.textContent = '0 pasos ejecutados';
+
+      // Auto load starter conversation
+      const starterMsg = config.starterPrompt;
+      handleSendMessage(starterMsg);
+    }
+
+    // Industry Selector Event Listeners
+    industryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        industryCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        const id = card.getAttribute('data-industry-id') || 'inmobiliaria';
+        loadIndustryContext(id);
+      });
+    });
+
+    // Chat Message Handling
+    function appendMessage(sender: 'user' | 'agent', text: string) {
+      if (!chatContainer) return;
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `chat-msg ${sender}`;
+
+      const senderSpan = document.createElement('span');
+      senderSpan.className = 'msg-sender';
+      senderSpan.textContent = sender === 'user' ? 'Cliente' : 'Agente IA';
+
+      const bubbleDiv = document.createElement('div');
+      bubbleDiv.className = 'msg-bubble';
+      bubbleDiv.textContent = text;
+
+      msgDiv.appendChild(senderSpan);
+      msgDiv.appendChild(bubbleDiv);
+
+      chatContainer.appendChild(msgDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    async function handleSendMessage(messageText: string) {
+      if (!messageText.trim()) return;
+
+      // Append User message
+      appendMessage('user', messageText);
+      if (chatInput) chatInput.value = '';
+
+      // Show typing indicator
+      if (typingIndicator) typingIndicator.classList.remove('hidden');
+      if (emptyFeed) emptyFeed.classList.add('hidden');
+
+      // Get simulated agent response & activity steps
+      const { responseText, steps, crmRecord } = simulateAgentResponse(activeIndustryId, messageText);
+
+      // Render Activity Steps Progressive Animation (500-700ms each)
+      if (stepsTimeline) {
+        stepsTimeline.innerHTML = '';
+        let stepCount = 0;
+
+        for (let i = 0; i < steps.length; i++) {
+          await new Promise(res => setTimeout(res, 550));
+          const stepData = steps[i];
+          stepCount++;
+
+          const stepDiv = document.createElement('div');
+          stepDiv.className = `step-item ${stepData.type}`;
+
+          const iconDiv = document.createElement('div');
+          iconDiv.className = 'step-icon-status';
+          iconDiv.innerHTML = stepData.type === 'done' 
+            ? '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+            : '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
+
+          const textSpan = document.createElement('span');
+          textSpan.className = 'step-text';
+          textSpan.textContent = stepData.text;
+
+          stepDiv.appendChild(iconDiv);
+          stepDiv.appendChild(textSpan);
+          stepsTimeline.appendChild(stepDiv);
+
+          if (stepsCounter) stepsCounter.textContent = `${stepCount} pasos ejecutados`;
+        }
+      }
+
+      // Hide typing indicator & append agent text response
+      await new Promise(res => setTimeout(res, 400));
+      if (typingIndicator) typingIndicator.classList.add('hidden');
+      appendMessage('agent', responseText);
+
+      // Dispatch custom event to update CRM preview component live!
+      if (crmRecord) {
+        window.dispatchEvent(new CustomEvent('demo:crm-update', { detail: crmRecord }));
+      }
+    }
+
+    if (chatForm) {
+      chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (chatInput) handleSendMessage(chatInput.value);
+      });
+    }
+
+    // Initial Load with Inmobiliaria
+    loadIndustryContext('inmobiliaria');
+  });
+</script>

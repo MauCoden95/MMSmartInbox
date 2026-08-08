@@ -1,0 +1,153 @@
+---
+// src/components/demo/AutomationSummary.astro
+const SUMMARY_ITEMS = [
+  {
+    title: 'Respondió automáticamente',
+    desc: 'Atendió de forma inmediata sin demora de espera ni intervención humana inicial.',
+    icon: 'check-circle'
+  },
+  {
+    title: 'Analizó la solicitud',
+    desc: 'Identificó la intención principal, ubicación, presupuesto y requerimientos específicos.',
+    icon: 'cpu'
+  },
+  {
+    title: 'Consultó información',
+    desc: 'Buscó en tiempo real dentro de la base de datos de propiedades, inventario o turnos disponibles.',
+    icon: 'database'
+  },
+  {
+    title: 'Tomó una decisión',
+    desc: 'Evaluó reglas comerciales y seleccionó las 3 mejores opciones compatibles.',
+    icon: 'git-branch'
+  },
+  {
+    title: 'Ejecutó una acción',
+    desc: 'Generó la propuesta personalizada y ofreció agendar la visita o reserva.',
+    icon: 'zap'
+  },
+  {
+    title: 'Registró el cliente',
+    desc: 'Creó automáticamente la ficha de lead calificado dentro del CRM comercial.',
+    icon: 'user-check'
+  },
+  {
+    title: 'Preparó el seguimiento',
+    desc: 'Dejó programado el recordatorio posterior para asegurar el cierre comercial.',
+    icon: 'calendar'
+  }
+];
+---
+
+<section class="summary-section" id="summary-section">
+  <div class="summary-container">
+    <div class="section-header text-center">
+      <span class="step-badge">Etapa 6</span>
+      <h2 class="section-title">¿Qué hizo el agente en esta interacción?</h2>
+      <p class="section-subtitle">
+        Resumen objetivo del proceso automatizado ejecutado en cuestión de segundos.
+      </p>
+    </div>
+
+    <div class="summary-grid">
+      {SUMMARY_ITEMS.map((item) => (
+        <div class="summary-card">
+          <div class="card-icon-box">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">{item.title}</h3>
+            <p class="card-desc">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .summary-section {
+    padding: 4rem 1.5rem;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .summary-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-header.text-center {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+  }
+  .step-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: var(--color-text-medium);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 0.75rem;
+  }
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-text-medium);
+    line-height: 1.6;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .summary-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .summary-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary-green);
+  }
+
+  .card-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(21, 198, 59, 0.12);
+    color: var(--color-primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0.25rem;
+  }
+  .card-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-medium);
+    line-height: 1.45;
+  }
+</style>

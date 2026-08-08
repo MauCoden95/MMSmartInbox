@@ -1,0 +1,190 @@
+---
+// src/components/demo/IndustrySelector.astro
+import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
+---
+
+<section class="industry-selector-section" id="industry-selector">
+  <div class="section-header">
+    <span class="step-badge">Etapa 2</span>
+    <h2 class="section-title">¿Qué tipo de negocio querés simular?</h2>
+    <p class="section-subtitle">
+      Seleccioná una industria para ver cómo el agente adapta su contexto, consulta datos específicos y ejecuta acciones correspondientes.
+    </p>
+  </div>
+
+  <div class="industry-grid">
+    {DEMO_INDUSTRIES.map((ind, index) => (
+      <button 
+        class={`industry-card ${index === 0 ? 'active' : ''}`}
+        data-industry-id={ind.id}
+        type="button"
+      >
+        <div class="card-badge">{ind.badge}</div>
+        <div class="card-icon-box">
+          {ind.icon === 'building' && (
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
+          )}
+          {ind.icon === 'utensils' && (
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2v20"></path><path d="M18 2a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3"></path><path d="M14 2v7a2 2 0 0 0 2 2h2"></path><path d="M6 2v7a2 2 0 0 0 2 2h2V2"></path><path d="M8 11v11"></path></svg>
+          )}
+          {ind.icon === 'hospital' && (
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v12"></path><path d="M6 12h12"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>
+          )}
+          {ind.icon === 'bed' && (
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg>
+          )}
+          {ind.icon === 'shopping-cart' && (
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          )}
+          {ind.icon === 'briefcase' && (
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          )}
+        </div>
+        <h3 class="card-name">{ind.name}</h3>
+        <p class="card-subtitle">{ind.subtitle}</p>
+        
+        <div class="card-select-indicator">
+          <span class="indicator-dot"></span>
+          <span class="indicator-text">Seleccionado</span>
+        </div>
+      </button>
+    ))}
+  </div>
+</section>
+
+<style>
+  .industry-selector-section {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+  }
+  .step-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #f1f5f9;
+    color: var(--color-text-medium);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0.75rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-medium);
+    line-height: 1.5;
+  }
+
+  .industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .industry-card {
+    position: relative;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .industry-card:hover {
+    border-color: var(--color-primary-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(58, 61, 238, 0.08);
+  }
+  .industry-card.active {
+    border-color: var(--color-primary-blue);
+    background-color: rgba(58, 61, 238, 0.02);
+    box-shadow: 0 8px 20px rgba(58, 61, 238, 0.12);
+  }
+
+  .card-badge {
+    align-self: flex-start;
+    padding: 0.2rem 0.6rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+  }
+  .industry-card.active .card-badge {
+    background: rgba(58, 61, 238, 0.1);
+    color: var(--color-primary-blue);
+    border-color: rgba(58, 61, 238, 0.2);
+  }
+
+  .card-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f1f5f9;
+    color: var(--color-text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.2s;
+  }
+  .industry-card.active .card-icon-box {
+    background: var(--color-primary-blue);
+    color: #ffffff;
+  }
+
+  .card-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+  }
+  .card-subtitle {
+    font-size: 0.88rem;
+    color: var(--color-text-medium);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .card-select-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    opacity: 0.6;
+  }
+  .indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e1;
+  }
+  .industry-card.active .card-select-indicator {
+    color: var(--color-primary-blue);
+    opacity: 1;
+  }
+  .industry-card.active .indicator-dot {
+    background: var(--color-primary-green);
+    box-shadow: 0 0 0 3px rgba(21, 198, 59, 0.2);
+  }
+</style>
