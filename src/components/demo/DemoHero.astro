@@ -1,0 +1,256 @@
+---
+// src/components/demo/DemoHero.astro
+---
+
+<section class="demo-hero">
+  <div class="demo-container">
+    <div class="hero-badge">
+      <span class="pulse-dot"></span>
+      <span>Simulador Interactivo de Agentes de IA</span>
+    </div>
+
+    <h1 class="hero-title">
+      Probá cómo un agente de IA puede trabajar en tu negocio
+    </h1>
+
+    <p class="hero-subtitle">
+      No se trata solo de responder mensajes. Un agente de IA puede analizar solicitudes, tomar decisiones según tus reglas empresariales y ejecutar acciones automáticamente.
+    </p>
+
+    <!-- Visual explanation diagram -->
+    <div class="process-diagram">
+      <div class="diagram-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <span class="step-label">Cliente</span>
+      </div>
+
+      <div class="diagram-arrow">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="diagram-step highlight">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <span class="step-label">Agente IA</span>
+      </div>
+
+      <div class="diagram-arrow">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="diagram-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span class="step-label">Analiza</span>
+      </div>
+
+      <div class="diagram-arrow">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="diagram-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        </div>
+        <span class="step-label">Decide</span>
+      </div>
+
+      <div class="diagram-arrow">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="diagram-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        </div>
+        <span class="step-label">Ejecuta</span>
+      </div>
+
+      <div class="diagram-arrow">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="diagram-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
+        <span class="step-label">Registra</span>
+      </div>
+
+      <div class="diagram-arrow">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="diagram-step">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <span class="step-label">Seguimiento</span>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#demo-playground" class="btn-start-demo">
+        <span>Comenzar demo</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .demo-hero {
+    padding: 3rem 1.5rem 4rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .demo-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background-color: rgba(58, 61, 238, 0.08);
+    border: 1px solid rgba(58, 61, 238, 0.2);
+    border-radius: 50px;
+    color: var(--color-primary-blue);
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary-green);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.5);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(21, 198, 59, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(21, 198, 59, 0); }
+  }
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-medium);
+    max-width: 760px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+
+  /* Process Diagram */
+  .process-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    background: #ffffff;
+    padding: 1.75rem 2rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    margin-bottom: 2.5rem;
+  }
+  .diagram-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .diagram-step.highlight {
+    background-color: rgba(58, 61, 238, 0.06);
+  }
+  .step-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: #f1f5f9;
+    color: var(--color-primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .diagram-step.highlight .step-icon {
+    background-color: var(--color-primary-blue);
+    color: #ffffff;
+  }
+  .step-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+  }
+  .diagram-arrow {
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-start-demo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--color-primary-green);
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 18px rgba(21, 198, 59, 0.25);
+    transition: all 0.25s ease;
+  }
+  .btn-start-demo:hover {
+    background-color: #12ad33;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(21, 198, 59, 0.35);
+  }
+
+  @media (max-width: 900px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    .process-diagram {
+      gap: 0.3rem;
+      padding: 1.25rem 1rem;
+    }
+    .diagram-arrow {
+      transform: rotate(90deg);
+      margin: 0.2rem 0;
+    }
+    .process-diagram {
+      flex-direction: column;
+    }
+    .diagram-step {
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+</style>

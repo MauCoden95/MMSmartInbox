@@ -1,0 +1,33 @@
+---
+// src/pages/demo.astro
+import Layout from '../layouts/Layout.astro';
+import DemoHero from '../components/demo/DemoHero.astro';
+import IndustrySelector from '../components/demo/IndustrySelector.astro';
+import AgentPlayground from '../components/demo/AgentPlayground.astro';
+import WorkflowVisualization from '../components/demo/WorkflowVisualization.astro';
+import CRMPreview from '../components/demo/CRMPreview.astro';
+import AutomationSummary from '../components/demo/AutomationSummary.astro';
+import BusinessAnalyzer from '../components/demo/BusinessAnalyzer.astro';
+---
+
+<Layout 
+  title="Demo de Agentes de IA | MM SmartInbox" 
+  description="Experimentá cómo un agente de Inteligencia Artificial puede automatizar procesos, atender clientes y ejecutar tareas en tu negocio."
+>
+  <main class="demo-page">
+    <DemoHero />
+    <IndustrySelector />
+    <AgentPlayground />
+    <WorkflowVisualization />
+    <CRMPreview />
+    <AutomationSummary />
+    <BusinessAnalyzer />
+  </main>
+</Layout>
+
+<style>
+  .demo-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+</style>

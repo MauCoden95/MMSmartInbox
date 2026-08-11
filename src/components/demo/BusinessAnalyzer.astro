@@ -1,0 +1,452 @@
+---
+// src/components/demo/BusinessAnalyzer.astro
+---
+
+<section class="analyzer-section" id="analizador">
+  <div class="analyzer-container">
+    <div class="section-header text-center">
+      <span class="step-badge">Etapa 7 & 8</span>
+      <h2 class="section-title">¿Y qué podríamos automatizar en tu empresa?</h2>
+      <p class="section-subtitle">
+        Contanos cómo funciona hoy uno de tus procesos comerciales u operativos y generá un diagnóstico inmediato de oportunidades de automatización.
+      </p>
+    </div>
+
+    <!-- Diagnostic Form -->
+    <div class="analyzer-card" id="analyzer-form-card">
+      <form class="analyzer-form" id="analyzer-form">
+        <!-- Question 1 -->
+        <div class="form-group">
+          <label class="form-label" for="input-business-type">
+            1. ¿Qué tipo de negocio o industria tenés?
+          </label>
+          <input 
+            type="text" 
+            id="input-business-type" 
+            placeholder="Ej: Inmobiliaria, Estudio Contable, Clínica, Distribuidora..." 
+            required 
+          />
+        </div>
+
+        <!-- Question 2 -->
+        <div class="form-group">
+          <label class="form-label">
+            2. ¿Dónde recibís más consultas diariamente?
+          </label>
+          <div class="channels-options-grid">
+            <label class="channel-chip">
+              <input type="radio" name="channel" value="WhatsApp" checked />
+              <span>WhatsApp</span>
+            </label>
+            <label class="channel-chip">
+              <input type="radio" name="channel" value="Instagram" />
+              <span>Instagram</span>
+            </label>
+            <label class="channel-chip">
+              <input type="radio" name="channel" value="Sitio Web" />
+              <span>Sitio Web</span>
+            </label>
+            <label class="channel-chip">
+              <input type="radio" name="channel" value="Email" />
+              <span>Email</span>
+            </label>
+            <label class="channel-chip">
+              <input type="radio" name="channel" value="Teléfono" />
+              <span>Teléfono</span>
+            </label>
+            <label class="channel-chip">
+              <input type="radio" name="channel" value="Varios canales" />
+              <span>Varios canales</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="form-group">
+          <label class="form-label" for="input-repetitive-task">
+            3. ¿Qué tarea repetitiva te consume más tiempo a vos o a tu equipo?
+          </label>
+          <textarea 
+            id="input-repetitive-task" 
+            rows="3" 
+            placeholder="Ej: Responder precios, pedir datos de contacto, filtrar clientes sin presupuesto, enviar cotizaciones por PDF..." 
+            required
+          ></textarea>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="form-group">
+          <label class="form-label" for="input-target-process">
+            4. ¿Qué proceso te gustaría automatizar primero?
+          </label>
+          <textarea 
+            id="input-target-process" 
+            rows="3" 
+            placeholder="Ej: Calificar los leads de WhatsApp antes de pasarlos a ventas, agendar reuniones en Google Calendar, enviar recordatorios..." 
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-submit-box">
+          <button type="submit" class="btn-analyze" id="btn-submit-analysis">
+            <span>Analizar oportunidades</span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Analysis Results Output (Initially Hidden) -->
+    <div class="results-card hidden" id="analysis-results-card">
+      <div class="results-header">
+        <div class="results-badge">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Diagnóstico Personalizado Generado</span>
+        </div>
+        <h3 class="results-title">Detectamos estas oportunidades para tu negocio:</h3>
+        <p class="results-summary-text" id="results-summary-intro">
+          Basado en tus respuestas para tu empresa, identificamos 4 pilares clave donde un agente de IA generaría impacto inmediato:
+        </p>
+      </div>
+
+      <div class="opportunity-cards-grid">
+        <!-- Opportunity 1 -->
+        <div class="opportunity-card">
+          <div class="opp-number">01</div>
+          <h4 class="opp-title">Atención automática inicial</h4>
+          <p class="opp-desc">
+            Las consultas iniciales recibidas por <strong class="highlight-channel">WhatsApp</strong> podrían ser atendidas en segundos. El agente resuelve preguntas frecuentes y deriva al equipo humano únicamente los casos de alta prioridad.
+          </p>
+        </div>
+
+        <!-- Opportunity 2 -->
+        <div class="opportunity-card">
+          <div class="opp-number">02</div>
+          <h4 class="opp-title">Calificación de prospectos</h4>
+          <p class="opp-desc">
+            El agente puede recopilar datos clave (presupuesto, requerimientos, urgencia) y clasificar las oportunidades antes de enviarlas al equipo comercial.
+          </p>
+        </div>
+
+        <!-- Opportunity 3 -->
+        <div class="opportunity-card">
+          <div class="opp-number">03</div>
+          <h4 class="opp-title">Seguimiento automático</h4>
+          <p class="opp-desc">
+            El sistema detecta automáticamente oportunidades sin respuesta o presupuestos pendientes y envía recordatorios amigables sin olvidos.
+          </p>
+        </div>
+
+        <!-- Opportunity 4 -->
+        <div class="opportunity-card">
+          <div class="opp-number">04</div>
+          <h4 class="opp-title">Integración de procesos</h4>
+          <p class="opp-desc">
+            Los datos capturados en cada conversación se sincronizan automáticamente con tu CRM, agendas y herramientas internas sin carga manual.
+          </p>
+        </div>
+      </div>
+
+      <div class="results-next-step-box">
+        <div class="next-step-content">
+          <h4>Próximo paso</h4>
+          <p>
+            Podemos analizar tu proceso real de negocio en una reunión estratégica y diseñar la arquitectura exacta de automatización adaptada a tu empresa.
+          </p>
+        </div>
+        <div class="next-step-action">
+          <button class="btn-quote-conversion" data-open-quote>
+            <span>Quiero analizar mi negocio</span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .analyzer-section {
+    padding: 4rem 1.5rem 5rem;
+    background: #ffffff;
+  }
+  .analyzer-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .section-header.text-center {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+  }
+  .step-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(58, 61, 238, 0.08);
+    color: var(--color-primary-blue);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 0.75rem;
+  }
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-text-medium);
+    line-height: 1.6;
+  }
+
+  .analyzer-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 2.25rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  }
+  .analyzer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .form-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+  }
+  .analyzer-form input[type="text"],
+  .analyzer-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .analyzer-form input[type="text"]:focus,
+  .analyzer-form textarea:focus {
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 0 0 3px rgba(58, 61, 238, 0.1);
+  }
+
+  .channels-options-grid {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+  }
+  .channel-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .channel-chip input[type="radio"] {
+    accent-color: var(--color-primary-blue);
+  }
+  .channel-chip:hover {
+    border-color: var(--color-primary-blue);
+    background: #ffffff;
+  }
+
+  .form-submit-box {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .btn-analyze {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--color-primary-blue);
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(58, 61, 238, 0.25);
+    transition: all 0.2s;
+  }
+  .btn-analyze:hover {
+    background: #2f32c9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(58, 61, 238, 0.35);
+  }
+
+  /* Results Card */
+  .results-card {
+    background: #ffffff;
+    border: 2px solid var(--color-primary-green);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 16px 40px rgba(21, 198, 59, 0.1);
+    animation: fadeInResults 0.5s ease-out;
+  }
+  .results-card.hidden { display: none; }
+  @keyframes fadeInResults {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .results-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(21, 198, 59, 0.12);
+    color: var(--color-primary-green);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .results-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+  }
+  .results-summary-text {
+    font-size: 1rem;
+    color: var(--color-text-medium);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .opportunity-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+  .opportunity-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+  }
+  .opp-number {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-primary-blue);
+    opacity: 0.3;
+    margin-bottom: 0.25rem;
+  }
+  .opp-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+  }
+  .opp-desc {
+    font-size: 0.88rem;
+    color: var(--color-text-medium);
+    line-height: 1.45;
+  }
+
+  .results-next-step-box {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .next-step-content h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.35rem;
+    color: #ffffff;
+  }
+  .next-step-content p {
+    font-size: 0.92rem;
+    color: #cbd5e1;
+    line-height: 1.45;
+  }
+  .btn-quote-conversion {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--color-primary-green);
+    color: #ffffff;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 6px 18px rgba(21, 198, 59, 0.3);
+    transition: all 0.2s;
+  }
+  .btn-quote-conversion:hover {
+    background: #12ad33;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .results-next-step-box {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .btn-quote-conversion {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('analyzer-form');
+    const resultsCard = document.getElementById('analysis-results-card');
+    const formCard = document.getElementById('analyzer-form-card');
+    const summaryIntro = document.getElementById('results-summary-intro');
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const businessTypeInput = document.getElementById('input-business-type') as HTMLInputElement;
+        const channelRadio = document.querySelector('input[name="channel"]:checked') as HTMLInputElement;
+
+        const businessName = businessTypeInput?.value || 'tu negocio';
+        const channelName = channelRadio?.value || 'WhatsApp';
+
+        if (summaryIntro) {
+          summaryIntro.textContent = `Basado en tus respuestas para tu negocio (${businessName}), identificamos 4 pilares clave para automatizar las consultas recibidas por ${channelName}:`;
+        }
+
+        // Show Results Card with Smooth Scroll
+        if (resultsCard) {
+          resultsCard.classList.remove('hidden');
+          resultsCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  });
+</script>
