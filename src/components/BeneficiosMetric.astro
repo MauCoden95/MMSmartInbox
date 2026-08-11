@@ -1,0 +1,185 @@
+---
+// src/components/BeneficiosMetric.astro
+---
+<div id="beneficios" class="section-card card-beneficios" data-aos="fade-up">
+  <div class="section-header">
+    <h2>Beneficios</h2>
+    <p class="subtitle">Resultados medibles desde el primer mes</p>
+  </div>
+
+  <div class="metrics-grid">
+    <!-- Metric 1: Ahorro de Tiempo -->
+    <div class="metric-card">
+      <div class="metric-head">
+        <h3>Ahorro de Tiempo</h3>
+        <span class="pill-badge">+65%</span>
+      </div>
+      <div class="bar-chart-visual">
+        <div class="chart-bar" style="height: 35%;"></div>
+        <div class="chart-bar" style="height: 45%;"></div>
+        <div class="chart-bar" style="height: 60%;"></div>
+        <div class="chart-bar highlight-bar" style="height: 90%;"></div>
+        <div class="chart-bar highlight-bar" style="height: 100%;"></div>
+      </div>
+    </div>
+
+    <!-- Metric 2: Velocidad -->
+    <div class="metric-card">
+      <div class="metric-head">
+        <h3>Velocidad</h3>
+        <span class="pill-badge">+180%</span>
+      </div>
+      <div class="gauge-visual">
+        <svg viewBox="0 0 100 60" class="gauge-svg">
+          <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round" />
+          <path d="M 10 50 A 40 40 0 0 1 82 25" fill="none" stroke="url(#gaugeGrad)" stroke-width="10" stroke-linecap="round" />
+          <polygon points="48,48 52,48 70,20" fill="#0b2591" />
+          <circle cx="50" cy="50" r="5" fill="#0b2591" />
+          <defs>
+            <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#15c63b" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="gauge-value">100% Max</span>
+      </div>
+    </div>
+
+    <!-- Metric 3: Integración -->
+    <div class="metric-card">
+      <div class="metric-head">
+        <h3>Integración</h3>
+        <span class="pill-badge">+100%</span>
+      </div>
+      <div class="bar-chart-visual">
+        <div class="chart-bar green-bar" style="height: 50%;"></div>
+        <div class="chart-bar green-bar" style="height: 70%;"></div>
+        <div class="chart-bar green-bar" style="height: 85%;"></div>
+        <div class="chart-bar green-bar highlight-green" style="height: 95%;"></div>
+        <div class="chart-bar green-bar highlight-green" style="height: 100%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+  }
+
+  .section-header .subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .metric-card {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 1.2rem;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .metric-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+  }
+
+  .metric-head h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .pill-badge {
+    background: #dcfce7;
+    color: #15c63b;
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    border: 1px solid rgba(21, 198, 59, 0.2);
+  }
+
+  .bar-chart-visual {
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .chart-bar {
+    flex: 1;
+    background: #cbd5e1;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+  }
+
+  .highlight-bar {
+    background: #3b82f6;
+  }
+
+  .green-bar {
+    background: #a7f3d0;
+  }
+
+  .highlight-green {
+    background: #15c63b;
+  }
+
+  .gauge-visual {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .gauge-svg {
+    width: 110px;
+    height: 60px;
+  }
+
+  .gauge-value {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

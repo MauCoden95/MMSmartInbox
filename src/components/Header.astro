@@ -3,22 +3,23 @@
 ---
 <div class="header-wrapper" id="header-wrapper">
   <header class="header">
-    <a href="#" class="logo">
+    <a href="/" class="logo">
       <img src="/images/Logo.png" alt="MM SmartInbox" />
     </a>
     <nav class="nav" id="nav-menu">
-      <a href="/">Inicio</a>
-      <a href="/#nosotros">Nosotros</a>
-      <a href="/#como-funciona">Cómo funciona</a>
-      <a href="/#beneficios">Beneficios</a>
-      <a href="/#testimonios">Testimonios</a>
+      <a href="/#inicio">Inicio</a>
+      <a href="/#soluciones">Soluciones</a>
+      <a href="/#agente-ia">Agentes de IA</a>
+      <a href="/#automatizaciones">Automatizaciones</a>
+      <a href="/#casos-de-uso">Casos de uso</a>
+      <a href="/#como-trabajamos">Cómo trabajamos</a>
       <a href="/#precios">Precios</a>
       <div class="mobile-cta">
-        <button class="btn btn-primary" data-open-quote>Solicitar cotización</button>
+        <button class="btn btn-navy" data-open-quote>Solicitar cotización</button>
       </div>
     </nav>
     <div class="actions">
-      <button class="btn btn-primary" data-open-quote>Solicitar cotización</button>
+      <button class="btn btn-navy" data-open-quote>Solicitar cotización</button>
     </div>
     <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -63,99 +64,82 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 0 0 0 transparent;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f1f5f9;
   }
   .header-wrapper.scrolled {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
   }
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
-    max-width: 1200px;
-    width: 90%;
+    padding: 0.9rem 0;
+    max-width: 1280px;
+    width: 92%;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
   }
   .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
   .logo img {
-    height: 80px;
+    height: 52px;
     width: auto;
     object-fit: contain;
   }
   .nav {
     display: flex;
-    gap: 2.5rem;
+    align-items: center;
+    gap: 1.8rem;
   }
   .nav a {
     text-decoration: none;
-    color: var(--color-primary-blue);
+    color: #1e293b;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: opacity 0.2s;
+    font-size: 0.92rem;
+    transition: color 0.2s ease;
+    position: relative;
   }
   .nav a:hover {
-    opacity: 0.8;
-  }
-
-  @media (max-width: 1100px) and (min-width: 769px) {
-    .header {
-      padding: 1rem 0;
-    }
-    .logo img {
-      height: 64px;
-    }
-    .nav {
-      gap: 1.4rem;
-    }
-    .nav a {
-      font-size: 0.85rem;
-    }
-    .btn.btn-primary {
-      padding: 0.5rem 1rem;
-      font-size: 0.85rem;
-    }
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+    color: #0b2591;
   }
   .actions {
     display: flex;
+    align-items: center;
   }
-  .btn.btn-primary {
-    background-color: var(--color-primary-green);
+  .btn.btn-navy {
+    background-color: #0b2591;
     color: white;
-    padding: 0.6rem 1.4rem;
+    padding: 0.65rem 1.4rem;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color 0.2s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(21, 198, 59, 0.2);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(11, 37, 145, 0.25);
     border: none;
     cursor: pointer;
     font-family: inherit;
+    letter-spacing: -0.2px;
   }
-  .btn.btn-primary:hover {
-    background-color: #12ad33;
-    transform: translateY(-1px);
+  .btn.btn-navy:hover {
+    background-color: #061868;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(11, 37, 145, 0.35);
   }
   
   .mobile-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--color-primary-blue);
+    color: #0b2591;
     cursor: pointer;
     padding: 0.5rem;
   }
@@ -164,18 +148,37 @@
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1180px) and (min-width: 901px) {
+    .header {
+      padding: 0.8rem 0;
+    }
+    .logo img {
+      height: 44px;
+    }
+    .nav {
+      gap: 1.1rem;
+    }
+    .nav a {
+      font-size: 0.84rem;
+    }
+    .btn.btn-navy {
+      padding: 0.55rem 1rem;
+      font-size: 0.82rem;
+    }
+  }
+
+  @media (max-width: 900px) {
     .actions {
       display: none;
     }
     .logo img {
-      height: 60px;
+      height: 44px;
     }
     .mobile-toggle {
       display: block;
     }
     .header {
-      padding: 1rem 0;
+      padding: 0.8rem 0;
     }
     .nav {
       position: absolute;
@@ -186,7 +189,7 @@
       flex-direction: column;
       gap: 0;
       padding: 0;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: clip-path 0.3s ease-in-out;
     }
@@ -195,14 +198,14 @@
       border-top: 1px solid #f1f5f9;
     }
     .nav a:not(.btn) {
-      padding: 1.25rem 2rem;
+      padding: 1rem 1.8rem;
       border-bottom: 1px solid #f1f5f9;
       display: block;
       width: 100%;
     }
     .mobile-cta {
       display: block;
-      padding: 1.5rem 2rem;
+      padding: 1.2rem 1.8rem;
     }
     .mobile-cta .btn {
       display: block;
