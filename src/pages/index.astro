@@ -1,20 +1,87 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro';
-import AboutUs from '../components/AboutUs.astro';
-import HowItWorks from '../components/HowItWorks.astro';
-import Benefits from '../components/Benefits.astro';
-import Testimonials from '../components/Testimonials.astro';
+import ProblemasReales from '../components/ProblemasReales.astro';
+import AgenteIAWorkflow from '../components/AgenteIAWorkflow.astro';
+import PropuestaValor from '../components/PropuestaValor.astro';
+import ChatbotVsAgente from '../components/ChatbotVsAgente.astro';
+import BeneficiosMetric from '../components/BeneficiosMetric.astro';
+import ComoTrabajamos from '../components/ComoTrabajamos.astro';
+import SolucionesCards from '../components/SolucionesCards.astro';
+import AutomatizacionesWorkflow from '../components/AutomatizacionesWorkflow.astro';
+import CasosDeUsoGrid from '../components/CasosDeUsoGrid.astro';
 import Pricing from '../components/Pricing.astro';
+import CtaBanner from '../components/CtaBanner.astro';
 import DemoModal from '../components/DemoModal.astro';
 ---
 
-<Layout>
+<Layout title="MM SmartInbox | Agentes de IA y Automatización Inteligente">
 	<Banner />
-	<AboutUs />
-	<HowItWorks />
-	<Benefits />
-	<Testimonials />
-	<Pricing />
+
+	<main class="dashboard-wrapper">
+		<div class="dashboard-grid">
+			<!-- Column 1 (Left) -->
+			<div class="grid-column">
+				<ProblemasReales />
+				<AgenteIAWorkflow />
+				<CasosDeUsoGrid />
+			</div>
+
+			<!-- Column 2 (Center) -->
+			<div class="grid-column">
+				<PropuestaValor />
+				<ChatbotVsAgente />
+				<BeneficiosMetric />
+				<ComoTrabajamos />
+			</div>
+
+			<!-- Column 3 (Right) -->
+			<div class="grid-column">
+				<SolucionesCards />
+				<AutomatizacionesWorkflow />
+				<CtaBanner />
+			</div>
+		</div>
+
+		<!-- Pricing Section (Precios) retained intact as requested -->
+		<div class="pricing-wrapper">
+			<Pricing />
+		</div>
+	</main>
+
 	<DemoModal />
 </Layout>
+
+<style>
+	.dashboard-wrapper {
+		max-width: 1400px;
+		width: 94%;
+		margin: 0 auto;
+		padding: 2rem 0 4rem;
+	}
+
+	.dashboard-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+	.grid-column {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.pricing-wrapper {
+		margin-top: 3.5rem;
+	}
+
+	@media (max-width: 1280px) {
+		.dashboard-grid {
+			grid-template-columns: 1fr;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+	}
+</style>

@@ -1,0 +1,181 @@
+---
+// src/components/SolucionesCards.astro
+---
+<div id="soluciones" class="section-card card-soluciones" data-aos="fade-up" data-aos-delay="100">
+  <div class="section-header">
+    <h2>Soluciones</h2>
+    <p class="subtitle">Tecnología de vanguardia para escalar tus operaciones</p>
+  </div>
+
+  <div class="soluciones-grid">
+    <!-- Card 1: IA Aplicada (Blue Card) -->
+    <div class="solucion-card bg-navy">
+      <div class="card-tag">01</div>
+      <h3>Inteligencia Artificial Aplicada</h3>
+      <p>Modelos de lenguaje avanzados entrenados con el conocimiento específico de tu empresa.</p>
+
+      <div class="card-visual">
+        <div class="visual-bot-box">
+          <img src="/images/Robot.png" alt="IA Aplicada" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Automatización de Procesos (Green Card) -->
+    <div class="solucion-card bg-emerald-card">
+      <div class="card-tag tag-green">02</div>
+      <h3>Automatización de Procesos</h3>
+      <p>Conexión directa entre WhatsApp, CRM, Email, Calendario y Sistemas Internos sin fisuras.</p>
+
+      <div class="card-visual">
+        <div class="workflow-diagram-mini">
+          <div class="mini-node">CRM</div>
+          <span class="mini-arrow">➔</span>
+          <div class="mini-node node-active">IA Bot</div>
+          <span class="mini-arrow">➔</span>
+          <div class="mini-node">Ventas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.2rem 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+  }
+
+  .section-header .subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .soluciones-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .solucion-card {
+    border-radius: 16px;
+    padding: 1.8rem 1.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .solucion-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .bg-navy {
+    background: linear-gradient(135deg, #0b2591 0%, #061868 100%);
+  }
+
+  .bg-emerald-card {
+    background: linear-gradient(135deg, #15c63b 0%, #0f9d2a 100%);
+  }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    width: fit-content;
+    margin-bottom: 0.8rem;
+  }
+
+  .solucion-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+  }
+
+  .solucion-card p {
+    font-size: 0.84rem;
+    opacity: 0.9;
+    line-height: 1.45;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-visual {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .visual-bot-box {
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+
+  .visual-bot-box img {
+    width: 50px;
+    height: auto;
+  }
+
+  .workflow-diagram-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+  }
+
+  .mini-node {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .node-active {
+    background: #ffffff;
+    color: #0f9d2a;
+  }
+
+  .mini-arrow {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .soluciones-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

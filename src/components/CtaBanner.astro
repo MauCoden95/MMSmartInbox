@@ -1,0 +1,134 @@
+---
+// src/components/CtaBanner.astro
+---
+<div class="cta-banner-container" data-aos="fade-up">
+  <div class="cta-card">
+    <div class="cta-content">
+      <h2>Descubrí qué podría automatizar tu empresa.</h2>
+      <p>Analizamos tus procesos actuales sin costo y te mostramos el potencial real de IA para tu negocio.</p>
+      <button class="btn btn-green" data-open-quote>
+        Analizar mi empresa
+      </button>
+    </div>
+
+    <div class="cta-robot-visual">
+      <div class="glow-bg"></div>
+      <img src="/images/Robot.png" alt="Agente de IA MM SmartInbox" class="robot-cta" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .cta-banner-container {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, #071548 0%, #0b2591 100%);
+    border-radius: 20px;
+    padding: 3rem 3.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(7, 21, 72, 0.25);
+  }
+
+  .cta-content {
+    max-width: 550px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-content h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.8px;
+  }
+
+  .cta-content p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+  }
+
+  .btn-green {
+    background-color: #15c63b;
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 18px rgba(21, 198, 59, 0.35);
+    font-family: inherit;
+  }
+
+  .btn-green:hover {
+    background-color: #12ad33;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(21, 198, 59, 0.45);
+  }
+
+  .cta-robot-visual {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .glow-bg {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(21, 198, 59, 0.3) 0%, transparent 70%);
+    filter: blur(15px);
+  }
+
+  .robot-cta {
+    width: 160px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    animation: floatCta 3.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes floatCta {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+  }
+
+  @media (max-width: 900px) {
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem 1.8rem;
+    }
+    .cta-content {
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .cta-content h2 {
+      font-size: 1.8rem;
+    }
+    .cta-robot-visual {
+      width: 150px;
+      height: 140px;
+    }
+    .robot-cta {
+      width: 130px;
+    }
+  }
+</style>

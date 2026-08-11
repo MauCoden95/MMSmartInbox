@@ -1,0 +1,137 @@
+---
+// src/components/ChatbotVsAgente.astro
+---
+<div id="chatbot-vs-agente" class="section-card card-comparison" data-aos="fade-up" data-aos-delay="100">
+  <div class="section-header">
+    <h2>Chatbot vs Agente de IA</h2>
+    <p class="subtitle">Implementamos IA que opera con verdaderas capacidades</p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th class="col-chatbot">Chatbot Tradicional</th>
+          <th class="col-agente">Agente de IA (MM SmartInbox)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-chatbot">Proactivo chatbot pasivo / menú fijo</td>
+          <td class="col-agente">Prescriptivo automatizado e inteligente</td>
+        </tr>
+        <tr>
+          <td class="col-chatbot">Respuestas preprogramadas rígidas</td>
+          <td class="col-agente">Análisis continuo del CRM y contexto</td>
+        </tr>
+        <tr>
+          <td class="col-chatbot">Capacidad de respuesta limitada</td>
+          <td class="col-agente">Capacidades multitarea y autónomas</td>
+        </tr>
+        <tr>
+          <td class="col-chatbot">No interactúa con bases de datos</td>
+          <td class="col-agente">Prescribe y actualiza registros en CRM</td>
+        </tr>
+        <tr>
+          <td class="col-chatbot">Redirige pero no resuelve</td>
+          <td class="col-agente">Agenda reuniones y procesa solicitudes</td>
+        </tr>
+        <tr>
+          <td class="col-chatbot">Sin seguimiento ni proactividad</td>
+          <td class="col-agente">Proactivo y ejecuta seguimiento continuo</td>
+        </tr>
+        <tr>
+          <td class="col-chatbot">Aislado de la operación interna</td>
+          <td class="col-agente">Integración fluida con cualquier sistema de IA</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .section-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+  }
+
+  .section-header .subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.88rem;
+  }
+
+  .comparison-table th {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+  }
+
+  .col-chatbot {
+    background-color: #3a3dee;
+    width: 48%;
+  }
+
+  .col-agente {
+    background-color: #15c63b;
+    width: 52%;
+  }
+
+  .comparison-table td {
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+    line-height: 1.45;
+  }
+
+  .comparison-table td.col-chatbot {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 500;
+  }
+
+  .comparison-table td.col-agente {
+    background-color: #f0fdf4;
+    color: #14532d;
+    font-weight: 700;
+  }
+
+  .comparison-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  @media (max-width: 640px) {
+    .comparison-table th, .comparison-table td {
+      padding: 0.75rem 0.85rem;
+      font-size: 0.8rem;
+    }
+  }
+</style>

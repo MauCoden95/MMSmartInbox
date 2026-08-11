@@ -1,0 +1,157 @@
+---
+// src/components/ComoTrabajamos.astro
+---
+<div id="como-trabajamos" class="section-card card-como-trabajamos" data-aos="fade-up">
+  <div class="section-header">
+    <h2>Cómo Trabajamos</h2>
+    <p class="subtitle">Implementación ágil en 4 etapas estratégicas</p>
+  </div>
+
+  <div class="steps-container">
+    <!-- Center Robot Illustration -->
+    <div class="center-robot">
+      <img src="/images/Robot.png" alt="MM SmartInbox Robot" />
+    </div>
+
+    <!-- 4 Step Grid -->
+    <div class="steps-grid">
+      <!-- Step 01 -->
+      <div class="step-card">
+        <span class="step-num">01</span>
+        <h3>Analizamos</h3>
+        <p>Revisamos tu proceso actual e identificamos los puntos de automatización clave.</p>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="step-card">
+        <span class="step-num">02</span>
+        <h3>Diseñamos</h3>
+        <p>Estructuramos el flujo de trabajo del agente de IA a la medida de tu empresa.</p>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="step-card">
+        <span class="step-num">03</span>
+        <h3>Automatizamos</h3>
+        <p>Conectamos la infraestructura: WhatsApp, CRM, email y bases de datos.</p>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="step-card">
+        <span class="step-num">04</span>
+        <h3>Optimizamos</h3>
+        <p>Medimos la precisión, analizamos métricas y refinamos las respuestas continuamente.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.2rem 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+  }
+
+  .section-header .subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .steps-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .center-robot {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(11, 37, 145, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .center-robot img {
+    width: 90px;
+    height: auto;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
+    animation: floatSmooth 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes floatSmooth {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .step-card {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 1.2rem;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .step-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1;
+  }
+
+  .step-num {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #0b2591;
+    background: #dbeafe;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-card h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+  }
+
+  .step-card p {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 768px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
