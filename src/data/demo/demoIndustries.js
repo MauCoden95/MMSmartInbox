@@ -40,7 +40,7 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'Excelente decisión. Para tasar tu propiedad en Recoleta, nuestro equipo analiza precio por m² de operaciones recientes en la zona, estado de conservación y amenities.\n\nActualmente el mercado en Recoleta muestra valores entre USD 2.800 y USD 4.200/m² para departamentos de categoría. ¿Me podés indicar la superficie aproximada y la cantidad de ambientes para darte una estimación inicial?',
+        responseText: 'Excelente decisión. Para tasar tu propiedad en Recoleta, nuestro equipo realiza un análisis completo basado en:\n\n📊 Precio por m² de operaciones cerradas en los últimos 90 días\n🏗️ Estado de conservación y antigüedad del edificio\n🏊 Amenities disponibles: pileta, sum, gym, terraza\n📍 Ubicación exacta y piso con o sin ascensor\n\nActualmente el mercado en Recoleta registra valores entre USD 2.800 y USD 4.500/m² para departamentos en buen estado. Un depto de 60 m² puede estar en el rango de USD 168.000 — USD 270.000.\n\n¿Me podés indicar la superficie aproximada y la cantidad de ambientes para darte una tasación inicial más precisa?',
         steps: [
           { type: 'done', text: 'Intención detectada: Venta de propiedad' },
           { type: 'done', text: 'Zona: Recoleta (barrio premium)' },
@@ -60,7 +60,7 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'Sí, tenemos disponibilidad en alquileres temporarios en Zona Norte. Algunas opciones para el verano:\n\n• Casa 4 amb con pileta — Nordelta, $850.000/mes\n• Casa 3 amb en barrio cerrado — San Isidro, $620.000/mes\n• Chalet 4 amb — Tigre Delta, $540.000/mes\n\nTodos los contratos son por temporada (diciembre a marzo). ¿Para cuántas personas y qué fechas te interesan?',
+        responseText: 'Sí, contamos con un portafolio activo de alquileres temporarios en Zona Norte para la temporada de verano:\n\n🏡 Casa 4 amb con pileta y quincho — Nordelta, $950.000/mes\n   (Barrio cerrado, seguridad 24hs, acceso al lago)\n🏘️ Casa 3 amb en barrio cerrado — San Isidro, $680.000/mes\n   (Jardín propio, pileta comunitaria, a 10 min del tren)\n🛠️ Chalet frente al río — Tigre Delta, $590.000/mes\n   (Embarcadero propio, total privacidad, acceso en lancha)\n\nTodos los contratos son por temporada (diciembre a marzo). Incluyen expensas y servicios básicos.\n\n¿Para cuántas personas y qué fechas exactas te interesan para hacer la reserva?',
         steps: [
           { type: 'done', text: 'Tipo: Alquiler temporal' },
           { type: 'done', text: 'Zona: Norte (GBA Norte)' },
@@ -131,7 +131,7 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'Claro. En Casa Norte tenemos varias opciones para cada necesidad:\n\nVegetarianas: Risotto de hongos silvestres, Ravioles de ricotta y espinaca, Ensalada de quinoa con vegetales asados.\n\nSin TACC (gluten free): Brochette de pollo, Bife de chorizo con guarnición, Tabla de quesos y fiambres.\n\nTodos nuestros platos se preparan con ingredientes frescos y podemos adaptar salsas y guarniciones. ¿Querés hacer una reserva para alguna fecha especial?',
+        responseText: 'Por supuesto. En Casa Norte tenemos opciones pensadas para cada necesidad dietaria:\n\n🌿 Menú Vegetariano:\n• Risotto de hongos silvestres con parmesano y trufa\n• Ravioles de ricotta y espinaca con salsa de tomates asados\n• Ensalada de quinoa, vegetales grillados y aderezo de limón\n• Milanesa de berenjena con puré rústico\n\n🌾 Sin TACC (certificado gluten free):\n• Brochette de pollo con papas al romero\n• Bife de chorizo 300g con ensalada caesar y papas fritas\n• Tabla de quesos y fiambres de primera selección\n• Volcán de chocolate (postre SIN TACC)\n\nTodos nuestros platos se elaboran con ingredientes frescos del día. Si tenés alguna alergia adicional, avisános al reservar para coordinar con cocina. ¿Reservamos para cuándo?',
         steps: [
           { type: 'done', text: 'Consulta: Opciones dietarias especiales' },
           { type: 'done', text: 'Categorías: Vegetariano + Sin TACC' },
@@ -150,7 +150,7 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'Los domingos al mediodía Casa Norte abre con el siguiente horario:\n\nAlmuerzo: 12:00 a 15:30 hs\nMerienda: 16:00 a 18:00 hs\n\nLos domingos tenemos menú especial de brunch de 12:00 a 14:00 hs con opción buffet. Recomendamos reservar con anticipación ya que suele haber alta demanda. ¿Querés hacer una reserva?',
+        responseText: 'Casa Norte atiende los domingos con el siguiente esquema:\n\n🍳 Brunch Especial de Domingo: 11:30 a 14:00 hs\n   (Buffet de entrada + plato principal + postre + bebida: $12.500/persona)\n\n🍽️ Almuerzo tradicional: 12:00 a 15:30 hs\n   (Carta completa con todos los platos del menú de mediodía)\n\n☕ Merienda y café: 16:00 a 18:30 hs\n   (Pastería artesanal, tortas y sandwiches especiales)\n\n⚠️ Los domingos suelen estar completos con 3-4 días de anticipación, especialmente el brunch. ¿Querés hacer una reserva para el próximo domingo?',
         steps: [
           { type: 'done', text: 'Consulta: Horarios de atención' },
           { type: 'done', text: 'Día consultado: Domingo' },
@@ -216,41 +216,41 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'El Laboratorio de Centro Salud Integral atiende para extracciones de sangre sin turno en los siguientes horarios:\n\nLunes a Viernes: 7:00 a 10:00 hs (extracciones en ayunas)\nSábados: 7:30 a 9:30 hs\n\nImportante: Para análisis hormonales o cultivos especiales sí se requiere turno previo. ¿Necesitás saber si tu análisis requiere ayuno o turno?',
+        responseText: 'El Laboratorio de Centro Salud Integral atiende extracciones de sangre sin turno en los siguientes horarios:\n\n🔬 Sin turno previo (ayunas):\n• Lunes a Viernes: 07:00 a 10:00 hs\n• Sábados: 07:30 a 09:30 hs\n\n📋 Con turno previo obligatorio:\n• Análisis hormonales (cortisol, tiroides, prolactina)\n• Cultivos de orina o esputo\n• Curva de glucemia\n• Análisis de 24 horas\n\n⚠️ Importante: En ayunas significa al menos 8 horas sin comer ni tomar nada (solo agua). Podés venir directamente con la orden médica.\n\n¿Necesitás saber si tu análisis específico requiere turno o ayuno especial?',
         steps: [
-          { type: 'done', text: 'Consulta: Horarios de laboratorio' },
-          { type: 'done', text: 'Tipo: Análisis sin turno previo' },
-          { type: 'done', text: 'Consultando agenda del laboratorio' },
-          { type: 'active', text: 'Generando respuesta con horarios' }
+          { type: 'done', text: 'Consulta: Horarios de laboratorio clínico' },
+          { type: 'done', text: 'Tipo: Extracciones sin turno previo' },
+          { type: 'done', text: 'Agenda del laboratorio consultada' },
+          { type: 'done', text: 'Requisitos de ayuno y turno verificados' },
+          { type: 'active', text: 'Generando información completa de laboratorio' }
         ],
         crmRecord: {
           name: 'Consulta Laboratorio',
           phone: 'Sin datos aún',
-          interest: 'Extracción de sangre sin turno',
-          details: 'Consulta informativa de horarios',
+          interest: 'Extracción de sangre y análisis clínicos',
+          details: 'Consulta informativa de horarios y requisitos',
           status: 'Consulta Informativa',
-          nextStep: 'Verificar si requiere turno según tipo de análisis',
+          nextStep: 'Verificar tipo de análisis y necesidad de turno',
           source: 'Agente IA Salud'
         }
       },
       {
-        text: 'Claro, puedo ayudarte a reprogramar tu turno de Cardiología del jueves. Tengo estos turnos disponibles:\n\n• Lunes próximo — 9:00 hs con Dr. Marcelo Torres\n• Miércoles próximo — 14:30 hs con Dr. Marcelo Torres\n• Viernes próximo — 11:00 hs con Dra. Patricia Vega\n\n¿Cuál de estas opciones te viene mejor? El turno anterior queda cancelado automáticamente.',
+        responseText: 'Claro, puedo gestionar la reprogramación de tu turno de Cardiología del jueves ahora mismo.\n\nTurnos disponibles con el mismo equipo médico:\n\n📅 Lunes próximo — 09:00 hs | Dr. Marcelo Torres (Consultorio 7)\n📅 Miércoles próximo — 14:30 hs | Dr. Marcelo Torres (Consultorio 7)\n📅 Viernes próximo — 11:00 hs | Dra. Patricia Vega (Consultorio 9)\n\nEl turno del jueves queda cancelado automáticamente al confirmar el nuevo. Recibirás la confirmación por WhatsApp con los datos y un recordatorio 24hs antes.\n\n¿Cuál de estos horarios te queda mejor?',
         steps: [
-          { type: 'done', text: 'Acción: Cancelar / Reprogramar turno' },
-          { type: 'done', text: 'Especialidad: Cardiología' },
-          { type: 'done', text: 'Turno actual: Jueves (identificado)' },
-          { type: 'done', text: 'Consultando disponibilidad para reprogramar' },
+          { type: 'done', text: 'Acción: Reprogramar turno de Cardiología' },
+          { type: 'done', text: 'Turno actual del jueves identificado en sistema' },
+          { type: 'done', text: 'Agenda de Cardiología consultada' },
           { type: 'done', text: '3 opciones de reprogramación disponibles' },
-          { type: 'active', text: 'Gestionando cancelación del turno anterior' },
-          { type: 'active', text: 'Esperando confirmación del nuevo turno' }
+          { type: 'active', text: 'Cancelando turno del jueves en sistema' },
+          { type: 'active', text: 'Esperando confirmación del nuevo horario' }
         ],
         crmRecord: {
-          name: 'Paciente Cardiología',
+          name: 'Paciente — Reprogramación Cardiología',
           phone: '+54 9 11 0000-0000',
-          interest: 'Reprogramar turno Cardiología',
-          details: 'Turno jueves cancelado • Pendiente nuevo turno',
+          interest: 'Reprogramar turno de Cardiología',
+          details: 'Turno jueves cancelado • Nuevo turno pendiente de confirmación',
           status: 'Reprogramación en Curso',
-          nextStep: 'Confirmar nuevo horario seleccionado',
+          nextStep: 'Confirmar nuevo horario y enviar recordatorio',
           source: 'Agente IA Salud'
         }
       }
@@ -303,38 +303,39 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'Nuestro desayuno buffet incluye:\n\nEstación de panificados: medialunas, tostadas, facturas y pan artesanal\nEstación fría: yogures, frutas frescas, cereales y jugos naturales\nEstación caliente: huevos revueltos, panceta, salchichas y quesos\nBebidas: café, té, leche y jugos de naranja exprimido\n\nHorario del desayuno:\n• Lunes a viernes: 07:00 a 10:30 hs\n• Sábados y domingos: 07:30 a 11:30 hs\n\n¿Necesitás alguna opción sin TACC o vegana? Las preparamos con aviso previo.',
+        responseText: 'Nuestro desayuno buffet es uno de los más completos de la zona. Incluye:\n\n🥐 Estación de Panificados:\nMedialunas, facturas variadas, pan artesanal de masa madre, tostadas y brioches\n\n🍓 Estación Fría:\nYogures griegos, frutas frescas de estación, granola, cereales y jugos naturales\n\n🍳 Estación Caliente:\nHuevos revueltos, omelette personalizado, panceta ahumada, salchichas y queso fundido\n\n☕ Bebidas:\nCafé de especialidad, té de hierbas, leche entera/descremada y jugo de naranja recién exprimido\n\n⏰ Horarios:\n• Lunes a Viernes: 07:00 — 10:30 hs\n• Sábados y Domingos: 07:30 — 11:30 hs\n\nLas opciones sin TACC y veganas se preparan con aviso previo (incluidas sin cargo extra en Suites). ¿Necesitás alguna adaptación?',
         steps: [
-          { type: 'done', text: 'Consulta: Servicio de desayuno buffet' },
-          { type: 'done', text: 'Consultando descripción del servicio' },
-          { type: 'active', text: 'Generando respuesta con detalle completo' }
+          { type: 'done', text: 'Consulta: Desayuno buffet incluido' },
+          { type: 'done', text: 'Detalle del menú de desayuno consultado' },
+          { type: 'done', text: 'Horarios y opciones especiales verificadas' },
+          { type: 'active', text: 'Generando descripción completa del buffet' }
         ],
         crmRecord: {
-          name: 'Consulta Desayuno',
+          name: 'Consulta Desayuno Buffet',
           phone: 'Sin datos aún',
-          interest: 'Información sobre desayuno buffet',
-          details: 'Consulta de servicios incluidos',
-          status: 'Consulta Informativa',
-          nextStep: 'Ofrecer reserva de alojamiento',
+          interest: 'Información del desayuno incluido',
+          details: 'Evaluando servicios antes de reservar',
+          status: 'Pre-Reserva Activa',
+          nextStep: 'Ofrecer reserva con servicio de desayuno incluido',
           source: 'Agente IA Hotel'
         }
       },
       {
-        text: 'Sí, el Hotel Central Plaza cuenta con ambos servicios:\n\nEstacionamiento privado: Disponible 24hs, cubierto y con cámaras de seguridad. Tarifa: USD 15/día para huéspedes (incluido en suites superiores).\n\nTraslado al aeropuerto: Servicio de transfer privado disponible a cualquier hora. Tarifas:\n• Ezeiza (EZE): USD 45 por vehículo (hasta 4 pasajeros)\n• Aeroparque (AEP): USD 25 por vehículo\n\nLos traslados se reservan con 12hs de anticipación. ¿Querés incluirlo en tu reserva?',
+        responseText: 'Sí, el Hotel Central Plaza cuenta con ambos servicios disponibles para todos los huéspedes:\n\n🚗 Estacionamiento Privado:\n• Disponible 24 horas, cubierto y con cámaras de seguridad HD\n• Tarifa: USD 15/día para habitaciones estándar y deluxe\n• Incluido sin cargo en Suite Executive y Presidencial\n• Capacidad limitada — Recomendamos reservarlo junto con la habitación\n\n✈️ Transfer al Aeropuerto:\nServicio de traslado privado disponible a cualquier hora del día o la noche:\n• Ezeiza (EZE): USD 48 por vehículo (hasta 4 pasajeros)\n• Aeroparque Jorge Newbery (AEP): USD 28 por vehículo\n• Opción van para grupos de 5 a 8 personas: USD 70\n\nLos traslados se coordinan con 12hs de anticipación. ¿Querés agregar alguno de estos servicios a tu reserva?',
         steps: [
-          { type: 'done', text: 'Consulta: Servicios adicionales' },
-          { type: 'done', text: 'Servicio 1: Estacionamiento privado' },
-          { type: 'done', text: 'Servicio 2: Traslado al aeropuerto' },
-          { type: 'done', text: 'Consultando tarifas y disponibilidad' },
+          { type: 'done', text: 'Consulta: Estacionamiento y transfer' },
+          { type: 'done', text: 'Tarifas de estacionamiento verificadas' },
+          { type: 'done', text: 'Tarifas de transfer al aeropuerto consultadas' },
+          { type: 'done', text: 'Disponibilidad de ambos servicios confirmada' },
           { type: 'active', text: 'Generando cotización de servicios adicionales' }
         ],
         crmRecord: {
-          name: 'Consulta Servicios',
+          name: 'Consulta Servicios Adicionales',
           phone: 'Sin datos aún',
           interest: 'Estacionamiento + Transfer aeropuerto',
-          details: 'Interés en servicios adicionales del hotel',
+          details: 'Interés en agregar servicios a su estadía',
           status: 'Consulta Activa',
-          nextStep: 'Ofrecer reserva con servicios incluidos',
+          nextStep: 'Agregar servicios y cerrar reserva',
           source: 'Agente IA Hotel'
         }
       }
@@ -387,40 +388,39 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'El servicio de envío express a Córdoba Capital tiene los siguientes tiempos y tarifas:\n\nEnvío Express (24-48 hs hábiles): $8.500 flat\nEnvío Estándar (3-5 días hábiles): $4.200 flat\nRetiro en sucursal correo: Gratis (5-7 días)\n\nPara pedidos superiores a $500.000 el envío estándar es gratis.\n\nTodos los envíos incluyen número de seguimiento en tiempo real y seguro de rotura. ¿Querés continuar con la compra?',
+        responseText: 'Las opciones de envío a Córdoba Capital para tu pedido son las siguientes:\n\n⚡ Envío Express (24-48 hs hábiles)\n   Costo: $8.500 flat | Tracking en tiempo real | Seguro incluido\n\n📦 Envío Estándar (3-5 días hábiles)\n   Costo: $4.200 flat | GRATIS en compras superiores a $500.000\n\n🏠 Retiro en sucursal de correo\n   Gratis (5-7 días hábiles)\n\n✅ Todos los envíos incluyen:\n• Número de seguimiento activado al momento del despacho\n• Seguro de rotura y pérdida sin cargo\n• Notificaciones por WhatsApp en cada etapa del envío\n\nPara el ProBook Creator 15" ($1.420.000) el envío estándar sería GRATIS. ¿Querés continuar con la compra?',
         steps: [
-          { type: 'done', text: 'Consulta: Tiempo y costo de envío' },
-          { type: 'done', text: 'Destino: Córdoba Capital' },
-          { type: 'done', text: 'Modalidad: Express' },
-          { type: 'done', text: 'Consultando tarifario logístico actualizado' },
+          { type: 'done', text: 'Consulta: Envío a Córdoba Capital' },
+          { type: 'done', text: 'Tarifario logístico actualizado consultado' },
+          { type: 'done', text: 'Producto califica para envío estándar gratuito' },
           { type: 'active', text: 'Generando opciones de envío disponibles' }
         ],
         crmRecord: {
-          name: 'Consulta Envío',
-          phone: 'Sin datos aún',
-          interest: 'Envío express a Córdoba Capital',
-          details: 'Consultó tiempos y costos de logística',
-          status: 'Pre-compra Activa',
-          nextStep: 'Ofrecer continuar con proceso de compra',
+          name: 'Lucas V. — Consulta de Envío',
+          phone: '+54 9 11 9988-3322',
+          interest: 'Envío del ProBook Creator a Córdoba Capital',
+          details: 'Califica para envío gratis — Alta intención de compra',
+          status: 'Pre-Compra Activa',
+          nextStep: 'Procesar compra con envío gratuito',
           source: 'Agente IA E-commerce'
         }
       },
       {
-        text: 'En Nova Store Tech trabajamos con los siguientes medios de pago en cuotas sin interés:\n\nTarjetas Visa y Mastercard (todos los bancos):\n• 3 cuotas sin interés en compras desde $50.000\n• 6 cuotas sin interés en compras desde $200.000\n• 12 cuotas sin interés en compras desde $500.000 (promoción vigente hasta fin de mes)\n\nAdemás aceptamos: Transferencia bancaria, Mercado Pago y MODO.\n\n¿Querés saber cuánto quedaría la cuota para alguno de nuestros productos?',
+        responseText: 'En Nova Store Tech tenemos las mejores condiciones de financiación del mercado:\n\n💳 Tarjetas Visa y Mastercard (todos los bancos):\n• 3 cuotas sin interés: Desde $50.000\n• 6 cuotas sin interés: Desde $200.000\n• 12 cuotas sin interés: Desde $500.000 ⭐ Promo vigente hasta fin de mes\n\n💡 Ejemplo para el ProBook Creator 15" ($1.420.000):\n→ 12 cuotas sin interés: $118.333/mes\n→ 6 cuotas sin interés: $236.667/mes\n→ 3 cuotas sin interés: $473.333/mes\n\n💰 Otros medios de pago:\n• Transferencia bancaria: 5% de descuento adicional ($1.349.000)\n• Mercado Pago: 3 cuotas sin interés\n• MODO y Débito inmediato\n\n¿Querés que te prepare el link de pago con la modalidad que más te conviene?',
         steps: [
-          { type: 'done', text: 'Consulta: Medios de pago en cuotas' },
-          { type: 'done', text: 'Filtro: Sin interés' },
-          { type: 'done', text: 'Consultando plan de cuotas vigente' },
-          { type: 'done', text: 'Promociones activas identificadas' },
-          { type: 'active', text: 'Generando detalle de opciones financieras' }
+          { type: 'done', text: 'Consulta: Financiación y cuotas sin interés' },
+          { type: 'done', text: 'Plan de cuotas vigente consultado' },
+          { type: 'done', text: 'Promociones de 12 cuotas activas confirmadas' },
+          { type: 'done', text: 'Cálculo de cuotas para el producto de interés' },
+          { type: 'active', text: 'Generando simulación de cuotas personalizada' }
         ],
         crmRecord: {
-          name: 'Consulta Financiación',
+          name: 'Consulta de Financiación',
           phone: 'Sin datos aún',
-          interest: 'Cuotas sin interés disponibles',
-          details: 'Interés en financiación — Alta intención de compra',
+          interest: 'Cuotas sin interés — Alta intención de compra',
+          details: 'Evaluando plan de 12 cuotas para el ProBook Creator',
           status: 'Prospecto Calificado',
-          nextStep: 'Calcular cuota según producto elegido',
+          nextStep: 'Enviar link de pago en cuotas',
           source: 'Agente IA E-commerce'
         }
       }
@@ -472,41 +472,40 @@ export const DEMO_INDUSTRIES = [
         }
       },
       {
-        text: 'La integración con tu CRM actual es uno de nuestros puntos fuertes. Trabajamos con:\n\nIntegraciones nativas: HubSpot, Zoho CRM, Salesforce, Pipedrive y Monday.com\nIntegración vía API: Cualquier CRM con API REST (documentación requerida)\nIntegración vía Webhook/n8n: Para sistemas internos o ERP a medida\n\nEl proceso de integración típico lleva entre 3 y 5 días hábiles. Los datos del agente (leads, conversaciones, etiquetas) se sincronizan en tiempo real.\n\n¿Qué CRM usás actualmente? Te damos más detalle según tu plataforma específica.',
+        responseText: 'La integración con tu stack tecnológico actual es uno de nuestros puntos más fuertes y diferenciadores.\n\n🔗 Integraciones nativas (plug & play):\n• HubSpot, Salesforce, Zoho CRM, Pipedrive\n• Monday.com, Notion, Airtable\n• Google Sheets, Google Calendar y Gmail\n\n⚙️ Integración vía API REST:\n• Cualquier CRM o ERP con API disponible\n• Documentación técnica incluida + soporte de integración\n• Sincronización bidireccional en tiempo real\n\n🔄 Integración vía n8n / Make / Webhook:\n• Para sistemas internos o desarrollos a medida\n• Sin necesidad de código adicional por parte del cliente\n\nTiempo de integración: 3 a 7 días hábiles según complejidad.\n\n¿Qué CRM o ERP usás actualmente? Te preparamos la propuesta técnica específica para tu plataforma.',
         steps: [
-          { type: 'done', text: 'Consulta: Integración con CRM' },
-          { type: 'done', text: 'Tipos de integración disponibles analizados' },
-          { type: 'done', text: 'Plataformas compatibles identificadas' },
-          { type: 'active', text: 'Generando respuesta técnica de integración' },
-          { type: 'active', text: 'Registrando consulta técnica en CRM' }
+          { type: 'done', text: 'Consulta técnica: Integración con sistemas' },
+          { type: 'done', text: 'Plataformas compatibles verificadas' },
+          { type: 'done', text: 'Modalidades de integración disponibles analizadas' },
+          { type: 'active', text: 'Generando propuesta técnica personalizada' },
+          { type: 'active', text: 'Registrando consulta técnica como prioridad' }
         ],
         crmRecord: {
-          name: 'Consulta Técnica CRM',
+          name: 'Consulta Técnica de Integración',
           phone: 'Sin datos aún',
-          interest: 'Integración Agente IA con CRM propio',
-          details: 'Requiere conocer CRM actual del cliente',
+          interest: 'Integración del Agente IA con CRM/ERP propio',
+          details: 'Pendiente identificar stack tecnológico actual',
           status: 'Consulta Técnica Activa',
-          nextStep: 'Identificar CRM actual para propuesta técnica',
+          nextStep: 'Preparar propuesta de integración según CRM actual',
           source: 'Agente IA Corporativo'
         }
       },
       {
-        text: 'Con gusto agendamos una reunión de 30 minutos con uno de nuestros consultores senior.\n\nTenemos disponibilidad esta semana:\n• Martes 14:00 hs (modalidad Google Meet)\n• Miércoles 10:30 hs (modalidad Google Meet)\n• Jueves 16:00 hs (presencial CABA o Google Meet)\n\nEn la reunión analizamos tu proceso actual, identificamos oportunidades de automatización y te presentamos un plan de implementación a medida.\n\n¿Cuál de estos horarios te viene mejor?',
+        responseText: 'Con gusto. Agendo una reunión de diagnóstico de 30 minutos con uno de nuestros consultores senior, sin costo y sin compromiso.\n\n📅 Disponibilidad esta semana:\n• Martes — 10:00 hs o 14:00 hs (Google Meet)\n• Miércoles — 11:30 hs (Google Meet o presencial CABA)\n• Jueves — 15:00 hs o 17:00 hs (Google Meet)\n• Viernes — 09:30 hs (Google Meet)\n\nEn esa reunión vamos a:\n✅ Analizar tu proceso de atención y ventas actual\n✅ Identificar los cuellos de botella y oportunidades de automatización\n✅ Presentar un plan de implementación con ROI estimado\n✅ Responder todas tus preguntas técnicas y comerciales\n\n¿Cuál de estos horarios te viene mejor?',
         steps: [
-          { type: 'done', text: 'Acción: Agendar reunión comercial' },
-          { type: 'done', text: 'Duración: 30 minutos' },
-          { type: 'done', text: 'Consultando agenda de consultores' },
-          { type: 'done', text: '3 horarios disponibles esta semana' },
-          { type: 'active', text: 'Preparando opciones de agenda' },
-          { type: 'active', text: 'Registrando oportunidad comercial como prioridad' }
+          { type: 'done', text: 'Solicitud: Reunión comercial de diagnóstico' },
+          { type: 'done', text: 'Consultores senior disponibles esta semana' },
+          { type: 'done', text: '6 horarios disponibles identificados' },
+          { type: 'active', text: 'Registrando oportunidad como prioridad ALTA' },
+          { type: 'active', text: 'Preparando confirmación y link de reunión' }
         ],
         crmRecord: {
-          name: 'Prospecto Reunión Comercial',
+          name: 'Oportunidad — Reunión Comercial Solicitada',
           phone: 'Sin datos aún',
-          interest: 'Reunión de diagnóstico 30 min',
-          details: 'Alta intención — Solicitó reunión directa',
-          status: 'Oportunidad Caliente',
-          nextStep: 'Confirmar horario y enviar calendario',
+          interest: 'Reunión de diagnóstico 30 min con consultor senior',
+          details: 'Máxima intención — Solicitó reunión directa con equipo',
+          status: 'Oportunidad Caliente 🔥',
+          nextStep: 'Confirmar horario y enviar invitación de Google Calendar',
           source: 'Agente IA Corporativo'
         }
       }
