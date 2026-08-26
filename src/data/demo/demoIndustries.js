@@ -519,5 +519,502 @@ export const DEMO_INDUSTRIES = [
       interestLabel: 'Servicio Solicitado',
       valueLabel: 'Tamaño de Empresa'
     }
+  },
+  {
+    id: 'jugueteria',
+    name: 'Juguetería',
+    icon: 'gift',
+    subtitle: 'Asesoramiento por edad, regalos, stock en tienda y envíos express',
+    badge: 'Juguetes & Niños',
+    businessName: 'Mundo Juguete',
+    systemRole: 'Agente de Ventas y Recomendación de Juguetes',
+    description: 'Filtra opciones por edad, tipo de juego y presupuesto, consulta stock e inicie envío para regalo.',
+    starterPrompt: 'Hola, busco un regalo de cumpleaños para un nene de 6 años. Le gustan los juegos de mesa o de construcción, presupuesto hasta $35.000.',
+    presetPrompts: [
+      'Juego de mesa o construcción para nene de 6 años hasta $35.000',
+      '¿Tienen stock de autos a control remoto o pistas de carreras?',
+      '¿Hacen envíos para regalo con tarjeta dedicatoria en el día?'
+    ],
+    presetResponses: [
+      {
+        responseText: '¡Excelente opción! Para nenes de 6 años con preferencia en construcción y juegos de mesa, te recomiendo:\n\n1. Set Bloques de Construcción 350 piezas — $28.500 (Estimula creatividad y motricidad)\n2. Juego de Mesa "Carrera de Aventuras" — $32.000 (Ideal para jugar en familia, 2 a 4 jugadores)\n3. Kit de Construcción Magnética 48 piezas — $34.900 (Top ventas, encastre magnético fácil)\n\nTodos incluyen envoltorio de regalo gratis. ¿Te gustaría reservar alguno o que agreguemos tarjeta con dedicatoria?',
+        steps: [
+          { type: 'done', text: 'Edad objetivo: 6 años (Nene)' },
+          { type: 'done', text: 'Categorías: Construcción y Juegos de mesa' },
+          { type: 'done', text: 'Presupuesto: hasta $35.000' },
+          { type: 'done', text: 'Consultando catálogo de juguetes por edad' },
+          { type: 'done', text: '3 opciones con stock inmediato encontradas' },
+          { type: 'active', text: 'Ofreciendo envoltorio de regalo sin cargo' },
+          { type: 'active', text: 'Registrando cliente en CRM Juguetería' }
+        ],
+        crmRecord: {
+          name: 'Cliente Consulta Regalo',
+          phone: '+54 9 11 8877-4411',
+          interest: 'Regalo Niño 6 años (Construcción/Mesa)',
+          details: 'Presupuesto $35.000 • 3 opciones recomendadas',
+          status: 'Prospecto Calificado',
+          nextStep: 'Confirmar producto y dedicatoria de regalo',
+          source: 'Agente IA Juguetería'
+        }
+      },
+      {
+        responseText: 'Sí, contamos con stock disponible de autos a control remoto y pistas de carreras en tienda:\n\n🏎️ Auto R/C Monster Truck 4x4 — $42.000 (Batería recargable USB, 20km/h max)\n🏎️ Auto Buggy Alta Velocidad R/C — $31.500 (Escala 1:18, incluye pilas)\n🛣️ Pista de Carreras Doble Loop con 2 autos — $38.900 (3.5 metros de recorrido)\n\nTodos los productos tienen garantía directa de 3 meses. ¿Querés reservarlo para retiro en sucursal o envío a domicilio?',
+        steps: [
+          { type: 'done', text: 'Consulta: Autos R/C y Pistas de carreras' },
+          { type: 'done', text: 'Verificando stock en depósito central' },
+          { type: 'done', text: '3 modelos destacados en stock disponibles' },
+          { type: 'active', text: 'Generando ficha técnica y precios' }
+        ],
+        crmRecord: {
+          name: 'Consulta Control Remoto',
+          phone: 'Sin datos aún',
+          interest: 'Autos a control remoto y pistas',
+          details: 'Stock disponible • Alta intención',
+          status: 'Consulta Activa',
+          nextStep: 'Coordinar reserva o despacho',
+          source: 'Agente IA Juguetería'
+        }
+      },
+      {
+        responseText: '¡Sí! Realizamos envíos en el día en CABA y GBA para compras realizadas antes de las 14:00 hs.\n\n🎁 Incluido GRATIS:\n• Envoltorio festivo de regalo a elección (infantil o neutro)\n• Moño decorativo\n• Tarjeta personalizada con el texto que nos indiques por WhatsApp\n\n🚚 Costo de envío express en el día: $3.800 (GRATIS en compras superiores a $45.000).\n\n¿Querés que preparemos el paquete ahora?',
+        steps: [
+          { type: 'done', text: 'Consulta: Envío express para regalo' },
+          { type: 'done', text: 'Servicio de regalo en el día disponible' },
+          { type: 'done', text: 'Envoltorio y tarjeta personalizada incluidos' },
+          { type: 'active', text: 'Preparando formulario de despacho' }
+        ],
+        crmRecord: {
+          name: 'Pedido de Regalo Express',
+          phone: 'Sin datos aún',
+          interest: 'Envío express en el día con regalo y tarjeta',
+          details: 'Requiere dedicatoria personalizada',
+          status: 'Pre-Venta Activa',
+          nextStep: 'Solicitar texto de tarjeta y dirección',
+          source: 'Agente IA Juguetería'
+        }
+      }
+    ],
+    mockData: [
+      { name: 'Kit Bloques 350 pcs', category: 'Construcción', age: '5-8 años', price: '$28.500', stock: '14 unidades' },
+      { name: 'Pista Doble Loop R/C', category: 'Pistas & Autos', age: '6+ años', price: '$38.900', stock: '6 unidades' }
+    ],
+    crmFieldMapping: {
+      clientLabel: 'Venta de Juguete Iniciada',
+      interestLabel: 'Categoría & Edad Target',
+      valueLabel: 'Presupuesto / Monto'
+    }
+  },
+  {
+    id: 'peluqueria',
+    name: 'Peluquería',
+    icon: 'scissors',
+    subtitle: 'Agendamiento de turnos, catálogo de servicios, estilistas y recordatorios',
+    badge: 'Belleza & Estética',
+    businessName: 'Studio Look & Barbería',
+    systemRole: 'Agente de Turnos y Estilo',
+    description: 'Coordina agenda de profesionales, reserva servicios de corte/coloración y envía recordatorios.',
+    starterPrompt: 'Hola, quisiera agendar un turno para corte y barba este viernes por la tarde con el barbero Lucas.',
+    presetPrompts: [
+      'Turno para corte y barba este viernes a la tarde con Lucas',
+      '¿Cuáles son los precios de balayage y tratamiento de nutrición?',
+      '¿Tienen disponibilidad hoy mismo para peinado de fiesta?'
+    ],
+    presetResponses: [
+      {
+        responseText: '¡Excelente! Consulté la agenda de Lucas para este viernes por la tarde y tengo estos horarios disponibles:\n\n1. Viernes 16:30 hs\n2. Viernes 18:00 hs\n3. Viernes 19:15 hs\n\nEl servicio incluye: Corte de cabello de autor, perfilado de barba con toalla caliente y bebida de cortesía (café o cerveza artesanal). Precio total: $14.000.\n\n¿Cuál de los horarios preferís para confirmar tu turno?',
+        steps: [
+          { type: 'done', text: 'Servicio: Corte + Perfilado de barba' },
+          { type: 'done', text: 'Estilista seleccionado: Lucas' },
+          { type: 'done', text: 'Día solicitado: Viernes turno tarde' },
+          { type: 'done', text: 'Verificando agenda en tiempo real' },
+          { type: 'done', text: '3 horarios disponibles encontrados' },
+          { type: 'active', text: 'Pre-reservando sillón de barbero' },
+          { type: 'active', text: 'Registrando cliente en CRM Peluquería' }
+        ],
+        crmRecord: {
+          name: 'Gonzalo R.',
+          phone: '+54 9 11 6543-2211',
+          interest: 'Corte + Barba con Lucas (Viernes)',
+          details: 'Precio $14.000 • Esperando confirmación de hora',
+          status: 'Turno Pre-Agendado',
+          nextStep: 'Confirmar hora exacta y enviar recordatorio',
+          source: 'Agente IA Peluquería'
+        }
+      },
+      {
+        responseText: 'Te comparto la lista de precios para nuestros servicios de coloración y tratamientos:\n\n🎨 Balayage / Mechas Creativas:\n• Cabello corto/medio: $38.000\n• Cabello largo: $46.000\n(Incluye matizador + lavado protector + peinado final)\n\n✨ Tratamientos de Nutrición & Brillo:\n• Nutrición Intensiva de Argán: $12.000\n• Botox Capilar Reconstructor: $18.500\n• Alisado Orgánico sin formol: $28.000\n\n🎁 PROMO: Balayage + Nutrición intensiva tiene un 15% de descuento off combo.\n\n¿Querés realizar un diagnóstico de cabello o agendar turno con nuestra colorista?',
+        steps: [
+          { type: 'done', text: 'Consulta: Precios de Balayage y Nutrición' },
+          { type: 'done', text: 'Lista de precios de coloración consultada' },
+          { type: 'done', text: 'Promociones de combo aplicadas' },
+          { type: 'active', text: 'Ofreciendo turno con especialista en color' }
+        ],
+        crmRecord: {
+          name: 'Consulta Balayage',
+          phone: 'Sin datos aún',
+          interest: 'Balayage + Tratamiento Nutrición',
+          details: 'Interés en promo combo coloración',
+          status: 'Consulta Activa',
+          nextStep: 'Ofrecer turno para diagnóstico de color',
+          source: 'Agente IA Peluquería'
+        }
+      },
+      {
+        responseText: 'Revisé la agenda del día de hoy y sí tenemos disponibilidad para Peinado de Fiesta / Evento:\n\n• Hoy 17:00 hs — Estilista Valeria (Sede Palermo)\n• Hoy 18:30 hs — Estilista Romina (Sede Palermo)\n\nDuración del servicio: 50 minutos. Precio: $16.500.\n\n¿Querés congelar el turno de las 17:00 hs o las 18:30 hs antes de que se ocupe?',
+        steps: [
+          { type: 'done', text: 'Solicitud: Turno urgente HOY para Peinado' },
+          { type: 'done', text: 'Filtrando estilistas de peinado del día' },
+          { type: 'done', text: '2 turnos de cancelación / huecos disponibles' },
+          { type: 'active', text: 'Bloqueando turno en agenda urgente' }
+        ],
+        crmRecord: {
+          name: 'Turno Urgente Peinado',
+          phone: 'Sin datos aún',
+          interest: 'Peinado para evento — Turno hoy',
+          details: 'Disponibilidad 17:00 hs y 18:30 hs',
+          status: 'Urgente / Pre-Reserva',
+          nextStep: 'Confirmar nombre para cerrar turno hoy',
+          source: 'Agente IA Peluquería'
+        }
+      }
+    ],
+    mockData: [
+      { service: 'Corte + Barba', duration: '45 min', price: '$14.000', professional: 'Lucas' },
+      { service: 'Balayage Premium', duration: '2.5 hs', price: '$46.000', professional: 'Valeria' }
+    ],
+    crmFieldMapping: {
+      clientLabel: 'Turno Registrado',
+      interestLabel: 'Servicio & Estilista',
+      valueLabel: 'Valor del Servicio'
+    }
+  },
+  {
+    id: 'gimnasio',
+    name: 'Gimnasio',
+    icon: 'activity',
+    subtitle: 'Membresías mensuales, agenda de clases grupales y pases de prueba',
+    badge: 'Deportes & Fitness',
+    businessName: 'FitCenter Club',
+    systemRole: 'Agente de Membresías y Pases Fitness',
+    description: 'Informa sobre planes de musculación, horarios de Spinning, Pilates y CrossFit, y agenda pases libres.',
+    starterPrompt: 'Hola, me gustaría información sobre los planes mensuales de gimnasio y las clases de spinning.',
+    presetPrompts: [
+      'Planes mensuales de gimnasio y horarios de clases de spinning',
+      '¿Tienen pase libre para musculación y pase diario de prueba?',
+      'Quiero agendar un pase de prueba gratuito para mañana a las 18 hs'
+    ],
+    presetResponses: [
+      {
+        responseText: ' Te cuento los planes y modalidades de FitCenter Club:\n\n💪 Plan Musculación & Cardio — $22.000/mes\n• Acceso ilimitado a salón de aparatos y área aeróbica\n• Rutina personalizada con profesor en sala\n\n🚴 Plan Total Pass (Musculación + Clases) — $28.500/mes\n• Acceso a todas las clases grupales: Spinning, CrossFit, Yoga, Pilates y GAP\n• Pases libres en todas las sedes\n\n🚴 Horarios de Spinning (Sede Central):\n• Mañanas: Lunes, Miércoles y Viernes 08:00 y 10:00 hs\n• Tardes/Noches: Lunes a Viernes 18:30, 19:30 y 20:30 hs\n\n¿Querés probar una clase de spinning gratis mañana?',
+        steps: [
+          { type: 'done', text: 'Consulta: Planes mensuales y Spinning' },
+          { type: 'done', text: 'Planes comerciales de gimnasio verificados' },
+          { type: 'done', text: 'Grilla de horarios de Spinning obtenida' },
+          { type: 'active', text: 'Ofreciendo pase de prueba gratuito' },
+          { type: 'active', text: 'Registrando prospecto en CRM Fitness' }
+        ],
+        crmRecord: {
+          name: 'Prospecto Fitness',
+          phone: '+54 9 11 3344-5566',
+          interest: 'Plan Total Pass / Spinning',
+          details: 'Interés en musculación + clases grupales',
+          status: 'Prospecto Calificado',
+          nextStep: 'Ofrecer pase de prueba gratis de 1 día',
+          source: 'Agente IA Gimnasio'
+        }
+      },
+      {
+        responseText: '¡Sí! En FitCenter contamos con varias opciones de acceso:\n\n🎟️ Pase Diario de Prueba:\n• Pase Individual por 1 día completo: $4.500\n• ¡GRATIS! Tu primer pase de prueba si registrás tu DNI hoy mismo\n\n🏋️ Pase Libre Anual (Promoción 2x1):\n• $19.000/mes abonando el pase semestral o anual (ahorrás 35%)\n• Incluye lockets, duchas con agua caliente y evaluación física sin cargo\n\n¿Te agendo tu primer pase de prueba sin costo para conocer las instalaciones?',
+        steps: [
+          { type: 'done', text: 'Consulta: Pase libre y prueba diaria' },
+          { type: 'done', text: 'Promociones anuales y pases de prueba verificados' },
+          { type: 'active', text: 'Registrando solicitud de pase sin costo' }
+        ],
+        crmRecord: {
+          name: 'Solicitud Pase Prueba',
+          phone: 'Sin datos aún',
+          interest: 'Pase diario libre de prueba gratis',
+          details: 'Evaluando instalaciones antes de suscribirse',
+          status: 'Pase de Prueba Ofrecido',
+          nextStep: 'Confirmar día y hora de visita',
+          source: 'Agente IA Gimnasio'
+        }
+      },
+      {
+        responseText: '¡Pase de prueba agendado con éxito! 🏋️‍♂️\n\nResumen de tu pase gratuito:\n📍 Sede Central: Av. Corrientes 4500\n📅 Fecha: Mañana a las 18:00 hs\n✅ Incluye: Acceso a musculación + Clase de Spinning de las 18:30 hs\n👤 Presentarse en recepción con DNI indicando el código de pase #FIT-9921.\n\nTe enviamos la confirmación e instrucciones por WhatsApp. ¡Te esperamos!',
+        steps: [
+          { type: 'done', text: 'Reserva de pase gratis: Mañana 18:00 hs' },
+          { type: 'done', text: 'Cupo reservado en clase de Spinning 18:30 hs' },
+          { type: 'done', text: 'Código #FIT-9921 generado' },
+          { type: 'active', text: 'Enviando pase digital con código QR por WhatsApp' }
+        ],
+        crmRecord: {
+          name: 'Pase Gratuito Confirmado',
+          phone: '+54 9 11 3344-5566',
+          interest: 'Pase de prueba Mañana 18:00 hs',
+          details: 'Código #FIT-9921 • Musculación + Spinning',
+          status: 'Visita Agendada 🔥',
+          nextStep: 'Recepción en gimnasio y oferta de inscripción',
+          source: 'Agente IA Gimnasio'
+        }
+      }
+    ],
+    mockData: [
+      { plan: 'Musculación & Cardio', price: '$22.000 / mes', features: 'Acceso a aparatos + rutina' },
+      { plan: 'Total Pass', price: '$28.500 / mes', features: 'Musculación + Spinning + CrossFit + Pilates' }
+    ],
+    crmFieldMapping: {
+      clientLabel: 'Nuevo Socio / Prospecto',
+      interestLabel: 'Plan o Clase de Interés',
+      valueLabel: 'Valor de Membresía'
+    }
+  },
+  {
+    id: 'veterinaria',
+    name: 'Veterinaria',
+    icon: 'paw',
+    subtitle: 'Consultas médicas, vacunación, baño/peluquería y alimento balanceado',
+    badge: 'Mascotas',
+    businessName: 'PetCare Veterinaria',
+    systemRole: 'Agente de Atención Veterinaria y Pet Care',
+    description: 'Gestiona turnos de clínica veterinaria, estética canina/felina y ventas de alimento balanceado.',
+    starterPrompt: 'Hola, necesito sacar un turno de vacunación para mi perro y consultar si tienen alimento Royal Canin Adulto de 15kg.',
+    presetPrompts: [
+      'Turno de vacunación para perro y alimento Royal Canin Adulto 15kg',
+      '¿Tienen turno disponible de baño y peluquería canina para este sábado?',
+      '¿Atienden urgencias veterinarias las 24 horas?'
+    ],
+    presetResponses: [
+      {
+        responseText: ' Te ayudo con ambas solicitudes para tu mascota:\n\n💉 Turno de Vacunación (Quíntuple / Antirrábica):\n• Disponibilidad clínica: Jueves 11:00 hs o Viernes 16:30 hs con la Dra. Paula\n• Precio consulta + vacuna: $14.500\n\n🦴 Alimento Royal Canin Medium Adult 15kg:\n• Stock disponible en tienda ✅\n• Precio: $62.000 (10% de descuento en efectivo/transferencia = $55.800)\n• Envío a domicilio gratis comprando la bolsa de 15kg.\n\n¿Te reservamos el turno de vacunación y te enviamos la bolsa de alimento?',
+        steps: [
+          { type: 'done', text: 'Mascota: Perro (Consulta clínica + Alimento)' },
+          { type: 'done', text: 'Vacunación: Disponibilidad Dra. Paula' },
+          { type: 'done', text: 'Alimento: Royal Canin 15kg verificado en stock' },
+          { type: 'done', text: 'Descuento del 10% por pago contado aplicado' },
+          { type: 'active', text: 'Pre-reservando turno médico' },
+          { type: 'active', text: 'Registrando cliente en CRM Vet' }
+        ],
+        crmRecord: {
+          name: 'Dueño de Mascota',
+          phone: '+54 9 11 7766-3322',
+          interest: 'Vacunación Perro + Royal Canin 15kg',
+          details: 'Alimento en stock • Turno pendiente confirmación',
+          status: 'Turno & Pedido Activo',
+          nextStep: 'Confirmar horario de turno y dirección de envío',
+          source: 'Agente IA Veterinaria'
+        }
+      },
+      {
+        responseText: '¡Sí! Para Peluquería y Baño Canino/Felino tenemos estos turnos para este sábado:\n\n• Sábado 10:00 hs (Peluquero Damián)\n• Sábado 12:30 hs (Peluquera Sofía)\n• Sábado 15:00 hs (Peluquero Damián)\n\nEl servicio incluye: Baño con shampoo hipoalergénico, corte de raza o desmotado, secado, limpieza de oídos y corte de uñas.\n\nPrecios según tamaño:\n• Perro Chico: $11.000\n• Perro Mediano: $14.000\n• Perro Grande: $18.000\n\n¿Qué raza y tamaño es tu perro para reservarle el sillón?',
+        steps: [
+          { type: 'done', text: 'Servicio: Baño y Peluquería Canina' },
+          { type: 'done', text: 'Día solicitado: Sábado' },
+          { type: 'done', text: '3 turnos en spa canino disponibles' },
+          { type: 'active', text: 'Esperando tamaño/raza para confirmar horario' }
+        ],
+        crmRecord: {
+          name: 'Consulta Spa Canino',
+          phone: 'Sin datos aún',
+          interest: 'Baño y Peluquería Canina — Sábado',
+          details: 'Pendiente indicar raza/tamaño',
+          status: 'Pre-Turno Spa',
+          nextStep: 'Confirmar tamaño y horario preferido',
+          source: 'Agente IA Veterinaria'
+        }
+      },
+      {
+        responseText: '🚨 ¡Sí! En PetCare contamos con Guardia Veterinaria de Urgencias 24 Horas los 365 días del año.\n\n📍 Dirección Guardia 24hs: Av. Cabildo 2800, Belgrano\n📞 Teléfono directo guardia: 0800-555-VET24 (+54 9 11 4433-2211)\n\n🩺 La guardia cuenta con:\n• Quirófano equipado e internación monitoreada\n• Diagnóstico por ecografía y rayos X de urgencia\n• Banco de sangre veterinario\n\nSi estás ante una emergencia médica con tu mascota, podés venir directamente sin turno previo. ¿Necesitás que avisemos al equipo médico de guardia que estás en camino?',
+        steps: [
+          { type: 'done', text: 'URGENCIA DETECTADA: Protocolo de Guardia 24hs' },
+          { type: 'done', text: 'Obteniendo datos de ubicación y contacto guardia' },
+          { type: 'done', text: 'Servicios de emergencia médica verificados' },
+          { type: 'active', text: 'Prioridad máxima: Alerta enviada a clínica' }
+        ],
+        crmRecord: {
+          name: 'ALERTA URGENCIA 24HS',
+          phone: 'Contacto telefónico urgente',
+          interest: 'Atención médica de urgencia 24hs',
+          details: 'Guardia notificada de posible ingreso directo',
+          status: 'Emergencia 🚨',
+          nextStep: 'Recibir paciente en clínica de urgencias',
+          source: 'Agente IA Veterinaria'
+        }
+      }
+    ],
+    mockData: [
+      { service: 'Vacunación & Chequeo', price: '$14.500', professional: 'Dra. Paula' },
+      { product: 'Royal Canin Adult 15kg', price: '$55.800', stock: '8 unidades' }
+    ],
+    crmFieldMapping: {
+      clientLabel: 'Paciente / Mascota',
+      interestLabel: 'Servicio o Alimento',
+      valueLabel: 'Monto de Consulta / Pedido'
+    }
+  },
+  {
+    id: 'concesionaria',
+    name: 'Concesionaria',
+    icon: 'car',
+    subtitle: 'Venta de vehículos 0km y usados, Test Drive, financiación y permutas',
+    badge: 'Automotriz',
+    businessName: 'AutoPremier Motors',
+    systemRole: 'Agente de Ventas Automotriz y Test Drive',
+    description: 'Asesora sobre modelos, cotiza usados en parte de pago, liquida planes de financiación y agenda test drives.',
+    starterPrompt: 'Hola, estoy interesado en un SUV 0km con financiación a tasa 0% y quisiera entregar mi auto usado en parte de pago.',
+    presetPrompts: [
+      'Consulta por SUV 0km con tasa 0% y entregando auto usado',
+      'Quiero coordinar un Test Drive del nuevo SUV para este sábado',
+      '¿Cuáles son las cuotas y requisitos del plan de ahorro adjudicado?'
+    ],
+    presetResponses: [
+      {
+        responseText: '¡Excelente elección! En AutoPremier Motors tenemos la mejor propuesta para tu próximo SUV 0km:\n\n🚙 Modelo destacado: New CrossSUV 1.6 Turbo (Model 2026)\n• Precio de lista: $32.500.000\n• Financiación Tasa 0% TNA: Financiás hasta $15.000.000 en 12 o 18 cuotas fijas sin interés\n\n🚗 Llave por Llave (Tu usado en parte de pago):\n• Tomamos tu vehículo usado al mejor valor de plaza (peritaje en 30 minutos sin costo)\n• Te entregamos el 0km el mismo día que nos dejás tu unidad usada\n\n¿De qué marca, modelo y año es tu vehículo actual para darte una tasación estimada?',
+        steps: [
+          { type: 'done', text: 'Modelo de interés: SUV 0km' },
+          { type: 'done', text: 'Modalidad de compra: Tasa 0% + Toma de usado' },
+          { type: 'done', text: 'Plan de financiación a tasa 0% verificado' },
+          { type: 'done', text: 'Peritaje Llave por Llave activo' },
+          { type: 'active', text: 'Solicitando datos del usado para tasación' },
+          { type: 'active', text: 'Registrando lead automotriz en CRM' }
+        ],
+        crmRecord: {
+          name: 'Comprador SUV 0km',
+          phone: '+54 9 11 2211-9988',
+          interest: 'New CrossSUV 1.6 Turbo 0km',
+          details: 'Financiación Tasa 0% • Permuta por usado',
+          status: 'Lead Automotriz Calificado',
+          nextStep: 'Tasar vehículo usado y coordinar Test Drive',
+          source: 'Agente IA Concesionaria'
+        }
+      },
+      {
+        responseText: '¡Perfecto! El Test Drive es la mejor forma de sentir la potencia y confort del nuevo SUV.\n\n📅 Disponibilidad para Test Drive este sábado (Sucursal Puerto Madero):\n• Sábado 10:30 hs\n• Sábado 12:00 hs\n• Sábado 16:00 hs\n\nRequisitos para el Test Drive:\n✅ Licencia de conducir vigente\n✅ DNI original\n(Duración de la prueba: 30 minutos con asesor especializado a bordo).\n\n¿En cuál de estos horarios preferís hacer tu prueba de manejo?',
+        steps: [
+          { type: 'done', text: 'Solicitud: Test Drive de vehículo SUV 0km' },
+          { type: 'done', text: 'Unidad de Test Drive disponible en flota' },
+          { type: 'done', text: '3 horarios disponibles confirmados para el sábado' },
+          { type: 'active', text: 'Pre-reservando vehículo de pruebas de manejo' }
+        ],
+        crmRecord: {
+          name: 'Agendamiento Test Drive',
+          phone: 'Sin datos aún',
+          interest: 'Test Drive New CrossSUV 0km — Sábado',
+          details: 'Esperando selección de horario',
+          status: 'Test Drive Pendiente',
+          nextStep: 'Confirmar horario y enviar ubicación',
+          source: 'Agente IA Concesionaria'
+        }
+      },
+      {
+        responseText: 'Te paso los detalles de nuestros Planes de Ahorro Adjudicados con entrega asegurada en Cuota 3 y Cuota 6:\n\n📋 Plan 80/20 Adjudicado Directo:\n• Cuota pura inicial: $185.000/mes\n• Requisitos: Solo DNI (sin recibo de sueldo ni avales bancarios)\n• Adjudicación asegurada: Licitación fija en cuota 3 o sorteo mensual\n• Gastos de retiro: Posibilidad de incluirlos dentro de las cuotas\n\n🎁 Bonificación exclusiva por suscribirte hoy: Gastos de flete y embalaje 100% bonificados.\n\n¿Te gustaría recibir el folleto digital con la grilla completa de cuotas por WhatsApp?',
+        steps: [
+          { type: 'done', text: 'Consulta: Plan de ahorro adjudicado' },
+          { type: 'done', text: 'Requisitos y cuotas del plan 80/20 verificados' },
+          { type: 'done', text: 'Bonificación de flete aplicada' },
+          { type: 'active', text: 'Generando folleto digital de cuotas' }
+        ],
+        crmRecord: {
+          name: 'Consulta Plan de Ahorro',
+          phone: 'Sin datos aún',
+          interest: 'Plan 80/20 Adjudicación Cuota 3',
+          details: 'Bonificación de flete disponible',
+          status: 'Prospecto Plan Ahorro',
+          nextStep: 'Enviar grilla de cuotas a WhatsApp',
+          source: 'Agente IA Concesionaria'
+        }
+      }
+    ],
+    mockData: [
+      { model: 'New CrossSUV 1.6T', type: '0km', price: '$32.500.000', promo: 'Tasa 0% hasta $15M' },
+      { model: 'Sedan Executive 2.0', type: 'Usado Selección (2023)', price: '$21.800.000', km: '24.000 km' }
+    ],
+    crmFieldMapping: {
+      clientLabel: 'Prospecto Vehicular',
+      interestLabel: 'Modelo & Modalidad',
+      valueLabel: 'Monto de Operación'
+    }
+  },
+  {
+    id: 'estudio',
+    name: 'Estudio Profesional',
+    icon: 'scale',
+    subtitle: 'Asesoramiento contable, legal, inscripción impositiva y sociedades',
+    badge: 'Servicios Profesionales',
+    businessName: 'Asesores Contables & Legales',
+    systemRole: 'Agente Consultor Contable y Legal',
+    description: 'Asesora sobre Monotributo, constitución de empresas (SAS/SRL), liquidación de impuestos y agendamiento de reuniones.',
+    starterPrompt: 'Hola, necesito asesoramiento para darme de alta en el Monotributo y constituir una SAS para mi nuevo emprendimiento.',
+    presetPrompts: [
+      'Alta en Monotributo y constitución de SAS para emprendimiento',
+      '¿Qué documentos necesito para una liquidación de sueldos o auditoría?',
+      'Quiero agendar una consultoría inicial con un contador especialista'
+    ],
+    presetResponses: [
+      {
+        responseText: '¡Felicitaciones por el nuevo emprendimiento! Con gusto te guiamos en la estructuración impositiva y legal de tu negocio:\n\n📑 Constitución de SAS (Sociedad por Acciones Simplificada):\n• Tiempo de trámite: 72 a 96 horas hábiles con CUIT asignado\n• Incluye: Estatuto modelo, libros digitales, inscripción en IGJ/DPJ y CUIT en AFIP\n• Honorarios paquete integral: $180.000 (en 2 pagos)\n\n💼 Alta de Monotributo & Ingresos Brutos:\n• Encuadre de categoría según facturación estimada\n• Alta en ARBA / AGIP / Convenio Multilateral\n• Tramitación de facturación electrónica sin cargo adicional\n\n¿Querés coordinar una reunión presencial o por videollamada para revisar tu caso?',
+        steps: [
+          { type: 'done', text: 'Trámites requeridos: Alta Monotributo + Constitución SAS' },
+          { type: 'done', text: 'Requisitos legales de IGJ y AFIP analizados' },
+          { type: 'done', text: 'Presupuesto de honorarios y plazos compilados' },
+          { type: 'active', text: 'Registrando emprendedor en CRM Profesional' },
+          { type: 'active', text: 'Coordinando reunión de asesoría inicial' }
+        ],
+        crmRecord: {
+          name: 'Emprendimiento Nuevo (SAS)',
+          phone: '+54 9 11 4455-6677',
+          interest: 'Constitución SAS + Monotributo',
+          details: 'Honorarios $180.000 • Alta intención',
+          status: 'Lead Profesional Calificado',
+          nextStep: 'Agendar consultoría de 30 min con socio del estudio',
+          source: 'Agente IA Estudio'
+        }
+      },
+      {
+        responseText: 'Para la liquidación de sueldos y cargas sociales (F.931 AFIP) o auditoría contable, la documentación inicial requerida es:\n\n📋 Documentación a presentar:\n1. Alta de empleador AFIP y nómina del personal con CUIL\n2. Convenio colectivo aplicable (CCT Comercio, UOCRA, Sanidad, etc.)\n3. Novedades del mes: Horas extras, ausencias, licencias y comisiones\n4. Libro de sueldos digital AFIP configurado\n\nNos encargamos del 100% de la liquidación mensual, presentación de DDJJ y emisión de recibos digitales.\n\n¿Cuántos empleados tenés actualmente en la nómina para enviarte el presupuesto exacto de abono mensual?',
+        steps: [
+          { type: 'done', text: 'Consulta: Liquidación de sueldos y auditoría' },
+          { type: 'done', text: 'Listado de documentación F.931 AFIP compilado' },
+          { type: 'active', text: 'Solicitando cantidad de empleados para presupuesto' }
+        ],
+        crmRecord: {
+          name: 'Consulta Liquidación Sueldos',
+          phone: 'Sin datos aún',
+          interest: 'Abono mensual de liquidación de sueldos',
+          details: 'Pendiente cantidad de empleados',
+          status: 'Consulta Activa',
+          nextStep: 'Cotizar abono mensual según cantidad de cápitas',
+          source: 'Agente IA Estudio'
+        }
+      },
+      {
+        responseText: 'Con gusto. Coordinemos una reunión inicial de consultoría de 30 minutos sin cargo con uno de nuestros contadores senior:\n\n📅 Horarios disponibles esta semana:\n• Martes 11:30 hs (Google Meet)\n• Miércoles 16:00 hs (Presencial en oficinas Microcentro / Google Meet)\n• Jueves 10:00 hs (Google Meet)\n\nEn la reunión evaluaremos la estrategia tributaria óptima para minimizar costos impositivos de forma 100% legal.\n\n¿Cuál de los horarios te queda más cómodo?',
+        steps: [
+          { type: 'done', text: 'Solicitud: Consultoría inicial sin cargo' },
+          { type: 'done', text: 'Agenda de contadores senior consultada' },
+          { type: 'done', text: '3 opciones de horarios disponibles' },
+          { type: 'active', text: 'Pre-reservando consultoría contable' }
+        ],
+        crmRecord: {
+          name: 'Reunión Consultoría Agendada',
+          phone: 'Sin datos aún',
+          interest: 'Consultoría contable/legal inicial 30 min',
+          details: 'Google Meet / Presencial',
+          status: 'Reunión Solicitada 🔥',
+          nextStep: 'Confirmar horario y enviar link de Meet',
+          source: 'Agente IA Estudio'
+        }
+      }
+    ],
+    mockData: [
+      { service: 'Constitución SAS / SRL', duration: '72-96 hs', price: '$180.000' },
+      { service: 'Abono Contable PyME', coverage: 'AFIP + IIBB + Sueldos', price: 'Desde $45.000 / mes' }
+    ],
+    crmFieldMapping: {
+      clientLabel: 'Cliente / Empresa Registrada',
+      interestLabel: 'Trámite / Servicio Solicitado',
+      valueLabel: 'Honorarios / Abono'
+    }
   }
 ];
+

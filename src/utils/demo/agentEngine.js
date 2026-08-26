@@ -84,6 +84,60 @@ export function simulateAgentResponse(industryId, userMessage, conversationHisto
         ],
         crmRecord: null
       },
+      jugueteria: {
+        responseText: '¡Hola! Bienvenido a Mundo Juguete 🧸\n\nSoy el Agente de Ventas y Asesor de Regalos. Estoy disponible para ayudarte a encontrar el juguete o regalo ideal por edad, gustos o presupuesto.\n\n¿En qué te puedo ayudar hoy?\n\n🎁 Recomendación de regalos según edad y presupuesto\n🏎️ Consultar stock de autos R/C, pistas y juegos de mesa\n🚚 Envíos express en el día con envoltorio de regalo\n💳 Medios de pago y promociones en cuotas\n\n¡Contame para quién es el regalo y te muestro las mejores opciones!',
+        steps: [
+          { type: 'done', text: 'Saludo recibido del cliente' },
+          { type: 'done', text: 'Canal de atención: Agente de Recomendación de Juguetes IA' },
+          { type: 'active', text: 'Iniciando asesoramiento personalizado' }
+        ],
+        crmRecord: null
+      },
+      peluqueria: {
+        responseText: '¡Hola! Bienvenido a Studio Look & Barbería ✂️\n\nSoy tu Agente de Turnos y Estilo. Estoy disponible las 24hs para coordinar tu próxima visita.\n\n¿Qué te gustaría hacer hoy?\n\n📅 Agendar turno de corte, barba o peinado\n🎨 Consultar tarifas de balayage y nutrición capilar\n⏰ Ver disponibilidad urgente para el día de hoy\n📍 Horarios de atención y ubicación del studio\n\n¡Decime qué servicio o estilista preferís y reservamos tu sillón!',
+        steps: [
+          { type: 'done', text: 'Saludo recibido del cliente' },
+          { type: 'done', text: 'Canal de atención: Agente de Turnos Peluquería IA' },
+          { type: 'active', text: 'Iniciando gestión de agenda' }
+        ],
+        crmRecord: null
+      },
+      gimnasio: {
+        responseText: '¡Hola! Bienvenido a FitCenter Club 🏋️‍♂️\n\nSoy el Agente de Membresías y Pases Fitness. Estoy acá para darte toda la información sobre nuestros planes y clases.\n\n¿Qué te gustaría consultar hoy?\n\n💪 Planes mensuales de musculación y clases grupales\n🚴 Horarios de Spinning, CrossFit, Pilates y Yoga\n🎟️ Agendar un pase de prueba GRATUITO por 1 día\n📍 Ver ubicación de nuestras sedes y vestuarios\n\n¡Sumate a entrenar con nosotros! ¿Con qué empezamos?',
+        steps: [
+          { type: 'done', text: 'Saludo recibido del visitante' },
+          { type: 'done', text: 'Canal de atención: Agente de Membresías Fitness IA' },
+          { type: 'active', text: 'Iniciando asistencia deportiva' }
+        ],
+        crmRecord: null
+      },
+      veterinaria: {
+        responseText: '¡Hola! Bienvenido a PetCare Veterinaria 🐾\n\nSoy el Agente de Atención Veterinaria. Estoy acá para cuidar la salud y bienestar de tu mascota.\n\n¿En qué podemos ayudarte hoy?\n\n💉 Agendar turno de clínica o vacunación\n🐶 Agendar turno de baño y peluquería canina/felina\n🦴 Consultar stock y precios de alimentos balanceados\n🚨 Información de la Guardia Veterinaria 24 Horas\n\n¡Contame sobre tu mascota y con gusto te asistimos!',
+        steps: [
+          { type: 'done', text: 'Saludo recibido del dueño de mascota' },
+          { type: 'done', text: 'Canal de atención: Agente de Atención Veterinaria IA' },
+          { type: 'active', text: 'Iniciando atención veterinaria' }
+        ],
+        crmRecord: null
+      },
+      concesionaria: {
+        responseText: '¡Hola! Bienvenido a AutoPremier Motors 🚗\n\nSoy tu Agente de Ventas Automotriz y Test Drive. Te acompaño a encontrar tu próximo 0km o usado selección.\n\n¿Qué estás buscando hoy?\n\n🚙 Ver modelos 0km con financiación Tasa 0%\n🚗 Cotizar tu auto usado en parte de pago (Llave por Llave)\n📅 Agendar un Test Drive de prueba de manejo\n📋 Requisitos y cuotas de Planes de Ahorro\n\n¡Contame qué modelo te interesa y armamos la propuesta a tu medida!',
+        steps: [
+          { type: 'done', text: 'Saludo recibido del cliente' },
+          { type: 'done', text: 'Canal de atención: Agente de Ventas Automotriz IA' },
+          { type: 'active', text: 'Cargando catálogo vehicular actualizado' }
+        ],
+        crmRecord: null
+      },
+      estudio: {
+        responseText: '¡Hola! Bienvenido a Asesores Contables & Legales ⚖️\n\nSoy tu Agente Consultor Profesional. Te asesoro en materia impositiva, societaria y legal para tu empresa o emprendimiento.\n\n¿En qué podemos asesorarte hoy?\n\n💼 Alta en Monotributo, Responsable Inscripto o Ingresos Brutos\n📑 Constitución de Sociedades (SAS / SRL / SA) en 72hs\n📋 Liquidación de sueldos y cargas sociales (F.931 AFIP)\n📅 Agendar consultoría inicial de 30 min sin cargo\n\n¡Contame sobre tu proyecto y te brindamos el diagnóstico profesional!',
+        steps: [
+          { type: 'done', text: 'Saludo recibido del cliente' },
+          { type: 'done', text: 'Canal de atención: Agente Consultor Contable IA' },
+          { type: 'active', text: 'Iniciando evaluación del proyecto' }
+        ],
+        crmRecord: null
+      },
       otro: {
         responseText: '¡Hola! Bienvenido a MM SmartInbox 🤖\n\nSoy un Agente Comercial especializado en automatización empresarial. Estoy acá para ayudarte a entender cómo la IA puede transformar tu negocio.\n\n¿Qué te gustaría explorar?\n\n💡 Conocer cómo funciona la automatización con IA\n💰 Ver planes y precios para tu empresa\n🔗 Integraciones disponibles con tus sistemas actuales\n📅 Agendar una reunión de diagnóstico gratuita\n⚡ Ver casos de éxito según tu rubro\n\n¡Contame sobre tu empresa y te muestro el potencial de automatización!',
         steps: [
@@ -627,6 +681,216 @@ export function simulateAgentResponse(industryId, userMessage, conversationHisto
           { type: 'done', text: 'Consulta recibida' },
           { type: 'done', text: 'Catálogo de productos disponible cargado' },
           { type: 'active', text: 'Analizando necesidades del cliente' }
+        ],
+        crmRecord: null
+      };
+    }
+
+    // ═══════════════════════════════════════════
+    // JUGUETERÍA
+    // ═══════════════════════════════════════════
+    case 'jugueteria': {
+      if (text.includes('regalo') || text.includes('cumpleaños') || text.includes('nene') || text.includes('nena') || text.includes('edad') || text.includes('años')) {
+        return {
+          responseText: 'Te sugiero nuestras mejores opciones de regalos por categoría y edad:\n\n🧩 3 a 5 años: Bloques Gigantes Encastrables ($18.500) | Rompecabezas de Madera ($12.000)\n🎨 6 a 8 años: Kit de Construcción Magnética ($34.900) | Juego de Mesa Carrera ($32.000)\n🤖 9 a 12 años: Bot de Robótica Programable ($45.000) | Juego de Estrategia Catan Jr ($39.000)\n\nTodos los regalos incluyen envoltorio festivo y moño sin cargo. ¿Para qué edad estás buscando?',
+          steps: [
+            { type: 'done', text: 'Consulta: Sugerencia de regalos por edad' },
+            { type: 'done', text: 'Filtro por rangos etarios aplicado' },
+            { type: 'active', text: 'Ofreciendo envoltorio de regalo gratis' }
+          ],
+          crmRecord: {
+            name: 'Consulta de Regalos',
+            phone: 'Sin datos aún',
+            interest: 'Regalo infantil por edad',
+            details: 'Evaluando opciones de catálogo',
+            status: 'Prospecto Calificado',
+            nextStep: 'Confirmar edad del agasajado',
+            source: 'Agente IA Juguetería'
+          }
+        };
+      }
+
+      return {
+        responseText: 'En Mundo Juguete tenemos opciones para todas las edades:\n\n🧩 Juegos de mesa, estrategia y construcción\n🏎️ Autos a control remoto y pistas de carreras\n🎨 Arte, manualidades y masa para modelar\n🚚 Envíos express en el día con envoltorio de regalo gratis\n\n¿Con qué te podemos ayudar hoy?',
+        steps: [
+          { type: 'done', text: 'Consulta recibida' },
+          { type: 'done', text: 'Catálogo de juguetes verificado' },
+          { type: 'active', text: 'Iniciando asistencia de ventas' }
+        ],
+        crmRecord: null
+      };
+    }
+
+    // ═══════════════════════════════════════════
+    // PELUQUERÍA
+    // ═══════════════════════════════════════════
+    case 'peluqueria': {
+      if (text.includes('turno') || text.includes('agendar') || text.includes('reserva') || text.includes('viernes') || text.includes('sábado') || text.includes('sabado') || text.includes('hora')) {
+        return {
+          responseText: 'Tengo turnos disponibles en nuestra agenda para esta semana:\n\n✂️ Barbería & Corte Masculino: Viernes 16:30 hs / 18:00 hs (con Lucas)\n🎨 Coloración & Balayage: Jueves 14:00 hs / Viernes 10:00 hs (con Valeria)\n💇 Peinado & Tratamientos: Hoy 17:00 hs / Mañana 15:30 hs (con Romina)\n\n¿Cuál de estos turnos te viene mejor para reservar tu sillón?',
+          steps: [
+            { type: 'done', text: 'Consulta de disponibilidad de agenda' },
+            { type: 'done', text: 'Sillones y profesionales verificados' },
+            { type: 'active', text: 'Pre-reservando turno en agenda' }
+          ],
+          crmRecord: {
+            name: 'Cliente Turno Peluquería',
+            phone: '+54 9 11 6543-2211',
+            interest: 'Reserva de turno semanal',
+            details: 'Pendiente confirmación de horario',
+            status: 'Turno Pre-Agendado',
+            nextStep: 'Confirmar horario y enviar recordatorio',
+            source: 'Agente IA Peluquería'
+          }
+        };
+      }
+
+      return {
+        responseText: 'Bienvenido a Studio Look & Barbería. Te ofrecemos:\n\n✂️ Cortes de cabello de autor y perfilado de barba con toalla caliente\n🎨 Balayage, mechas, reflejos y coloración sin amoníaco\n✨ Tratamientos de nutrición, Botox capilar y alisado orgánico\n📅 Agendamiento de turnos online y recordatorios automáticos\n\n¿Querés agendar un turno o consultar precios?',
+        steps: [
+          { type: 'done', text: 'Consulta recibida' },
+          { type: 'done', text: 'Servicios del studio cargados' },
+          { type: 'active', text: 'Iniciando asistencia de turnos' }
+        ],
+        crmRecord: null
+      };
+    }
+
+    // ═══════════════════════════════════════════
+    // GIMNASIO
+    // ═══════════════════════════════════════════
+    case 'gimnasio': {
+      if (text.includes('precio') || text.includes('plan') || text.includes('costo') || text.includes('cuota') || text.includes('pase') || text.includes('mensual')) {
+        return {
+          responseText: 'Nuestros planes de membresía en FitCenter Club:\n\n💪 Plan Musculación & Cardio: $22.000/mes\n🚴 Plan Total Pass (Musculación + Clases grupales): $28.500/mes\n🔥 Pase Anual Promocional: $19.000/mes (ahorrás un 35%)\n🎟️ Pase Diario de Prueba: GRATIS registrando tu DNI hoy\n\nTodos los planes incluyen evaluación física inicial sin cargo. ¿Querés reservar tu pase de prueba gratuito?',
+          steps: [
+            { type: 'done', text: 'Consulta de planes y tarifas' },
+            { type: 'done', text: 'Promociones y pases de prueba verificados' },
+            { type: 'active', text: 'Ofreciendo pase gratis de 1 día' }
+          ],
+          crmRecord: {
+            name: 'Consulta de Membresías',
+            phone: 'Sin datos aún',
+            interest: 'Planes mensuales / Total Pass',
+            details: 'Interés en promociones vigentes',
+            status: 'Prospecto Calificado',
+            nextStep: 'Agendar pase de prueba gratis',
+            source: 'Agente IA Gimnasio'
+          }
+        };
+      }
+
+      return {
+        responseText: 'En FitCenter Club te ayudamos a alcanzar tus metas deportivas:\n\n🏋️ Sala de musculación y aparatos de última generación\n🚴 Clases de Spinning, CrossFit, Yoga, Pilates y GAP\n🎟️ Pases libres y pases diarios de prueba gratis\n📍 Sedes en CABA y GBA con duchas y vestuarios\n\n¿Te gustaría probar una clase gratis o consultar horarios?',
+        steps: [
+          { type: 'done', text: 'Consulta recibida' },
+          { type: 'done', text: 'Grilla de actividades verificada' },
+          { type: 'active', text: 'Iniciando atención a prospecto socio' }
+        ],
+        crmRecord: null
+      };
+    }
+
+    // ═══════════════════════════════════════════
+    // VETERINARIA
+    // ═══════════════════════════════════════════
+    case 'veterinaria': {
+      if (text.includes('turno') || text.includes('vacuna') || text.includes('alimento') || text.includes('perro') || text.includes('gato') || text.includes('baño') || text.includes('peluquería') || text.includes('peluqueria')) {
+        return {
+          responseText: 'Servicios activos en PetCare Veterinaria:\n\n💉 Vacunación & Clínica: Turnos disponibles Jueves 11:00 hs y Viernes 16:30 hs ($14.500)\n🐶 Baño & Peluquería Canina: Turnos este Sábado 10:00, 12:30 y 15:00 hs\n🦴 Alimentos Balanceados: Royal Canin, Pro Plan y Eukanuba con 10% OFF en efectivo y envío gratis en bolsas +15kg\n\n¿Qué servicio necesitás para tu mascota?',
+          steps: [
+            { type: 'done', text: 'Consulta sobre servicios veterinarios' },
+            { type: 'done', text: 'Disponibilidad clínica y peluquería verificada' },
+            { type: 'active', text: 'Pre-reservando atención veterinaria' }
+          ],
+          crmRecord: {
+            name: 'Cliente Mascota',
+            phone: '+54 9 11 7766-3322',
+            interest: 'Consulta clínica / Peluquería / Alimento',
+            details: 'Evaluando turno o pedido de alimento',
+            status: 'Turno / Pedido Activo',
+            nextStep: 'Confirmar servicio solicitado',
+            source: 'Agente IA Veterinaria'
+          }
+        };
+      }
+
+      return {
+        responseText: 'Bienvenido a PetCare Veterinaria 🐾:\n\n🩺 Clínica médica veterinaria y vacunación\n🐶 Baño y peluquería canina/felina\n🦴 Alimentos balanceados y accesorios pet shop\n🚨 Guardia Veterinaria de Emergencias 24 Horas\n\n¿Con qué te podemos ayudar hoy para tu mascota?',
+        steps: [
+          { type: 'done', text: 'Consulta recibida' },
+          { type: 'done', text: 'Sistema veterinario conectado' },
+          { type: 'active', text: 'Atendiendo dueño de mascota' }
+        ],
+        crmRecord: null
+      };
+    }
+
+    // ═══════════════════════════════════════════
+    // CONCESIONARIA
+    // ═══════════════════════════════════════════
+    case 'concesionaria': {
+      if (text.includes('0km') || text.includes('usado') || text.includes('test drive') || text.includes('plan') || text.includes('financiación') || text.includes('financiacion') || text.includes('tasa 0') || text.includes('permut')) {
+        return {
+          responseText: 'Propuestas activas en AutoPremier Motors:\n\n🚙 New CrossSUV 1.6T 0km: Financiación Tasa 0% hasta $15.000.000 en 18 cuotas fijas\n🚗 Llave por Llave: Cotizamos tu usado al instante y entregamos el 0km el mismo día\n🏎️ Test Drive: Disponibilidad para prueba de manejo este Sábado a las 10:30, 12:00 y 16:00 hs\n📋 Plan 80/20: Adjudicación asegurada en cuota 3 ($185.000/mes)\n\n¿Querés agendar un Test Drive o tasar tu auto usado?',
+          steps: [
+            { type: 'done', text: 'Consulta automotriz recibida' },
+            { type: 'done', text: 'Planes Tasa 0% y Test Drive verificados' },
+            { type: 'active', text: 'Solicitando datos de cliente para cotización' }
+          ],
+          crmRecord: {
+            name: 'Prospecto Vehicular',
+            phone: '+54 9 11 2211-9988',
+            interest: '0km / Test Drive / Permuta Usado',
+            details: 'Interés en financiación Tasa 0%',
+            status: 'Lead Automotriz Calificado',
+            nextStep: 'Coordinar prueba de manejo o tasación',
+            source: 'Agente IA Concesionaria'
+          }
+        };
+      }
+
+      return {
+        responseText: 'En AutoPremier Motors te ofrecemos:\n\n🚙 Catálogo de vehículos 0km y Usados Selección\n💳 Financiación a Tasa 0% TNA en cuotas fijas\n🚗 Sistema Llave por Llave con toma de usado en parte de pago\n🏎️ Agendamiento de Test Drive presencial\n\n¿Qué modelo o consulta tenés hoy?',
+        steps: [
+          { type: 'done', text: 'Consulta recibida' },
+          { type: 'done', text: 'Catálogo automotriz cargado' },
+          { type: 'active', text: 'Iniciando atención comercial' }
+        ],
+        crmRecord: null
+      };
+    }
+
+    // ═══════════════════════════════════════════
+    // ESTUDIO PROFESIONAL
+    // ═══════════════════════════════════════════
+    case 'estudio': {
+      if (text.includes('monotributo') || text.includes('sas') || text.includes('srl') || text.includes('sociedad') || text.includes('sueldo') || text.includes('afip') || text.includes('contador') || text.includes('reunión') || text.includes('reunion')) {
+        return {
+          responseText: 'Asesoramiento profesional en Asesores Contables & Legales:\n\n📑 Constitución de SAS / SRL: En 72 a 96hs con CUIT AFIP asignado ($180.000)\n💼 Alta Monotributo / IIBB: Encuadre de categoría + facturación electrónica sin cargo\n📋 Liquidación de Sueldos (F.931): Abonos PyME desde $45.000/mes\n📅 Consultoría Inicial: 30 minutos sin cargo este Martes 11:30 hs o Jueves 10:00 hs (Google Meet)\n\n¿Querés agendar la consultoría de 30 minutos sin cargo?',
+          steps: [
+            { type: 'done', text: 'Consulta profesional recibida' },
+            { type: 'done', text: 'Trámites de AFIP e IGJ analizados' },
+            { type: 'active', text: 'Ofreciendo consultoría de 30 min sin cargo' }
+          ],
+          crmRecord: {
+            name: 'Cliente Profesional',
+            phone: '+54 9 11 4455-6677',
+            interest: 'Monotributo / SAS / Sueldos',
+            details: 'Interés en consultoría contable/legal',
+            status: 'Lead Profesional Calificado',
+            nextStep: 'Confirmar horario de reunión Google Meet',
+            source: 'Agente IA Estudio'
+          }
+        };
+      }
+
+      return {
+        responseText: 'En Asesores Contables & Legales brindamos:\n\n💼 Alta y recategorización en Monotributo e Ingresos Brutos\n📑 Constitución de Sociedades (SAS, SRL, SA) y trámites IGJ\n📋 Liquidación mensual de sueldos y cargas sociales AFIP\n📅 Reuniones de diagnóstico y planificación fiscal\n\n¿Con qué trámite o consulta te asistimos hoy?',
+        steps: [
+          { type: 'done', text: 'Consulta recibida' },
+          { type: 'done', text: 'Servicios del estudio cargados' },
+          { type: 'active', text: 'Iniciando atención profesional' }
         ],
         crmRecord: null
       };
