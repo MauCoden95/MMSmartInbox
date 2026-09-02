@@ -2,7 +2,7 @@
 // src/components/TrialModal.astro
 ---
 
-<div id="trial-modal" class="trial-modal">
+<div id="trial-modal" class="trial-modal" transition:persist="trial-modal">
   <div class="modal-overlay" id="trial-overlay"></div>
   <div class="modal-content">
     <button class="close-modal" id="close-trial" aria-label="Cerrar">

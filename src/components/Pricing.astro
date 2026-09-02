@@ -78,13 +78,13 @@
 </style>
 
 <script>
-  const trialButtons = document.querySelectorAll('[data-start-trial]');
-  
-  trialButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (target && (target.matches('[data-start-trial]') || target.closest('[data-start-trial]'))) {
+      e.preventDefault();
       if (typeof (window as any).openTrialModal === 'function') {
         (window as any).openTrialModal();
       }
-    });
+    }
   });
 </script>

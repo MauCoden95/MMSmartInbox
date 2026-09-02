@@ -421,10 +421,9 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     const form = document.getElementById('analyzer-form');
     const resultsCard = document.getElementById('analysis-results-card');
-    const formCard = document.getElementById('analyzer-form-card');
     const summaryIntro = document.getElementById('results-summary-intro');
 
     if (form) {

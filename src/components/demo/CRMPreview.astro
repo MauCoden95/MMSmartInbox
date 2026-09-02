@@ -308,8 +308,17 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  let removePrevCrmListener: (() => void) | null = null;
+
+  document.addEventListener('astro:page-load', () => {
+    if (removePrevCrmListener) {
+      removePrevCrmListener();
+      removePrevCrmListener = null;
+    }
+
     const card = document.getElementById('crm-record-card');
+    if (!card) return;
+
     const nameEl = document.getElementById('crm-name');
     const phoneEl = document.getElementById('crm-phone');
     const statusTextEl = document.getElementById('crm-status-text');
@@ -319,7 +328,7 @@
     const sourceEl = document.getElementById('crm-source');
     const avatarEl = document.getElementById('crm-avatar');
 
-    window.addEventListener('demo:crm-update', (e: Event) => {
+    const handleUpdate = (e: Event) => {
       const customEvent = e as CustomEvent;
       const data = customEvent.detail;
       if (!data) return;
@@ -341,6 +350,11 @@
         void card.offsetWidth; // trigger reflow
         card.classList.add('updated');
       }
-    });
+    };
+
+    window.addEventListener('demo:crm-update', handleUpdate);
+    removePrevCrmListener = () => {
+      window.removeEventListener('demo:crm-update', handleUpdate);
+    };
   });
 </script>

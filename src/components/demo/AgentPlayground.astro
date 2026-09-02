@@ -947,9 +947,9 @@ import { DEMO_INDUSTRIES } from '../../data/demo/demoIndustries.js';
     loadIndustryContext('inmobiliaria');
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPlayground);
-  } else {
-    initPlayground();
-  }
+  document.addEventListener('astro:page-load', () => {
+    if (document.getElementById('chat-messages-container')) {
+      initPlayground();
+    }
+  });
 </script>
