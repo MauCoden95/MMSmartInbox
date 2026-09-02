@@ -19,28 +19,17 @@ import DemoModal from '../components/DemoModal.astro';
 	<Banner />
 
 	<main class="dashboard-wrapper">
-		<div class="dashboard-grid">
-			<!-- Column 1 (Left) -->
-			<div class="grid-column">
-				<ProblemasReales />
-				<AgenteIAWorkflow />
-				<AutomatizacionesWorkflow />
-				<CasosDeUsoGrid />
-			</div>
-
-			<!-- Column 2 (Center) -->
-			<div class="grid-column">
-				<PropuestaValor />
-				<ChatbotVsAgente />
-				<BeneficiosMetric />
-				<ComoTrabajamos />
-			</div>
-
-			<!-- Column 3 (Right) -->
-			<div class="grid-column">
-				<SolucionesCards />
-				<CtaBanner />
-			</div>
+		<div class="single-column-flow">
+			<ProblemasReales />
+			<PropuestaValor />
+			<SolucionesCards />
+			<AgenteIAWorkflow />
+			<ChatbotVsAgente />
+			<AutomatizacionesWorkflow />
+			<CasosDeUsoGrid />
+			<BeneficiosMetric />
+			<ComoTrabajamos />
+			<CtaBanner />
 		</div>
 
 		<!-- Pricing Section (Precios) retained intact as requested -->
@@ -54,34 +43,20 @@ import DemoModal from '../components/DemoModal.astro';
 
 <style>
 	.dashboard-wrapper {
-		max-width: 1400px;
-		width: 94%;
+		max-width: 1040px;
+		width: 92%;
 		margin: 0 auto;
 		padding: 2rem 0 4rem;
 	}
 
-	.dashboard-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
-		align-items: start;
-	}
-
-	.grid-column {
+	.single-column-flow {
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 2.5rem;
+		width: 100%;
 	}
 
 	.pricing-wrapper {
 		margin-top: 3.5rem;
-	}
-
-	@media (max-width: 1280px) {
-		.dashboard-grid {
-			grid-template-columns: 1fr;
-			max-width: 900px;
-			margin: 0 auto;
-		}
 	}
 </style>
