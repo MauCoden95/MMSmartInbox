@@ -2,173 +2,1208 @@
 // src/components/AutomatizacionesWorkflow.astro
 ---
 <div id="automatizaciones" class="section-card card-automatizaciones" data-aos="fade-up">
+  <!-- Section Header -->
   <div class="section-header">
-    <h2>Automatizaciones</h2>
-    <p class="subtitle">Orquestación inteligente entre todos tus sistemas</p>
+    <div class="header-badge">
+      <span class="badge-dot"></span>
+      <span>Enterprise & RAG Ready</span>
+    </div>
+    <h2>Automatizaciones Empresariales</h2>
+    <p class="subtitle">Orquestación inteligente entre flujos comerciales, bases de conocimiento corporativas y ERPs</p>
   </div>
 
-  <div class="automation-canvas">
-    <!-- Top Row Apps -->
-    <div class="apps-row">
-      <div class="app-chip">
-        <div class="chip-icon bg-wa">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
+  <!-- Category Selector Tabs -->
+  <div class="tabs-container" role="tablist" aria-label="Categorías de Automatización">
+    <button 
+      type="button"
+      class="tab-btn active" 
+      id="tab-comercial-btn"
+      role="tab" 
+      aria-selected="true" 
+      aria-controls="panel-comercial"
+      data-tab="comercial"
+    >
+      <span class="tab-icon">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </span>
+      <span class="tab-text">
+        <strong>Automatización Comercial</strong>
+        <span class="tab-tag">Front-Office</span>
+      </span>
+    </button>
+
+    <button 
+      type="button" 
+      class="tab-btn" 
+      id="tab-rag-btn"
+      role="tab" 
+      aria-selected="false" 
+      aria-controls="panel-rag"
+      data-tab="rag"
+    >
+      <span class="tab-icon icon-rag-sparkle">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+        </svg>
+      </span>
+      <span class="tab-text">
+        <strong>Automatización Empresarial & RAG</strong>
+        <span class="tab-tag tag-rag">Back-Office / RAG</span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Dynamic Automation Canvas / Interactive Architecture Diagram -->
+  <div class="automation-canvas-wrapper" id="automation-workflow-root" data-active-mode="comercial">
+    <div class="automation-canvas">
+      
+      <!-- Top Row Enterprise Nodes -->
+      <div class="nodes-grid-row top-row">
+        <!-- Node 1: RAG Vector DB with Interactive Tooltip -->
+        <div class="enterprise-node node-rag" id="node-vector-rag" tabindex="0" role="button" aria-describedby="tooltip-rag">
+          <div class="node-icon bg-rag">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="node-content">
+            <div class="node-title-row">
+              <span class="node-title">Base Vectorial / Docs (RAG)</span>
+              <span class="info-badge" aria-label="Más información RAG">i</span>
+            </div>
+            <span class="node-desc">PDFs, Manuales, Bases Legales</span>
+          </div>
+
+          <!-- Dynamic RAG Tooltip -->
+          <div class="rag-tooltip" id="tooltip-rag" role="tooltip">
+            <div class="tooltip-header">
+              <span class="tooltip-badge">RAG Architecture</span>
+            </div>
+            <p><strong>RAG (Retrieval-Augmented Generation):</strong> Conectamos la IA a los PDFs, reglamentos, catálogos y bases de datos de tu empresa para respuestas 100% precisas sin alucinaciones.</p>
+          </div>
         </div>
-        <span>WhatsApp API</span>
+
+        <!-- Node 2: ERP / Sistemas Internos -->
+        <div class="enterprise-node node-erp" id="node-erp-sistemas">
+          <div class="node-icon bg-erp">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <div class="node-content">
+            <span class="node-title">ERP / Sistemas Internos</span>
+            <span class="node-desc">SAP, Oracle, Bases SQL & APIs</span>
+          </div>
+        </div>
       </div>
 
-      <div class="app-chip">
-        <div class="chip-icon bg-crm">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+      <!-- Center Hub with Dynamic Energy Lines -->
+      <div class="hub-stage">
+        <!-- SVG Connecting Flow Lines -->
+        <svg class="flow-connectors-svg" viewBox="0 0 600 180" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="grad-flow-comercial" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#25d366" />
+              <stop offset="50%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#6366f1" />
+            </linearGradient>
+            <linearGradient id="grad-flow-rag" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#06b6d4" />
+              <stop offset="50%" stop-color="#8b5cf6" />
+              <stop offset="100%" stop-color="#ec4899" />
+            </linearGradient>
+          </defs>
+
+          <!-- Flow Lines: Top Nodes to Center -->
+          <path class="flow-path path-rag-left" d="M 150,50 Q 200,90 300,90" />
+          <path class="flow-path path-erp-right" d="M 450,50 Q 400,90 300,90" />
+
+          <!-- Flow Lines: Bottom Nodes to Center -->
+          <path class="flow-path path-wa-left" d="M 120,150 Q 200,100 300,90" />
+          <path class="flow-path path-sheets-mid" d="M 300,150 L 300,90" />
+          <path class="flow-path path-apis-right" d="M 480,150 Q 400,100 300,90" />
+        </svg>
+
+        <!-- Central AI Agent Hub -->
+        <div class="hub-center">
+          <div class="hub-halo halo-outer"></div>
+          <div class="hub-halo halo-inner"></div>
+          <div class="robot-circle">
+            <img src="/images/Robot.png" alt="Orquestador IA Central" class="hub-robot" />
+          </div>
+          <div class="hub-meta">
+            <span class="hub-title">Agente Central de IA</span>
+            <span class="hub-status-chip">
+              <span class="status-pulse-dot"></span>
+              <span id="hub-mode-indicator">Modo Comercial Activo</span>
+            </span>
+          </div>
         </div>
-        <span>HubSpot / CRM</span>
+      </div>
+
+      <!-- Bottom Row Enterprise Nodes -->
+      <div class="nodes-grid-row bottom-row">
+        <!-- Node 3: WhatsApp API / CRM -->
+        <div class="enterprise-node node-comercial" id="node-wa-crm">
+          <div class="node-icon bg-wa">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/>
+            </svg>
+          </div>
+          <div class="node-content">
+            <span class="node-title">WhatsApp API / CRM</span>
+            <span class="node-desc">HubSpot, Meta, Zoho</span>
+          </div>
+        </div>
+
+        <!-- Node 4: Google Sheets / Excel Corporativo -->
+        <div class="enterprise-node node-comercial" id="node-sheets-excel">
+          <div class="node-icon bg-sheets">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+          </div>
+          <div class="node-content">
+            <span class="node-title">Google Sheets / Excel</span>
+            <span class="node-desc">Reportes en tiempo real</span>
+          </div>
+        </div>
+
+        <!-- Node 5: +100 APIs / Sistemas Propietarios -->
+        <div class="enterprise-node node-apis" id="node-apis-prop">
+          <div class="node-icon bg-apis">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <div class="node-content">
+            <span class="node-title">+100 APIs / Propietarios</span>
+            <span class="node-desc">Webhooks, Zapier & Make</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Interactive Step-by-Step Flow Pipeline Display -->
+    <div class="flow-pipeline-card">
+      <!-- Panel 1: Comercial Flow -->
+      <div class="flow-panel active" id="panel-comercial">
+        <div class="pipeline-header">
+          <span class="pipeline-tag tag-front">Flujo de Front-Office / Ventas</span>
+          <h4 class="pipeline-title">Secuencia de Conversión Comercial</h4>
+        </div>
+
+        <div class="pipeline-steps">
+          <div class="step-chip">
+            <div class="step-num">1</div>
+            <div class="step-info">
+              <span class="step-badge">Canal Entrada</span>
+              <strong>WhatsApp API</strong>
+            </div>
+          </div>
+          <div class="step-arrow">➔</div>
+          <div class="step-chip highlight-chip">
+            <div class="step-num">2</div>
+            <div class="step-info">
+              <span class="step-badge">Procesamiento</span>
+              <strong>Agente IA comercial</strong>
+            </div>
+          </div>
+          <div class="step-arrow">➔</div>
+          <div class="step-chip">
+            <div class="step-num">3</div>
+            <div class="step-info">
+              <span class="step-badge">Sincronización</span>
+              <strong>Actualiza CRM / HubSpot</strong>
+            </div>
+          </div>
+          <div class="step-arrow">➔</div>
+          <div class="step-chip">
+            <div class="step-num">4</div>
+            <div class="step-info">
+              <span class="step-badge">Acción Final</span>
+              <strong>Agenda en Calendar</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-callout benefit-comercial">
+          <span class="benefit-icon">⚡</span>
+          <div class="benefit-text">
+            <strong>Impacto Comercial Clave:</strong>
+            <span>Respuestas instantáneas 24/7 y cero pérdida de prospectos calificados.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: RAG Empresarial Flow -->
+      <div class="flow-panel" id="panel-rag">
+        <div class="pipeline-header">
+          <span class="pipeline-tag tag-back">Flujo de Back-Office / RAG Corporativo</span>
+          <h4 class="pipeline-title">Arquitectura Retrieval-Augmented Generation & ERP</h4>
+        </div>
+
+        <div class="pipeline-steps">
+          <div class="step-chip">
+            <div class="step-num">1</div>
+            <div class="step-info">
+              <span class="step-badge">Requerimiento</span>
+              <strong>Pregunta Empleado / Cliente</strong>
+            </div>
+          </div>
+          <div class="step-arrow">➔</div>
+          <div class="step-chip highlight-rag-chip">
+            <div class="step-num">2</div>
+            <div class="step-info">
+              <span class="step-badge">Vector Search</span>
+              <strong>Búsqueda RAG / PDFs / ERP</strong>
+            </div>
+          </div>
+          <div class="step-arrow">➔</div>
+          <div class="step-chip">
+            <div class="step-num">3</div>
+            <div class="step-info">
+              <span class="step-badge">Comprensión</span>
+              <strong>Agente IA sintetiza e interpreta</strong>
+            </div>
+          </div>
+          <div class="step-arrow">➔</div>
+          <div class="step-chip">
+            <div class="step-num">4</div>
+            <div class="step-info">
+              <span class="step-badge">Resolución</span>
+              <strong>Contexto preciso + Acción ERP</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-callout benefit-rag">
+          <span class="benefit-icon">🚀</span>
+          <div class="benefit-text">
+            <strong>Impacto Operativo & RAG:</strong>
+            <span>Reducción drástica de cuellos de botella en RRHH, Legales y Operaciones; respuestas instantáneas 100% basadas en documentación interna de tu empresa.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Enterprise Pillars Bar -->
+  <div class="enterprise-pillars-bar">
+    <div class="pillar-item">
+      <div class="pillar-icon-box">🧠</div>
+      <div class="pillar-details">
+        <span class="pillar-title">RAG & Bases de Conocimiento Propias</span>
+        <span class="pillar-desc">Indexación vectorial de PDFs, políticas internas y catálogos sin alucinaciones.</span>
       </div>
     </div>
 
-    <!-- Center Hub -->
-    <div class="hub-center">
-      <div class="hub-pulse"></div>
-      <img src="/images/Robot.png" alt="Orquestador IA" class="hub-robot" />
-      <span class="hub-label">Agente Central de IA</span>
+    <div class="pillar-divider"></div>
+
+    <div class="pillar-item">
+      <div class="pillar-icon-box">⚙️</div>
+      <div class="pillar-details">
+        <span class="pillar-title">Automatización de Operaciones</span>
+        <span class="pillar-desc">Generación automática de reportes, aprobaciones internas y tareas complejas.</span>
+      </div>
     </div>
 
-    <!-- Bottom Row Apps -->
-    <div class="apps-row">
-      <div class="app-chip">
-        <div class="chip-icon bg-sheets">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="3" x2="9" y2="21"></line></svg>
-        </div>
-        <span>Google Sheets</span>
-      </div>
+    <div class="pillar-divider"></div>
 
-      <div class="app-chip">
-        <div class="chip-icon bg-email">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </div>
-        <span>Mailchimp / Email</span>
+    <div class="pillar-item">
+      <div class="pillar-icon-box">🔒</div>
+      <div class="pillar-details">
+        <span class="pillar-title">Conexión Segura con ERPs</span>
+        <span class="pillar-desc">Integración cifrada con SAP, SQL, Salesforce y sistemas legados propietarios.</span>
       </div>
     </div>
   </div>
 </div>
 
 <style>
+  /* ==========================================================================
+     Card & Section Layout
+     ========================================================================== */
   .section-card {
     background: #ffffff;
-    border-radius: 20px;
-    padding: 2rem;
+    border-radius: 24px;
+    padding: 2.25rem 2rem;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3A3DEE 0%, #06b6d4 50%, #15C63B 100%);
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    background: rgba(58, 61, 238, 0.08);
+    border: 1px solid rgba(58, 61, 238, 0.2);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #3A3DEE;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+  }
+
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #15C63B;
+    box-shadow: 0 0 8px #15C63B;
+    animation: pulseDot 2s infinite;
+  }
+
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
   }
 
   .section-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
     font-weight: 800;
     color: #0f172a;
     letter-spacing: -0.5px;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.4rem;
   }
 
   .section-header .subtitle {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     color: #64748b;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
   }
 
-  .automation-canvas {
-    background: #f8fafc;
-    border-radius: 16px;
-    padding: 2rem 1.5rem;
-    border: 1px solid #f1f5f9;
+  /* ==========================================================================
+     Category Selector Tabs
+     ========================================================================== */
+  .tabs-container {
     display: flex;
-    flex-direction: column;
+    gap: 0.75rem;
+    background: #f1f5f9;
+    padding: 0.35rem;
+    border-radius: 16px;
+    margin-bottom: 1.75rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .tab-btn {
+    flex: 1;
+    display: flex;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0.85rem 1.25rem;
+    border-radius: 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #64748b;
+    font-family: inherit;
+    text-align: left;
     position: relative;
   }
 
-  .apps-row {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
+  .tab-btn:hover {
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.6);
   }
 
-  .app-chip {
+  .tab-btn.active {
     background: #ffffff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    color: #0f172a;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  }
+
+  .tab-icon {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: #1e293b;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #e2e8f0;
+    color: #475569;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
   }
 
-  .chip-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
+  .tab-btn.active .tab-icon {
+    background: #3A3DEE;
+    color: #ffffff;
+  }
+
+  .tab-btn[data-tab="rag"].active .tab-icon {
+    background: linear-gradient(135deg, #06b6d4, #6366f1);
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);
+  }
+
+  .tab-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .tab-text strong {
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .tab-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #64748b;
+  }
+
+  .tag-rag {
+    color: #0284c7;
+    font-weight: 700;
+  }
+
+  /* ==========================================================================
+     Diagram Canvas
+     ========================================================================== */
+  .automation-canvas-wrapper {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: visible;
+  }
+
+  .automation-canvas {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%);
+    border: 1px solid #edf2f7;
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-height: 340px;
+  }
+
+  /* Grid of External Nodes */
+  .nodes-grid-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 5;
+    flex-wrap: wrap;
+  }
+
+  .enterprise-node {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 0.65rem 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: default;
+  }
+
+  .enterprise-node:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  }
+
+  .node-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
+  .bg-rag { background: linear-gradient(135deg, #0284c7, #6366f1); }
+  .bg-erp { background: linear-gradient(135deg, #475569, #1e293b); }
   .bg-wa { background: #25d366; }
-  .bg-crm { background: #3b82f6; }
   .bg-sheets { background: #10b981; }
-  .bg-email { background: #f59e0b; }
+  .bg-apis { background: #6366f1; }
 
+  .node-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .node-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .node-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+
+  .node-desc {
+    font-size: 0.68rem;
+    color: #64748b;
+    line-height: 1.2;
+  }
+
+  .info-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  /* ==========================================================================
+     RAG Tooltip
+     ========================================================================== */
+  .node-rag {
+    cursor: pointer;
+  }
+
+  .rag-tooltip {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    width: 290px;
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    font-size: 0.76rem;
+    line-height: 1.4;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25), 0 0 15px rgba(14, 165, 233, 0.35);
+    border: 1px solid #38bdf8;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+  }
+
+  .rag-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #0f172a transparent transparent transparent;
+  }
+
+  .node-rag:hover .rag-tooltip,
+  .node-rag:focus-within .rag-tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .tooltip-header {
+    margin-bottom: 0.35rem;
+  }
+
+  .tooltip-badge {
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .rag-tooltip strong {
+    color: #38bdf8;
+  }
+
+  /* ==========================================================================
+     Neon Highlight Effect in RAG Mode
+     ========================================================================== */
+  [data-active-mode="rag"] .node-rag,
+  [data-active-mode="rag"] .node-erp {
+    border-color: #06b6d4;
+    box-shadow: 0 0 18px rgba(6, 182, 212, 0.35), 0 0 35px rgba(99, 102, 241, 0.2);
+    animation: neonGlowPulse 2.5s ease-in-out infinite alternate;
+  }
+
+  [data-active-mode="rag"] .node-rag {
+    border-color: #38bdf8;
+  }
+
+  @keyframes neonGlowPulse {
+    0% {
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.3), 0 0 25px rgba(99, 102, 241, 0.15);
+      border-color: #06b6d4;
+    }
+    100% {
+      box-shadow: 0 0 22px rgba(6, 182, 212, 0.6), 0 0 45px rgba(99, 102, 241, 0.35);
+      border-color: #38bdf8;
+    }
+  }
+
+  /* Highlighting for Comercial Mode */
+  [data-active-mode="comercial"] .node-comercial {
+    border-color: #25d366;
+    box-shadow: 0 0 14px rgba(37, 211, 102, 0.25);
+  }
+
+  /* ==========================================================================
+     Center Hub Stage & Connectors
+     ========================================================================== */
+  .hub-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 0;
+    min-height: 140px;
+  }
+
+  .flow-connectors-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: visible;
+  }
+
+  .flow-path {
+    fill: none;
+    stroke: #cbd5e1;
+    stroke-width: 2;
+    stroke-dasharray: 6 6;
+    transition: all 0.5s ease;
+  }
+
+  /* Active line animations depending on mode */
+  [data-active-mode="comercial"] .path-wa-left,
+  [data-active-mode="comercial"] .path-sheets-mid,
+  [data-active-mode="comercial"] .path-apis-right {
+    stroke: url(#grad-flow-comercial);
+    stroke-width: 2.5;
+    stroke-dasharray: 8 6;
+    animation: flowPulseLine 1.2s linear infinite;
+  }
+
+  [data-active-mode="rag"] .path-rag-left,
+  [data-active-mode="rag"] .path-erp-right {
+    stroke: url(#grad-flow-rag);
+    stroke-width: 3;
+    stroke-dasharray: 8 6;
+    animation: flowPulseLine 1.2s linear infinite;
+  }
+
+  @keyframes flowPulseLine {
+    to {
+      stroke-dashoffset: -28;
+    }
+  }
+
+  /* Center Hub Avatar & Meta */
   .hub-center {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    z-index: 10;
   }
 
-  .hub-pulse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    width: 100px;
-    height: 100px;
+  .robot-circle {
+    width: 84px;
+    height: 84px;
     border-radius: 50%;
-    background: rgba(11, 37, 145, 0.1);
-    animation: hubPulse 3s ease-in-out infinite alternate;
-  }
-
-  @keyframes hubPulse {
-    0% { transform: translate(-50%, -60%) scale(0.9); opacity: 0.5; }
-    100% { transform: translate(-50%, -60%) scale(1.2); opacity: 1; }
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(11, 37, 145, 0.12);
+    position: relative;
+    z-index: 3;
+    transition: all 0.3s ease;
   }
 
   .hub-robot {
-    width: 80px;
+    width: 60px;
     height: auto;
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+    transition: transform 0.3s ease;
   }
 
-  .hub-label {
-    font-size: 0.82rem;
+  .hub-center:hover .hub-robot {
+    transform: scale(1.08);
+  }
+
+  .hub-halo {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .halo-outer {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(58, 61, 238, 0.15) 0%, rgba(58, 61, 238, 0) 70%);
+    animation: hubHaloPulse 3s ease-in-out infinite alternate;
+  }
+
+  .halo-inner {
+    width: 96px;
+    height: 96px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0) 70%);
+    animation: hubHaloPulse 2s ease-in-out infinite alternate-reverse;
+  }
+
+  [data-active-mode="rag"] .halo-outer {
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.35) 0%, rgba(99, 102, 241, 0) 70%);
+  }
+
+  @keyframes hubHaloPulse {
+    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+    100% { transform: translate(-50%, -50%) scale(1.25); opacity: 1; }
+  }
+
+  .hub-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .hub-title {
+    font-size: 0.88rem;
     font-weight: 800;
-    color: #0b2591;
-    margin-top: 0.4rem;
+    color: #0f172a;
+    letter-spacing: -0.2px;
   }
 
-  @media (max-width: 640px) {
-    .apps-row {
+  .hub-status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.6rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #3b82f6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  .status-pulse-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 6px #10b981;
+  }
+
+  /* ==========================================================================
+     Pipeline Steps Card & Benefits
+     ========================================================================== */
+  .flow-pipeline-card {
+    margin-top: 1.25rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  }
+
+  .flow-panel {
+    display: none;
+    animation: fadeInSlide 0.3s ease-in-out;
+  }
+
+  .flow-panel.active {
+    display: block;
+  }
+
+  @keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .pipeline-header {
+    margin-bottom: 1rem;
+  }
+
+  .pipeline-tag {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 0.3rem;
+  }
+
+  .tag-front {
+    background: rgba(37, 211, 102, 0.12);
+    color: #15803d;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+  }
+
+  .tag-back {
+    background: rgba(6, 182, 212, 0.12);
+    color: #0369a1;
+    border: 1px solid rgba(6, 182, 212, 0.25);
+  }
+
+  .pipeline-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+  }
+
+  /* Steps Sequence */
+  .pipeline-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .step-chip {
+    flex: 1;
+    min-width: 120px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.6rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .step-chip:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+  }
+
+  .highlight-chip {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.04);
+  }
+
+  .highlight-rag-chip {
+    border-color: #06b6d4;
+    background: rgba(6, 182, 212, 0.04);
+  }
+
+  .step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step-badge {
+    font-size: 0.62rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .step-info strong {
+    font-size: 0.76rem;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+
+  .step-arrow {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* Benefit Callouts */
+  .benefit-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .benefit-comercial {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+  }
+
+  .benefit-rag {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+  }
+
+  .benefit-icon {
+    font-size: 1.15rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .benefit-text strong {
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+
+  /* ==========================================================================
+     Enterprise Pillars Bottom Bar
+     ========================================================================== */
+  .enterprise-pillars-bar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.75rem;
+    padding: 1.25rem 1.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+  }
+
+  .pillar-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .pillar-icon-box {
+    font-size: 1.45rem;
+    line-height: 1;
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+  }
+
+  .pillar-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .pillar-title {
+    font-size: 0.84rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+  }
+
+  .pillar-desc {
+    font-size: 0.72rem;
+    color: #64748b;
+    line-height: 1.35;
+  }
+
+  .pillar-divider {
+    width: 1px;
+    height: 48px;
+    background: #cbd5e1;
+  }
+
+  /* ==========================================================================
+     Responsive Media Queries
+     ========================================================================== */
+  @media (max-width: 1024px) {
+    .enterprise-pillars-bar {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .pillar-divider {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-card {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .tabs-container {
       flex-direction: column;
-      align-items: center;
+    }
+
+    .nodes-grid-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .enterprise-node {
+      width: 100%;
+    }
+
+    .rag-tooltip {
+      position: static;
+      transform: none !important;
+      width: 100%;
+      margin-top: 0.5rem;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+
+    .rag-tooltip::after {
+      display: none;
+    }
+
+    .flow-connectors-svg {
+      display: none;
+    }
+
+    .pipeline-steps {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .step-arrow {
+      align-self: center;
+      transform: rotate(90deg);
+      margin: -0.2rem 0;
     }
   }
 </style>
+
+<script is:inline>
+  function setupAutomationSection() {
+    const rootEl = document.getElementById('automation-workflow-root');
+    const tabComercial = document.getElementById('tab-comercial-btn');
+    const tabRag = document.getElementById('tab-rag-btn');
+    const panelComercial = document.getElementById('panel-comercial');
+    const panelRag = document.getElementById('panel-rag');
+    const hubIndicator = document.getElementById('hub-mode-indicator');
+
+    if (!rootEl || !tabComercial || !tabRag) return;
+
+    function activateMode(mode) {
+      if (mode === 'rag') {
+        // Update tabs
+        tabRag.classList.add('active');
+        tabRag.setAttribute('aria-selected', 'true');
+        tabComercial.classList.remove('active');
+        tabComercial.setAttribute('aria-selected', 'false');
+
+        // Update canvas root mode
+        rootEl.setAttribute('data-active-mode', 'rag');
+
+        // Update panels
+        if (panelRag && panelComercial) {
+          panelRag.classList.add('active');
+          panelComercial.classList.remove('active');
+        }
+
+        // Update central hub indicator
+        if (hubIndicator) {
+          hubIndicator.textContent = 'Modo RAG & ERP Activo';
+          hubIndicator.parentElement.style.color = '#0284c7';
+        }
+      } else {
+        // Default: comercial
+        tabComercial.classList.add('active');
+        tabComercial.setAttribute('aria-selected', 'true');
+        tabRag.classList.remove('active');
+        tabRag.setAttribute('aria-selected', 'false');
+
+        rootEl.setAttribute('data-active-mode', 'comercial');
+
+        if (panelRag && panelComercial) {
+          panelComercial.classList.add('active');
+          panelRag.classList.remove('active');
+        }
+
+        if (hubIndicator) {
+          hubIndicator.textContent = 'Modo Comercial Activo';
+          hubIndicator.parentElement.style.color = '#15803d';
+        }
+      }
+    }
+
+    tabComercial.onclick = () => activateMode('comercial');
+    tabRag.onclick = () => activateMode('rag');
+  }
+
+  // Bind to standard page load & Astro ClientRouter transitions
+  document.addEventListener('DOMContentLoaded', setupAutomationSection);
+  document.addEventListener('astro:page-load', setupAutomationSection);
+</script>
