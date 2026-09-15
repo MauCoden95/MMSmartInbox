@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import ChatWidget from '../components/ChatWidget.astro';
 import QuoteModal from '../components/QuoteModal.astro';
 import TrialModal from '../components/TrialModal.astro';
+import HexagonBackground from '../components/HexagonBackground.astro';
 
 interface Props {
 	title?: string;
@@ -61,10 +62,13 @@ const {
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	</head>
 	<body>
+		<HexagonBackground />
 		<Header transition:persist />
 		<div class="header-spacer"></div>
-		<slot />
-		<Footer />
+		<div class="page-content-wrapper">
+			<slot />
+			<Footer />
+		</div>
 		<ChatWidget transition:persist />
 		<QuoteModal transition:persist />
 		<TrialModal transition:persist />
@@ -139,6 +143,12 @@ const {
 		.header-spacer {
 			height: 90px;
 		}
+	}
+
+	.page-content-wrapper {
+		position: relative;
+		z-index: 1;
+		width: 100%;
 	}
 
 	/* Scrollbar Personalizado */

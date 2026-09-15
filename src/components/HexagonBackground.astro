@@ -1,0 +1,39 @@
+---
+// src/components/HexagonBackground.astro
+---
+
+<div class="hexagon-bg-wrapper" aria-hidden="true">
+  <div class="hexagon-bg-pattern"></div>
+</div>
+
+<style>
+  .hexagon-bg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hexagon-bg-pattern {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/hexagon-bg.svg');
+    background-repeat: repeat;
+    background-position: top center;
+    background-size: 1216px 486px;
+    opacity: 0.88;
+  }
+
+  @media (max-width: 768px) {
+    .hexagon-bg-pattern {
+      background-size: 760px 304px;
+      opacity: 0.75;
+    }
+  }
+</style>
