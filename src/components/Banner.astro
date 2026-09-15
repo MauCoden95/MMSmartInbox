@@ -5,7 +5,17 @@
   <div class="hero-container">
     <div class="hero-content" data-aos="fade-right">
       <h1 class="hero-title">
-        Tu Empresa Puede Tener Un Agente de IA Trabajando Por Ella.
+        Agentes de IA para{" "}
+        <span class="word-rotator-wrapper" id="hero-rotator-wrapper">
+          <span class="word-rotator" id="hero-word-rotator">
+            <span class="rotator-word is-active">tu negocio</span>
+            <span class="rotator-word">Farmacia</span>
+            <span class="rotator-word">Inmobiliaria</span>
+            <span class="rotator-word">Restaurante</span>
+            <span class="rotator-word">Estudio jurídico</span>
+            <span class="rotator-word">Gimnasio</span>
+          </span>
+        </span>
       </h1>
       <p class="hero-description">
         Implementamos IA aplicada y automatización inteligente para optimizar tus procesos, aumentar la productividad y mejorar la experiencia del cliente.
@@ -199,6 +209,56 @@
     color: #0f172a;
     letter-spacing: -1.2px;
     margin-bottom: 1.5rem;
+  }
+
+  .word-rotator-wrapper {
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    color: #0b2591;
+    overflow: hidden;
+    transition: width 0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .word-rotator {
+    display: inline-block;
+    position: relative;
+  }
+
+  .rotator-word {
+    display: inline-block;
+    color: #0b2591;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translateY(110%);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .rotator-word.is-active {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0%);
+    pointer-events: auto;
+  }
+
+  .rotator-word.is-exiting {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-110%);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .rotator-word.is-entering {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(110%);
+    transition: none;
+    pointer-events: none;
   }
 
   .hero-description {
@@ -451,3 +511,76 @@
     }
   }
 </style>
+
+<script>
+  function setupWordRotator() {
+    const wrapper = document.getElementById('hero-rotator-wrapper');
+    const rotator = document.getElementById('hero-word-rotator');
+    if (!wrapper || !rotator) return;
+
+    const words = Array.from(rotator.querySelectorAll<HTMLElement>('.rotator-word'));
+    if (words.length <= 1) return;
+
+    // Reset previous interval if navigating via Astro SPA
+    if ((window as any)._heroRotatorTimer) {
+      clearInterval((window as any)._heroRotatorTimer);
+      (window as any)._heroRotatorTimer = null;
+    }
+
+    let currentIndex = 0;
+
+    const syncWrapperWidth = (target: HTMLElement) => {
+      if (!target) return;
+      wrapper.style.width = `${target.offsetWidth}px`;
+    };
+
+    // Ensure initial word is active and wrapper width matches
+    words.forEach((w, idx) => {
+      w.classList.remove('is-active', 'is-exiting', 'is-entering');
+      if (idx === 0) {
+        w.classList.add('is-active');
+      }
+    });
+
+    syncWrapperWidth(words[0]);
+
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(() => {
+        const currentActive = rotator.querySelector<HTMLElement>('.rotator-word.is-active');
+        if (currentActive) syncWrapperWidth(currentActive);
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      const currentActive = rotator.querySelector<HTMLElement>('.rotator-word.is-active');
+      if (currentActive) syncWrapperWidth(currentActive);
+    }, { passive: true });
+
+    (window as any)._heroRotatorTimer = setInterval(() => {
+      const currentWord = words[currentIndex];
+      const nextIndex = (currentIndex + 1) % words.length;
+      const nextWord = words[nextIndex];
+
+      // Prepare next word at bottom
+      nextWord.className = 'rotator-word is-entering';
+      syncWrapperWidth(nextWord);
+
+      // Trigger bottom-to-top slide animation
+      requestAnimationFrame(() => {
+        currentWord.className = 'rotator-word is-exiting';
+        nextWord.className = 'rotator-word is-active';
+
+        setTimeout(() => {
+          if (currentWord !== words[nextIndex]) {
+            currentWord.className = 'rotator-word';
+          }
+        }, 500);
+
+        currentIndex = nextIndex;
+      });
+    }, 2600);
+  }
+
+  document.addEventListener('DOMContentLoaded', setupWordRotator);
+  document.addEventListener('astro:page-load', setupWordRotator);
+</script>
