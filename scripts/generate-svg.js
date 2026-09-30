@@ -45,11 +45,11 @@ const STYLES = {
 // Clusters positioned to match the image layout
 const hexagons = [
   // === CLUSTER 1: Upper-Left (Node & rings) ===
-  { c: 1, r: 2, type: 'node', nodeColor: '#1d4ed8', dotColor: '#1e3a8a' },
+  { c: 1, r: 2, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 0, r: 2, type: 'soft' },
   { c: 2, r: 1, type: 'ice' },
   { c: 3, r: 1, type: 'sky' },
-  { c: 4, r: 1, type: 'node', nodeColor: '#2563eb', dotColor: '#1e40af' },
+  { c: 4, r: 1, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 3, r: 2, type: 'vibrant' },
   { c: 2, r: 2, type: 'cyan' },
   { c: 1, r: 3, type: 'soft' },
@@ -74,7 +74,7 @@ const hexagons = [
 
   // === CLUSTER 3: Mid-Left Node & Ring ===
   { c: 6, r: 2, type: 'ice' },
-  { c: 7, r: 2, type: 'node', nodeColor: '#1d4ed8', dotColor: '#1e3a8a' },
+  { c: 7, r: 2, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 6, r: 3, type: 'soft' },
   { c: 7, r: 3, type: 'sky' },
   { c: 8, r: 3, type: 'cyan' },
@@ -96,18 +96,18 @@ const hexagons = [
 
   // === CLUSTER 6: Center Bottom (Double Rings & Node) ===
   { c: 10, r: 6, type: 'ice' },
-  { c: 11, r: 6, type: 'node', nodeColor: '#1e40af', dotColor: '#1e3a8a' },
+  { c: 11, r: 6, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 12, r: 6, type: 'double', stroke: '#60a5fa', innerStroke: '#93c5fd' },
   { c: 13, r: 6, type: 'double', stroke: '#38bdf8', innerStroke: '#bfdbfe' },
   { c: 11, r: 7, type: 'soft' },
   { c: 12, r: 7, type: 'sky' },
-  { c: 13, r: 7, type: 'node', nodeColor: '#1d4ed8', dotColor: '#1e40af' },
+  { c: 13, r: 7, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 10, r: 8, type: 'cyan' },
   { c: 11, r: 8, type: 'vibrant' },
   { c: 12, r: 8, type: 'ice' },
 
   // === CLUSTER 7: Mid-Right Upper Node ===
-  { c: 15, r: 2, type: 'node', nodeColor: '#1d4ed8', dotColor: '#1e3a8a' },
+  { c: 15, r: 2, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 14, r: 2, type: 'soft' },
   { c: 16, r: 2, type: 'cyan' },
   { c: 15, r: 3, type: 'sky' },
@@ -115,14 +115,14 @@ const hexagons = [
 
   // === CLUSTER 8: Vertical Honeycomb Cascade ===
   { c: 19, r: 1, type: 'sky' },
-  { c: 18, r: 2, type: 'node', nodeColor: '#2563eb', dotColor: '#1e40af' },
+  { c: 18, r: 2, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 19, r: 2, type: 'soft' },
   { c: 18, r: 3, type: 'vibrant' },
   { c: 19, r: 3, type: 'cyan' },
   { c: 18, r: 4, type: 'sky' },
   { c: 19, r: 4, type: 'soft' },
   { c: 18, r: 5, type: 'ice' },
-  { c: 19, r: 5, type: 'node', nodeColor: '#1d4ed8', dotColor: '#1e3a8a' },
+  { c: 19, r: 5, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 18, r: 6, type: 'vibrant' },
   { c: 19, r: 6, type: 'cyan' },
   { c: 20, r: 6, type: 'soft' },
@@ -135,7 +135,7 @@ const hexagons = [
   { c: 23, r: 2, type: 'vibrant' },
   { c: 24, r: 2, type: 'ice' },
   { c: 22, r: 3, type: 'sky' },
-  { c: 23, r: 3, type: 'node', nodeColor: '#1d4ed8', dotColor: '#1e40af' },
+  { c: 23, r: 3, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 24, r: 3, type: 'cyan' },
   { c: 25, r: 3, type: 'soft' },
   { c: 22, r: 4, type: 'ice' },
@@ -143,13 +143,13 @@ const hexagons = [
   { c: 24, r: 4, type: 'sky' },
   { c: 25, r: 4, type: 'cyan' },
   { c: 23, r: 5, type: 'soft' },
-  { c: 24, r: 5, type: 'node', nodeColor: '#2563eb', dotColor: '#1e3a8a' },
+  { c: 24, r: 5, type: 'node', nodeColor: '#85A2ED', dotColor: '#85A2ED' },
   { c: 25, r: 5, type: 'vibrant' },
   { c: 24, r: 6, type: 'sky' },
   { c: 25, r: 6, type: 'ice' },
 
   // Connecting line with dot at upper right edge
-  { c: 25, r: 1, type: 'node-partial', dotColor: '#1e3a8a' },
+  { c: 25, r: 1, type: 'node-partial', dotColor: '#85A2ED' },
 ];
 
 function generateWrappedInstances(cx, cy) {
@@ -196,7 +196,7 @@ hexagons.forEach(hex => {
     } else if (hex.type === 'node-partial') {
       const p1 = pts[4];
       const p2 = pts[5];
-      svgNodes += `  <line x1="${p1.x.toFixed(2)}" y1="${p1.y.toFixed(2)}" x2="${p2.x.toFixed(2)}" y2="${p2.y.toFixed(2)}" stroke="#1d4ed8" stroke-width="1.6" />\n`;
+      svgNodes += `  <line x1="${p1.x.toFixed(2)}" y1="${p1.y.toFixed(2)}" x2="${p2.x.toFixed(2)}" y2="${p2.y.toFixed(2)}" stroke="#85A2ED" stroke-width="1.6" />\n`;
       svgNodes += `  <circle cx="${p2.x.toFixed(2)}" cy="${p2.y.toFixed(2)}" r="3" fill="${hex.dotColor}" />\n`;
     } else {
       const s = STYLES[hex.type] || STYLES.sky;

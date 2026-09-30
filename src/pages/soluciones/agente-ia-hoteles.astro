@@ -4,10 +4,10 @@ import DemoModal from '../../components/DemoModal.astro';
 ---
 
 <Layout
-  title="Agente de IA para Bienes Raíces e Inmobiliarias | MM SmartInbox"
-  description="IA que acompaña a los interesados hasta concretar una visita. Califica leads, responde consultas clave, agenda visitas y mantiene el seguimiento conectado a tu CRM e inventario."
+  title="Agente de IA para Hoteles y Alojamientos Turísticos | MM SmartInbox"
+  description="IA que atiende a tus huéspedes en todo momento del viaje. Responde consultas de disponibilidad y tarifas, asiste durante la estadía y fideliza tras el check-out conectada a tu PMS."
 >
-  <div class="real-estate-page">
+  <div class="hotel-page">
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <!-- 1. HERO / BANNER -->
@@ -19,15 +19,15 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="hero-text-col" data-aos="fade-right">
           <div class="hero-badge">
             <span class="badge-pulse"></span>
-            <span>Agente de IA para Inmobiliarias, Brokers y Desarrolladoras</span>
+            <span>Agente de IA para Hoteles Boutique, Cadenas, Hostels y Alojamientos</span>
           </div>
 
           <h1 class="hero-title">
-            IA que acompaña a los interesados hasta concretar una visita
+            IA que atiende a tus huéspedes en todo momento del viaje
           </h1>
 
           <p class="hero-description">
-            Convierte consultas de portales, WhatsApp y redes en conversaciones útiles: el agente califica, responde dudas clave, sugiere propiedades, agenda visitas y mantiene el seguimiento para que tu equipo cierre más y persiga menos.
+            Responde consultas de disponibilidad, tarifas y servicios, asiste durante la estadía y mantiene la conversación después del check-out, para que tu equipo se enfoque en brindar una experiencia memorable en lugar de repetir la misma información.
           </p>
 
           <div class="hero-actions">
@@ -35,7 +35,7 @@ import DemoModal from '../../components/DemoModal.astro';
               Reservar una demo
             </button>
             <a href="#automatizaciones" class="btn btn-outline">
-              Ver etapas del proceso
+              Ver etapas del viaje
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -46,22 +46,22 @@ import DemoModal from '../../components/DemoModal.astro';
           <div class="hero-microcopy">
             <div class="microcopy-item">
               <span class="micro-icon">✓</span>
-              <span>Implementación guiada</span>
+              <span>Disponible 24/7</span>
             </div>
             <span class="micro-sep">•</span>
             <div class="microcopy-item">
               <span class="micro-icon">✓</span>
-              <span>Integración con tu CRM</span>
+              <span>Multi-idioma</span>
             </div>
             <span class="micro-sep">•</span>
             <div class="microcopy-item">
               <span class="micro-icon">✓</span>
-              <span>Enfoque en operación comercial</span>
+              <span>Integración con tu PMS y canales</span>
             </div>
           </div>
         </div>
 
-        <!-- Columna Derecha: Flujo interactivo del Agente (Consulta → Calificación → Propiedades → Agenda visita → Seguimiento) -->
+        <!-- Columna Derecha: Visual Journey del Huésped (Consulta → Reserva → Pre-estadía → Estadía → Post-estadía) -->
         <div class="hero-visual-col" data-aos="fade-left" data-aos-delay="150">
           <div class="flow-visual-wrapper">
             <div class="flow-glass-card">
@@ -69,12 +69,12 @@ import DemoModal from '../../components/DemoModal.astro';
               <div class="flow-card-header">
                 <div class="live-indicator">
                   <span class="pulse-dot"></span>
-                  <span class="live-label">Agente Inmobiliario IA Activo</span>
+                  <span class="live-label">Agente Hotelero IA Activo</span>
                 </div>
-                <span class="channel-pill">Portales + WhatsApp + CRM</span>
+                <span class="channel-pill">WhatsApp • Web • PMS Sincronizado</span>
               </div>
 
-              <!-- Pipeline de 5 etapas con íconos de marca y contexto inmobiliario -->
+              <!-- Pipeline Journey del Huésped en 5 etapas -->
               <div class="flow-stream">
                 
                 <!-- Etapa 1: Consulta -->
@@ -86,11 +86,11 @@ import DemoModal from '../../components/DemoModal.astro';
                   </div>
                   <div class="flow-step-body">
                     <div class="flow-step-header">
-                      <span class="flow-step-tag">1. Consulta entrante</span>
-                      <span class="flow-step-meta">Zonaprop • 21:40 hs</span>
+                      <span class="flow-step-tag">1. Consulta</span>
+                      <span class="flow-step-meta">WhatsApp • 22:45 hs</span>
                     </div>
                     <div class="chat-bubble user-bubble">
-                      "Hola, ¿sigue disponible el departamento en Palermo? ¿Aceptan mascotas y cuánto son las expensas?"
+                      "Hola! ¿Tienen habitación disponible para 2 personas del 14 al 17 de febrero? ¿Aceptan mascotas?"
                     </div>
                   </div>
                 </div>
@@ -101,21 +101,22 @@ import DemoModal from '../../components/DemoModal.astro';
                   <div class="connector-dot"></div>
                 </div>
 
-                <!-- Etapa 2: Calificación -->
+                <!-- Etapa 2: Reserva y Disponibilidad en vivo -->
                 <div class="flow-step-item">
                   <div class="flow-icon-circle green-theme">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                   </div>
                   <div class="flow-step-body">
                     <div class="flow-step-header">
-                      <span class="flow-step-tag">2. Calificación de intención</span>
-                      <span class="flow-badge-ai">IA Calificando</span>
+                      <span class="flow-step-tag">2. Reserva directa</span>
+                      <span class="flow-badge-ai">Disponible en PMS ✓</span>
                     </div>
                     <div class="chat-bubble ai-bubble">
                       <span class="ai-avatar">IA</span>
-                      <p>¡Hola Lucas! Sí, está disponible y <strong>es pet friendly</strong>. Expensas: <strong>$68.000</strong>. ¿Buscás mudarte en los próximos 30 días o estás evaluando opciones?</p>
+                      <p>¡Hola Florencia! Sí, tenemos disponibilidad en <strong>Suite Balcón</strong> ($120/noche) con desayuno incluido y <strong>somos pet-friendly 🐾</strong>. Te dejo el link directo con 10% off de bienvenida.</p>
                     </div>
                   </div>
                 </div>
@@ -126,39 +127,9 @@ import DemoModal from '../../components/DemoModal.astro';
                   <div class="connector-dot"></div>
                 </div>
 
-                <!-- Etapa 3: Propiedades -->
+                <!-- Etapa 3: Pre-estadía -->
                 <div class="flow-step-item">
                   <div class="flow-icon-circle blue-theme">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                  </div>
-                  <div class="flow-step-body">
-                    <div class="flow-step-header">
-                      <span class="flow-step-tag">3. Match con inventario</span>
-                      <span class="flow-step-meta">Conectado a inventario</span>
-                    </div>
-                    <div class="property-match-mini">
-                      <div class="prop-thumb">🏢</div>
-                      <div class="prop-details">
-                        <span class="prop-title">Palermo Soho • 2 amb c/ Balcón</span>
-                        <span class="prop-sub">USD 145.000 • Cochera opcional</span>
-                      </div>
-                      <span class="prop-badge">Match 98%</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Conector -->
-                <div class="flow-line-connector">
-                  <div class="connector-track"></div>
-                  <div class="connector-dot"></div>
-                </div>
-
-                <!-- Etapa 4: Agenda Visita -->
-                <div class="flow-step-item">
-                  <div class="flow-icon-circle green-theme">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                       <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -168,12 +139,16 @@ import DemoModal from '../../components/DemoModal.astro';
                   </div>
                   <div class="flow-step-body">
                     <div class="flow-step-header">
-                      <span class="flow-step-tag">4. Agenda de visita</span>
-                      <span class="flow-badge-confirmed">✓ Visita confirmada</span>
+                      <span class="flow-step-tag">3. Pre-estadía</span>
+                      <span class="flow-step-meta">48 hs antes del check-in</span>
                     </div>
-                    <div class="chat-bubble ai-bubble">
-                      <span class="ai-avatar">IA</span>
-                      <p>¡Perfecto! Te agendé para el <strong>Jueves a las 16:30 hs</strong> con Martín, asesor de la zona. Te envié la ubicación exacta y ficha técnica por WhatsApp.</p>
+                    <div class="property-match-mini">
+                      <div class="prop-thumb">🛎️</div>
+                      <div class="prop-details">
+                        <span class="prop-title">Check-in digital + Ubicación</span>
+                        <span class="prop-sub">Transfer coordinado • Preferencias guardadas</span>
+                      </div>
+                      <span class="prop-badge">Completado</span>
                     </div>
                   </div>
                 </div>
@@ -184,23 +159,48 @@ import DemoModal from '../../components/DemoModal.astro';
                   <div class="connector-dot"></div>
                 </div>
 
-                <!-- Etapa 5: Seguimiento y CRM -->
+                <!-- Etapa 4: Estadía -->
                 <div class="flow-step-item">
-                  <div class="flow-icon-circle purple-theme">
+                  <div class="flow-icon-circle green-theme">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
                   </div>
                   <div class="flow-step-body">
                     <div class="flow-step-header">
-                      <span class="flow-step-tag">5. Seguimiento y CRM</span>
-                      <span class="flow-step-meta">CRM Sincronizado</span>
+                      <span class="flow-step-tag">4. Durante la estadía</span>
+                      <span class="flow-badge-confirmed">Concierge 24/7</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>El desayuno se sirve en la terraza de <strong>07:30 a 10:30 hs</strong>. La clave de Wi-Fi es <em>BoutiqueGuest</em>. ¿Necesitás toallas extra para la piscina o sugerencias de restaurantes?</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 5: Post-estadía -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle purple-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">5. Post-estadía</span>
+                      <span class="flow-step-meta">Fidelización y Reseñas</span>
                     </div>
                     <div class="crm-sync-box">
-                      <span class="crm-tag">Lead Calificado</span>
-                      <span class="crm-tag">Visita Agendada</span>
-                      <span class="crm-tag">Recordatorio programado 2h antes</span>
+                      <span class="crm-tag">Encuesta 5★ Enviada</span>
+                      <span class="crm-tag">Google Reviews</span>
+                      <span class="crm-tag">Cupón 15% próximo viaje</span>
                     </div>
                   </div>
                 </div>
@@ -210,10 +210,10 @@ import DemoModal from '../../components/DemoModal.astro';
               <!-- Barra de integraciones en el pie del Hero visual -->
               <div class="flow-systems-bar">
                 <span class="systems-label">Sincronizado con:</span>
-                <span class="system-tag">Tokko Broker</span>
+                <span class="system-tag">PMS Hotelero</span>
                 <span class="system-tag">WhatsApp API</span>
-                <span class="system-tag">Google Calendar</span>
-                <span class="system-tag">Zonaprop / Portales</span>
+                <span class="system-tag">Channel Manager</span>
+                <span class="system-tag">Motor de Reservas</span>
               </div>
 
             </div>
@@ -225,21 +225,49 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 2. EL PROBLEMA (Identificación de situaciones reales) -->
+    <!-- 2. EL PROBLEMA (Cuando la ocupación crece, la recepción se satura) -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section class="section-container" id="problema" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">El Reto de la Operación Inmobiliaria</div>
-        <h2 class="section-title">Cuando llegan consultas, el cuello de botella es el seguimiento</h2>
+        <div class="section-badge">El Desafío de la Operación Hotelera</div>
+        <h2 class="section-title">Cuando la ocupación crece, la recepción se satura</h2>
         <p class="section-subtitle">
-          Invertir en portales y pauta digital genera volumen de contactos, pero la respuesta manual y la falta de calificación terminan dispersando las oportunidades de cierre.
+          Entre atender al huésped en el mostrador, coordinar el check-in y contestar canales digitales a toda hora, el equipo se desborda y las oportunidades de reserva directa se escapan.
         </p>
       </div>
 
       <div class="problem-grid">
         
-        <!-- Problema 1 -->
+        <!-- Situación 1 -->
         <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Consultas simultáneas por múltiples canales</h3>
+            <p>Disponibilidad y tarifas consultadas al mismo tiempo por WhatsApp, Instagram, el chat de la web y correo electrónico, saturando al personal de recepción.</p>
+          </div>
+        </div>
+
+        <!-- Situación 2 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Preguntas idénticas repetidas decenas de veces</h3>
+            <p>Horarios de check-in y check-out, desayuno incluido, política de mascotas, estacionamiento, traslados y condiciones de cancelación consumen horas del día.</p>
+          </div>
+        </div>
+
+        <!-- Situación 3 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
           <div class="problem-icon-wrap">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
@@ -247,83 +275,52 @@ import DemoModal from '../../components/DemoModal.astro';
             </svg>
           </div>
           <div class="problem-content">
-            <h3>Leads preguntando lo mismo y la respuesta llega tarde</h3>
-            <p>Precio, expensas, ubicación precisa y requisitos de ingreso. Cuando un asesor tarda horas en contestar, el interesado ya consultó en tres inmobiliarias más.</p>
+            <h3>Reservas perdidas por demoras en la respuesta</h3>
+            <p>El viajero compara alojamientos de noche o en su tiempo libre. Si el hotel tarda horas o responde al día siguiente, el huésped ya reservó en otro lugar.</p>
           </div>
         </div>
 
-        <!-- Problema 2 -->
-        <div class="problem-card" data-aos="fade-up" data-aos-delay="150">
-          <div class="problem-icon-wrap">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </div>
-          <div class="problem-content">
-            <h3>Consultas fuera de horario que se enfrían</h3>
-            <p>La mayor parte de los compradores e inquilinos buscan propiedades por la noche y fines de semana. Si no hay respuesta inmediata, ese contacto se pierde.</p>
-          </div>
-        </div>
-
-        <!-- Problema 3 -->
-        <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="problem-icon-wrap">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="8.5" cy="7" r="4"></circle>
-              <line x1="18" y1="8" x2="23" y2="13"></line>
-              <line x1="23" y1="8" x2="18" y2="13"></line>
-            </svg>
-          </div>
-          <div class="problem-content">
-            <h3>Leads sin calificar que consumen tiempo del equipo</h3>
-            <p>Asesores comerciales dedicando horas valiosas a coordinar visitas con personas que no cuentan con el presupuesto, la garantía requerida o urgencia real.</p>
-          </div>
-        </div>
-
-        <!-- Problema 4 -->
+        <!-- Situación 4 -->
         <div class="problem-card" data-aos="fade-up" data-aos-delay="250">
           <div class="problem-icon-wrap">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </div>
           <div class="problem-content">
-            <h3>Agendas desordenadas: idas y vueltas por chat</h3>
-            <p>Coordinar día y hora por mensajes cruzados genera cancelaciones de último momento, ausencias en visitas fijadas y huecos improductivos en el calendario.</p>
+            <h3>Barrera idiomática con huéspedes internacionales</h3>
+            <p>Consultas en inglés, portugués, francés o alemán que la recepción no siempre puede responder con rapidez, fluidez y calidez en el momento exacto.</p>
           </div>
         </div>
 
-        <!-- Problema 5 -->
+        <!-- Situación 5 -->
         <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
           <div class="problem-icon-wrap">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
           <div class="problem-content">
-            <h3>Falta de registro: nadie sabe en qué etapa está cada uno</h3>
-            <p>Conversaciones que quedan en los WhatsApp personales de cada vendedor sin sincronizarse con el CRM, impidiendo tener visibilidad de la cartera comercial.</p>
+            <h3>Recepción interrumpida frente al huésped</h3>
+            <p>El personal atiende llamadas y responde chats mientras tiene a una persona esperando en el mostrador para hacer su check-in, perjudicando la experiencia presencial.</p>
           </div>
         </div>
 
-        <!-- Problema 6 -->
+        <!-- Situación 6 -->
         <div class="problem-card" data-aos="fade-up" data-aos-delay="350">
           <div class="problem-icon-wrap">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
-              <line x1="12" y1="2" x2="12" y2="12"></line>
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
             </svg>
           </div>
           <div class="problem-content">
-            <h3>Seguimientos olvidados que enfrían operaciones</h3>
-            <p>Tras una primera visita o consulta inicial, el asesor no recontacta a tiempo. Operaciones con alto potencial de cierre se apagan por falta de cadencia comercial.</p>
+            <h3>Postestadía sin seguimiento ni fidelización</h3>
+            <p>Una vez realizado el check-out, no se recopilan reseñas en Google o TripAdvisor ni se envían propuestas para incentivar una próxima estadía directa.</p>
           </div>
         </div>
 
@@ -334,11 +331,15 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="closing-banner-inner">
           <div class="closing-icon">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l7-4 7 4v14"></path>
+              <rect x="9" y="12" width="6" height="9"></rect>
+              <path d="M9 7h.01"></path>
+              <path d="M15 7h.01"></path>
             </svg>
           </div>
           <p class="closing-text">
-            <strong>La IA no reemplaza a tu equipo:</strong> elimina tareas repetitivas para que tus asesores se enfoquen en negociar, mostrar inmuebles y cerrar operaciones.
+            <strong>La IA no reemplaza la calidez de tu equipo:</strong> le quita tareas repetitivas para que se enfoque en la experiencia del huésped.
           </p>
         </div>
       </div>
@@ -346,98 +347,98 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 3. QUÉ HACE UN AGENTE DE IA (Comparativa Chatbot vs Agente) -->
+    <!-- 3. QUÉ HACE UN AGENTE DE IA (Más que responder: entiende, informa y gestiona) -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section class="section-container bg-subtle" id="que-hace" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">Evolución Tecnológica</div>
-        <h2 class="section-title">Más que responder: entiende, decide y ejecuta</h2>
+        <div class="section-badge">Evolución Tecnológica en Hospitalidad</div>
+        <h2 class="section-title">Más que responder: entiende, informa y gestiona</h2>
         <p class="section-subtitle">
-          Un chatbot convencional se limita a mostrar botones o textos pregrabados. Un Agente de IA para Real Estate razona con contexto, consulta tu inventario disponible y avanza el trámite en tu CRM.
+          Un chatbot convencional se limita a botones y respuestas fijas. Un Agente de IA para Hoteles razona con contexto real, consulta tu sistema hotelero y gestiona acciones operativas.
         </p>
       </div>
 
       <div class="comparison-grid">
         
-        <!-- Card 1: Chatbot convencional -->
+        <!-- Card 1: Chatbot básico -->
         <div class="comp-card bot-card" data-aos="fade-up" data-aos-delay="100">
           <div class="comp-header">
             <span class="comp-type-badge basic">Enfoque Limitado</span>
             <h3 class="comp-title">Chatbot tradicional</h3>
-            <p class="comp-tagline">Responde preguntas aisladas</p>
+            <p class="comp-tagline">Responde preguntas simples</p>
           </div>
           <ul class="comp-features">
             <li class="comp-item neutral">
               <span class="dot-icon">✕</span>
-              <span>Menús rígidos con opciones numéricas ("Marca 1 para ventas, 2 para alquiler").</span>
+              <span>Menús rígidos con opciones numéricas ("Marcá 1 para tarifas, 2 para ubicación").</span>
             </li>
             <li class="comp-item neutral">
               <span class="dot-icon">✕</span>
-              <span>Respuestas estáticas de texto sin verificar si la propiedad sigue disponible.</span>
+              <span>Textos prearmados sin verificar si las habitaciones están realmente libres.</span>
             </li>
             <li class="comp-item neutral">
               <span class="dot-icon">✕</span>
-              <span>No comprende preguntas complejas ("Busco 3 amb con balcón aterrazado y apto crédito").</span>
+              <span>Se confunde ante consultas combinadas ("Somos 2 adultos y un bebé, ¿tienen cuna y vista al mar?").</span>
             </li>
             <li class="comp-item neutral">
               <span class="dot-icon">✕</span>
-              <span>No agenda turnos ni actualiza la ficha del cliente en el CRM.</span>
+              <span>No se conecta al PMS para verificar disponibilidad ni registrar solicitudes.</span>
             </li>
           </ul>
         </div>
 
-        <!-- Card 2: Agente IA - Entiende intención -->
+        <!-- Card 2: Agente IA - Entiende Contexto -->
         <div class="comp-card agent-card featured" data-aos="fade-up" data-aos-delay="200">
           <div class="comp-badge-recommended">Inteligencia y Contexto</div>
           <div class="comp-header">
             <span class="comp-type-badge premium">Agente de IA</span>
-            <h3 class="comp-title">Entiende intención y contexto</h3>
-            <p class="comp-tagline">Perfil, presupuesto, zona y urgencia</p>
+            <h3 class="comp-title">Entiende contexto</h3>
+            <p class="comp-tagline">Tipo de viaje, fechas y necesidades</p>
           </div>
           <ul class="comp-features">
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Interpreta lenguaje natural en audio y texto sin obligar al usuario a elegir botones.</span>
+              <span>Comprende lenguaje natural, audios y textos en múltiples idiomas de forma nativa.</span>
             </li>
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Recuerda el historial de la charla y las preferencias particulares del comprador.</span>
+              <span>Interpreta el tipo de viaje (pareja, familia, escapada relax, corporativo o luna de miel).</span>
             </li>
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Identifica el nivel de urgencia, motivo de búsqueda y capacidad financiera real.</span>
+              <span>Recuerda preferencias del huésped: cama king, cuna, piso alto, alergias o mascotas.</span>
             </li>
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Adapta el tono de comunicación a la identidad de tu inmobiliaria o desarrollo.</span>
+              <span>Mantiene un tono empático, cálido y profesional acorde a la categoría de tu hotel.</span>
             </li>
           </ul>
         </div>
 
-        <!-- Card 3: Agente IA - Ejecuta acciones -->
+        <!-- Card 3: Agente IA - Ejecuta Acciones -->
         <div class="comp-card agent-card action" data-aos="fade-up" data-aos-delay="300">
           <div class="comp-badge-recommended action-badge">Capacidad Operativa</div>
           <div class="comp-header">
             <span class="comp-type-badge accent">Agente de IA</span>
-            <h3 class="comp-title">Ejecuta acciones comerciales</h3>
-            <p class="comp-tagline">Califica, agenda, registra y deriva</p>
+            <h3 class="comp-title">Ejecuta acciones</h3>
+            <p class="comp-tagline">Consulta disponibilidad, coordina y deriva</p>
           </div>
           <ul class="comp-features">
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Consulta inventario de propiedades en tiempo real (precio, estado y expensas).</span>
+              <span>Consulta disponibilidad de habitaciones y tarifas actualizadas en tu PMS o motor de reservas.</span>
             </li>
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Resuelve dudas sobre políticas, garantías aceptadas, anticipos y plazos de entrega.</span>
+              <span>Explica políticas del hotel, servicios incluidos, horarios y métodos de pago aceptados.</span>
             </li>
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Cruza la disponibilidad de la agenda del asesor y fija la cita de visita sin fricción.</span>
+              <span>Coordina peticiones durante la estadía (toallas extra, transfer, room service, late check-out).</span>
             </li>
             <li class="comp-item positive">
               <span class="check-icon">✓</span>
-              <span>Crea el lead en el CRM inmobiliario con notas completas y dispara recordatorios.</span>
+              <span>Registra datos, entrega enlaces de reserva directa y deriva a recepción cuando es necesario.</span>
             </li>
           </ul>
         </div>
@@ -447,21 +448,21 @@ import DemoModal from '../../components/DemoModal.astro';
       <!-- Texto simple complementario -->
       <div class="what-it-does-summary" data-aos="fade-up">
         <p>
-          El agente puede <strong>consultar inventario de propiedades</strong> en vivo, <strong>explicar políticas y requisitos</strong>, <strong>verificar disponibilidad de agenda</strong> y <strong>actualizar tu CRM</strong> de forma autónoma en cada conversación.
+          El agente puede <strong>consultar el PMS y channel manager</strong>, comunicar <strong>políticas del hotel y servicios</strong>, y verificar la <strong>disponibilidad de habitaciones</strong> para brindar respuestas reales y actualizadas en todo momento.
         </p>
       </div>
     </section>
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 4. BENEFICIOS PARA LA OPERACIÓN COMERCIAL -->
+    <!-- 4. BENEFICIOS PARA TU HOTEL Y TU EQUIPO -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section class="section-container" id="beneficios" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">Impacto en el Negocio</div>
-        <h2 class="section-title">Beneficios para tu operación comercial</h2>
+        <div class="section-badge">Valor para tu Negocio</div>
+        <h2 class="section-title">Beneficios para tu hotel y tu equipo</h2>
         <p class="section-subtitle">
-          Diseñado para que brokers independientes, inmobiliarias consolidadas y desarrolladoras escalen su atención sin inflar costos fijos.
+          Diseñado para que hoteles boutique, hostels, aparts y cadenas hoteleras optimicen su operación sin perder la hospitalidad que los distingue.
         </p>
       </div>
 
@@ -472,12 +473,13 @@ import DemoModal from '../../components/DemoModal.astro';
           <div class="benefit-icon-wrapper blue-bg">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </div>
-          <h3>Respuesta inmediata 24/7 a consultas entrantes</h3>
+          <h3>Respuestas 24/7 en múltiples idiomas</h3>
           <p>
-            Atención instantánea a interesados de Zonaprop, Argenprop, Instagram y WhatsApp, incluso domingos a medianoche o días feriados.
+            Atención instantánea a viajeros de todo el mundo en su idioma natal, sin importar la diferencia horaria ni el día de la semana.
           </p>
         </div>
 
@@ -489,9 +491,9 @@ import DemoModal from '../../components/DemoModal.astro';
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
           </div>
-          <h3>Calificación automática y precisa</h3>
+          <h3>Menos consultas repetitivas en recepción</h3>
           <p>
-            Identifica presupuesto, zona deseada, ambientes requeridos, plazos de mudanza y motivo de compra antes de pasar el lead a un asesor.
+            Descomprime el teléfono y mostrador resolviendo dudas frecuentes sobre horarios, servicios, comodidades, desayuno y check-in.
           </p>
         </div>
 
@@ -499,15 +501,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
           <div class="benefit-icon-wrapper blue-bg">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
             </svg>
           </div>
-          <h3>Agenda de visitas sin fricción</h3>
+          <h3>Más reservas directas (menos comisiones)</h3>
           <p>
-            Ofrece horarios libres en la agenda del asesor, coordina el encuentro, envía indicaciones de llegada y reduce ausencias con recordatorios.
+            Guía al huésped con el enlace de tu motor de reservas directas, reduciendo la dependencia y comisiones de las OTAs intermediarias.
           </p>
         </div>
 
@@ -515,12 +514,13 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="benefit-card" data-aos="fade-up" data-aos-delay="250">
           <div class="benefit-icon-wrapper green-bg">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
             </svg>
           </div>
-          <h3>Seguimiento automatizado continuo</h3>
+          <h3>Recuperación de consultas que hoy se pierden</h3>
           <p>
-            Recontacta a prospectos con consultas pendientes, recopila impresiones tras la visita y reanima conversaciones sin perder interesados.
+            Capta consultas nocturnas o de fines de semana que antes quedaban sin respuesta oportuna, convirtiendo interesados en huéspedes confirmados.
           </p>
         </div>
 
@@ -528,16 +528,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
           <div class="benefit-icon-wrapper blue-bg">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <path d="M16 13H8"></path>
-              <path d="M16 17H8"></path>
-              <path d="M10 9H8"></path>
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
             </svg>
           </div>
-          <h3>Registro y trazabilidad en tu CRM</h3>
+          <h3>Mejor experiencia del huésped de punta a punta</h3>
           <p>
-            Cada dato obtenido, objeción y próxima acción queda asentado en tu CRM o base de datos. Fin de la información dispersa en chats personales.
+            Acompañamiento cercano antes de llegar, durante la estadía con un concierge virtual y después del viaje para asegurar una reseña 5 estrellas.
           </p>
         </div>
 
@@ -545,15 +541,13 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="benefit-card" data-aos="fade-up" data-aos-delay="350">
           <div class="benefit-icon-wrapper green-bg">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
-          <h3>Mejor experiencia para el interesado</h3>
+          <h3>Recepción enfocada en atención presencial</h3>
           <p>
-            Respuestas al instante, información clara sobre expensas y requisitos, y trato profesional que transmite seriedad y acelera la decisión.
+            Tu equipo puede mirar a los ojos al huésped que acaba de llegar, sonreír y personalizar su estadía sin interrupciones constantes de llamadas.
           </p>
         </div>
 
@@ -562,70 +556,72 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 5. AUTOMATIZACIONES POR ETAPA DEL PROCESO (Núcleo) -->
+    <!-- 5. AUTOMATIZACIONES EN CADA ETAPA DEL VIAJE (Núcleo) -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section class="section-container bg-subtle" id="automatizaciones" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">El Recorrido Comercial</div>
-        <h2 class="section-title">Automatización de punta a punta: del lead a la firma</h2>
+        <div class="section-badge">El Guest Journey Completo</div>
+        <h2 class="section-title">Automatización a lo largo del journey del huésped</h2>
         <p class="section-subtitle">
-          Descubre cómo interactúa el Agente de IA en cada fase del ciclo inmobiliario para asegurar fluidez, orden y máxima tasa de conversión.
+          Descubrí cómo acompaña el Agente de IA en cada fase del viaje, desde la primera consulta hasta la fidelización post-estadía.
         </p>
       </div>
 
-      <!-- Tabs de Etapas -->
+      <!-- Tabs de Etapas del Viaje -->
       <div class="process-tabs-container">
         <div class="process-tabs-nav" role="tablist">
-          <button type="button" class="process-tab-btn is-active" data-tab="tab-captacion" role="tab" aria-selected="true">
+          <button type="button" class="process-tab-btn is-active" data-tab="tab-consulta" role="tab" aria-selected="true">
             <span class="tab-number">1</span>
-            <span class="tab-label">Captación y Respuesta</span>
+            <span class="tab-label">Antes de reservar</span>
           </button>
-          <button type="button" class="process-tab-btn" data-tab="tab-calificacion" role="tab" aria-selected="false">
+          <button type="button" class="process-tab-btn" data-tab="tab-preestadia" role="tab" aria-selected="false">
             <span class="tab-number">2</span>
-            <span class="tab-label">Calificación y Match</span>
+            <span class="tab-label">Confirmación y pre-estadía</span>
           </button>
-          <button type="button" class="process-tab-btn" data-tab="tab-visitas" role="tab" aria-selected="false">
+          <button type="button" class="process-tab-btn" data-tab="tab-estadia" role="tab" aria-selected="false">
             <span class="tab-number">3</span>
-            <span class="tab-label">Coordinación de Visitas</span>
+            <span class="tab-label">Durante la estadía</span>
           </button>
-          <button type="button" class="process-tab-btn" data-tab="tab-seguimiento" role="tab" aria-selected="false">
+          <button type="button" class="process-tab-btn" data-tab="tab-postestadia" role="tab" aria-selected="false">
             <span class="tab-number">4</span>
-            <span class="tab-label">Seguimiento Comercial</span>
-          </button>
-          <button type="button" class="process-tab-btn" data-tab="tab-postvisita" role="tab" aria-selected="false">
-            <span class="tab-number">5</span>
-            <span class="tab-label">Post-visita y Cierre</span>
+            <span class="tab-label">Check-out y post-estadía</span>
           </button>
         </div>
 
         <div class="process-tabs-content">
           
-          <!-- Panel 1: Captación -->
-          <div class="process-tab-panel is-active" id="tab-captacion" role="tabpanel">
+          <!-- Panel 1: Antes de reservar -->
+          <div class="process-tab-panel is-active" id="tab-consulta" role="tabpanel">
             <div class="panel-layout">
               <div class="panel-text">
-                <div class="panel-badge-step">Etapa A • Primer Contacto</div>
-                <h3>Captación y primera respuesta inmediata</h3>
+                <div class="panel-badge-step">Etapa A • Consulta y Captación</div>
+                <h3>Antes de reservar: respuestas inmediatas y reservas directas</h3>
                 <p class="panel-desc">
-                  El momento de mayor interés es cuando el usuario consulta. El agente toma la delantera antes de que la atención se desvíe.
+                  El momento de mayor intención es cuando el viajero planifica sus fechas. El agente responde al instante antes de que elija otra opción.
                 </p>
                 <ul class="panel-checklist">
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Respuestas omnicanal unificadas:</strong> Atiende consultas provenientes de Zonaprop, Argenprop, Mercado Libre Inmuebles, Instagram DMs, web chat y WhatsApp oficial.
+                      <strong>Disponibilidad y tarifas por fechas:</strong> Consulta tu inventario en vivo y cotiza con precisión según cantidad de noches y huéspedes.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Preguntas clave en 1–2 minutos:</strong> Sin cuestionarios eternos que aburran; indaga con tono conversacional ágil y empático.
+                      <strong>Detalle de tipos de habitación:</strong> Explica metros cuadrados, camas, vistas, comodidades, desayuno incluido y políticas de cancelación.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Detección de intención profunda:</strong> Identifica si es compra o alquiler, uso residencial o comercial, perfil inversor o vivienda familiar, y qué tan urgente es su necesidad de mudanza.
+                      <strong>Enlace de reserva directa:</strong> Facilita el link oficial de tu motor de reservas para concretar la seña sin comisiones de intermediarios.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Multi-idioma automático:</strong> Detecta el idioma del contacto y contesta en inglés, portugués o español con fluidez natural.
                     </div>
                   </li>
                 </ul>
@@ -636,52 +632,58 @@ import DemoModal from '../../components/DemoModal.astro';
                     <span class="mockup-dot red"></span>
                     <span class="mockup-dot yellow"></span>
                     <span class="mockup-dot green"></span>
-                    <span class="mockup-title">Captación en WhatsApp Business</span>
+                    <span class="mockup-title">Consulta de Disponibilidad • WhatsApp</span>
                   </div>
                   <div class="mockup-body">
                     <div class="m-msg user">
-                      Hola, vi un depto publicado en Av. Libertador. ¿Me pasan precio y si tiene cochera?
+                      Hi! Do you have rooms available for 2 people from March 10th to 14th? We are traveling with a small dog.
                     </div>
                     <div class="m-msg ai">
-                      <span class="m-sender">Agente IA</span>
-                      ¡Hola! El departamento en Av. Libertador al 4200 tiene un valor de USD 210.000 e <strong>incluye cochera fija cubierta</strong> y baulera.<br><br>¿Estás buscando para mudarte vos o para renta/inversión?
+                      <span class="m-sender">Agente Hotelero IA</span>
+                      Hello! Yes, we have availability in our <strong>Deluxe Garden Room</strong> ($135/night) with gourmet breakfast included. We are proudly <strong>pet-friendly 🐾</strong> (up to 12kg) with a dedicated welcome kit.<br><br>Would you like me to send you photos and the direct booking link?
                     </div>
                     <div class="m-msg user">
-                      Para mudarme con mi familia en unos meses.
+                      Yes please, that would be wonderful!
                     </div>
-                    <div class="m-meta-pill">✓ Intención: Compra Residencial • Plazo: Mediano</div>
+                    <div class="m-meta-pill">✓ Idioma detectado: Inglés • Tarifa PMS validada</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Panel 2: Calificación y Match -->
-          <div class="process-tab-panel" id="tab-calificacion" role="tabpanel">
+          <!-- Panel 2: Confirmación y pre-estadía -->
+          <div class="process-tab-panel" id="tab-preestadia" role="tabpanel">
             <div class="panel-layout">
               <div class="panel-text">
-                <div class="panel-badge-step">Etapa B • Criterio de Selección</div>
-                <h3>Calificación y match con propiedades disponibles</h3>
+                <div class="panel-badge-step">Etapa B • Preparación del Viaje</div>
+                <h3>Confirmación y pre-estadía: bienvenida y servicios extra</h3>
                 <p class="panel-desc">
-                  No envíes a ciegas todo el catálogo. El agente presenta opciones con alta probabilidad de interés real.
+                  Genera tranquilidad antes del viaje, agiliza la llegada del huésped y abre la puerta a ingresos adicionales por servicios auxiliares.
                 </p>
                 <ul class="panel-checklist">
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Filtro según criterios clave:</strong> Clasifica por presupuesto exacto, zonas o barrios prioritarios, cantidad de ambientes, aptitud para mascotas, cochera, piso y amenities indispensables.
+                      <strong>Confirmación con datos útiles:</strong> Envía horarios de check-in, mapa de llegada, indicaciones de acceso y contacto de conserjería.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Sugerencia de 3 a 5 propiedades afines:</strong> Muestra fichas resumidas con fotos, plano y características, consultando la confirmación de interés del lead.
+                      <strong>Recordatorios previos al arribo:</strong> Mensaje automático 48 y 24 horas antes con instrucciones para el ingreso rápido.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Resolución de dudas frecuentes al instante:</strong> Responde sobre garantías aceptadas (Finaer, seguro de caución, propietaria), expensas ordinarias/extraordinarias, plazos y documentación para reservar.
+                      <strong>Ofrecimiento de upgrades y extras:</strong> Propone early check-in, transfer desde el aeropuerto, flores de bienvenida o cena en el restaurante.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Relevamiento de preferencias:</strong> Consulta tipo de almohada, cuna para bebés, alergias alimentarias o pedidos especiales.
                     </div>
                   </li>
                 </ul>
@@ -689,52 +691,59 @@ import DemoModal from '../../components/DemoModal.astro';
               <div class="panel-visual">
                 <div class="chat-mockup-card">
                   <div class="mockup-header">
-                    <span class="mockup-title">Match inteligente con inventario</span>
+                    <span class="mockup-title">Pre-check-in y Servicios Extra</span>
                   </div>
                   <div class="mockup-body">
                     <div class="m-msg ai">
-                      <span class="m-sender">Agente IA</span>
-                      Tengo 2 opciones que cumplen exactamente con lo que me pedís en Belgrano:<br><br>
-                      📍 <strong>Opción 1:</strong> 3 amb, 78m², balcón terraza, amenities. USD 178.000.<br>
-                      📍 <strong>Opción 2:</strong> 3 amb, 84m², cocina independiente, cochera. USD 185.000.<br><br>
-                      ¿Te gustaría ver las fotos y la ficha completa de alguna de ellas?
+                      <span class="m-sender">Agente Hotelero IA</span>
+                      ¡Hola Martín! Tu estadía comienza en 48 hs (Reserva #4920). Podés completar tu <strong>Check-in Online</strong> desde este enlace para ingresar directo a tu habitación sin esperas en recepción.<br><br>¿Vas a necesitar estacionamiento cubierto o transfer desde Aeroparque?
                     </div>
                     <div class="m-msg user">
-                      Me gusta mucho la Opción 1. ¿Qué expensas tiene?
+                      Hola! Sí, por favor reservame una cochera para auto mediano.
                     </div>
-                    <div class="m-meta-pill">✓ Inventario validado en tiempo real</div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Hotelero IA</span>
+                      ¡Listo! Cochera asignada en el subsuelo 1. Te esperamos el viernes a partir de las 14:00 hs.
+                    </div>
+                    <div class="m-meta-pill">✓ Preferencia guardada en PMS • Check-in agilizado</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Panel 3: Visitas -->
-          <div class="process-tab-panel" id="tab-visitas" role="tabpanel">
+          <!-- Panel 3: Durante la estadía -->
+          <div class="process-tab-panel" id="tab-estadia" role="tabpanel">
             <div class="panel-layout">
               <div class="panel-text">
-                <div class="panel-badge-step">Etapa C • Coordinación en Agenda</div>
-                <h3>Coordinación y agenda de visitas presenciales</h3>
+                <div class="panel-badge-step">Etapa C • Concierge Digital</div>
+                <h3>Durante la estadía: asistencia 24/7 y pedidos al instante</h3>
                 <p class="panel-desc">
-                  Elimina los chats interminables para encontrar un hueco. La cita queda fijada en el calendario del asesor.
+                  Atiende consultas operativas habituales en segundos y gestiona pedidos internos sin saturar el mostrador de recepción.
                 </p>
                 <ul class="panel-checklist">
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Propuesta de horarios en tiempo real:</strong> Lee la disponibilidad de Google Calendar o Calendly del asesor de la propiedad y propone opciones concretas.
+                      <strong>Consultas frecuentes resueltas al instante:</strong> Clave del Wi-Fi, horarios de desayuno, gimnasio, piscina, spa y actividades del hotel.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Confirmación y envío de datos útiles:</strong> Envía automáticamente la dirección exacta, instrucciones para estacionar, ubicación en Google Maps y contacto del asesor en el edificio.
+                      <strong>Solicitud ágil de servicios:</strong> Toallas adicionales, amenities, room service, planchado o solicitud de late check-out.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Reprogramaciones automáticas con reglas:</strong> Si el interesado tiene un imprevisto, puede reprogramar desde el mismo chat sin dejar al asesor esperando.
+                      <strong>Recomendaciones turísticas locales:</strong> Sugiere restaurantes de la zona, paseos, farmacias cercanas, transporte y tours recomendados.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Derivación a recepción cuando aplica:</strong> Detecta situaciones sensibles y las transfiere inmediatamente al personal presencial.
                     </div>
                   </li>
                 </ul>
@@ -742,55 +751,58 @@ import DemoModal from '../../components/DemoModal.astro';
               <div class="panel-visual">
                 <div class="chat-mockup-card">
                   <div class="mockup-header">
-                    <span class="mockup-title">Sincronización de Agenda</span>
+                    <span class="mockup-title">Concierge Virtual Durante la Estadía</span>
                   </div>
                   <div class="mockup-body">
+                    <div class="m-msg user">
+                      ¿A qué hora cierra la piscina y me pueden enviar toallas extra a la habitación 204?
+                    </div>
                     <div class="m-msg ai">
-                      <span class="m-sender">Agente IA</span>
-                      Nuestra asesora Laura estará mostrando la propiedad este jueves. ¿Qué horario te queda más cómodo?<br><br>
-                      🗓 <strong>Jueves 15:00 hs</strong><br>
-                      🗓 <strong>Jueves 17:30 hs</strong>
+                      <span class="m-sender">Agente Hotelero IA</span>
+                      La piscina está abierta hasta las <strong>21:00 hs</strong>. ¡Ya avisé al equipo de housekeeping para que te acerque toallas extra a la <strong>habitación 204</strong> en los próximos 10 minutos!
                     </div>
                     <div class="m-msg user">
-                      Jueves a las 17:30 me va perfecto.
+                      Genial, muchas gracias!
                     </div>
-                    <div class="m-msg ai">
-                      <span class="m-sender">Agente IA</span>
-                      ¡Excelente! Visita agendada para el <strong>Jueves 17:30 hs</strong>. Te adjunto la ubicación en Maps. Laura te estará esperando en el hall del edificio.
-                    </div>
-                    <div class="m-meta-pill">✓ Evento creado en Google Calendar</div>
+                    <div class="m-meta-pill">✓ Ticket enviado a Housekeeping • Tiempo de respuesta: 5s</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Panel 4: Seguimiento comercial -->
-          <div class="process-tab-panel" id="tab-seguimiento" role="tabpanel">
+          <!-- Panel 4: Check-out y post-estadía -->
+          <div class="process-tab-panel" id="tab-postestadia" role="tabpanel">
             <div class="panel-layout">
               <div class="panel-text">
-                <div class="panel-badge-step">Etapa D • Maduración del Lead</div>
-                <h3>Seguimiento comercial automatizado y oportuno</h3>
+                <div class="panel-badge-step">Etapa D • Reseñas y Fidelización</div>
+                <h3>Check-out y post-estadía: salida ágil, reputación y regreso</h3>
                 <p class="panel-desc">
-                  Mantiene encendido el contacto sin ser invasivo, adaptando la cadencia según el estado real de la conversación.
+                  El vínculo con el huésped no termina cuando entrega la llave. Convierte una buena estadía en reputación online y futuras reservas directas.
                 </p>
                 <ul class="panel-checklist">
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Mensajes según fase comercial:</strong> Seguimientos diferenciados para quien mostró interés inicial, quien realizó una visita o quien está comparando opciones con su pareja o socio.
+                      <strong>Recordatorio de check-out:</strong> Informa horario límite, opciones de late check-out y métodos de liquidación de consumos extra.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Resumen para el asesor con próximo paso:</strong> Sintetiza al vendedor: "El interesado visitó ayer, le gustó la luz pero duda del valor de expensas; próximo paso: acercar informe de liquidación".
+                      <strong>Solicitud automática de reseñas:</strong> Invita a calificar la experiencia en Google Reviews, TripAdvisor o Booking en el momento oportuno.
                     </div>
                   </li>
                   <li>
                     <span class="check-circ">✓</span>
                     <div>
-                      <strong>Derivación inteligente a humano:</strong> Cuando detecta intención de negociación, dudas jurídicas o una oferta, alerta al asesor para tomar la conversación.
+                      <strong>Programa de fidelización y descuentos:</strong> Comparte un código de descuento exclusivo para su próxima estadía directa.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Reactivación en fechas clave:</strong> Mensajes conmemorativos en aniversarios, promociones de temporada baja o fines de semana largos.
                     </div>
                   </li>
                 </ul>
@@ -798,77 +810,21 @@ import DemoModal from '../../components/DemoModal.astro';
               <div class="panel-visual">
                 <div class="chat-mockup-card">
                   <div class="mockup-header">
-                    <span class="mockup-title">Ficha de Resumen para el Asesor</span>
-                  </div>
-                  <div class="mockup-body">
-                    <div class="crm-lead-summary">
-                      <div class="summary-row">
-                        <span class="s-label">Interesado:</span>
-                        <span class="s-val">Lucas Benítez</span>
-                      </div>
-                      <div class="summary-row">
-                        <span class="s-label">Propiedad:</span>
-                        <span class="s-val">Palermo Soho 3 amb (Ref #1042)</span>
-                      </div>
-                      <div class="summary-row">
-                        <span class="s-label">Estado:</span>
-                        <span class="s-badge-hot">🔥 Muy Interesado / Calificado</span>
-                      </div>
-                      <div class="summary-row">
-                        <span class="s-label">Próximo paso:</span>
-                        <span class="s-val highlight">Enviar detalle de expensas y coordinar llamada para propuesta.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 5: Post-visita y avance -->
-          <div class="process-tab-panel" id="tab-postvisita" role="tabpanel">
-            <div class="panel-layout">
-              <div class="panel-text">
-                <div class="panel-badge-step">Etapa E • Cierre de Operación</div>
-                <h3>Post-visita y avance hacia la reserva</h3>
-                <p class="panel-desc">
-                  El trabajo no termina en la visita. El agente releva feedback de valor y prepara el terreno para la seña o firma.
-                </p>
-                <ul class="panel-checklist">
-                  <li>
-                    <span class="check-circ">✓</span>
-                    <div>
-                      <strong>Recolección de feedback estructurado:</strong> Pregunta qué le gustó de la unidad y qué aspectos le generaron reparos, permitiendo reorientar la búsqueda si no fue la indicada.
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-circ">✓</span>
-                    <div>
-                      <strong>Envío de checklist de documentación:</strong> Comparte la lista de requisitos y papeles necesarios para formalizar la reserva (en tono informativo y orientativo).
-                    </div>
-                  </li>
-                  <li>
-                    <span class="check-circ">✓</span>
-                    <div>
-                      <strong>Coordinación de llamada de cierre:</strong> Cuando el prospecto confirma que quiere avanzar, coordina de inmediato la llamada con el broker para ultimar detalles.
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <div class="chat-mockup-card">
-                  <div class="mockup-header">
-                    <span class="mockup-title">Feedback Post-Visita Automatizado</span>
+                    <span class="mockup-title">Encuesta de Satisfacción y Reseñas</span>
                   </div>
                   <div class="mockup-body">
                     <div class="m-msg ai">
-                      <span class="m-sender">Agente IA</span>
-                      ¡Hola Lucas! ¿Cómo viste la visita con Laura en el departamento de Palermo? ¿Sentís que se adapta a lo que tu familia necesita?
+                      <span class="m-sender">Agente Hotelero IA</span>
+                      ¡Gracias por visitarnos, Martín! Esperamos que hayas disfrutado tu descanso con nosotros. Si te gustó la experiencia, nos ayudarías mucho compartiendo tu opinión en <strong>Google Reviews</strong> ⭐⭐⭐⭐⭐
                     </div>
                     <div class="m-msg user">
-                      Nos encantó la distribución y el balcón. Queremos consultar si el propietario aceptaría una oferta de USD 170.000.
+                      La atención fue impecable, ya les dejé 5 estrellas!
                     </div>
-                    <div class="m-meta-pill accent">⚡ Alerta: Notificando al broker para llamado inmediato</div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Hotelero IA</span>
+                      ¡Nos alegra un montón! Te dejamos este cupón de <strong>15% OFF</strong> para tu próxima escapada con nosotros: <em>RETORNO15</em>.
+                    </div>
+                    <div class="m-meta-pill accent">⚡ Enlace a Google Reviews enviado • Cupón generado</div>
                   </div>
                 </div>
               </div>
@@ -889,9 +845,9 @@ import DemoModal from '../../components/DemoModal.astro';
             </svg>
             <span>Traspaso Inteligente</span>
           </div>
-          <h3 class="escalation-title">Escala a un asesor humano cuando…</h3>
+          <h3 class="escalation-title">Escala a un miembro del equipo cuando…</h3>
           <p class="escalation-subtitle">
-            El agente sabe exactamente cuáles son sus límites y deriva la conversación de inmediato en situaciones críticas:
+            El agente reconoce cuándo la situación exige criterio y calidez humana, derivando la conversación de inmediato:
           </p>
         </div>
 
@@ -899,20 +855,20 @@ import DemoModal from '../../components/DemoModal.astro';
           
           <div class="escalation-case-card">
             <div class="case-number">01</div>
-            <h4>Quiere negociar precio o condiciones</h4>
-            <p>Propuestas de contraoferta, formas de pago especiales, plazos de posesión o detalles de la seña económica.</p>
+            <h4>Reclamo o queja delicada durante la estadía</h4>
+            <p>Problemas de mantenimiento en la habitación, disconformidad con el servicio o reclamos sensibles que demandan contención humana inmediata.</p>
           </div>
 
           <div class="escalation-case-card">
             <div class="case-number">02</div>
-            <h4>Presenta un caso especial de garantías</h4>
-            <p>Garantías de otras provincias, recibos de ingresos combinados, fideicomisos o situaciones que requieren análisis directivo.</p>
+            <h4>Solicitud especial fuera de las políticas estándar</h4>
+            <p>Pedidos de check-in de madrugada, excepciones en políticas de cancelación, requerimientos médicos o acuerdos tarifarios particulares.</p>
           </div>
 
           <div class="escalation-case-card">
             <div class="case-number">03</div>
-            <h4>Pide asesoramiento legal o contractual</h4>
-            <p>Consultas sobre boletos de compraventa, poderes especiales, sucesiones o condiciones registrales específicas.</p>
+            <h4>Grupo numeroso, evento o tarifa corporativa</h4>
+            <p>Consultas para bloqueos de habitaciones por bodas, congresos corporativos o tarifas negociadas para agencias de viajes.</p>
           </div>
 
         </div>
@@ -926,10 +882,10 @@ import DemoModal from '../../components/DemoModal.astro';
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section class="section-container" id="implementacion" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">Puesta en Marcha</div>
+        <div class="section-badge">Puesta en Marcha Sencilla</div>
         <h2 class="section-title">Implementación guiada en 3 pasos</h2>
         <p class="section-subtitle">
-          Un proceso ágil y profesional para poner a punto tu agente sin complejidades técnicas para tu equipo.
+          Un proceso ágil y profesional para activar tu agente sin fricciones operativas ni curvas de aprendizaje complejas.
         </p>
       </div>
 
@@ -944,9 +900,9 @@ import DemoModal from '../../components/DemoModal.astro';
               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
             </svg>
           </div>
-          <h3>Relevamos tu proceso comercial y definimos criterios</h3>
+          <h3>Relevamos servicios, políticas y preguntas frecuentes de tu hotel</h3>
           <p>
-            Analizamos tus preguntas habituales, tipos de inmuebles, barrios foco, requisitos de alquiler/venta y las reglas de calificación que debe aplicar el agente.
+            Cargamos tus tipos de habitación, tarifas base, comodidades, horarios gastronómicos, políticas pet-friendly, cancelaciones y guías de llegada.
           </p>
         </div>
 
@@ -962,7 +918,7 @@ import DemoModal from '../../components/DemoModal.astro';
           </div>
           <h3>Conectamos canales y sistemas</h3>
           <p>
-            Integramos tu WhatsApp oficial, portales, inventario de propiedades, agendas de los asesores comerciales y tu CRM para sincronizar datos sin fricción.
+            Integramos tu WhatsApp oficial, el chat de tu sitio web, tu PMS o channel manager y tus herramientas de reservas para sincronizar datos en tiempo real.
           </p>
         </div>
 
@@ -974,9 +930,9 @@ import DemoModal from '../../components/DemoModal.astro';
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
             </svg>
           </div>
-          <h3>Lanzamos, medimos y optimizamos</h3>
+          <h3>Lanzamos, medimos y ajustamos respuestas según la temporada</h3>
           <p>
-            Activamos el agente, monitoreamos las primeras conversaciones reales y calibramos respuestas y disparadores para maximizar visitas agendadas.
+            Monitoreamos las primeras conversaciones, calibramos respuestas y ajustamos promociones o políticas según la temporada alta o baja.
           </p>
         </div>
 
@@ -986,42 +942,73 @@ import DemoModal from '../../components/DemoModal.astro';
       <div class="integration-notice-card" data-aos="fade-up">
         <div class="notice-icon">💡</div>
         <div class="notice-content">
-          <strong>No necesitás cambiar tus herramientas actuales:</strong> nos integramos directamente a tu CRM, calendario y canales existentes. Tu equipo continúa usando lo que ya conoce.
+          <strong>No necesitás cambiar tu PMS ni tu operación:</strong> nos adaptamos a tus procesos y herramientas existentes. Tu equipo sigue trabajando como siempre.
         </div>
       </div>
     </section>
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 7. INTEGRACIONES (Se conecta con tu stack actual) -->
+    <!-- 7. INTEGRACIONES (Se conecta con las herramientas que ya usás) -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section class="section-container bg-subtle" id="integraciones" data-aos="fade-up">
       <div class="section-header text-center">
         <div class="section-badge">Ecosistema Conectado</div>
-        <h2 class="section-title">Se conecta con tu stack actual</h2>
+        <h2 class="section-title">Se conecta con las herramientas que ya usás</h2>
         <p class="section-subtitle">
-          Integramos por APIs y automatizaciones para mantener datos consistentes y seguimiento ordenado sin duplicar tareas manuales.
+          Integramos por APIs y automatizaciones para que la información esté siempre sincronizada entre tus canales de atención y tu gestión hotelera.
         </p>
       </div>
 
       <div class="integrations-grid">
         
-        <!-- Tile 1: CRM Inmobiliario -->
+        <!-- Tile 1: PMS Hoteleros -->
         <div class="integration-tile" data-aos="fade-up" data-aos-delay="100">
           <div class="tile-icon-box">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l7-4 7 4v14"></path>
+              <rect x="9" y="12" width="6" height="9"></rect>
+              <path d="M9 7h.01"></path>
+              <path d="M15 7h.01"></path>
             </svg>
           </div>
           <div class="tile-info">
-            <h4>CRM Inmobiliario y General</h4>
-            <p>Tokko Broker, Salesforce, HubSpot, Zoho, Monday o soluciones a medida.</p>
+            <h4>PMS Hoteleros</h4>
+            <p>Sincronización de habitaciones, reservas, tarifas y fichas de huéspedes.</p>
           </div>
         </div>
 
-        <!-- Tile 2: WhatsApp Business -->
+        <!-- Tile 2: Channel Manager -->
         <div class="integration-tile" data-aos="fade-up" data-aos-delay="150">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Channel Manager</h4>
+            <p>Conexión en tiempo real con canales de distribución y paridad tarifaria.</p>
+          </div>
+        </div>
+
+        <!-- Tile 3: Motor de Reservas -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="200">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Motor de Reservas</h4>
+            <p>Generación de links de pago directo y liquidación sin comisiones intermedias.</p>
+          </div>
+        </div>
+
+        <!-- Tile 4: WhatsApp Business -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="250">
           <div class="tile-icon-box">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -1029,12 +1016,12 @@ import DemoModal from '../../components/DemoModal.astro';
           </div>
           <div class="tile-info">
             <h4>WhatsApp Business API</h4>
-            <p>Línea oficial verificada, soporte multiagente y respuestas automáticas 24/7.</p>
+            <p>Línea oficial verificada con respuestas instantáneas y soporte multiagente.</p>
           </div>
         </div>
 
-        <!-- Tile 3: Redes Sociales y Web -->
-        <div class="integration-tile" data-aos="fade-up" data-aos-delay="200">
+        <!-- Tile 5: Redes Sociales y Chat -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="300">
           <div class="tile-icon-box">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -1043,13 +1030,40 @@ import DemoModal from '../../components/DemoModal.astro';
             </svg>
           </div>
           <div class="tile-info">
-            <h4>Instagram y Web Chat</h4>
-            <p>Atención directa de mensajes directos, comentarios y widget en tu sitio web.</p>
+            <h4>Instagram y Messenger</h4>
+            <p>Atención fluida de mensajes directos y consultas de viajeros en redes.</p>
           </div>
         </div>
 
-        <!-- Tile 4: Calendarios -->
-        <div class="integration-tile" data-aos="fade-up" data-aos-delay="250">
+        <!-- Tile 6: Web Chat / Sitio Web -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="350">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Web Chat / Sitio Web</h4>
+            <p>Widget interactivo en tu web oficial para resolver dudas y captar visitas.</p>
+          </div>
+        </div>
+
+        <!-- Tile 7: Email y Google Sheets -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="400">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22 6 12 13 2 6"></polyline>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Email y Google Sheets</h4>
+            <p>Reportes automáticos, confirmaciones por correo y copias de seguridad.</p>
+          </div>
+        </div>
+
+        <!-- Tile 8: Google Calendar -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="450">
           <div class="tile-icon-box">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -1059,37 +1073,8 @@ import DemoModal from '../../components/DemoModal.astro';
             </svg>
           </div>
           <div class="tile-info">
-            <h4>Google Calendar y Calendly</h4>
-            <p>Consulta de disponibilidad por asesor y bloqueo automático de franjas horarias.</p>
-          </div>
-        </div>
-
-        <!-- Tile 5: Bases y Correo -->
-        <div class="integration-tile" data-aos="fade-up" data-aos-delay="300">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22 6 12 13 2 6"></polyline>
-            </svg>
-          </div>
-          <div class="tile-info">
-            <h4>Email, Sheets y Airtable</h4>
-            <p>Respaldos automáticos, reportes diarios y notificaciones inmediatas a tu casilla.</p>
-          </div>
-        </div>
-
-        <!-- Tile 6: Portales y Catálogo -->
-        <div class="integration-tile" data-aos="fade-up" data-aos-delay="350">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-          </div>
-          <div class="tile-info">
-            <h4>Portales Inmobiliarios y Web</h4>
-            <p>Conexión vía webhooks y correos de notificación de Zonaprop, Argenprop y tu portal.</p>
+            <h4>Google Calendar</h4>
+            <p>Agendamiento de traslados, citas de spa y tours para el huésped.</p>
           </div>
         </div>
 
@@ -1098,84 +1083,84 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 8. CASOS DE USO EN INMOBILIARIAS (Historias reales) -->
+    <!-- 8. CASOS DE USO (Ejemplos concretos en alojamientos) -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section class="section-container" id="casos-de-uso" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">Casos de Uso Prácticos</div>
-        <h2 class="section-title">Ejemplos de uso en inmobiliarias</h2>
+        <div class="section-badge">Casos de Uso Concretos</div>
+        <h2 class="section-title">Ejemplos de uso en hoteles y alojamientos</h2>
         <p class="section-subtitle">
-          Situaciones concretas donde el Agente de IA genera orden operativo y acelera la concreción de visitas.
+          Situaciones reales donde el Agente de IA agiliza la gestión operativa y mejora la percepción de servicio.
         </p>
       </div>
 
       <div class="use-cases-grid">
         
-        <!-- Caso 1 -->
+        <!-- Caso 1: Hotel boutique -->
         <div class="use-case-card" data-aos="fade-up" data-aos-delay="100">
           <div class="case-card-header">
-            <span class="case-tag blue">Portales Inmobiliarios</span>
-            <div class="case-icon">⚡</div>
+            <span class="case-tag blue">Hotel Boutique</span>
+            <div class="case-icon">🏨</div>
           </div>
-          <h3 class="case-card-title">Leads de portales: respuesta inmediata y derivación</h3>
+          <h3 class="case-card-title">Respuestas inmediatas fuera de horario → más reservas directas</h3>
           <p class="case-scenario">
-            <strong>Escenario:</strong> Un interesado consulta un domingo por la tarde desde un portal por un departamento en venta.
+            <strong>Escenario:</strong> Huéspedes consultando disponibilidad tarde por la noche vía WhatsApp e Instagram cuando la oficina de reservas está cerrada.
           </p>
           <div class="case-solution-flow">
-            <div class="flow-pill">1. IA inicia contacto en menos de 2 minutos vía WhatsApp.</div>
-            <div class="flow-pill">2. Valida presupuesto, zona de búsqueda y urgencia de mudanza.</div>
-            <div class="flow-pill">3. Asigna el prospecto calificado al asesor especialista de esa zona con ficha completa.</div>
+            <div class="flow-pill">1. La IA responde en segundos con habitaciones libres y fotos del hotel.</div>
+            <div class="flow-pill">2. Comunica políticas claras (estacionamiento, desayuno, mascotas).</div>
+            <div class="flow-pill">3. Facilita el link del motor directo para cerrar la reserva antes de que el huésped busque otra opción.</div>
           </div>
         </div>
 
-        <!-- Caso 2 -->
+        <!-- Caso 2: Hostel -->
         <div class="use-case-card" data-aos="fade-up" data-aos-delay="150">
           <div class="case-card-header">
-            <span class="case-tag green">Gestión de Alquileres</span>
-            <div class="case-icon">🔑</div>
+            <span class="case-tag green">Hostel</span>
+            <div class="case-icon">🎒</div>
           </div>
-          <h3 class="case-card-title">Alquileres: requisitos claros y visitas coordinadas</h3>
+          <h3 class="case-card-title">Consultas multi-idioma automáticas → menos carga en recepción</h3>
           <p class="case-scenario">
-            <strong>Escenario:</strong> Una propiedad en alquiler recibe decenas de consultas por día que saturan el teléfono comercial.
+            <strong>Escenario:</strong> Decenas de mochileros internacionales preguntando a diario por lockers, cocina comunitaria, tours y camas compartidas en varios idiomas.
           </p>
           <div class="case-solution-flow">
-            <div class="flow-pill">1. Comunica requisitos de ingreso, expensas y garantías aceptadas de forma transparente.</div>
-            <div class="flow-pill">2. Habilita el agendado de visitas únicamente a quienes cumplen las condiciones.</div>
-            <div class="flow-pill">3. Envía recordatorio previo por WhatsApp reduciendo visitas vacías a cero.</div>
+            <div class="flow-pill">1. Detecta automáticamente el idioma de la consulta (inglés, portugués, francés).</div>
+            <div class="flow-pill">2. Explica normas de convivencia, eventos de la semana y precios actualizados.</div>
+            <div class="flow-pill">3. Libera al staff de recepción para dinamizar actividades sociales y el bar.</div>
           </div>
         </div>
 
-        <!-- Caso 3 -->
+        <!-- Caso 3: Apart-hotel -->
         <div class="use-case-card" data-aos="fade-up" data-aos-delay="200">
           <div class="case-card-header">
-            <span class="case-tag blue">Compra e Inversión</span>
-            <div class="case-icon">📈</div>
+            <span class="case-tag blue">Apart-hotel</span>
+            <div class="case-icon">🔑</div>
           </div>
-          <h3 class="case-card-title">Compra: recomendación afinada y seguimiento post-visita</h3>
+          <h3 class="case-card-title">Información de servicios y check-in autogestionado</h3>
           <p class="case-scenario">
-            <strong>Escenario:</strong> Un comprador busca una unidad para inversión pero ninguna de las vistas le convence de inmediato.
+            <strong>Escenario:</strong> Departamentos turísticos con recepción remota o autónoma donde los huéspedes necesitan instrucciones claras de acceso.
           </p>
           <div class="case-solution-flow">
-            <div class="flow-pill">1. Consulta preferencias de rentabilidad, tipología y tickets de inversión disponibles.</div>
-            <div class="flow-pill">2. Sugiere 3 alternativas afines en desarrollos en pozo y entrega inmediata.</div>
-            <div class="flow-pill">3. Realiza seguimiento post-visita relevando dudas puntuales para el cierre.</div>
+            <div class="flow-pill">1. Envía códigos de cerradura digital y guía de estacionamiento el día de llegada.</div>
+            <div class="flow-pill">2. Responde al instante cómo funciona el aire acondicionado, basura y Wi-Fi.</div>
+            <div class="flow-pill">3. Centraliza solicitudes de limpieza y reposición de insumos de forma ordenada.</div>
           </div>
         </div>
 
-        <!-- Caso 4 -->
+        <!-- Caso 4: Cadena hotelera -->
         <div class="use-case-card" data-aos="fade-up" data-aos-delay="250">
           <div class="case-card-header">
-            <span class="case-tag green">Administración Comercial</span>
-            <div class="case-icon">📊</div>
+            <span class="case-tag green">Cadena Hotelera</span>
+            <div class="case-icon">⭐</div>
           </div>
-          <h3 class="case-card-title">Administración: registro en CRM y próximos pasos</h3>
+          <h3 class="case-card-title">Seguimiento post-estadía y solicitud de reseñas automatizada</h3>
           <p class="case-scenario">
-            <strong>Escenario:</strong> Varios asesores atienden canales por separado y la dirección pierde visibilidad del pipeline.
+            <strong>Escenario:</strong> Huéspedes que realizan el check-out sin que se registre su satisfacción ni se invite a calificar la experiencia en plataformas clave.
           </p>
           <div class="case-solution-flow">
-            <div class="flow-pill">1. Cada conversación crea o actualiza el contacto en el CRM con etiquetas estandarizadas.</div>
-            <div class="flow-pill">2. Programa tareas y alertas automáticas de seguimiento para los asesores.</div>
-            <div class="flow-pill">3. Brinda al líder de ventas una visión ordenada de la cartera activa en todo momento.</div>
+            <div class="flow-pill">1. Envía mensaje cordial de despedida 2 horas después de la salida del hotel.</div>
+            <div class="flow-pill">2. Conduce a los huéspedes satisfechos a dejar su reseña en Google y TripAdvisor.</div>
+            <div class="flow-pill">3. Ofrece incentivos directos para su próxima estancia en cualquiera de las propiedades.</div>
           </div>
         </div>
 
@@ -1191,7 +1176,7 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="section-badge">Dudas Habituales</div>
         <h2 class="section-title">Preguntas Frecuentes</h2>
         <p class="section-subtitle">
-          Respuestas claras sobre cómo opera el agente, su integración y la convivencia con tu equipo.
+          Respuestas transparentes sobre cómo funciona el agente, sus integraciones y la convivencia con tu personal.
         </p>
       </div>
 
@@ -1205,7 +1190,7 @@ import DemoModal from '../../components/DemoModal.astro';
           </button>
           <div class="faq-answer-panel">
             <p>
-              No. Un chatbot tradicional solo responde textos predefinidos o muestra menús rígidos con botones. Nuestro Agente de IA razona con lenguaje natural, interpreta el perfil y presupuesto del interesado, consulta el inventario en tiempo real, propone horarios de visitas en la agenda del asesor y actualiza tu CRM automáticamente.
+              No. Un chatbot tradicional repite textos fijos o te encasilla en menús numéricos limitados. Nuestro Agente de IA entiende lenguaje natural, interpreta el contexto del huésped (fechas, personas, preferencias), consulta la disponibilidad real en tu PMS o motor de reservas y gestiona acciones reales como brindar accesos, derivar pedidos de room service o coordinar transfer.
             </p>
           </div>
         </div>
@@ -1213,12 +1198,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 2 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span class="faq-question-text">¿Puede atender por WhatsApp y web al mismo tiempo?</span>
+            <span class="faq-question-text">¿Puede responder en varios idiomas?</span>
             <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Sí, es completamente omnicanal. Puede atender consultas que ingresan por WhatsApp Business oficial, mensajes directos de Instagram, el chat de tu sitio web e incluso procesar leads que llegan por notificación desde portales inmobiliarios (Zonaprop, Argenprop, etc.), manteniendo el historial unificado.
+              Sí, es completamente multi-idioma nativo. Si un viajero escribe en inglés, portugués, francés, alemán o italiano, el agente detecta el idioma automáticamente y mantiene toda la conversación con fluidez y calidez, sin necesidad de configurar traducciones manuales.
             </p>
           </div>
         </div>
@@ -1226,12 +1211,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 3 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span class="faq-question-text">¿Cómo califica a un lead?</span>
+            <span class="faq-question-text">¿Se integra con mi PMS y motor de reservas?</span>
             <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              A través de una conversación fluida de 2 a 3 intercambios, el agente identifica: intención (compra, alquiler o inversión), presupuesto estimado, barrios o zonas de preferencia, cantidad de ambientes requeridos, necesidad de cochera/mascotas y plazo deseado de mudanza. Si no cumple los parámetros mínimos, se le informa cortésmente sin comprometer el tiempo de tus asesores.
+              Sí. Nos conectamos mediante APIs y automatizaciones a los principales sistemas hoteleros del mercado (PMS, channel managers y motores de reservas directas). Si utilizás una herramienta específica o un desarrollo propio, evaluamos la conexión para que las tarifas y la disponibilidad estén siempre sincronizadas.
             </p>
           </div>
         </div>
@@ -1239,12 +1224,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 4 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span class="faq-question-text">¿Qué pasa si no encuentra una propiedad ideal en el inventario?</span>
+            <span class="faq-question-text">¿Qué pasa si el huésped tiene una queja?</span>
             <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              En lugar de cortar el diálogo, el agente guarda la búsqueda y los criterios del interesado en una lista de espera calificada dentro de tu CRM. Cuando ingresa una nueva propiedad afín a su perfil, el sistema puede avisarle automáticamente o sugerir opciones cercanas en zonas aledañas.
+              El agente está calibrado para detectar malestar, reclamos o situaciones delicadas. En lugar de dar respuestas automáticas, responde con empatía, registra los detalles del inconveniente y alerta de inmediato al personal de recepción o gerencia para que un responsable humano tome contacto de inmediato.
             </p>
           </div>
         </div>
@@ -1252,12 +1237,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 5 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span class="faq-question-text">¿Se puede adaptar a mis requisitos y guiones comerciales específicos?</span>
+            <span class="faq-question-text">¿Puede tomar reservas o solo informa?</span>
             <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Totalmente. Calibramos el tono de comunicación (formal, descontracturado, corporativo), los requisitos obligatorios de tu inmobiliaria (garantías aceptadas, anticipos para señas, políticas de alquiler temporal o tradicional) y los criterios con los que deben asignarse los prospectos a cada miembro de tu equipo.
+              Puede guiar todo el proceso de reserva: valida disponibilidad por fechas, presenta opciones de habitación, aplica descuentos directos y entrega el link de pago seguro de tu motor de reservas o pasarela de pago para confirmar la operación al instante.
             </p>
           </div>
         </div>
@@ -1265,12 +1250,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 6 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span class="faq-question-text">¿Cuánto tarda en implementarse?</span>
+            <span class="faq-question-text">¿Se adapta a las políticas de mi hotel?</span>
             <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              La implementación suele llevar entre 1 y 2 semanas dependiendo del nivel de integración requerido (conexión con CRM, catálogo de propiedades y canales de mensajería). Nuestro equipo realiza el relevamiento, la configuración y los ensayos de prueba guiados de punta a punta.
+              Totalmente. Durante la configuración relevamos tus horarios de check-in/out, políticas de cancelación, admisión de niños, mascotas, estacionamiento, condiciones para grupos y el tono de comunicación exacto (cálido, de lujo, descontracturado o boutique).
             </p>
           </div>
         </div>
@@ -1278,12 +1263,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 7 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span class="faq-question-text">¿Cómo se deriva al equipo humano?</span>
+            <span class="faq-question-text">¿Cuánto tarda la implementación?</span>
             <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Cuando el prospecto solicita una llamada, inicia una negociación sobre precio, presenta una situación contractual especial o simplemente pide hablar con una persona, el agente pausa su respuesta autónoma y transfiere la conversación al asesor asignado, notificándolo por WhatsApp, correo o CRM con el resumen del caso.
+              La puesta en marcha promedio lleva entre 1 y 2 semanas. En ese período realizamos el relevamiento de información de tu hotel, la integración con WhatsApp y tus canales digitales, y las pruebas de respuesta guiadas antes de salir a producción.
             </p>
           </div>
         </div>
@@ -1291,12 +1276,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 8 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span class="faq-question-text">¿Queda registro de todas las conversaciones?</span>
+            <span class="faq-question-text">¿Cómo se deriva al equipo humano cuando es necesario?</span>
             <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Sí. Todas las conversaciones, datos recabados, visitas acordadas y notas de seguimiento quedan debidamente registrados en tu CRM o base de datos. De esta forma, cualquier miembro de tu equipo comercial puede retomar la atención con contexto completo.
+              Cuando un huésped solicita hablar con una persona o el caso requiere aprobación especial, el agente pausa su intervención y notifica al equipo de recepción mediante alerta en WhatsApp, panel multiagente o correo electrónico con el resumen del caso.
             </p>
           </div>
         </div>
@@ -1312,14 +1297,14 @@ import DemoModal from '../../components/DemoModal.astro';
       <div class="cta-card">
         <div class="cta-glow-bg"></div>
         
-        <div class="cta-badge">Agendá una sesión estratégica</div>
+        <div class="cta-badge">Sesión Estratégica para Hotelería</div>
         
         <h2 class="cta-title">
-          Ordená tu operación comercial sin perder el trato humano
+          Mejorá la experiencia de tus huéspedes sin saturar a tu equipo
         </h2>
         
         <p class="cta-description">
-          Te mostramos qué automatizar primero según tu volumen de consultas y tu proceso.
+          Te mostramos qué automatizar primero según el tipo de hotel, canales y volumen de consultas.
         </p>
 
         <div class="cta-actions-wrap">
@@ -1334,7 +1319,7 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="cta-guarantees-row">
           <span class="guarantee-item">✓ Diagnóstico inicial sin costo</span>
           <span class="guarantee-sep">•</span>
-          <span class="guarantee-item">✓ Sin cambiar tu CRM o herramientas</span>
+          <span class="guarantee-item">✓ Sin cambiar tu PMS o sistemas</span>
           <span class="guarantee-sep">•</span>
           <span class="guarantee-item">✓ Respuesta en menos de 24 horas</span>
         </div>
@@ -1347,8 +1332,8 @@ import DemoModal from '../../components/DemoModal.astro';
 </Layout>
 
 <script>
-  function initRealEstatePage() {
-    // 1. TABS DEL PROCESO
+  function initHotelPage() {
+    // 1. TABS DEL JOURNEY
     const tabButtons = document.querySelectorAll('.process-tab-btn');
     const tabPanels = document.querySelectorAll('.process-tab-panel');
 
@@ -1380,7 +1365,6 @@ import DemoModal from '../../components/DemoModal.astro';
         const item = btn.closest('.faq-item');
         const icon = btn.querySelector('.faq-toggle-icon');
         
-        // Toggle current
         btn.setAttribute('aria-expanded', String(!isExpanded));
         item?.classList.toggle('is-open', !isExpanded);
         if (icon) {
@@ -1390,15 +1374,15 @@ import DemoModal from '../../components/DemoModal.astro';
     });
   }
 
-  document.addEventListener('DOMContentLoaded', initRealEstatePage);
-  document.addEventListener('astro:page-load', initRealEstatePage);
+  document.addEventListener('DOMContentLoaded', initHotelPage);
+  document.addEventListener('astro:page-load', initHotelPage);
 </script>
 
 <style>
   /* ============================================================== */
   /* VARIABLES & GENERAL LAYOUT                                     */
   /* ============================================================== */
-  .real-estate-page {
+  .hotel-page {
     font-family: 'Inter', sans-serif;
     color: var(--color-text-dark, #0f172a);
     background-color: transparent;
@@ -1603,7 +1587,7 @@ import DemoModal from '../../components/DemoModal.astro';
     color: #cbd5e1;
   }
 
-  /* Hero Visual Column (Pipeline Flow Card) */
+  /* Hero Visual Column (Flow Glass Card) */
   .flow-visual-wrapper {
     position: relative;
   }
@@ -2435,50 +2419,6 @@ import DemoModal from '../../components/DemoModal.astro';
     color: #ea580c;
   }
 
-  /* CRM Lead Summary Mockup */
-  .crm-lead-summary {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .summary-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.84rem;
-    gap: 0.5rem;
-  }
-
-  .s-label {
-    color: #64748b;
-    font-weight: 600;
-  }
-
-  .s-val {
-    color: #0f172a;
-    font-weight: 600;
-    text-align: right;
-  }
-
-  .s-val.highlight {
-    color: #0b2591;
-    font-size: 0.8rem;
-  }
-
-  .s-badge-hot {
-    background: rgba(239, 68, 68, 0.1);
-    color: #dc2626;
-    font-size: 0.74rem;
-    font-weight: 700;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-  }
-
   /* Bloque: Escala a un humano cuando... */
   .human-escalation-box {
     background: #ffffff;
@@ -2666,7 +2606,7 @@ import DemoModal from '../../components/DemoModal.astro';
   /* ============================================================== */
   .integrations-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
 
@@ -2770,7 +2710,7 @@ import DemoModal from '../../components/DemoModal.astro';
   }
 
   .case-card-title {
-    font-size: 1.25rem;
+    font-size: 1.22rem;
     font-weight: 800;
     color: #0f172a;
     line-height: 1.3;
@@ -3033,7 +2973,10 @@ import DemoModal from '../../components/DemoModal.astro';
     .problem-grid,
     .comparison-grid,
     .benefits-grid,
-    .steps-grid,
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .integrations-grid {
       grid-template-columns: repeat(2, 1fr);
     }
