@@ -176,10 +176,10 @@
 
               <!-- Footer "Ver todas las soluciones ↗" -->
               <div class="mega-col-footer">
-                <a href="/#casos-de-uso" class="mega-view-all">
+                <button type="button" class="mega-view-all btn-reset" data-open-quote aria-label="Solicitar cotización personalizada para más soluciones">
                   <span>Ver todas las soluciones</span>
                   <span class="arrow-up-right">↗</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -553,6 +553,11 @@
     font-weight: 700;
     color: #475569;
     text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
     transition: all 0.2s ease;
   }
   .mega-view-all:hover {
