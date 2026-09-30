@@ -1,0 +1,3326 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DemoModal from '../../components/DemoModal.astro';
+---
+
+<Layout
+  title="Agente de IA para Salud y Clínicas | MM SmartInbox"
+  description="IA que mejora la atención al paciente sin saturar a tu equipo. Automatiza admisión, turnos, recordatorios, preconsulta y postconsulta conectada a tu agenda médica y sistemas de gestión."
+>
+  <div class="health-page">
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 1. HERO / BANNER -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Columna Izquierda: Texto y CTA -->
+        <div class="hero-text-col" data-aos="fade-right">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span>Agente de IA para Clínicas, Consultorios y Centros Médicos</span>
+          </div>
+
+          <h1 class="hero-title">
+            IA que mejora la atención al paciente sin saturar a tu equipo
+          </h1>
+
+          <p class="hero-description">
+            Transforma la admisión, la gestión de turnos y el seguimiento posterior en un flujo ordenado de asistencia. El agente responde dudas frecuentes, guía trámites, agenda y recuerda turnos, y deriva casos sensibles al personal, para que tu clínica atienda mejor con menos esfuerzo repetitivo.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-navy" data-open-quote>
+              Reservar una demo
+            </button>
+            <a href="#automatizaciones" class="btn btn-outline">
+              Ver recorrido del paciente
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Microcopy de confianza -->
+          <div class="hero-microcopy">
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Implementación guiada</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Privacidad por diseño</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Integración con tu agenda y sistemas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Flujo interactivo del Paciente (Consulta → Turno → Preconsulta → Atención → Postconsulta) -->
+        <div class="hero-visual-col" data-aos="fade-left" data-aos-delay="150">
+          <div class="flow-visual-wrapper">
+            <div class="flow-glass-card">
+              
+              <div class="flow-card-header">
+                <div class="live-indicator">
+                  <span class="pulse-dot"></span>
+                  <span class="live-label">Agente de Salud IA Activo</span>
+                </div>
+                <span class="channel-pill">WhatsApp • Agenda Médica • Encriptado</span>
+              </div>
+
+              <!-- Pipeline de 5 etapas del Paciente -->
+              <div class="flow-stream">
+                
+                <!-- Etapa 1: Consulta -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">1. Consulta y Admisión</span>
+                      <span class="flow-step-meta">WhatsApp • 10:15 hs</span>
+                    </div>
+                    <div class="chat-bubble user-bubble">
+                      "Hola! ¿Tienen turnos para Dermatología en Sede Centro? ¿Atienden con OSDE 210?"
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 2: Turno y Disponibilidad -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">2. Asignación de Turno</span>
+                      <span class="flow-badge-ai">Agenda Sincronizada ✓</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>¡Hola Carla! Sí, el Dr. Gómez atiende en Sede Centro con tu cobertura. Tenemos turnos libres este <strong>Jueves a las 15:30 hs</strong> o <strong>Viernes a las 11:00 hs</strong>. ¿Cuál te queda más cómodo?</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 3: Preconsulta y Preparación -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">3. Preconsulta / Recordatorio</span>
+                      <span class="flow-step-meta">24 hs antes del turno</span>
+                    </div>
+                    <div class="property-match-mini">
+                      <div class="prop-thumb">📋</div>
+                      <div class="prop-details">
+                        <span class="prop-title">Turno confirmado • Jueves 15:30 hs</span>
+                        <span class="prop-sub">Recordatorio de DNI, credencial y copago digital</span>
+                      </div>
+                      <span class="prop-badge">Confirmado</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 4: Atención / Soporte en Sede -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">4. Durante la atención</span>
+                      <span class="flow-badge-confirmed">Check-in Guiado</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>Te esperamos en <strong>Av. Santa Fe 2400 (Piso 2, Consultorio 6)</strong>. Podés hacer check-in directo en recepción con tu DNI. Hay estacionamiento a 50m.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 5: Postconsulta y Seguimiento -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle purple-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">5. Postconsulta</span>
+                      <span class="flow-step-meta">Seguimiento y Trámites</span>
+                    </div>
+                    <div class="crm-sync-box">
+                      <span class="crm-tag">Certificado disponible</span>
+                      <span class="crm-tag">Control programado 30d</span>
+                      <span class="crm-tag">Encuesta 5★</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Barra de integraciones en el pie del Hero visual -->
+              <div class="flow-systems-bar">
+                <span class="systems-label">Sincronizado con:</span>
+                <span class="system-tag">Sistema de Turnos</span>
+                <span class="system-tag">WhatsApp API</span>
+                <span class="system-tag">Historia Clínica / EMR</span>
+                <span class="system-tag">Google Calendar</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 2. EL PROBLEMA (Cuando suben las consultas, el cuello de botella es administrativo) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="problema" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Reto de la Gestión Médica</div>
+        <h2 class="section-title">Cuando suben las consultas, el cuello de botella es administrativo</h2>
+        <p class="section-subtitle">
+          Entre atender el teléfono de turnos, responder mensajes por redes y recibir a los pacientes en sala de espera, la recepción se desborda y la experiencia de atención se resiente.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        
+        <!-- Problema 1 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Pacientes esperando respuesta por WhatsApp y redes</h3>
+            <p>Consultas acumuladas en el chat oficial fuera de horario o en picos de demanda que generan frustración y hacen que el paciente busque otro centro médico.</p>
+          </div>
+        </div>
+
+        <!-- Problema 2 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Turnos mal gestionados: idas y vueltas constantes</h3>
+            <p>Múltiples mensajes para coordinar una fecha y hora disponible, reprogramaciones manuales desordenadas y huecos improductivos en las agendas de los profesionales.</p>
+          </div>
+        </div>
+
+        <!-- Problema 3 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Preguntas idénticas repetidas decenas de veces</h3>
+            <p>Dudas sobre coberturas, obras sociales aceptadas, horarios, sedes, documentación exigida e instrucciones previas para estudios (como horas de ayuno).</p>
+          </div>
+        </div>
+
+        <!-- Problema 4 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+              <line x1="12" y1="2" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>No-shows por falta de confirmaciones oportunas</h3>
+            <p>Pacientes que no asisten a su consulta programada porque no recibieron un recordatorio con botón de confirmación, perjudicando el tiempo del médico.</p>
+          </div>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Recepción interrumpida frente al paciente presente</h3>
+            <p>El personal atiende llamadas o responde mensajes mientras un paciente en persona espera ser admitido en el mostrador, degradando la calidez del servicio.</p>
+          </div>
+        </div>
+
+        <!-- Problema 6 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Información fragmentada entre sistemas y planillas</h3>
+            <p>Datos dispersos en chats individuales, planillas de Excel, agendas paralelas y software clínico sin sincronización, provocando duplicidad y errores.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cierre destacado de la sección -->
+      <div class="problem-closing-banner" data-aos="fade-up">
+        <div class="closing-banner-inner">
+          <div class="closing-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <p class="closing-text">
+            <strong>La IA no reemplaza al personal de salud:</strong> automatiza lo repetitivo para cuidar la experiencia del paciente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 3. QUÉ HACE UN AGENTE DE IA EN CLÍNICAS (Comparativa) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="que-hace" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Evolución Tecnológica en Salud</div>
+        <h2 class="section-title">Más que responder: entiende, decide y ejecuta con reglas</h2>
+        <p class="section-subtitle">
+          Un chatbot convencional se limita a mostrar un menú estático. Un Agente de IA para Clínicas comprende la necesidad del paciente, aplica reglas de negocio y gestiona la agenda en tiempo real.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        
+        <!-- Card 1: Chatbot tradicional -->
+        <div class="comp-card bot-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="comp-header">
+            <span class="comp-type-badge basic">Enfoque Limitado</span>
+            <h3 class="comp-title">Chatbot tradicional</h3>
+            <p class="comp-tagline">Responde FAQs aisladas</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>Menús rígidos ("Marca 1 para turnos, 2 para horarios, 3 para médicos").</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>Textos prearmados sin verificar si el profesional realmente tiene espacio libre.</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>No comprende consultas combinadas ("Necesito ecografía abdominal y turno clínico el mismo día").</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>No distingue entre una consulta administrativa y un motivo de urgencia.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Agente IA - Entiende intención y contexto -->
+        <div class="comp-card agent-card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="comp-badge-recommended">Inteligencia y Contexto</div>
+          <div class="comp-header">
+            <span class="comp-type-badge premium">Agente de IA</span>
+            <h3 class="comp-title">Entiende intención y contexto</h3>
+            <p class="comp-tagline">Especialidad, cobertura, sede y urgencia</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Interpreta lenguaje natural en texto y audio con tono empático y respetuoso.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Identifica especialidad correcta, cobertura u obra social y sede de preferencia.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Distingue consultas habituales de síntomas que requieren derivación urgente.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Recuerda el historial administrativo y las indicaciones previas del paciente.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Agente IA - Ejecuta acciones -->
+        <div class="comp-card agent-card action" data-aos="fade-up" data-aos-delay="300">
+          <div class="comp-badge-recommended action-badge">Capacidad Operativa</div>
+          <div class="comp-header">
+            <span class="comp-type-badge accent">Agente de IA</span>
+            <h3 class="comp-title">Ejecuta acciones operativas</h3>
+            <p class="comp-tagline">Agenda, confirma, registra y deriva</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Consulta disponibilidad de turnos en vivo en el sistema de gestión o calendario.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Asigna turnos, envía recordatorios y gestiona reprogramaciones con reglas claras.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Informa preparaciones para estudios médicos (ayuno, recetas, órdenes).</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Registra datos administrativos en el CRM/EMR y deriva a un operador cuando corresponde.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Texto simple complementario -->
+      <div class="what-it-does-summary" data-aos="fade-up">
+        <p>
+          El agente puede <strong>conectarse a tu agenda, CRM o sistema de turnos</strong> para evitar errores, prevenir superposiciones y mantener el orden en cada consulta.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 4. BENEFICIOS (Para la clínica y para el paciente) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="beneficios" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Impacto en la Atención</div>
+        <h2 class="section-title">Beneficios para la clínica y para el paciente</h2>
+        <p class="section-subtitle">
+          Diseñado para centros médicos, consultorios y clínicas que buscan optimizar sus procesos sin comprometer la calidez en el trato humano.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <!-- Beneficio 1 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Respuestas rápidas y consistentes 24/7</h3>
+          <p>
+            Atención al instante en cualquier momento del día, brindando información certera sobre turnos, profesionales y requisitos de atención.
+          </p>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Menos carga en recepción por consultas repetitivas</h3>
+          <p>
+            Libera al personal de llamadas y mensajes monótonos para que puedan brindar una atención cálida y personalizada en el mostrador.
+          </p>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Reducción de ausencias con confirmaciones</h3>
+          <p>
+            Recordatorios automáticos por WhatsApp con botón de confirmación o cancelación anticipada para reasignar turnos liberados de inmediato.
+          </p>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Mejor organización y registro estructurado</h3>
+          <p>
+            Registro ordenado de motivos de consulta, especialidad solicitada, sede y estado del paciente en tu sistema o base de datos centralizada.
+          </p>
+        </div>
+
+        <!-- Beneficio 5 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <h3>Más turnos concretados con menos fricción</h3>
+          <p>
+            El paciente reserva en menos de 2 minutos sin esperar en línea telefónica, aumentando la tasa de ocupación de tus consultorios.
+          </p>
+        </div>
+
+        <!-- Beneficio 6 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Experiencia del paciente más clara y humana</h3>
+          <p>
+            Información transparente sobre copagos y preparaciones, con derivación inmediata a personal administrativo ante situaciones que lo ameriten.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 5. AUTOMATIZACIONES CLAVE (El recorrido del paciente) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="automatizaciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Patient Journey Asistido</div>
+        <h2 class="section-title">Automatización en el recorrido del paciente</h2>
+        <p class="section-subtitle">
+          Acompañamiento ordenado en cada fase: desde la primera inquietud hasta el seguimiento postconsulta, con límites éticos y derivación segura.
+        </p>
+      </div>
+
+      <!-- Tabs de Etapas del Recorrido -->
+      <div class="process-tabs-container">
+        <div class="process-tabs-nav" role="tablist">
+          <button type="button" class="process-tab-btn is-active" data-tab="tab-orientacion" role="tab" aria-selected="true">
+            <span class="tab-number">1</span>
+            <span class="tab-label">Admisión y orientación</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-turnos" role="tab" aria-selected="false">
+            <span class="tab-number">2</span>
+            <span class="tab-label">Turnos y agenda</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-preconsulta" role="tab" aria-selected="false">
+            <span class="tab-number">3</span>
+            <span class="tab-label">Preconsulta y preparación</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-atencion" role="tab" aria-selected="false">
+            <span class="tab-number">4</span>
+            <span class="tab-label">Soporte en sede</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-postconsulta" role="tab" aria-selected="false">
+            <span class="tab-number">5</span>
+            <span class="tab-label">Postconsulta y control</span>
+          </button>
+        </div>
+
+        <div class="process-tabs-content">
+          
+          <!-- Panel 1: Orientación -->
+          <div class="process-tab-panel is-active" id="tab-orientacion" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa A • Primer Contacto</div>
+                <h3>Primera consulta y orientación al paciente</h3>
+                <p class="panel-desc">
+                  Resuelve las dudas iniciales en segundos, orienta al paciente hacia el servicio adecuado y clarifica coberturas antes de agendar.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Especialidades, sedes y horarios:</strong> Informa la cartilla médica, profesionales disponibles, sedes de atención y días de consulta.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Validación de coberturas y aranceles:</strong> Detalla planes de obras sociales y prepagas aceptadas, copagos estimados y medios de pago.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Documentación requerida:</strong> Indica si se requiere orden médica autorizada, carnet digital, estudios previos o DNI.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Derivación oportuna:</strong> Ante casos complejos o consultas administrativas especiales, transfiere la conversación a recepción.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-title">Orientación Inicial en WhatsApp</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg user">
+                      Hola, quería saber si atienden Oftalmología en Sede Norte y si entra con mi prepaga Galeno.
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente de Salud IA</span>
+                      ¡Hola! Sí, en Sede Norte contamos con el servicio de Oftalmología General y estudios de diagnóstico.<br><br>Atendemos con <strong>Galeno (Planes Oro y Plata)</strong> de forma directa. ¿Te gustaría conocer la disponibilidad de turnos para esta semana?
+                    </div>
+                    <div class="m-msg user">
+                      Sí, por favor, preferentemente por la tarde.
+                    </div>
+                    <div class="m-meta-pill">✓ Cobertura verificada • Sede Norte seleccionada</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Turnos y agenda -->
+          <div class="process-tab-panel" id="tab-turnos" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa B • Agendamiento</div>
+                <h3>Gestión ágil de turnos y sincronización de agenda</h3>
+                <p class="panel-desc">
+                  Elimina la fricción de coordinar fechas por teléfono. El turno queda registrado directamente en el software de la clínica.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Solicitud de datos indispensables:</strong> Pide nombre, DNI y número de contacto sin burocracia excesiva.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Propuesta de franjas horarias libres:</strong> Lee la disponibilidad real del profesional y ofrece opciones concretas.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Reprogramaciones y cancelaciones con reglas:</strong> Permite cambiar turnos con la antelación mínima estipulada por la clínica.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Lista de espera automatizada:</strong> Si un turno se cancela, ofrece el espacio automáticamente al siguiente paciente en espera.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Agendamiento en Tiempo Real</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente de Salud IA</span>
+                      Tenemos los siguientes turnos disponibles con la Dra. Méndez (Oftalmología):<br><br>
+                      🗓 <strong>Martes 16:20 hs</strong><br>
+                      🗓 <strong>Jueves 17:40 hs</strong><br><br>
+                      ¿Cuál preferís confirmar?
+                    </div>
+                    <div class="m-msg user">
+                      El Jueves 17:40 hs me viene perfecto.
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente de Salud IA</span>
+                      ¡Excelente! Turno confirmado para el <strong>Jueves a las 17:40 hs</strong>. Te enviamos la ficha del turno con ubicación y requisitos por este medio.
+                    </div>
+                    <div class="m-meta-pill">✓ Turno registrado en Sistema Clínico • Cupo asignado</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Preconsulta y preparación -->
+          <div class="process-tab-panel" id="tab-preconsulta" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa C • Recordatorio y Preparación</div>
+                <h3>Preconsulta: confirmación de asistencia e indicaciones</h3>
+                <p class="panel-desc">
+                  Reduce el ausentismo a cero y asegura que el paciente llegue preparado con los requisitos necesarios para su estudio o consulta.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Recordatorios 24 y 48 hs antes:</strong> Mensaje automatizado con botón para confirmar o liberar el turno a tiempo.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Instrucciones médicas provistas por la clínica:</strong> Ayuno requerido, retención de líquidos o suspensión de medicación según protocolo.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Formularios administrativos previos:</strong> Relevamiento de datos de facturación o motivo general de consulta sin invadir anamnesis médica.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Guía de autorizaciones:</strong> Recordatorio de gestionar autorizaciones ante la obra social para evitar demoras en mostrador.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Recordatorio y Preparación para Estudios</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente de Salud IA</span>
+                      ¡Hola Lucas! Te recordamos tu turno de <strong>Ecografía Abdominal</strong> mañana a las <strong>09:00 hs</strong> en Sede Belgrano.<br><br>
+                      ⚠️ <strong>Instrucciones:</strong> Recordá concurrir con 8 horas de ayuno sólido y líquido, y tu orden médica autorizada.<br><br>
+                      ¿Confirmás tu asistencia?
+                    </div>
+                    <div class="m-msg user">
+                      Sí, confirmo mi asistencia.
+                    </div>
+                    <div class="m-meta-pill">✓ Asistencia confirmada • Sala de Espera notificada</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Durante la atención -->
+          <div class="process-tab-panel" id="tab-atencion" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa D • Soporte Administrativo</div>
+                <h3>Durante la atención: check-in guiado y orientación en sede</h3>
+                <p class="panel-desc">
+                  Agiliza el ingreso del paciente a la sede, disminuye aglomeraciones en recepción y guía el recorrido dentro del centro médico.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Check-in ágil:</strong> Indicaciones claras de qué presentar en recepción o cómo registrarse en tótems de autoservicio.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Ubicación y accesos:</strong> Envía mapa de la sede, piso, número de consultorio y opciones de estacionamiento cercano.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Derivación interna entre áreas:</strong> Informa al paciente adónde dirigirse tras la consulta para estudios complementarios o laboratorio.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Avisos de demoras eventuales:</strong> Notificación automática al paciente en caso de retrasos imprevistos en consultorio.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Guía de Ingreso a Sede</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente de Salud IA</span>
+                      Tu turno con el Dr. Gómez es en 30 minutos.<br><br>
+                      📍 <strong>Sede Centro:</strong> Av. Santa Fe 2400.<br>
+                      🛎️ <strong>Consultorio:</strong> Piso 2, Box 4.<br><br>
+                      Al ingresar, podés escanear tu DNI en el tótem de recepción para anunciar tu llegada directamente al profesional.
+                    </div>
+                    <div class="m-msg user">
+                      Perfecto, ya estoy en el edificio.
+                    </div>
+                    <div class="m-meta-pill">✓ Paciente en sala de espera • Estado actualizado</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 5: Postconsulta y seguimiento -->
+          <div class="process-tab-panel" id="tab-postconsulta" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa E • Seguimiento y Trámites</div>
+                <h3>Postconsulta: trámites, controles y encuestas de calidad</h3>
+                <p class="panel-desc">
+                  Mantiene el vínculo de cuidado activo, facilita gestiones administrativas posteriores y releva la satisfacción del paciente.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Recordatorios de control periódico:</strong> Sugiere agendar visitas preventivas o controles a los 30, 60 o 180 días según la especialidad.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Orientación de trámites administrativos:</strong> Cómo descargar facturas, certificados de atención o resultados de laboratorio.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Encuestas breves de satisfacción:</strong> Evalúa la puntualidad y la atención recibida para mejora continua de la clínica.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Derivación inmediata ante reclamos:</strong> Canaliza quejas o dudas no médicas con el responsable de atención al paciente.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Gestión Postconsulta y Resultados</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente de Salud IA</span>
+                      ¡Hola Lucas! Los resultados de tus estudios de laboratorio ya se encuentran disponibles en nuestro portal de pacientes.<br><br>
+                      ¿Querés agendar el turno de control con tu médico de cabecera para la revisión de los mismos?
+                    </div>
+                    <div class="m-msg user">
+                      Sí, me gustaría para la semana próxima por favor.
+                    </div>
+                    <div class="m-meta-pill accent">⚡ Enlace a portal enviado • Agenda de control iniciada</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bloque obligatorio: Seguridad, Límites y Traspaso Humano -->
+      <div class="medical-safety-box" data-aos="fade-up">
+        <div class="safety-banner-top">
+          <div class="safety-badge">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Criterios de Seguridad y Límites Asistenciales</span>
+          </div>
+          <h3 class="safety-title">Compromiso ético: el agente es administrativo, no médico</h3>
+          <p class="safety-desc">
+            <strong>El agente de IA no brinda diagnósticos ni reemplaza indicaciones médicas.</strong> Su función es exclusivamente de gestión y orientación operativa. Ante síntomas agudos o emergencias, el sistema indica de inmediato los canales de guardia médica y deriva la conversación.
+          </p>
+        </div>
+
+        <div class="escalation-header text-center">
+          <h4 class="escalation-subheading">Escala a un operador humano cuando…</h4>
+        </div>
+
+        <div class="escalation-cases-grid">
+          
+          <div class="escalation-case-card">
+            <div class="case-number">01</div>
+            <h4>Urgencia o emergencia reportada</h4>
+            <p>El paciente menciona dolor en el pecho, dificultad respiratoria, pérdida de conocimiento o traumatismo agudo: se indican números de emergencia y guardia.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">02</div>
+            <h4>Pedido de diagnóstico clínico</h4>
+            <p>El usuario solicita interpretar un resultado de laboratorio o pide prescripción de medicamentos: se aclara el límite y se orienta a agendar con el médico.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">03</div>
+            <h4>Reclamo sensible o disconformidad</h4>
+            <p>Inconvenientes con la atención médica, facturación conflictiva o demoras excesivas se derivan de inmediato a la coordinación del centro.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">04</div>
+            <h4>Criterios pediátricos o geriátricos</h4>
+            <p>Casos de recién nacidos, pacientes de alto riesgo o adultos mayores que requieran confirmación directa del especialista de cabecera.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">05</div>
+            <h4>Solicitudes fuera de protocolo</h4>
+            <p>Turnos sobreturnados, pedidos de sobrecupo médico o excepciones administrativas que exigen autorización expresa de la dirección.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 6. PRIVACIDAD, CUMPLIMIENTO Y CONTROL (Confianza) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="privacidad" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Seguridad de la Información</div>
+        <h2 class="section-title">Privacidad por diseño y control operativo</h2>
+        <p class="section-subtitle">
+          Cuidamos los datos de tus pacientes con los más altos estándares éticos, técnicos y normativos en el manejo de información en salud.
+        </p>
+      </div>
+
+      <div class="privacy-grid">
+        
+        <div class="privacy-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="privacy-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h4>Accesos por roles y permisos</h4>
+          <p>El personal administrativo accede únicamente a los datos pertinentes según su función operativa. Nada queda expuesto sin autorización.</p>
+        </div>
+
+        <div class="privacy-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="privacy-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h4>Registro y trazabilidad</h4>
+          <p>Historial unificado y auditable de cada interacción, garantizando consistencia, transparencia y orden en la atención brindada.</p>
+        </div>
+
+        <div class="privacy-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="privacy-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+          </div>
+          <h4>Minimización de datos</h4>
+          <p>El agente solicita únicamente lo estrictamente indispensable para gestionar el turno o trámite, evitando recopilar datos sensibles innecesarios.</p>
+        </div>
+
+        <div class="privacy-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="privacy-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h4>Consentimiento y retención</h4>
+          <p>Interacciones claras donde el paciente autoriza el envío de recordatorios y notificaciones de salud según las políticas de tu centro médico.</p>
+        </div>
+
+        <div class="privacy-card span-full" data-aos="fade-up" data-aos-delay="300">
+          <div class="privacy-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div>
+            <h4>Adaptable a normativas de protección de datos</h4>
+            <p>Nuestra arquitectura está diseñada para alinearse con marcos regulatorios vigentes en materia de privacidad y tratamiento de datos personales y de salud, resguardando la confidencialidad en todo el ciclo de atención.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 7. CÓMO SE IMPLEMENTA (Implementación guiada en 3 pasos) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="implementacion" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Puesta en Marcha Segura</div>
+        <h2 class="section-title">Implementación guiada en 3 pasos</h2>
+        <p class="section-subtitle">
+          Un proceso ordenado y profesional que no interrumpe el trabajo diario de tus médicos ni de tu equipo de recepción.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <!-- Paso 1 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-badge-number">Paso 01</div>
+          <div class="step-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3>Relevamos procesos: turnos, sedes, especialidades, reglas y FAQs</h3>
+          <p>
+            Cargamos tu cartilla de profesionales, sedes, coberturas médicas aceptadas, requisitos de estudios y las reglas de agendamiento específicas de tu clínica.
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-badge-number">Paso 02</div>
+          <div class="step-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Conectamos canales y sistemas</h3>
+          <p>
+            Integramos tu WhatsApp oficial, el chat de tu sitio web, tu sistema de turnos, agendas y CRM de pacientes para sincronizar la información sin duplicar tareas.
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-badge-number">Paso 03</div>
+          <div class="step-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <h3>Lanzamos, medimos y ajustamos flujos</h3>
+          <p>
+            Monitoreamos las primeras conversaciones reales, calibramos respuestas y optimizamos los recordatorios para reducir la carga de recepción y el ausentismo.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Aclaración destacada -->
+      <div class="integration-notice-card" data-aos="fade-up">
+        <div class="notice-icon">💡</div>
+        <div class="notice-content">
+          <strong>No necesitás cambiar tus herramientas actuales:</strong> nos integramos a tu software de turnos, agenda médica y canales existentes. Tu equipo médico y administrativo continúa usando lo que ya conoce.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 8. INTEGRACIONES (Se conecta con lo que ya usás) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="integraciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Ecosistema Conectado</div>
+        <h2 class="section-title">Se conecta con lo que ya usás</h2>
+        <p class="section-subtitle">
+          Integramos por APIs y automatizaciones para mantener la información médica y administrativa siempre sincronizada y al día.
+        </p>
+      </div>
+
+      <div class="integrations-grid">
+        
+        <!-- Tile 1: WhatsApp Business -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="100">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>WhatsApp Business API</h4>
+            <p>Canal oficial verificado para admisión, turnos y recordatorios al paciente.</p>
+          </div>
+        </div>
+
+        <!-- Tile 2: Web Chat -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="150">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Web Chat / Sitio Web</h4>
+            <p>Asistente interactivo en el portal institucional de la clínica.</p>
+          </div>
+        </div>
+
+        <!-- Tile 3: Instagram y Redes -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="200">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Instagram y Mensajería</h4>
+            <p>Atención directa a consultas espontáneas en redes sociales.</p>
+          </div>
+        </div>
+
+        <!-- Tile 4: Calendarios -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="250">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Google y Microsoft Calendar</h4>
+            <p>Sincronización de agendas de consultorios y quirófanos.</p>
+          </div>
+        </div>
+
+        <!-- Tile 5: Sistema de Turnos -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="300">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Sistemas de Turnos</h4>
+            <p>Conexión bidireccional con software médico y turneras vigentes.</p>
+          </div>
+        </div>
+
+        <!-- Tile 6: CRM de Pacientes -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="350">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>CRM de Salud</h4>
+            <p>Ficha de paciente, trazabilidad de solicitudes y estado del caso.</p>
+          </div>
+        </div>
+
+        <!-- Tile 7: Email y Sheets -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="400">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22 6 12 13 2 6"></polyline>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Email y Google Sheets</h4>
+            <p>Confirmaciones formales por correo y respaldos en hojas de cálculo.</p>
+          </div>
+        </div>
+
+        <!-- Tile 8: EMR / EHR -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="450">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="12" y1="18" x2="12" y2="12"></line>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Historia Clínica / EMR</h4>
+            <p>Integración con registros electrónicos para disponibilidad de turnos.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 9. CASOS DE USO (Ejemplos concretos en salud) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="casos-de-uso" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Aplicaciones Reales</div>
+        <h2 class="section-title">Ejemplos de automatización en salud</h2>
+        <p class="section-subtitle">
+          Situaciones prácticas donde el Agente de IA ordena el flujo de pacientes, reduce el trabajo administrativo y mejora la atención.
+        </p>
+      </div>
+
+      <div class="use-cases-grid">
+        
+        <!-- Caso 1: Clínica multi-especialidad -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="case-card-header">
+            <span class="case-tag blue">Clínica Multiespecialidad</span>
+            <div class="case-icon">🏥</div>
+          </div>
+          <h3 class="case-card-title">Orientación + turnos por sede y especialista</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Un centro médico con 15 especialidades y 3 sedes recibe cientos de consultas telefónicas y por chat simultáneas.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. El agente califica la especialidad médica adecuada según el motivo expresado.</div>
+            <div class="flow-pill">2. Filtra por sede más cercana al paciente y valida cobertura médica.</div>
+            <div class="flow-pill">3. Confirma el turno directamente en la agenda del profesional sin intervención de recepción.</div>
+          </div>
+        </div>
+
+        <!-- Caso 2: Odontología -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="case-card-header">
+            <span class="case-tag green">Centros Odontológicos</span>
+            <div class="case-icon">🦷</div>
+          </div>
+          <h3 class="case-card-title">Confirmaciones, recordatorios y reprogramaciones</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Alta tasa de cancelaciones imprevistas en turnos de ortodoncia, implantes y limpiezas que dejan sillones vacíos.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Envía recordatorios interactivos 48 y 24 horas antes por WhatsApp.</div>
+            <div class="flow-pill">2. Permite reprogramar con reglas automáticas si el paciente tiene un imprevisto.</div>
+            <div class="flow-pill">3. Ofrece el turno liberado de inmediato a pacientes en lista de espera.</div>
+          </div>
+        </div>
+
+        <!-- Caso 3: Centro de diagnóstico -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="case-card-header">
+            <span class="case-tag blue">Diagnóstico por Imágenes</span>
+            <div class="case-icon">🔬</div>
+          </div>
+          <h3 class="case-card-title">Instrucciones previas y entrega de resultados</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Pacientes que llegan a resonancias o ecografías sin el ayuno o la preparación necesaria, obligando a suspender el estudio.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Comunica la preparación exacta provista por el centro según el estudio agendado.</div>
+            <div class="flow-pill">2. Recuerda traer órdenes médicas autorizadas y estudios previos complementarios.</div>
+            <div class="flow-pill">3. Notifica automáticamente cuando los informes digitales están listos para descarga.</div>
+          </div>
+        </div>
+
+        <!-- Caso 4: Estética médica -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="case-card-header">
+            <span class="case-tag green">Estética Médica y Dermatología</span>
+            <div class="case-icon">✨</div>
+          </div>
+          <h3 class="case-card-title">Calificación inicial y coordinación de turnos</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Consultas espontáneas desde Instagram solicitando precios y detalles de tratamientos sin calificar interés real.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Responde preguntas frecuentes sobre zonas de aplicación, tiempos y cuidados.</div>
+            <div class="flow-pill">2. Informa que todo tratamiento requiere consulta médica de valoración previa.</div>
+            <div class="flow-pill">3. Coordina el turno de valoración y solicita seña previa para confirmar la fecha.</div>
+          </div>
+        </div>
+
+        <!-- Caso 5: Laboratorio -->
+        <div class="use-case-card span-2-col" data-aos="fade-up" data-aos-delay="300">
+          <div class="case-card-header">
+            <span class="case-tag blue">Laboratorio de Análisis Clínicos</span>
+            <div class="case-icon">🧪</div>
+          </div>
+          <h3 class="case-card-title">Preguntas frecuentes + preparación + horarios y sedes</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Dudas constantes sobre horarios de extracción, requisitos de recolección de muestras y retiro de informes.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Informa ventanas horarias de extracción por sede y modalidad (con o sin turno previo).</div>
+            <div class="flow-pill">2. Guía sobre preparación de muestras específicas (orina 24h, ayuno estricto, curvas).</div>
+            <div class="flow-pill">3. Facilita el acceso seguro al portal web de resultados mediante código de protocolo.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 10. PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="faq" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Dudas Habituales</div>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">
+          Respuestas claras sobre la operatoria del agente, su alcance, seguridad y derivación médica.
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrapper">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item is-open">
+          <button type="button" class="faq-question-btn" aria-expanded="true">
+            <span class="faq-question-text">¿Esto es solo un chatbot?</span>
+            <span class="faq-toggle-icon">−</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              No. Un chatbot convencional se limita a botones y respuestas estáticas pregrabadas. Nuestro Agente de IA para Salud entiende lenguaje natural (audio y texto), interpreta el contexto del paciente (especialidad, sede, cobertura), consulta la agenda médica en tiempo real, aplica reglas de negocio para reservar turnos y se conecta a tus sistemas de gestión.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Puede tomar turnos por WhatsApp y web al mismo tiempo?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí, es omnicanal. Puede gestionar turnos tanto desde la línea oficial de WhatsApp Business de tu clínica como desde el chat interactivo en tu sitio web o mensajes directos de Instagram, manteniendo toda la agenda centralizada sin duplicaciones.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Qué pasa si el paciente describe una urgencia?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              El agente cuenta con reglas estrictas de seguridad clínica. Si detecta palabras clave o síntomas asociados a emergencias (dolor torácico agudo, falta de aire, traumatismos severos), interrumpe el agendamiento ordinario, indica inmediatamente dirigirse a la guardia médica más cercana o llamar al servicio de emergencias, y alerta al equipo humano.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Puede integrarse con mi sistema de turnos y agenda médica?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí. Nos conectamos mediante APIs o webhooks a los principales sistemas de turnos médicos, Google Calendar, Microsoft Calendar y CRMs de salud. Si tu clínica cuenta con un software a medida, evaluamos la integración técnica para que los turnos queden sincronizados automáticamente.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿El agente da diagnósticos o indicaciones médicas?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Rotundamente no. El agente tiene un límite ético y operativo estricto: su función es puramente administrativa y de orientación operativa. Nunca emite diagnósticos, no receta medicamentos ni interpreta resultados clínicos. Para cualquier duda clínica, guía al paciente a agendar una consulta con el profesional correspondiente.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cómo se protege la información del paciente?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Aplicamos el principio de minimización de datos: el agente solicita únicamente los datos estrictamente necesarios para concretar el turno o trámite administrativo. Además, las comunicaciones están encriptadas, con control de acceso por roles y registro de trazabilidad auditable.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Se puede adaptar por especialidad y sede?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Totalmente. Configuramos reglas personalizadas por cada profesional, sede o especialidad: duración de la consulta, días de atención, coberturas aceptadas por cada médico, requisitos de preparación previa para estudios y tiempos de anticipación para cancelaciones.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Qué pasa si el agente no sabe responder una consulta específica?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              El agente no inventa respuestas. Si el paciente realiza una pregunta fuera de su base de conocimiento o solicita una excepción no contemplada, transfiere cordialmente la conversación al personal de recepción o atención al paciente con un resumen del caso.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cuánto tarda en implementarse?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              El proceso de implementación guiada suele demorar entre 1 y 2 semanas. En ese tiempo relevamos tu cartilla, configuramos las reglas de agendamiento, conectamos canales y realizamos pruebas de validación previas al lanzamiento en vivo.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 11. CTA FINAL (Conversión) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container cta-section" id="cta-final" data-aos="fade-up">
+      <div class="cta-card">
+        <div class="cta-glow-bg"></div>
+        
+        <div class="cta-badge">Sesión Estratégica para Centros Médicos</div>
+        
+        <h2 class="cta-title">
+          Mejorá la atención y ordená la operación desde la recepción
+        </h2>
+        
+        <p class="cta-description">
+          Te mostramos qué automatizar primero según tu flujo de consultas y turnos.
+        </p>
+
+        <div class="cta-actions-wrap">
+          <button type="button" class="btn btn-cta-primary" data-open-quote>
+            Reservar una demo
+          </button>
+          <button type="button" class="btn btn-cta-secondary" onclick="window.openDemoModal && window.openDemoModal()">
+            Ver demo en vivo
+          </button>
+        </div>
+
+        <div class="cta-guarantees-row">
+          <span class="guarantee-item">✓ Diagnóstico inicial sin costo</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Sin cambiar tus sistemas actuales</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Implementación guiada paso a paso</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <DemoModal />
+</Layout>
+
+<script>
+  function initHealthPage() {
+    // 1. TABS DEL RECORRIDO DEL PACIENTE
+    const tabButtons = document.querySelectorAll('.process-tab-btn');
+    const tabPanels = document.querySelectorAll('.process-tab-panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-tab');
+        
+        tabButtons.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        tabPanels.forEach(p => p.classList.remove('is-active'));
+
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        
+        if (targetId) {
+          const targetPanel = document.getElementById(targetId);
+          targetPanel?.classList.add('is-active');
+        }
+      });
+    });
+
+    // 2. FAQ ACCORDION
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        const item = btn.closest('.faq-item');
+        const icon = btn.querySelector('.faq-toggle-icon');
+        
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+        item?.classList.toggle('is-open', !isExpanded);
+        if (icon) {
+          icon.textContent = !isExpanded ? '−' : '+';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initHealthPage);
+  document.addEventListener('astro:page-load', initHealthPage);
+</script>
+
+<style>
+  /* ============================================================== */
+  /* VARIABLES & GENERAL LAYOUT                                     */
+  /* ============================================================== */
+  .health-page {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-dark, #0f172a);
+    background-color: transparent;
+    padding-bottom: 2rem;
+  }
+
+  .section-container {
+    max-width: 1140px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 4.5rem 0;
+  }
+
+  .bg-subtle {
+    background-color: rgba(248, 250, 252, 0.7);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.15);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ============================================================== */
+  /* BUTTONS & TOKENS                                               */
+  /* ============================================================== */
+  .btn {
+    padding: 0.85rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .btn-navy {
+    background-color: #0b2591;
+    color: white;
+    box-shadow: 0 4px 16px rgba(11, 37, 145, 0.28);
+    border: none;
+  }
+
+  .btn-navy:hover {
+    background-color: #061868;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 37, 145, 0.38);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #1e293b;
+    border: 1.5px solid #cbd5e1;
+  }
+
+  .btn-outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 1. HERO SECTION                                                */
+  /* ============================================================== */
+  .hero-section {
+    padding: 0.75rem 0 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    max-width: 1240px;
+    width: 92%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.16);
+    color: #0b2591;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    animation: pulseGlow 2s infinite;
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 6px rgba(21, 198, 59, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0);
+    }
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 580px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-microcopy {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.86rem;
+    color: #64748b;
+  }
+
+  .microcopy-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .micro-icon {
+    color: #15C63B;
+    font-weight: 800;
+  }
+
+  .micro-sep {
+    color: #cbd5e1;
+  }
+
+  /* Hero Visual Column (Flow Glass Card) */
+  .flow-visual-wrapper {
+    position: relative;
+  }
+
+  .flow-glass-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    position: relative;
+  }
+
+  .flow-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(21, 198, 59, 0.8);
+  }
+
+  .live-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .channel-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+  }
+
+  .flow-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .flow-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+    padding: 0.6rem 0.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .flow-step-item:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+  }
+
+  .flow-icon-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .flow-icon-circle.blue-theme {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .flow-icon-circle.green-theme {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .flow-icon-circle.purple-theme {
+    background: rgba(124, 58, 237, 0.12);
+    color: #7c3aed;
+  }
+
+  .flow-step-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .flow-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flow-step-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #0b2591;
+  }
+
+  .flow-step-meta {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .flow-badge-ai {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .flow-badge-confirmed {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.12);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .chat-bubble {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+  }
+
+  .user-bubble {
+    background: #e2e8f0;
+    color: #1e293b;
+    border-bottom-left-radius: 2px;
+  }
+
+  .ai-bubble {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+
+  .ai-avatar {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    background: #0b2591;
+    color: #fff;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    margin-right: 0.35rem;
+    vertical-align: middle;
+  }
+
+  .property-match-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .prop-thumb {
+    font-size: 1.25rem;
+  }
+
+  .prop-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prop-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .prop-sub {
+    font-size: 0.72rem;
+    color: #64748b;
+  }
+
+  .prop-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .crm-sync-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .crm-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #475569;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .flow-line-connector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8px;
+    position: relative;
+  }
+
+  .connector-track {
+    width: 2px;
+    height: 100%;
+    background: #cbd5e1;
+  }
+
+  .connector-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #0b2591;
+    border-radius: 50%;
+  }
+
+  .flow-systems-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.74rem;
+  }
+
+  .systems-label {
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .system-tag {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* ============================================================== */
+  /* 2. EL PROBLEMA (Cards & Closing Banner)                        */
+  /* ============================================================== */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .problem-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 24px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .problem-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .problem-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .problem-content p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.55;
+  }
+
+  .problem-closing-banner {
+    background: linear-gradient(135deg, rgba(11, 37, 145, 0.06) 0%, rgba(21, 198, 59, 0.06) 100%);
+    border: 1.5px solid rgba(11, 37, 145, 0.15);
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+  }
+
+  .closing-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .closing-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #0b2591;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .closing-text {
+    font-size: 1.05rem;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+
+  .closing-text strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 3. COMPARATIVA (Chatbot vs Agente)                             */
+  /* ============================================================== */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+  }
+
+  .comp-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  .comp-card.bot-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+  }
+
+  .comp-card.featured {
+    border: 2px solid #0b2591;
+    box-shadow: 0 12px 30px -5px rgba(11, 37, 145, 0.15);
+  }
+
+  .comp-card.action {
+    border: 2px solid #15C63B;
+    box-shadow: 0 12px 30px -5px rgba(21, 198, 59, 0.15);
+  }
+
+  .comp-badge-recommended {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0b2591;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .comp-badge-recommended.action-badge {
+    background: #15C63B;
+    color: #0f172a;
+  }
+
+  .comp-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .comp-type-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .comp-type-badge.basic {
+    background: #e2e8f0;
+    color: #475569;
+  }
+
+  .comp-type-badge.premium {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .comp-type-badge.accent {
+    background: rgba(21, 198, 59, 0.15);
+    color: #0c8a26;
+  }
+
+  .comp-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  .comp-tagline {
+    font-size: 0.88rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .comp-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+  }
+
+  .comp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #334155;
+  }
+
+  .dot-icon {
+    font-weight: 800;
+    color: #94a3b8;
+    flex-shrink: 0;
+  }
+
+  .check-icon {
+    font-weight: 800;
+    color: #15C63B;
+    flex-shrink: 0;
+  }
+
+  .what-it-does-summary {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 2rem;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .what-it-does-summary p {
+    font-size: 0.98rem;
+    color: #334155;
+    line-height: 1.6;
+  }
+
+  .what-it-does-summary strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 4. BENEFICIOS                                                  */
+  /* ============================================================== */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .benefit-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .benefit-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-icon-wrapper.blue-bg {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .benefit-icon-wrapper.green-bg {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .benefit-card p {
+    font-size: 0.93rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ============================================================== */
+  /* 5. TABS DE AUTOMATIZACIONES Y RECORRIDO                        */
+  /* ============================================================== */
+  .process-tabs-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+  }
+
+  .process-tabs-nav {
+    display: flex;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    overflow-x: auto;
+  }
+
+  .process-tab-btn {
+    flex: 1;
+    min-width: 170px;
+    padding: 1.1rem 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn:hover {
+    background: #f1f5f9;
+  }
+
+  .process-tab-btn.is-active {
+    background: #ffffff;
+    border-bottom-color: #0b2591;
+  }
+
+  .tab-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn.is-active .tab-number {
+    background: #0b2591;
+    color: #ffffff;
+  }
+
+  .tab-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+    white-space: nowrap;
+  }
+
+  .process-tab-btn.is-active .tab-label {
+    color: #0b2591;
+  }
+
+  .process-tabs-content {
+    padding: 2.5rem;
+  }
+
+  .process-tab-panel {
+    display: none;
+  }
+
+  .process-tab-panel.is-active {
+    display: block;
+    animation: fadeInTab 0.3s ease forwards;
+  }
+
+  @keyframes fadeInTab {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .panel-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .panel-badge-step {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .panel-text h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  .panel-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .panel-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.94rem;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .check-circ {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(21, 198, 59, 0.15);
+    color: #15C63B;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Chat Mockup in Tabs */
+  .chat-mockup-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .mockup-header {
+    background: #ffffff;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .mockup-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+
+  .mockup-dot.red { background-color: #ef4444; }
+  .mockup-dot.yellow { background-color: #f59e0b; }
+  .mockup-dot.green { background-color: #10b981; }
+
+  .mockup-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #475569;
+    margin-left: 0.4rem;
+  }
+
+  .mockup-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .m-msg {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+
+  .m-msg.user {
+    background: #e2e8f0;
+    color: #1e293b;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+  }
+
+  .m-msg.ai {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+
+  .m-sender {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #0b2591;
+    margin-bottom: 0.25rem;
+  }
+
+  .m-meta-pill {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+
+  .m-meta-pill.accent {
+    background: rgba(234, 88, 12, 0.12);
+    color: #ea580c;
+  }
+
+  /* Medical Safety Box */
+  .medical-safety-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  .safety-banner-top {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 2rem;
+  }
+
+  .safety-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #dc2626;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 0.85rem;
+  }
+
+  .safety-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+  }
+
+  .safety-desc {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.6;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .safety-desc strong {
+    color: #0f172a;
+  }
+
+  .escalation-subheading {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
+
+  .escalation-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .escalation-case-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .escalation-case-card:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+  }
+
+  .case-number {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: rgba(11, 37, 145, 0.25);
+    margin-bottom: 0.4rem;
+  }
+
+  .escalation-case-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .escalation-case-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 6. PRIVACIDAD Y CUMPLIMIENTO                                   */
+  /* ============================================================== */
+  .privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .privacy-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    transition: all 0.25s ease;
+  }
+
+  .privacy-card:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -5px rgba(0, 0, 0, 0.06);
+  }
+
+  .privacy-card.span-full {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, rgba(11, 37, 145, 0.03) 0%, rgba(21, 198, 59, 0.03) 100%);
+    border: 1.5px solid rgba(11, 37, 145, 0.15);
+  }
+
+  .privacy-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .privacy-card h4 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  .privacy-card p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ============================================================== */
+  /* 7. CÓMO SE IMPLEMENTA                                          */
+  /* ============================================================== */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem 1.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 26px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .step-badge-number {
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+
+  .step-icon-wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-icon-wrap.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .step-icon-wrap.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .step-card h3 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .step-card p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .integration-notice-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .notice-content {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.55;
+  }
+
+  .notice-content strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 8. INTEGRACIONES                                               */
+  /* ============================================================== */
+  .integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .integration-tile {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  }
+
+  .integration-tile:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.06);
+  }
+
+  .tile-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tile-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .tile-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 9. CASOS DE USO                                                */
+  /* ============================================================== */
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .use-case-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .use-case-card.span-2-col {
+    grid-column: 1 / -1;
+  }
+
+  .use-case-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 26px -5px rgba(0, 0, 0, 0.07);
+  }
+
+  .case-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .case-tag {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .case-tag.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .case-tag.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .case-icon {
+    font-size: 1.25rem;
+  }
+
+  .case-card-title {
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  .case-scenario {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    background: #f8fafc;
+    border-left: 3px solid #0b2591;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .case-scenario strong {
+    color: #0f172a;
+  }
+
+  .case-solution-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .flow-pill {
+    font-size: 0.86rem;
+    color: #334155;
+    background: #f1f5f9;
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
+    line-height: 1.45;
+  }
+
+  /* ============================================================== */
+  /* 10. FAQ ACCORDION                                              */
+  /* ============================================================== */
+  .faq-accordion-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .faq-item.is-open {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  }
+
+  .faq-question-btn {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  .faq-question-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0b2591;
+    flex-shrink: 0;
+  }
+
+  .faq-answer-panel {
+    display: none;
+    padding: 0 1.5rem 1.35rem;
+    font-size: 0.94rem;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  .faq-item.is-open .faq-answer-panel {
+    display: block;
+    animation: fadeInFaq 0.25s ease forwards;
+  }
+
+  @keyframes fadeInFaq {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============================================================== */
+  /* 11. CTA FINAL                                                  */
+  /* ============================================================== */
+  .cta-section {
+    padding: 5rem 0 3rem;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, #0b2591 0%, #061868 100%);
+    border-radius: 24px;
+    padding: 4.5rem 2rem;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.4);
+  }
+
+  .cta-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(21, 198, 59, 0.25) 0%, rgba(11, 37, 145, 0) 70%);
+    pointer-events: none;
+  }
+
+  .cta-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-description {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-actions-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-cta-primary {
+    background-color: #15C63B;
+    color: #0f172a;
+    padding: 1rem 2.2rem;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 18px rgba(21, 198, 59, 0.4);
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-primary:hover {
+    background-color: #12ad33;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(21, 198, 59, 0.5);
+  }
+
+  .btn-cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .cta-guarantees-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: #94a3b8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .guarantee-item {
+    color: #e2e8f0;
+  }
+
+  .guarantee-sep {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* ============================================================== */
+  /* RESPONSIVE BREAKPOINTS (Mobile-First approach)                 */
+  /* ============================================================== */
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+    }
+
+    .problem-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .steps-grid,
+    .privacy-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .integrations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .escalation-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .panel-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-container {
+      padding: 3.5rem 0;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .problem-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .steps-grid,
+    .integrations-grid,
+    .use-cases-grid,
+    .privacy-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .privacy-card.span-full {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .process-tabs-nav {
+      justify-content: flex-start;
+    }
+
+    .process-tabs-content {
+      padding: 1.5rem;
+    }
+
+    .cta-card {
+      padding: 3.5rem 1.5rem;
+    }
+
+    .cta-title {
+      font-size: 1.85rem;
+    }
+
+    .cta-actions-wrap {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-secondary {
+      width: 100%;
+    }
+
+    .closing-banner-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

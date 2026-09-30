@@ -1,0 +1,2966 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DemoModal from '../../components/DemoModal.astro';
+---
+
+<Layout
+  title="Agente de IA para Logística, Envíos y Operaciones | MM SmartInbox"
+  description="IA que mantiene tus envíos en movimiento y tu operación ordenada. Automatiza tracking, gestión de incidencias, remitos POD y tareas internas conectado a tu TMS, WMS y ERP."
+>
+  <div class="logistics-page">
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 1. HERO / BANNER -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Columna Izquierda: Texto y CTA -->
+        <div class="hero-text-col" data-aos="fade-right">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span>Agente de IA para Operadores Logísticos, Última Milla y Distribución</span>
+          </div>
+
+          <h1 class="hero-title">
+            IA que mantiene tus envíos en movimiento y tu operación ordenada
+          </h1>
+
+          <p class="hero-description">
+            Automatiza tareas internas y comunicaciones de estado en un flujo continuo: el agente consulta tracking, actualiza sistemas, clasifica incidencias, crea tickets, dispara alertas y deriva casos críticos. Menos trabajo repetitivo, más control operativo.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-navy" data-open-quote>
+              Reservar una demo
+            </button>
+            <a href="#automatizaciones" class="btn btn-outline">
+              Ver flujos operativos
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Microcopy de confianza -->
+          <div class="hero-microcopy">
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Implementación guiada</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Integración con TMS / WMS / ERP</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Automatización interna + atención al cliente</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Diagrama en 2 carriles (Canales Cliente <-> Orquestador IA <-> Operación Interna) -->
+        <div class="hero-visual-col" data-aos="fade-left" data-aos-delay="150">
+          <div class="flow-visual-wrapper">
+            <div class="flow-glass-card">
+              
+              <div class="flow-card-header">
+                <div class="live-indicator">
+                  <span class="pulse-dot"></span>
+                  <span class="live-label">Agente Logístico Orquestador</span>
+                </div>
+                <span class="channel-pill">TMS • WMS • WhatsApp • ERP</span>
+              </div>
+
+              <!-- Pipeline de Integración Operativa en 2 carriles -->
+              <div class="flow-stream">
+                
+                <!-- Etapa 1: Consulta Cliente -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">Carril Cliente • Consulta</span>
+                      <span class="flow-step-meta">WhatsApp Business • 11:20 hs</span>
+                    </div>
+                    <div class="chat-bubble user-bubble">
+                      "Hola! ¿A qué hora llega mi envío #LOG-4921 a Córdoba? Estaba previsto para la mañana."
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 2: Orquestación y Consulta TMS en Vivo -->
+                <div class="flow-step-item highlight-ai">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">Orquestador IA • Cruce de Datos</span>
+                      <span class="flow-badge-ai">SLA Validado en TMS ✓</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>El móvil está en tu zona (Parada 4). Tu nueva ventana confirmada es de <strong>14:30 a 16:00 hs</strong>. ¿Confirmás recepción en el domicilio registrado?</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 3: Acción Interna Automática (Backoffice) -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle purple-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">Operación Interna • Automatización</span>
+                      <span class="flow-step-meta">Backoffice Sincronizado</span>
+                    </div>
+                    <div class="crm-sync-box">
+                      <span class="crm-tag">Ticket #8402 Helpdesk abierto</span>
+                      <span class="crm-tag">Asignado a: Base Córdoba</span>
+                      <span class="crm-tag">TMS: 'Demora informada'</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 4: Cierre con Evidencia (POD) -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">Cierre de Entrega • POD Digital</span>
+                      <span class="flow-badge-confirmed">Entrega Exitosa ✓</span>
+                    </div>
+                    <div class="property-match-mini">
+                      <div class="prop-thumb">📦</div>
+                      <div class="prop-details">
+                        <span class="prop-title">Firma digital + Foto recibida</span>
+                        <span class="prop-sub">Remito archivado en WMS • Pre-facturación ERP lista</span>
+                      </div>
+                      <span class="prop-badge">Completado</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Barra de integraciones en el pie del Hero visual -->
+              <div class="flow-systems-bar">
+                <span class="systems-label">Sincronizado con:</span>
+                <span class="system-tag">TMS Propio/SaaS</span>
+                <span class="system-tag">WMS Almacén</span>
+                <span class="system-tag">SAP / ERP</span>
+                <span class="system-tag">Helpdesk / Tickets</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 2. NO ES UN CHATBOT: ES AUTOMATIZACIÓN OPERATIVA -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="diferenciacion" data-aos="fade-up">
+      <div class="operational-banner">
+        <div class="operational-banner-header text-center">
+          <div class="section-badge">Impacto en el Núcleo del Negocio</div>
+          <h2 class="section-title">
+            Atención al cliente es solo una parte.<br>El mayor impacto está dentro de la operación.
+          </h2>
+          <p class="section-subtitle">
+            Un chatbot convencional se limita a responder preguntas con texto estático. Un Agente de IA para Logística consulta bases de datos, decide mediante reglas de negocio y ejecuta acciones concretas dentro de tus herramientas de backoffice.
+          </p>
+        </div>
+
+        <div class="operational-actions-grid">
+          
+          <div class="op-action-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="op-action-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+            </div>
+            <div class="op-action-text">
+              <h4>Actualiza estados</h4>
+              <p>Sincroniza en tiempo real eventos de choferes y carriers hacia el TMS, ERP o CRM.</p>
+            </div>
+          </div>
+
+          <div class="op-action-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="op-action-icon green">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="op-action-text">
+              <h4>Crea tareas y tickets</h4>
+              <p>Abre casos en Helpdesk o Jira ante incidencias y los asigna al despachante zonal.</p>
+            </div>
+          </div>
+
+          <div class="op-action-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="op-action-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <div class="op-action-text">
+              <h4>Notifica por excepción</h4>
+              <p>Alerta proactivamente a supervisores antes de que venza un SLA contractual.</p>
+            </div>
+          </div>
+
+          <div class="op-action-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="op-action-icon green">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+              </svg>
+            </div>
+            <div class="op-action-text">
+              <h4>Registra evidencias POD</h4>
+              <p>Recaba remitos firmados y fotos de entrega, archivándolos automáticamente.</p>
+            </div>
+          </div>
+
+          <div class="op-action-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="op-action-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="op-action-text">
+              <h4>Genera reportes operativos</h4>
+              <p>Consolida resúmenes de causas de desvío, volumetría y tiempos de ciclo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 3. PROBLEMAS REALES (Fricción externa e interna) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="problemas" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Desafío de la Cadena Logística</div>
+        <h2 class="section-title">Cuando el volumen crece, la fricción interna y externa se dispara</h2>
+        <p class="section-subtitle">
+          El tiempo de tus operadores se disuelve entre contestar reclamos repetitivos y actualizar manualmente múltiples sistemas desconectados.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        
+        <!-- Problema 1 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>“¿Dónde está mi envío?” saturando soporte</h3>
+            <p>Cientos de consultas diarias por WhatsApp y correo pidiendo estados de tracking que el personal busca manualmente copiando y pegando guías.</p>
+          </div>
+        </div>
+
+        <!-- Problema 2 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Seguimiento manual entre planillas y portales</h3>
+            <p>Operadores cruzando información entre webs de transportistas terceros, planillas de cálculo y el sistema central sin una vista unificada.</p>
+          </div>
+        </div>
+
+        <!-- Problema 3 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Incidencias repetidas sin flujo estándar</h3>
+            <p>Direcciones con numeración incompleta, timbre roto o ausencias del receptor tratadas caso a caso sin reglas automáticas de reintento o aviso.</p>
+          </div>
+        </div>
+
+        <!-- Problema 4 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Actualización tardía de estados en TMS/ERP</h3>
+            <p>Entregas y fallos que se cargan horas o días después, provocando que los clientes vean información desfasada y desconfíen del servicio.</p>
+          </div>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Falta de trazabilidad: chat → ticket → solución</h3>
+            <p>Conversaciones con clientes que mueren en el WhatsApp del operador sin transformarse en un ticket estructurado ni quedar registradas en el legajo del envío.</p>
+          </div>
+        </div>
+
+        <!-- Problema 6 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <path d="M12 18v-6"></path>
+              <path d="M9 15l3 3 3-3"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Horas perdidas en tareas de remitos y POD</h3>
+            <p>Búsqueda manual de comprobantes firmados, conciliación de guías entregadas contra facturación y resolución de reclamos por demoras administrativas.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cierre destacado de la sección -->
+      <div class="problem-closing-banner" data-aos="fade-up">
+        <div class="closing-banner-inner">
+          <div class="closing-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <p class="closing-text">
+            <strong>La solución no es contratar más operadores para cargar planillas:</strong> es automatizar los flujos entre los canales de contacto y tus sistemas de gestión.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 4. QUÉ HACE UN AGENTE DE IA EN LOGÍSTICA (3 Roles) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="que-hace" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Capacidades del Sistema</div>
+        <h2 class="section-title">Entiende contexto y ejecuta acciones conectadas</h2>
+        <p class="section-subtitle">
+          El agente opera como un asistente digital para tus clientes y como un orquestador automatizado para tu equipo de operaciones.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        
+        <!-- Card 1: Responde -->
+        <div class="comp-card bot-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="comp-header">
+            <span class="comp-type-badge basic">Canal Exterior</span>
+            <h3 class="comp-title">Responde y guía</h3>
+            <p class="comp-tagline">Consultas de tracking y estados</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Informa estados de guía, franjas horarias y eventos de entrega en tiempo real.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Resuelve dudas sobre cobertura de zonas, requisitos de despacho y embalaje.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Permite al receptor validar su dirección y confirmar si estará en el domicilio.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Atiende 24/7 por WhatsApp, web chat y correo sin tiempos de espera.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Orquesta -->
+        <div class="comp-card agent-card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="comp-badge-recommended">Inteligencia y SLA</div>
+          <div class="comp-header">
+            <span class="comp-type-badge premium">Orquestador IA</span>
+            <h3 class="comp-title">Orquesta y decide</h3>
+            <p class="comp-tagline">Cruce de carriers y reglas operativas</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Cruza información entre múltiples transportistas y tu base de datos central.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Monitorea tiempos de tránsito y detecta envíos con riesgo de incumplimiento de SLA.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Clasifica la severidad de un reclamo según el tipo de cliente (cuenta B2B vs. usuario final).</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Aplica reglas de reintento de entrega antes de que el bulto vuelva a depósito.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Automatiza internamente -->
+        <div class="comp-card agent-card action" data-aos="fade-up" data-aos-delay="300">
+          <div class="comp-badge-recommended action-badge">Impacto en Backoffice</div>
+          <div class="comp-header">
+            <span class="comp-type-badge accent">Operación Interna</span>
+            <h3 class="comp-title">Automatiza internamente</h3>
+            <p class="comp-tagline">Tickets, actualización de TMS y alertas</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Abre tickets en Helpdesk o Jira con todos los datos precargados y clasificados.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Actualiza hitos en tu TMS/ERP automáticamente sin carga manual de operadores.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Dispara alertas internas a supervisores cuando una unidad sufre demoras críticas.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Archiva remitos firmados (POD) y valida comprobantes para liquidación inmediata.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 5. SECCIÓN CLAVE: AUTOMATIZACIONES INTERNAS (Backoffice y Operación) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="automatizaciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Motor Operativo</div>
+        <h2 class="section-title">Flujos internos que se pueden automatizar</h2>
+        <p class="section-subtitle">
+          Casos reales de automatización de backoffice para reducir el trabajo manual, agilizar la resolución de incidencias y mantener trazabilidad total.
+        </p>
+      </div>
+
+      <div class="backoffice-grid">
+        
+        <!-- Flujo 1 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="backoffice-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3>Gestión de incidencias y tickets</h3>
+          <p>
+            Clasificación automática del problema (dirección incorrecta, receptor ausente, paquete dañado), creación de ticket en tu helpdesk y asignación automática al despachante o base zonal.
+          </p>
+        </div>
+
+        <!-- Flujo 2 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="backoffice-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+          </div>
+          <h3>Actualización de estados en TMS/ERP</h3>
+          <p>
+            Sincronización bidireccional entre eventos de tracking de carriers y tu TMS/ERP central. Eliminación de horas dedicadas a cargar estados manualmente en planillas.
+          </p>
+        </div>
+
+        <!-- Flujo 3 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="backoffice-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </div>
+          <h3>Alertas proactivas de desvíos y SLAs</h3>
+          <p>
+            Monitoreo en segundo plano que detecta paquetes "en excepción" o parados más tiempo del previsto, avisando a los supervisores antes de que el cliente final reclame.
+          </p>
+        </div>
+
+        <!-- Flujo 4 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="backoffice-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Documentación y recolección de POD</h3>
+          <p>
+            Recepción digital de remitos firmados, comprobantes de entrega y fotos de evidencia enviadas por los choferes, con validación automática y archivo en el sistema de gestión.
+          </p>
+        </div>
+
+        <!-- Flujo 5 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="backoffice-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+          </div>
+          <h3>Coordinación de ventanas y reintentos</h3>
+          <p>
+            Contacto interactivo con el receptor para consensuar ventanas horarias antes del despacho y reprogramación automática de visitas fallidas según reglas del operador.
+          </p>
+        </div>
+
+        <!-- Flujo 6 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="backoffice-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Conciliación y prefacturación</h3>
+          <p>
+            Agrupación de guías entregadas con evidencia conformada, cruce contra tarifas contratadas y preparación de la base de datos lista para facturación a clientes B2B.
+          </p>
+        </div>
+
+        <!-- Flujo 7 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="backoffice-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <h3>Reportes automáticos de gestión</h3>
+          <p>
+            Envío programado de métricas diarias y semanales: porcentaje de entregas a tiempo, causas principales de no-entrega, zonas críticas y cumplimiento de transportistas.
+          </p>
+        </div>
+
+        <!-- Flujo 8 -->
+        <div class="backoffice-card" data-aos="fade-up" data-aos-delay="450">
+          <div class="backoffice-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Asistente interno para operadores</h3>
+          <p>
+            Chatbot de consulta interna para tu personal: los operadores preguntan por el historial de una guía o cliente y reciben el resumen inmediato con los pasos sugeridos.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Aclaración técnica destacada -->
+      <div class="integration-notice-card" data-aos="fade-up">
+        <div class="notice-icon">⚙️</div>
+        <div class="notice-content">
+          <strong>Arquitectura conectada:</strong> Se integra por APIs y plataformas de automatización (como n8n, webhooks y colas de eventos) directamente con tus herramientas actuales, sin obligarte a cambiar de sistema.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 6. CICLO DEL ENVÍO (Externo + Interno) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="ciclo-envio" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Visión Extremo a Extremo</div>
+        <h2 class="section-title">Automatización del ciclo del envío</h2>
+        <p class="section-subtitle">
+          Descubrí cómo interactúa el agente en cada fase del paquete, coordinando la experiencia del cliente con la ejecución operativa interna.
+        </p>
+      </div>
+
+      <!-- Tabs de Etapas del Ciclo Logístico -->
+      <div class="process-tabs-container">
+        <div class="process-tabs-nav" role="tablist">
+          <button type="button" class="process-tab-btn is-active" data-tab="tab-despacho" role="tab" aria-selected="true">
+            <span class="tab-number">1</span>
+            <span class="tab-label">Ingreso y Despacho</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-transito" role="tab" aria-selected="false">
+            <span class="tab-number">2</span>
+            <span class="tab-label">En Tránsito</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-incidencia" role="tab" aria-selected="false">
+            <span class="tab-number">3</span>
+            <span class="tab-label">Excepción y Demora</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-entrega" role="tab" aria-selected="false">
+            <span class="tab-number">4</span>
+            <span class="tab-label">Entrega y POD</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-cierre" role="tab" aria-selected="false">
+            <span class="tab-number">5</span>
+            <span class="tab-label">Cierre y Liquidación</span>
+          </button>
+        </div>
+
+        <div class="process-tabs-content">
+          
+          <!-- Panel 1: Ingreso y Despacho -->
+          <div class="process-tab-panel is-active" id="tab-despacho" role="tabpanel">
+            <div class="panel-dual-layout">
+              <div class="dual-lane-card external">
+                <div class="dual-lane-header">
+                  <span class="lane-tag">Canal Exterior • Cliente / Receptor</span>
+                  <h4>Qué ve el cliente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Aviso de despacho:</strong> Notificación automática por WhatsApp o email con número de seguimiento y fecha estimada.</li>
+                  <li><strong>Validación de dirección:</strong> Enlace para chequear numeración, piso, entrecalles y referencias antes de la salida del móvil.</li>
+                  <li><strong>Preferencia de entrega:</strong> Opción de indicar si recibe un vecino, conserje o si prefiere retirar en sucursal.</li>
+                </ul>
+              </div>
+              <div class="dual-lane-card internal">
+                <div class="dual-lane-header">
+                  <span class="lane-tag green">Operación Interna • Backoffice</span>
+                  <h4>Qué se automatiza internamente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Normalización de domicilios:</strong> Geocodificación automática para evitar paquetes mal ruteados en el TMS.</li>
+                  <li><strong>Creación de hito en ERP:</strong> Sincronización de la orden de compra con el sistema de almacén WMS.</li>
+                  <li><strong>Asignación de lote:</strong> Etiquetado de bultos según zona de reparto y transportista asignado.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: En Tránsito -->
+          <div class="process-tab-panel" id="tab-transito" role="tabpanel">
+            <div class="panel-dual-layout">
+              <div class="dual-lane-card external">
+                <div class="dual-lane-header">
+                  <span class="lane-tag">Canal Exterior • Cliente / Receptor</span>
+                  <h4>Qué ve el cliente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Tracking en tiempo real:</strong> Consulta ágil de estado ("En camino", "Móvil en tu zona") sin esperar a soporte.</li>
+                  <li><strong>Ventana horaria acotada:</strong> Aviso matutino: "Tu pedido llegará entre las 13:00 y las 16:00 hs".</li>
+                  <li><strong>Canal directo de contacto:</strong> Botón para confirmar si hay alguien en el domicilio para recibir.</li>
+                </ul>
+              </div>
+              <div class="dual-lane-card internal">
+                <div class="dual-lane-header">
+                  <span class="lane-tag green">Operación Interna • Backoffice</span>
+                  <h4>Qué se automatiza internamente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Cruce de carriers:</strong> Ingesta de datos de GPS y eventos de múltiples transportistas en una base única.</li>
+                  <li><strong>Monitoreo de SLA:</strong> Cálculo en vivo del porcentaje de cumplimiento por ruta y chofer.</li>
+                  <li><strong>Actualización continua:</strong> Reflejo de paradas completadas en el TMS central de la empresa.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Excepción y Demora -->
+          <div class="process-tab-panel" id="tab-incidencia" role="tabpanel">
+            <div class="panel-dual-layout">
+              <div class="dual-lane-card external">
+                <div class="dual-lane-header">
+                  <span class="lane-tag">Canal Exterior • Cliente / Receptor</span>
+                  <h4>Qué ve el cliente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Comunicación transparente:</strong> "Tuvimos una demora en ruta; tu nuevo horario es 17:30 hs".</li>
+                  <li><strong>Reprogramación inmediata:</strong> Si no puede recibir hoy, elige en 2 clics la fecha para el reintento.</li>
+                  <li><strong>Sin llamados en espera:</strong> Resuelve el problema desde WhatsApp sin saturar la central telefónica.</li>
+                </ul>
+              </div>
+              <div class="dual-lane-card internal">
+                <div class="dual-lane-header">
+                  <span class="lane-tag green">Operación Interna • Backoffice</span>
+                  <h4>Qué se automatiza internamente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Ticket automático en Helpdesk:</strong> Creación del incidente con etiqueta de causa (tráfico, rotura, ausencia).</li>
+                  <li><strong>Alerta al despachante:</strong> Notificación en Slack o correo al supervisor de la zona afectada.</li>
+                  <li><strong>Reordenamiento de ruta:</strong> Ajuste de la hoja de ruta del transportista en el sistema operativo.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Entrega y POD -->
+          <div class="process-tab-panel" id="tab-entrega" role="tabpanel">
+            <div class="panel-dual-layout">
+              <div class="dual-lane-card external">
+                <div class="dual-lane-header">
+                  <span class="lane-tag">Canal Exterior • Cliente / Receptor</span>
+                  <h4>Qué ve el cliente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Comprobante digital:</strong> Copia del remito de entrega o confirmación con código de seguridad OTP.</li>
+                  <li><strong>Aviso a quien envió:</strong> Si es logística B2B, el remitente recibe notificación: "Entregado a Juan Pérez (DNI 28.xxx)".</li>
+                  <li><strong>Encuesta de servicio:</strong> Calificación rápida de 1 a 5 estrellas sobre la experiencia con el chofer.</li>
+                </ul>
+              </div>
+              <div class="dual-lane-card internal">
+                <div class="dual-lane-header">
+                  <span class="lane-tag green">Operación Interna • Backoffice</span>
+                  <h4>Qué se automatiza internamente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Ingesta de remito (POD):</strong> El chofer sube la foto del remito firmado y el agente la valida y asocia al envío.</li>
+                  <li><strong>Cierre de orden en TMS:</strong> Estado "Entregado con conformidad" registrado en segundos.</li>
+                  <li><strong>Habilitación contable:</strong> El viaje pasa a estado listo para liquidación y cobro.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 5: Cierre y Liquidación -->
+          <div class="process-tab-panel" id="tab-cierre" role="tabpanel">
+            <div class="panel-dual-layout">
+              <div class="dual-lane-card external">
+                <div class="dual-lane-header">
+                  <span class="lane-tag">Canal Exterior • Cliente / Receptor</span>
+                  <h4>Qué ve el cliente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Portal de reportes B2B:</strong> Acceso a la planilla consolidada de todas las entregas del mes con sus PODs descargables.</li>
+                  <li><strong>Canal de reclamos administrativos:</strong> Vía directa para resolver discrepancias de bultos o facturación.</li>
+                </ul>
+              </div>
+              <div class="dual-lane-card internal">
+                <div class="dual-lane-header">
+                  <span class="lane-tag green">Operación Interna • Backoffice</span>
+                  <h4>Qué se automatiza internamente</h4>
+                </div>
+                <ul class="lane-checklist">
+                  <li><strong>Conciliación automática:</strong> Cruce de guías entregadas vs. liquidación de transportistas terceros.</li>
+                  <li><strong>Detección de penalidades:</strong> Registro automático de demoras atribuibles al carrier para cálculo de cobros.</li>
+                  <li><strong>Reporte gerencial:</strong> Envío de resumen ejecutivo semanal con KPIs de volumen, costo y cumplimiento.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bloque destacado: Escala a humano cuando... -->
+      <div class="human-escalation-box" data-aos="fade-up">
+        <div class="escalation-header">
+          <div class="escalation-badge">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+            <span>Traspaso Operativo Inteligente</span>
+          </div>
+          <h3 class="escalation-title">Escala a un operador humano cuando…</h3>
+          <p class="escalation-subtitle">
+            El agente sabe cuándo transferir el caso con ficha completa para que tu equipo tome decisiones estratégicas:
+          </p>
+        </div>
+
+        <div class="escalation-cases-grid">
+          
+          <div class="escalation-case-card">
+            <div class="case-number">01</div>
+            <h4>Siniestro, rotura o pérdida de carga</h4>
+            <p>Reporte de mercadería dañada o extravío en tránsito: alerta inmediata a operaciones y seguros con registro fotográfico.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">02</div>
+            <h4>Reclamo de cuenta corporativa B2B clave</h4>
+            <p>Clientes estratégicos con acuerdos SLA específicos: se transfiere directamente al ejecutivo de cuenta asignado.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">03</div>
+            <h4>Domicilio inaccesible sin contacto</h4>
+            <p>Zonas con cortes de tránsito, errores catastrales o imposibilidad de contacto tras 2 reintentos programados.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">04</div>
+            <h4>Desvío crítico de SLA no recuperable</h4>
+            <p>Riesgo inminente de penalidad comercial o demoras mayores a 24 horas que requieren reasignación manual de chofer.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 7. INTEGRACIONES (Se conecta con tu stack logístico) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="integraciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Ecosistema Conectado</div>
+        <h2 class="section-title">Se conecta con tu stack logístico</h2>
+        <p class="section-subtitle">
+          Conectamos sistemas para eliminar la doble carga de datos y mantener una única fuente de verdad en toda tu operación.
+        </p>
+      </div>
+
+      <div class="integrations-grid">
+        
+        <!-- Tile 1: TMS -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="100">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Sistemas TMS</h4>
+            <p>Software de gestión de transporte, hojas de ruta y flotas.</p>
+          </div>
+        </div>
+
+        <!-- Tile 2: WMS -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="150">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Sistemas WMS</h4>
+            <p>Gestión de almacenes, preparación de pedidos y stock.</p>
+          </div>
+        </div>
+
+        <!-- Tile 3: ERP Central -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="200">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>ERP Corporativo</h4>
+            <p>SAP, Oracle, Odoo, Softland o desarrollos a medida.</p>
+          </div>
+        </div>
+
+        <!-- Tile 4: Helpdesk & Ticketing -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="250">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Ticketing y Soporte</h4>
+            <p>Zendesk, Jira, Freshdesk y sistemas de soporte internos.</p>
+          </div>
+        </div>
+
+        <!-- Tile 5: WhatsApp Business -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="300">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>WhatsApp Business API</h4>
+            <p>Línea oficial verificada para notificaciones y soporte.</p>
+          </div>
+        </div>
+
+        <!-- Tile 6: Tracking de Carriers -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="350">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Carriers y Couriers</h4>
+            <p>Conexión por webhooks y APIs a transportistas externos.</p>
+          </div>
+        </div>
+
+        <!-- Tile 7: Email y Sheets -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="400">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22 6 12 13 2 6"></polyline>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Email y Google Sheets</h4>
+            <p>Reportes automáticos, confirmaciones y bases analíticas.</p>
+          </div>
+        </div>
+
+        <!-- Tile 8: CRM Logístico -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="450">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>CRM de Cuentas B2B</h4>
+            <p>Ficha de dadores de carga, acuerdos y contratos comerciales.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 8. CASOS DE USO (Enfoque en operación interna) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="casos-de-uso" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Casos de Uso Operativos</div>
+        <h2 class="section-title">Casos de uso en operaciones de transporte y distribución</h2>
+        <p class="section-subtitle">
+          Ejemplos concretos donde la automatización de flujos internos optimiza tiempos y reduce costos operativos.
+        </p>
+      </div>
+
+      <div class="use-cases-grid">
+        
+        <!-- Caso 1: Operador 3PL -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="case-card-header">
+            <span class="case-tag blue">Operadores 3PL</span>
+            <div class="case-icon">🏭</div>
+          </div>
+          <h3 class="case-card-title">Incidencias automáticas → ticket + asignación + seguimiento</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Un centro de distribución maneja envíos de 50 dadores de carga diferentes y los reclamos se mezclaban en casillas de correo.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. El agente clasifica el tipo de incidente según la guía y el dador de carga.</div>
+            <div class="flow-pill">2. Genera el ticket con prioridad y lo asigna al equipo zonal correspondiente.</div>
+            <div class="flow-pill">3. Mantiene informadas a ambas partes hasta el cierre sin tareas manuales.</div>
+          </div>
+        </div>
+
+        <!-- Caso 2: Última milla -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="case-card-header">
+            <span class="case-tag green">Última Milla e-Commerce</span>
+            <div class="case-icon">🚚</div>
+          </div>
+          <h3 class="case-card-title">Reintentos automatizados + ventanas de entrega</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Alta tasa de ausencias en primer intento de entrega que encarecía los costos de flete por segundo viaje.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Contacto automático al receptor 3 horas antes para validar presencia.</div>
+            <div class="flow-pill">2. Si no puede recibir, permite seleccionar fecha y franja de reintento en el momento.</div>
+            <div class="flow-pill">3. El sistema actualiza la hoja de ruta del transportista antes de salir a la zona.</div>
+          </div>
+        </div>
+
+        <!-- Caso 3: Fulfillment -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="case-card-header">
+            <span class="case-tag blue">Fulfillment y Almacén</span>
+            <div class="case-icon">📦</div>
+          </div>
+          <h3 class="case-card-title">Validación de dirección + estados sincronizados</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Órdenes de compra con errores de carga en código postal o altura que salían a reparto destinadas al fracaso.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. La IA detecta inconsistencias en la dirección antes del picking en almacén.</div>
+            <div class="flow-pill">2. Envía mensaje automático al comprador para corregir datos en segundos.</div>
+            <div class="flow-pill">3. Actualiza el WMS y libera la etiqueta de despacho corregida sin demoras.</div>
+          </div>
+        </div>
+
+        <!-- Caso 4: Logística B2B -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="case-card-header">
+            <span class="case-tag green">Distribución B2B y Cargas</span>
+            <div class="case-icon">📋</div>
+          </div>
+          <h3 class="case-card-title">POD digital + conciliación administrativa rápida</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Demoras de semanas para facturar fletes corporativos por esperar que los choferes entreguen los remitos en papel.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. El chofer fotografía el remito con sello y firma al entregar en depósito de destino.</div>
+            <div class="flow-pill">2. El agente procesa la imagen, valida número de remito y la asocia al viaje en el ERP.</div>
+            <div class="flow-pill">3. La entrega queda confirmada de inmediato, habilitando la facturación en el día.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 9. CONTROL Y TRAZABILIDAD -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="control" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Gobernanza y Seguridad</div>
+        <h2 class="section-title">Control operativo, auditoría y trazabilidad total</h2>
+        <p class="section-subtitle">
+          Diseñado para operaciones exigentes que necesitan saber exactamente qué hizo el sistema, en qué momento y con qué permisos.
+        </p>
+      </div>
+
+      <div class="control-grid">
+        
+        <div class="control-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="control-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h4>Registro de acciones del agente</h4>
+          <p>Cada consulta resuelta, ticket creado o actualización de estado en el TMS queda registrada en un log auditable con fecha, hora y motivo.</p>
+        </div>
+
+        <div class="control-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="control-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h4>Reglas y permisos por rol</h4>
+          <p>El personal operativo, los supervisores y los choferes interactúan con datos delimitados según su nivel de autorización en la empresa.</p>
+        </div>
+
+        <div class="control-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="control-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+          </div>
+          <h4>Derivación con historial completo</h4>
+          <p>Al transferir una incidencia a un operador humano, este recibe el resumen del caso, antecedentes de la guía y acciones previas tomadas.</p>
+        </div>
+
+        <div class="control-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="control-icon-box">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h4>Minimización y seguridad de datos</h4>
+          <p>El agente solo procesa los datos indispensables para coordinar la entrega, cumpliendo con estándares de confidencialidad de la cadena.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 10. PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="faq" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Dudas Habituales</div>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">
+          Respuestas técnicas y operativas sobre cómo opera el agente, su integración con tu TMS y la gestión de incidencias.
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrapper">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item is-open">
+          <button type="button" class="faq-question-btn" aria-expanded="true">
+            <span class="faq-question-text">¿Esto es solo un chatbot?</span>
+            <span class="faq-toggle-icon">−</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              No. Un chatbot solo responde textos fijos. Nuestro Agente de IA para Logística está conectado a tus herramientas internas (TMS, WMS, ERP, Helpdesk): consulta tracking en tiempo real, aplica reglas de SLA, actualiza estados en tus sistemas, abre tickets y dispara alertas operativas para evitar demoras.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Puede actualizar mi TMS o ERP automáticamente sin intervención humana?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí. Mediante webhooks y APIs, el agente puede recibir la confirmación de entrega o la justificación de una visita fallida y asentar el evento directamente en tu TMS o ERP sin que un operador tenga que tipear datos manualmente.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cómo abre y enruta tickets de incidencias en nuestro helpdesk?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Cuando detecta un problema (dirección incorrecta, paquete dañado o demora excesiva), crea un ticket en plataformas como Zendesk o Jira con la guía precargada, clasificación de la causa y asignación inmediata al equipo o base zonal responsable.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Qué pasa si el tracking del transportista está incompleto o desactualizado?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              El agente identifica la falta de datos recientes y, en lugar de dar información errónea, informa al cliente que está verificando con la base operativa, mientras crea una alerta interna para que el despachante audite el estado del móvil.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Se puede adaptar a nuestros SLAs contractuales y reglas de negocio?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Totalmente. Calibramos las reglas según los acuerdos de tu empresa: tiempos máximos de entrega por zona, cantidad de reintentos permitidos, criterios de derivación para cuentas corporativas y horarios de notificación al cliente.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cuánto tarda en implementarse?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              La implementación suele llevar entre 2 y 3 semanas, dependiendo de la cantidad de sistemas a conectar (TMS, WMS, CRM) y la complejidad de las reglas de ruteo y tickets. Realizamos pruebas en entorno seguro antes de la salida a producción.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Sirve tanto para logística B2B como para última milla B2C?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí. En B2B automatiza la recolección de remitos conformados (POD), la conciliación y la atención a dadores de carga; en B2C agiliza el tracking masivo, la confirmación de domicilios y los reintentos de entrega para tiendas online y couriers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 11. CTA FINAL (Conversión) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container cta-section" id="cta-final" data-aos="fade-up">
+      <div class="cta-card">
+        <div class="cta-glow-bg"></div>
+        
+        <div class="cta-badge">Sesión Estratégica de Operaciones</div>
+        
+        <h2 class="cta-title">
+          Automatizá tu operación logística, no solo las respuestas
+        </h2>
+        
+        <p class="cta-description">
+          Te mostramos qué flujos internos automatizar primero para reducir carga y mejorar control.
+        </p>
+
+        <div class="cta-actions-wrap">
+          <button type="button" class="btn btn-cta-primary" data-open-quote>
+            Reservar una demo
+          </button>
+          <button type="button" class="btn btn-cta-secondary" onclick="window.openDemoModal && window.openDemoModal()">
+            Ver demo en vivo
+          </button>
+        </div>
+
+        <div class="cta-guarantees-row">
+          <span class="guarantee-item">✓ Diagnóstico operativo inicial sin costo</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Sin cambiar tus sistemas TMS/ERP actuales</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Integración guiada paso a paso</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <DemoModal />
+</Layout>
+
+<script>
+  function initLogisticsPage() {
+    // 1. TABS DEL CICLO LOGÍSTICO
+    const tabButtons = document.querySelectorAll('.process-tab-btn');
+    const tabPanels = document.querySelectorAll('.process-tab-panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-tab');
+        
+        tabButtons.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        tabPanels.forEach(p => p.classList.remove('is-active'));
+
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        
+        if (targetId) {
+          const targetPanel = document.getElementById(targetId);
+          targetPanel?.classList.add('is-active');
+        }
+      });
+    });
+
+    // 2. FAQ ACCORDION
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        const item = btn.closest('.faq-item');
+        const icon = btn.querySelector('.faq-toggle-icon');
+        
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+        item?.classList.toggle('is-open', !isExpanded);
+        if (icon) {
+          icon.textContent = !isExpanded ? '−' : '+';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initLogisticsPage);
+  document.addEventListener('astro:page-load', initLogisticsPage);
+</script>
+
+<style>
+  /* ============================================================== */
+  /* VARIABLES & GENERAL LAYOUT                                     */
+  /* ============================================================== */
+  .logistics-page {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-dark, #0f172a);
+    background-color: transparent;
+    padding-bottom: 2rem;
+  }
+
+  .section-container {
+    max-width: 1140px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 4.5rem 0;
+  }
+
+  .bg-subtle {
+    background-color: rgba(248, 250, 252, 0.7);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.15);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ============================================================== */
+  /* BUTTONS & TOKENS                                               */
+  /* ============================================================== */
+  .btn {
+    padding: 0.85rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .btn-navy {
+    background-color: #0b2591;
+    color: white;
+    box-shadow: 0 4px 16px rgba(11, 37, 145, 0.28);
+    border: none;
+  }
+
+  .btn-navy:hover {
+    background-color: #061868;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 37, 145, 0.38);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #1e293b;
+    border: 1.5px solid #cbd5e1;
+  }
+
+  .btn-outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 1. HERO SECTION                                                */
+  /* ============================================================== */
+  .hero-section {
+    padding: 0.75rem 0 3.5rem;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    max-width: 1240px;
+    width: 92%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.16);
+    color: #0b2591;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    animation: pulseGlow 2s infinite;
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 6px rgba(21, 198, 59, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0);
+    }
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 580px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-microcopy {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.86rem;
+    color: #64748b;
+  }
+
+  .microcopy-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .micro-icon {
+    color: #15C63B;
+    font-weight: 800;
+  }
+
+  .micro-sep {
+    color: #cbd5e1;
+  }
+
+  /* Hero Visual Column (Flow Glass Card) */
+  .flow-visual-wrapper {
+    position: relative;
+  }
+
+  .flow-glass-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    position: relative;
+  }
+
+  .flow-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(21, 198, 59, 0.8);
+  }
+
+  .live-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .channel-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+  }
+
+  .flow-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .flow-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+    padding: 0.6rem 0.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .flow-step-item:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+  }
+
+  .flow-icon-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .flow-icon-circle.blue-theme {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .flow-icon-circle.green-theme {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .flow-icon-circle.purple-theme {
+    background: rgba(124, 58, 237, 0.12);
+    color: #7c3aed;
+  }
+
+  .flow-step-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .flow-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flow-step-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #0b2591;
+  }
+
+  .flow-step-meta {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .flow-badge-ai {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .flow-badge-confirmed {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.12);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .chat-bubble {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+  }
+
+  .user-bubble {
+    background: #e2e8f0;
+    color: #1e293b;
+    border-bottom-left-radius: 2px;
+  }
+
+  .ai-bubble {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+
+  .ai-avatar {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    background: #0b2591;
+    color: #fff;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    margin-right: 0.35rem;
+    vertical-align: middle;
+  }
+
+  .property-match-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .prop-thumb {
+    font-size: 1.25rem;
+  }
+
+  .prop-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prop-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .prop-sub {
+    font-size: 0.72rem;
+    color: #64748b;
+  }
+
+  .prop-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .crm-sync-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .crm-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #475569;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .flow-line-connector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8px;
+    position: relative;
+  }
+
+  .connector-track {
+    width: 2px;
+    height: 100%;
+    background: #cbd5e1;
+  }
+
+  .connector-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #0b2591;
+    border-radius: 50%;
+  }
+
+  .flow-systems-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.74rem;
+  }
+
+  .systems-label {
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .system-tag {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* ============================================================== */
+  /* 2. NO ES UN CHATBOT: AUTOMATIZACIÓN OPERATIVA                  */
+  /* ============================================================== */
+  .operational-banner {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  .operational-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .op-action-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.25s ease;
+  }
+
+  .op-action-item:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .op-action-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .op-action-icon.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .op-action-icon.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .op-action-text h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+    margin-bottom: 0.35rem;
+  }
+
+  .op-action-text p {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.45;
+  }
+
+  /* ============================================================== */
+  /* 3. PROBLEMAS REALES                                            */
+  /* ============================================================== */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .problem-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 24px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .problem-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .problem-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .problem-content p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.55;
+  }
+
+  .problem-closing-banner {
+    background: linear-gradient(135deg, rgba(11, 37, 145, 0.06) 0%, rgba(21, 198, 59, 0.06) 100%);
+    border: 1.5px solid rgba(11, 37, 145, 0.15);
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+  }
+
+  .closing-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .closing-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #0b2591;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .closing-text {
+    font-size: 1.05rem;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+
+  .closing-text strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 4. COMPARATIVA (Qué hace el agente)                            */
+  /* ============================================================== */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+  }
+
+  .comp-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  .comp-card.bot-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+  }
+
+  .comp-card.featured {
+    border: 2px solid #0b2591;
+    box-shadow: 0 12px 30px -5px rgba(11, 37, 145, 0.15);
+  }
+
+  .comp-card.action {
+    border: 2px solid #15C63B;
+    box-shadow: 0 12px 30px -5px rgba(21, 198, 59, 0.15);
+  }
+
+  .comp-badge-recommended {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0b2591;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .comp-badge-recommended.action-badge {
+    background: #15C63B;
+    color: #0f172a;
+  }
+
+  .comp-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .comp-type-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .comp-type-badge.basic {
+    background: #e2e8f0;
+    color: #475569;
+  }
+
+  .comp-type-badge.premium {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .comp-type-badge.accent {
+    background: rgba(21, 198, 59, 0.15);
+    color: #0c8a26;
+  }
+
+  .comp-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  .comp-tagline {
+    font-size: 0.88rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .comp-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+  }
+
+  .comp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #334155;
+  }
+
+  .check-icon {
+    font-weight: 800;
+    color: #15C63B;
+    flex-shrink: 0;
+  }
+
+  /* ============================================================== */
+  /* 5. AUTOMATIZACIONES INTERNAS (Backoffice 8 Cards Grid)         */
+  /* ============================================================== */
+  .backoffice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .backoffice-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .backoffice-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .backoffice-icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .backoffice-icon-wrap.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .backoffice-icon-wrap.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .backoffice-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .backoffice-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.55;
+  }
+
+  .integration-notice-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .notice-content {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.55;
+  }
+
+  .notice-content strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 6. CICLO DEL ENVÍO (Dual Lane Cards & Tabs)                    */
+  /* ============================================================== */
+  .process-tabs-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+  }
+
+  .process-tabs-nav {
+    display: flex;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    overflow-x: auto;
+  }
+
+  .process-tab-btn {
+    flex: 1;
+    min-width: 170px;
+    padding: 1.1rem 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn:hover {
+    background: #f1f5f9;
+  }
+
+  .process-tab-btn.is-active {
+    background: #ffffff;
+    border-bottom-color: #0b2591;
+  }
+
+  .tab-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn.is-active .tab-number {
+    background: #0b2591;
+    color: #ffffff;
+  }
+
+  .tab-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+    white-space: nowrap;
+  }
+
+  .process-tab-btn.is-active .tab-label {
+    color: #0b2591;
+  }
+
+  .process-tabs-content {
+    padding: 2.5rem;
+  }
+
+  .process-tab-panel {
+    display: none;
+  }
+
+  .process-tab-panel.is-active {
+    display: block;
+    animation: fadeInTab 0.3s ease forwards;
+  }
+
+  @keyframes fadeInTab {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .panel-dual-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .dual-lane-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .dual-lane-card.external {
+    border-left: 4px solid #0b2591;
+  }
+
+  .dual-lane-card.internal {
+    border-left: 4px solid #15C63B;
+  }
+
+  .dual-lane-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .lane-tag {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0b2591;
+  }
+
+  .lane-tag.green {
+    color: #0c8a26;
+  }
+
+  .dual-lane-header h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0f172a;
+  }
+
+  .lane-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .lane-checklist li {
+    font-size: 0.92rem;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .lane-checklist li strong {
+    color: #0f172a;
+  }
+
+  /* Bloque: Escala a un humano cuando... */
+  .human-escalation-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  }
+
+  .escalation-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .escalation-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
+
+  .escalation-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  .escalation-subtitle {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .escalation-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .escalation-case-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .escalation-case-card:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+  }
+
+  .case-number {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: rgba(11, 37, 145, 0.25);
+    margin-bottom: 0.4rem;
+  }
+
+  .escalation-case-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .escalation-case-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 7. INTEGRACIONES                                               */
+  /* ============================================================== */
+  .integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .integration-tile {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  }
+
+  .integration-tile:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.06);
+  }
+
+  .tile-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tile-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .tile-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 8. CASOS DE USO                                                */
+  /* ============================================================== */
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .use-case-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .use-case-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 26px -5px rgba(0, 0, 0, 0.07);
+  }
+
+  .case-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .case-tag {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .case-tag.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .case-tag.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .case-icon {
+    font-size: 1.25rem;
+  }
+
+  .case-card-title {
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  .case-scenario {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    background: #f8fafc;
+    border-left: 3px solid #0b2591;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .case-scenario strong {
+    color: #0f172a;
+  }
+
+  .case-solution-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .flow-pill {
+    font-size: 0.86rem;
+    color: #334155;
+    background: #f1f5f9;
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
+    line-height: 1.45;
+  }
+
+  /* ============================================================== */
+  /* 9. CONTROL Y TRAZABILIDAD                                      */
+  /* ============================================================== */
+  .control-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .control-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  }
+
+  .control-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .control-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .control-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.55;
+  }
+
+  /* ============================================================== */
+  /* 10. FAQ ACCORDION                                              */
+  /* ============================================================== */
+  .faq-accordion-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .faq-item.is-open {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  }
+
+  .faq-question-btn {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  .faq-question-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0b2591;
+    flex-shrink: 0;
+  }
+
+  .faq-answer-panel {
+    display: none;
+    padding: 0 1.5rem 1.35rem;
+    font-size: 0.94rem;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  .faq-item.is-open .faq-answer-panel {
+    display: block;
+    animation: fadeInFaq 0.25s ease forwards;
+  }
+
+  @keyframes fadeInFaq {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============================================================== */
+  /* 11. CTA FINAL                                                  */
+  /* ============================================================== */
+  .cta-section {
+    padding: 5rem 0 3rem;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, #0b2591 0%, #061868 100%);
+    border-radius: 24px;
+    padding: 4.5rem 2rem;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.4);
+  }
+
+  .cta-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(21, 198, 59, 0.25) 0%, rgba(11, 37, 145, 0) 70%);
+    pointer-events: none;
+  }
+
+  .cta-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-description {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-actions-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-cta-primary {
+    background-color: #15C63B;
+    color: #0f172a;
+    padding: 1rem 2.2rem;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 18px rgba(21, 198, 59, 0.4);
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-primary:hover {
+    background-color: #12ad33;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(21, 198, 59, 0.5);
+  }
+
+  .btn-cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .cta-guarantees-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: #94a3b8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .guarantee-item {
+    color: #e2e8f0;
+  }
+
+  .guarantee-sep {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* ============================================================== */
+  /* RESPONSIVE BREAKPOINTS (Mobile-First approach)                 */
+  /* ============================================================== */
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+    }
+
+    .problem-grid,
+    .comparison-grid,
+    .backoffice-grid,
+    .integrations-grid,
+    .control-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .operational-actions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .escalation-cases-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel-dual-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-container {
+      padding: 3.5rem 0;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .operational-actions-grid,
+    .problem-grid,
+    .comparison-grid,
+    .backoffice-grid,
+    .integrations-grid,
+    .use-cases-grid,
+    .control-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .escalation-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .process-tabs-nav {
+      justify-content: flex-start;
+    }
+
+    .process-tabs-content {
+      padding: 1.5rem;
+    }
+
+    .cta-card {
+      padding: 3.5rem 1.5rem;
+    }
+
+    .cta-title {
+      font-size: 1.85rem;
+    }
+
+    .cta-actions-wrap {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-secondary {
+      width: 100%;
+    }
+
+    .closing-banner-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

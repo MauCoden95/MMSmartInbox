@@ -1,0 +1,3157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DemoModal from '../../components/DemoModal.astro';
+---
+
+<Layout
+  title="Agente de IA para Restaurantes, Bares y Gastronomía | MM SmartInbox"
+  description="IA que atiende a tus clientes y ordena la operación del restaurante. Automatiza reservas, pedidos, menú, eventos y seguimiento post-visita conectado a tu POS y WhatsApp."
+>
+  <div class="restaurant-page">
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 1. HERO / BANNER -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Columna Izquierda: Texto y CTA -->
+        <div class="hero-text-col" data-aos="fade-right">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span>Agente de IA para Restaurantes, Bares, Cafeterías y Cadenas</span>
+          </div>
+
+          <h1 class="hero-title">
+            IA que atiende a tus clientes y ordena la operación del restaurante
+          </h1>
+
+          <p class="hero-description">
+            Responde consultas al instante, gestiona reservas y pedidos, envía confirmaciones y recordatorios, y mantiene el seguimiento después de la visita. Un flujo continuo de asistencia que reduce mensajes repetidos y ayuda a tu equipo a enfocarse en el servicio.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-navy" data-open-quote>
+              Reservar una demo
+            </button>
+            <a href="#automatizaciones" class="btn btn-outline">
+              Ver etapas del servicio
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Microcopy de confianza -->
+          <div class="hero-microcopy">
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Implementación guiada</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Integración con tus herramientas</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Enfoque en experiencia y ventas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Flujo interactivo del Restaurante (Consulta → Reserva/Pedido → Confirmación → Experiencia → Feedback) -->
+        <div class="hero-visual-col" data-aos="fade-left" data-aos-delay="150">
+          <div class="flow-visual-wrapper">
+            <div class="flow-glass-card">
+              
+              <div class="flow-card-header">
+                <div class="live-indicator">
+                  <span class="pulse-dot"></span>
+                  <span class="live-label">Agente Gastronómico IA Activo</span>
+                </div>
+                <span class="channel-pill">WhatsApp • Menú Digital • POS</span>
+              </div>
+
+              <!-- Pipeline de 5 etapas del Servicio Gastronómico -->
+              <div class="flow-stream">
+                
+                <!-- Etapa 1: Consulta -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">1. Consulta entrante</span>
+                      <span class="flow-step-meta">WhatsApp • 19:40 hs</span>
+                    </div>
+                    <div class="chat-bubble user-bubble">
+                      "Hola! ¿Tienen mesa para 4 hoy a las 21:30 hs? ¿Tienen opciones sin TACC y son pet friendly?"
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 2: Reserva / Pedido -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">2. Reserva confirmada</span>
+                      <span class="flow-badge-ai">Mesa asignada ✓</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>¡Hola Sofía! Sí, tenemos disponibilidad en terraza (apta mascotas 🐾) y contamos con carta certificada sin TACC 🌾. ¿Te confirmo la mesa para 4 a las 21:30 hs?</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 3: Confirmación y Recordatorio -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">3. Recordatorio interactivo</span>
+                      <span class="flow-step-meta">2 hs antes de la visita</span>
+                    </div>
+                    <div class="property-match-mini">
+                      <div class="prop-thumb">🍽️</div>
+                      <div class="prop-details">
+                        <span class="prop-title">Reserva #3108 • 21:30 hs (4 pers)</span>
+                        <span class="prop-sub">Terraza • Tolerancia 15 min • Ubicación enviada</span>
+                      </div>
+                      <span class="prop-badge">Confirmada</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 4: Experiencia / Pedido Take Away -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                      <line x1="3" y1="6" x2="21" y2="6"></line>
+                      <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">4. Experiencia y Pedidos</span>
+                      <span class="flow-badge-confirmed">Comanda en Cocina</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>¡Tu pedido para take away #89 ya está en marcha! Estará listo para retirar en barra a las <strong>21:15 hs</strong>. Te adjuntamos el detalle con el link de pago.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 5: Feedback y Fidelización -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle purple-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">5. Feedback y Fidelización</span>
+                      <span class="flow-step-meta">Post-visita automático</span>
+                    </div>
+                    <div class="crm-sync-box">
+                      <span class="crm-tag">Encuesta 5★ Enviada</span>
+                      <span class="crm-tag">Google Reviews</span>
+                      <span class="crm-tag">Beneficio próx. visita</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Barra de integraciones en el pie del Hero visual -->
+              <div class="flow-systems-bar">
+                <span class="systems-label">Sincronizado con:</span>
+                <span class="system-tag">Sistema de Reservas</span>
+                <span class="system-tag">WhatsApp API</span>
+                <span class="system-tag">POS / Comandas</span>
+                <span class="system-tag">Google Maps</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 2. EL PROBLEMA (Cuando el salón se llena, el WhatsApp también) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="problema" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Cuello de Botella Gastronómico</div>
+        <h2 class="section-title">Cuando el salón se llena, el WhatsApp también</h2>
+        <p class="section-subtitle">
+          Entre despachar comandas, acomodar comensales y atender las mesas, responder decenas de mensajes a tiempo resulta imposible y se pierden reservas valiosas.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        
+        <!-- Problema 1 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Preguntas repetidas en los momentos de mayor trabajo</h3>
+            <p>Horarios, dirección, estacionamiento, carta digital, opciones veganas, sin TACC y medios de pago consultados una y otra vez en pleno turno pico.</p>
+          </div>
+        </div>
+
+        <!-- Problema 2 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Reservas con idas y vueltas y mesas mal asignadas</h3>
+            <p>Múltiples mensajes para coordinar un horario, falta de confirmación de sectores (adentro o afuera) y sobreventa de mesas en noches de alta demanda.</p>
+          </div>
+        </div>
+
+        <!-- Problema 3 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Pedidos por chat desordenados y confusos</h3>
+            <p>Comandas enviadas por WhatsApp sin aclaraciones de cocción, agregados o notas especiales que generan errores en cocina y demoras en entregas.</p>
+          </div>
+        </div>
+
+        <!-- Problema 4 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+              <line x1="12" y1="2" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Mesas vacías por cancelaciones y no-shows</h3>
+            <p>Comensales que no se presentan a su reserva porque no recibieron un recordatorio automático previo con botón para confirmar o liberar la mesa a tiempo.</p>
+          </div>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Eventos y grupos grandes que nadie responde rápido</h3>
+            <p>Cumpleaños o cenas corporativas que requieren propuesta de menú cerrado y se pierden porque el encargado no puede contestar en el momento.</p>
+          </div>
+        </div>
+
+        <!-- Problema 6 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Falta de seguimiento post-visita y pocas reseñas</h3>
+            <p>Clientes satisfechos que se marchan sin dejar su opinión en Google Maps o TripAdvisor por falta de una solicitud amable y oportuna tras la comida.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cierre destacado de la sección -->
+      <div class="problem-closing-banner" data-aos="fade-up">
+        <div class="closing-banner-inner">
+          <div class="closing-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 16a6 6 0 0 0-12 0Z"></path>
+              <line x1="2" y1="16" x2="22" y2="16"></line>
+              <line x1="12" y1="6" x2="12" y2="10"></line>
+              <circle cx="12" cy="5" r="1" fill="#ffffff"></circle>
+              <line x1="4" y1="20" x2="20" y2="20"></line>
+            </svg>
+          </div>
+          <p class="closing-text">
+            <strong>La IA no reemplaza al equipo:</strong> automatiza lo repetitivo para que el staff atienda mejor en el salón y la cocina trabaje con fluidez.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 3. QUÉ HACE UN AGENTE DE IA PARA RESTAURANTES -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="que-hace" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Evolución Tecnológica en Gastronomía</div>
+        <h2 class="section-title">Más que responder: entiende, decide y ejecuta</h2>
+        <p class="section-subtitle">
+          Un chatbot convencional solo muestra opciones rígidas. Un Agente de IA para Restaurantes comprende la intención, aplica las reglas del local y ejecuta acciones en vivo.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        
+        <!-- Card 1: Chatbot tradicional -->
+        <div class="comp-card bot-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="comp-header">
+            <span class="comp-type-badge basic">Enfoque Limitado</span>
+            <h3 class="comp-title">Chatbot tradicional</h3>
+            <p class="comp-tagline">Responde FAQs aisladas</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>Menús numéricos ("Marcá 1 para ver la carta, 2 para reservar, 3 para horarios").</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>Respuestas fijas sin chequear si realmente quedan mesas disponibles esa noche.</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>No entiende pedidos con variantes ("2 burgers sin cebolla y papas con cheddar aparte").</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>No gestiona lista de espera ni se conecta al sistema de comandas o POS.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Agente IA - Entiende intención -->
+        <div class="comp-card agent-card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="comp-badge-recommended">Inteligencia y Contexto</div>
+          <div class="comp-header">
+            <span class="comp-type-badge premium">Agente de IA</span>
+            <h3 class="comp-title">Entiende intención y contexto</h3>
+            <p class="comp-tagline">Reserva, pedido, evento o consulta</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Comprende texto libre y mensajes de audio de manera natural y cercana.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Distingue entre una consulta casual, una reserva formal o un pedido para llevar.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Identifica preferencias alimentarias, ocasiones especiales (cumpleaños) y sectores deseados.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Aplica el tono de comunicación de tu marca (cálido, gourmet, descontracturado o bar).</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Agente IA - Ejecuta acciones -->
+        <div class="comp-card agent-card action" data-aos="fade-up" data-aos-delay="300">
+          <div class="comp-badge-recommended action-badge">Capacidad Operativa</div>
+          <div class="comp-header">
+            <span class="comp-type-badge accent">Agente de IA</span>
+            <h3 class="comp-title">Ejecuta acciones operativas</h3>
+            <p class="comp-tagline">Confirmar, agendar, registrar y derivar</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Chequea disponibilidad de turnos o turneras y confirma la reserva al instante.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Toma pedidos guiados con adicionales, calcula el total y envía el link de cobro.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Gestiona lista de espera automática y avisa al cliente cuando se desocupa una mesa.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Dispara recordatorios interactivos y deriva al encargado ante casos especiales.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Texto simple complementario -->
+      <div class="what-it-does-summary" data-aos="fade-up">
+        <p>
+          El agente puede <strong>conectarse a tu sistema de reservas, carta digital, stock disponible</strong> (si existe) y canales de mensajería para mantener toda la operación sincronizada sin fricciones.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 4. BENEFICIOS PARA TU RESTAURANTE Y TUS CLIENTES -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="beneficios" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Impacto Operativo y Comercial</div>
+        <h2 class="section-title">Beneficios para tu restaurante y tus clientes</h2>
+        <p class="section-subtitle">
+          Diseñado para que locales gastronómicos independientes, cafeterías de especialidad, bares y cadenas reduzcan el caos en el chat y aumenten la facturación por mesa.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <!-- Beneficio 1 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Respuestas inmediatas 24/7</h3>
+          <p>
+            Atención al instante en cualquier horario: los comensales reciben la carta, horarios y disponibilidad sin esperar a que el local abra sus puertas.
+          </p>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 16a6 6 0 0 0-12 0Z"></path>
+              <line x1="2" y1="16" x2="22" y2="16"></line>
+              <line x1="12" y1="6" x2="12" y2="10"></line>
+              <circle cx="12" cy="5" r="1" fill="#15C63B"></circle>
+              <line x1="4" y1="20" x2="20" y2="20"></line>
+            </svg>
+          </div>
+          <h3>Menos carga de mensajes en horas pico</h3>
+          <p>
+            Tu equipo de salón y barra no se distrae respondiendo el teléfono o WhatsApp durante el despacho de comidas, mejorando la atención en mesa.
+          </p>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Reservas más ordenadas y confirmadas</h3>
+          <p>
+            Recordatorios automáticos 2 horas antes con botón para confirmar o cancelar, reduciendo el ausentismo y permitiendo reasignar mesas liberadas.
+          </p>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </div>
+          <h3>Menos errores en pedidos por chat</h3>
+          <p>
+            Comandas estructuradas con punto de cocción, aderezos, agregados y dirección de entrega confirmada, evitando reclamos y platos devueltos.
+          </p>
+        </div>
+
+        <!-- Beneficio 5 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3>Mejor experiencia y comensales felices</h3>
+          <p>
+            Información clara y transparente sobre alérgenos, promociones y políticas del local, generando confianza antes de que el cliente llegue.
+          </p>
+        </div>
+
+        <!-- Beneficio 6 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Base de datos y fidelización activa</h3>
+          <p>
+            Registro de cumpleaños, preferencias gastronómicas y solicitud automática de reseñas en Google Maps para multiplicar tus 5 estrellas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 5. AUTOMATIZACIONES POR TIPO DE INTERACCIÓN (Núcleo) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="automatizaciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Recorrido del Comensal</div>
+        <h2 class="section-title">Automatización en cada punto del recorrido</h2>
+        <p class="section-subtitle">
+          Descubrí cómo el Agente de IA resuelve cada interacción gastronómica, manteniendo el orden administrativo y cuidando el trato humano.
+        </p>
+      </div>
+
+      <!-- Tabs de Interacciones Gastronómicas -->
+      <div class="process-tabs-container">
+        <div class="process-tabs-nav" role="tablist">
+          <button type="button" class="process-tab-btn is-active" data-tab="tab-consultas" role="tab" aria-selected="true">
+            <span class="tab-number">1</span>
+            <span class="tab-label">Consultas y menú</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-reservas" role="tab" aria-selected="false">
+            <span class="tab-number">2</span>
+            <span class="tab-label">Reservas y espera</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-pedidos" role="tab" aria-selected="false">
+            <span class="tab-number">3</span>
+            <span class="tab-label">Take away y delivery</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-eventos" role="tab" aria-selected="false">
+            <span class="tab-number">4</span>
+            <span class="tab-label">Eventos y grupos</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-fidelizacion" role="tab" aria-selected="false">
+            <span class="tab-number">5</span>
+            <span class="tab-label">Post-visita y reseñas</span>
+          </button>
+        </div>
+
+        <div class="process-tabs-content">
+          
+          <!-- Panel 1: Consultas frecuentes -->
+          <div class="process-tab-panel is-active" id="tab-consultas" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa A • Antes de Venir</div>
+                <h3>Consultas frecuentes: menú, alérgenos y ubicación</h3>
+                <p class="panel-desc">
+                  El cliente toma la decisión en minutos. El agente responde dudas sobre la propuesta gastronómica sin demoras.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Horarios y ubicación exacta:</strong> Días de apertura, franjas de cocina, cómo llegar y opciones de estacionamiento cercano.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Menú y alérgenos:</strong> Explica opciones vegetarianas, veganas, sin TACC o sin lactosa según la carta del local.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Políticas del establecimiento:</strong> Política pet-friendly, tolerancia en reservas, descorche y festejos de cumpleaños.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Medios de pago y promociones:</strong> Informa tarjetas aceptadas, transferencias, reintegros bancarios y happy hour vigente.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-title">Consultas de Menú • WhatsApp</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg user">
+                      Hola! ¿Tienen platos para celíacos y se puede ir con perro a la terraza?
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Gastronómico IA</span>
+                      ¡Hola! Sí, contamos con sector de <strong>terraza 100% pet-friendly 🐾</strong> (con bebederos disponibles) y tenemos una sección especial de <strong>platos certificados sin TACC 🌾</strong> elaborados en cocina aislada.<br><br>¿Te gustaría ver nuestra carta digital completa o preferís reservar mesa para hoy?
+                    </div>
+                    <div class="m-msg user">
+                      Buenísimo! Quiero reservar mesa para 2 a las 20:30 hs.
+                    </div>
+                    <div class="m-meta-pill">✓ Intención: Reserva en Terraza • Preferencia Sin TACC</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Reservas y lista de espera -->
+          <div class="process-tab-panel" id="tab-reservas" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa B • Coordinación de Mesas</div>
+                <h3>Reservas ordenadas y lista de espera inteligente</h3>
+                <p class="panel-desc">
+                  Aplica tus reglas de capacidad sin sobrecargar al maitre ni generar confusiones en la asignación de sectores.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Agendamiento por reglas de capacidad:</strong> Valida comensales por mesa, sector habilitado y turnos de servicio (ej: 20:00 o 22:30 hs).
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Confirmación y recordatorio automático:</strong> Dispara aviso 2 horas antes con botón para confirmar o liberar la mesa.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Reprogramaciones y cancelaciones:</strong> Gestiona cambios con límites de antelación para no perjudicar la rotación.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Lista de espera automatizada:</strong> Si el salón está lleno, anota al cliente y le notifica en cuanto se desocupa un espacio.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Gestión de Reserva y Confirmación</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Gastronómico IA</span>
+                      ¡Mesa reservada para <strong>2 personas</strong> hoy a las <strong>20:30 hs</strong> en Terraza a nombre de Lucas!<br><br>
+                      📍 Dirección: Humboldt 1850, Palermo.<br>
+                      ⏰ Tolerancia: 15 minutos.<br><br>
+                      Te enviaremos un recordatorio 2 horas antes para confirmar tu asistencia.
+                    </div>
+                    <div class="m-msg user">
+                      Genial, muchas gracias!
+                    </div>
+                    <div class="m-meta-pill">✓ Reserva sincronizada con sistema • Mesa #14 asignada</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Pedidos take away y delivery -->
+          <div class="process-tab-panel" id="tab-pedidos" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa C • Pedidos Directos</div>
+                <h3>Pedidos guiados para take away y delivery sin intermediarios</h3>
+                <p class="panel-desc">
+                  Facilita la venta directa por WhatsApp reduciendo comisiones de apps externas y evitando malentendidos en la cocina.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Toma de pedido guiada:</strong> Consulta guarniciones, puntos de cocción, bebidas y adicionales paso a paso.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Confirmación de retiro o envío:</strong> Releva dirección exacta, timbre, franja estimada y método de cobro.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Notificación de estado en tiempo real:</strong> Informa cuando el pedido entra a cocina, cuando se empaqueta y cuando está listo.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Derivación por alérgenos críticos:</strong> Alerta al equipo de cocina ante requerimientos severos de contaminación cruzada.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Comanda de Take Away por WhatsApp</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg user">
+                      Quiero pedir 2 Burgers Bacon para retirar en 30 min.
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Gastronómico IA</span>
+                      ¡Perfecto! ¿Con qué guarnición preferís cada una?<br><br>
+                      🍟 <strong>Papas rústicas</strong> (incluidas)<br>
+                      🧅 <strong>Aros de cebolla</strong> (+$1.200)<br>
+                      🥗 <strong>Ensalada fresca</strong>
+                    </div>
+                    <div class="m-msg user">
+                      Una con papas y la otra con aros por favor.
+                    </div>
+                    <div class="m-meta-pill">✓ Comanda generada • Total calculado con extras</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Eventos y grupos -->
+          <div class="process-tab-panel" id="tab-eventos" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa D • Grupos y Celebraciones</div>
+                <h3>Eventos, cumpleaños y reservas para grupos grandes</h3>
+                <p class="panel-desc">
+                  Capta oportunidades de alto ticket relevando datos clave al instante para que el encargado cierre la propuesta sin demoras.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Relevamiento estructurado:</strong> Fecha, horario estimado, cantidad de personas, tipo de evento y presupuesto aproximado.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Envío de menús de grupo:</strong> Comparte propuestas cerradas de tapeo, pizzas libres o menú por pasos con bebidas.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Políticas de señas y reservas:</strong> Informa anticipo requerido para congelar fecha y condiciones de cancelación de eventos.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Traspaso con ficha al encargado:</strong> Notifica al gerente con el resumen completo para coordinar una llamada o visita.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Cotización de Evento Corporativo</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg user">
+                      Hola, queremos festejar un cumpleaños de 25 personas el próximo sábado. ¿Tienen menú fijo?
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Gastronómico IA</span>
+                      ¡Qué buena noticia! Para grupos mayores a 15 personas contamos con <strong>3 opciones de menú cerrado</strong> con bebida libre y postre incluido 🎂.<br><br>¿Preferís formato cóctel informal o cena sentados en salón privado?
+                    </div>
+                    <div class="m-msg user">
+                      Formato cóctel con tapeo y cervezas.
+                    </div>
+                    <div class="m-meta-pill accent">⚡ Lead de evento creado • Ficha derivada al encargado</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 5: Post-visita y fidelización -->
+          <div class="process-tab-panel" id="tab-fidelizacion" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa E • Reputación y Regreso</div>
+                <h3>Post-visita: recolección de feedback, reseñas y cumpleaños</h3>
+                <p class="panel-desc">
+                  Convierte a un comensal satisfecho en un cliente recurrente y multiplica las reseñas positivas en tus plataformas digitales.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Relevamiento de satisfacción:</strong> Consulta automática al día siguiente sobre la comida y la atención recibida.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Direccionamiento a Google Reviews:</strong> Invita a quienes calificaron positivo a compartir su reseña en Maps con enlace directo.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Alertas inmediatas ante reclamos:</strong> Si la experiencia fue negativa, deriva de inmediato al gerente para subsanar el caso.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Campañas de cumpleaños y regreso:</strong> Beneficio exclusivo (ej: postre o copa de brindis) en el mes del comensal.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Feedback Post-Cena y Google Reviews</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Gastronómico IA</span>
+                      ¡Hola Lucas! Esperamos que hayas disfrutado tu cena anoche en nuestro local. Si te gustó la experiencia, nos ayudarías muchísimo dejándonos tu opinión en <strong>Google Maps</strong> ⭐⭐⭐⭐⭐
+                    </div>
+                    <div class="m-msg user">
+                      La comida estuvo increíble y la atención de 10, ya les dejé 5 estrellas!
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente Gastronómico IA</span>
+                      ¡Muchísimas gracias! Te esperamos pronto. Mostrando este mensaje tenés <strong>2x1 en postres</strong> en tu próxima visita.
+                    </div>
+                    <div class="m-meta-pill">✓ Reseña en Google incentivada • Cupón emitido</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bloque destacado: Escala a humano cuando... -->
+      <div class="human-escalation-box" data-aos="fade-up">
+        <div class="escalation-header">
+          <div class="escalation-badge">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+            <span>Traspaso Inteligente</span>
+          </div>
+          <h3 class="escalation-title">Escala a un miembro del equipo cuando…</h3>
+          <p class="escalation-subtitle">
+            El agente reconoce cuándo un caso requiere criterio gastronómico o atención personalizada del personal:
+          </p>
+        </div>
+
+        <div class="escalation-cases-grid">
+          
+          <div class="escalation-case-card">
+            <div class="case-number">01</div>
+            <h4>Alergias severas o restricciones críticas</h4>
+            <p>Comensales que consultan por anafilaxis o contaminación cruzada estricta: se alerta al jefe de cocina o encargado para confirmar el plato.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">02</div>
+            <h4>Reclamos delicados o disconformidad</h4>
+            <p>Demoras en pedidos a domicilio, quejas sobre el servicio en salón o platos devueltos: se transfiere al responsable de turno para dar respuesta inmediata.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">03</div>
+            <h4>Eventos grandes o presupuestos a medida</h4>
+            <p>Consultas para bloqueos exclusivos de salón, bodas, agasajos empresariales o negociación de menús especiales por volumen.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">04</div>
+            <h4>Incidencias de pago o entrega en delivery</h4>
+            <p>Inconvenientes con transferencias no acreditadas, repartidores demorados o cambios de dirección de último minuto.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 6. CÓMO SE IMPLEMENTA (Implementación guiada en 3 pasos) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="implementacion" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Puesta en Marcha Ágil</div>
+        <h2 class="section-title">Implementación guiada en 3 pasos</h2>
+        <p class="section-subtitle">
+          Un proceso simple y profesional que no interrumpe el ritmo de despacho de tu cocina ni el servicio de tu salón.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <!-- Paso 1 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-badge-number">Paso 01</div>
+          <div class="step-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3>Relevamos tu operación: reservas, pedidos, menú, reglas y FAQs</h3>
+          <p>
+            Cargamos tu carta digital, horarios de cocina, turnos de mesas, sectores habilitados, alérgenos y las políticas particulares de tu local.
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-badge-number">Paso 02</div>
+          <div class="step-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Conectamos canales y sistemas</h3>
+          <p>
+            Integramos tu WhatsApp oficial, Instagram, web chat, sistema de reservas existente, POS o planillas de comandas para sincronizar todo en vivo.
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-badge-number">Paso 03</div>
+          <div class="step-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <h3>Lanzamos, medimos y optimizamos flujos</h3>
+          <p>
+            Activamos el agente, monitoreamos las conversaciones en días pico y ajustamos respuestas y disparadores para maximizar reservas y ventas.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Aclaración destacada -->
+      <div class="integration-notice-card" data-aos="fade-up">
+        <div class="notice-icon">💡</div>
+        <div class="notice-content">
+          <strong>No necesitás cambiar tus herramientas actuales:</strong> nos integramos a tu sistema de reservas, comandera, POS y canales existentes. Tu equipo continúa usando lo que ya conoce.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 7. INTEGRACIONES (Se conecta con lo que ya usás) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="integraciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Ecosistema Conectado</div>
+        <h2 class="section-title">Se conecta con lo que ya usás</h2>
+        <p class="section-subtitle">
+          Integramos por APIs y automatizaciones para mantener todo ordenado, desde la primera consulta por chat hasta la comanda en cocina.
+        </p>
+      </div>
+
+      <div class="integrations-grid">
+        
+        <!-- Tile 1: WhatsApp Business -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="100">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>WhatsApp Business API</h4>
+            <p>Línea oficial verificada con respuestas instantáneas y soporte multiagente.</p>
+          </div>
+        </div>
+
+        <!-- Tile 2: Instagram y Web Chat -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="150">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Instagram y Web Chat</h4>
+            <p>Atención fluida de mensajes directos, historias y widget en tu web.</p>
+          </div>
+        </div>
+
+        <!-- Tile 3: Google Maps / Negocio -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="200">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Google Maps / Perfil de Negocio</h4>
+            <p>Envío de ubicación exacta y derivación directa a dejar reseñas 5 estrellas.</p>
+          </div>
+        </div>
+
+        <!-- Tile 4: Sistemas de Reservas -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="250">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Sistemas de Reservas</h4>
+            <p>Conexión con turneras gastronómicas y agendas de mesas en vivo.</p>
+          </div>
+        </div>
+
+        <!-- Tile 5: POS y Comandas -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="300">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Sistemas POS</h4>
+            <p>Sincronización de pedidos y comanda directa al software de punto de venta.</p>
+          </div>
+        </div>
+
+        <!-- Tile 6: Delivery -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="350">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18.5" cy="17.5" r="3.5"></circle>
+              <circle cx="5.5" cy="17.5" r="3.5"></circle>
+              <circle cx="15" cy="5" r="1"></circle>
+              <path d="M12 17.5V14l-3-3 4-3 2 3h2"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Delivery y Envíos</h4>
+            <p>Gestión de pedidos propios con cálculo de envío y estado de entrega.</p>
+          </div>
+        </div>
+
+        <!-- Tile 7: Email y Sheets -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="400">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22 6 12 13 2 6"></polyline>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Email y Google Sheets</h4>
+            <p>Reportes automáticos de ventas del día, reservas y respaldos de datos.</p>
+          </div>
+        </div>
+
+        <!-- Tile 8: CRM y Fidelización -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="450">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>CRM y Fidelización</h4>
+            <p>Base de clientes habituales, fechas de cumpleaños y cupones exclusivos.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 8. CASOS DE USO (Ejemplos concretos en gastronomía) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="casos-de-uso" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Casos de Uso Prácticos</div>
+        <h2 class="section-title">Ejemplos de automatización en restaurantes</h2>
+        <p class="section-subtitle">
+          Situaciones reales donde el Agente de IA agiliza la atención, descongestiona el servicio y asegura mesas completas.
+        </p>
+      </div>
+
+      <div class="use-cases-grid">
+        
+        <!-- Caso 1: Cafetería -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="case-card-header">
+            <span class="case-tag blue">Cafetería de Especialidad</span>
+            <div class="case-icon">☕</div>
+          </div>
+          <h3 class="case-card-title">FAQs + pedidos para retiro en horas pico</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Mañanas de lunes a viernes con filas en el mostrador y clientes apurados consultando promociones y opciones sin lactosa.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. La IA responde opciones de leches vegetales, pastelería y promociones de combo.</div>
+            <div class="flow-pill">2. Permite al cliente encargar su café 15 minutos antes y pagar digitalmente.</div>
+            <div class="flow-pill">3. El comensal retira en la barra de take away sin hacer fila, agilizando el local.</div>
+          </div>
+        </div>
+
+        <!-- Caso 2: Restaurante de alta demanda -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="case-card-header">
+            <span class="case-tag green">Restaurante de Alta Demanda</span>
+            <div class="case-icon">🍷</div>
+          </div>
+          <h3 class="case-card-title">Reservas con confirmación y lista de espera</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Noches de fin de semana con salón completo y comensales intentando reservar por mensaje a último momento.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Asigna turnos según disponibilidad real en salón o terraza climatizada.</div>
+            <div class="flow-pill">2. Envía recordatorio interactivo 2 horas antes para confirmar asistencia.</div>
+            <div class="flow-pill">3. Si alguien cancela, ofrece la mesa en segundos a quienes están en lista de espera.</div>
+          </div>
+        </div>
+
+        <!-- Caso 3: Bar y eventos -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="case-card-header">
+            <span class="case-tag blue">Bar y Cervecería</span>
+            <div class="case-icon">🍻</div>
+          </div>
+          <h3 class="case-card-title">Eventos y cumpleaños con captación y derivación</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Consultas continuas sobre reservas grupales, promociones de cumpleaños y reserva de sectores exclusivos.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Releva cantidad de personas, horario de llegada y formato (cena o barra).</div>
+            <div class="flow-pill">2. Comunica beneficios para cumpleañeros (brindis y postre de cortesía).</div>
+            <div class="flow-pill">3. Traspasa la solicitud al encargado con ficha lista para bloquear el sector.</div>
+          </div>
+        </div>
+
+        <!-- Caso 4: Dark kitchen -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="case-card-header">
+            <span class="case-tag green">Dark Kitchen y Delivery</span>
+            <div class="case-icon">🛵</div>
+          </div>
+          <h3 class="case-card-title">Pedidos por WhatsApp estructurados + estado</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Cientos de pedidos nocturnos ingresando por chat sin comisiones de apps externas.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Guía el pedido con menú interactivo (adicionales, puntos de cocción y salsas).</div>
+            <div class="flow-pill">2. Solicita ubicación precisa, confirma método de pago y envía link de cobro.</div>
+            <div class="flow-pill">3. Notifica automáticamente: "En preparación" y "En camino con el repartidor".</div>
+          </div>
+        </div>
+
+        <!-- Caso 5: Cadena gastronómica -->
+        <div class="use-case-card span-2-col" data-aos="fade-up" data-aos-delay="300">
+          <div class="case-card-header">
+            <span class="case-tag blue">Cadena Gastronómica / Franquicias</span>
+            <div class="case-icon">🏢</div>
+          </div>
+          <h3 class="case-card-title">Estandarización de respuestas y registro de feedback multisucursal</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Marca con múltiples sucursales que busca mantener un tono unificado y medir la satisfacción de los clientes en cada local.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Detecta la sucursal más cercana según la ubicación del cliente o su consulta.</div>
+            <div class="flow-pill">2. Informa carta, precios y disponibilidad específicos de cada punto de venta.</div>
+            <div class="flow-pill">3. Centraliza encuestas post-visita para que la gerencia compare métricas de calidad entre locales.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 9. PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="faq" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Dudas Habituales</div>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">
+          Respuestas claras sobre la integración del agente en tu restaurante, reservas, pedidos y derivación a tu personal.
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrapper">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item is-open">
+          <button type="button" class="faq-question-btn" aria-expanded="true">
+            <span class="faq-question-text">¿Esto es solo un chatbot?</span>
+            <span class="faq-toggle-icon">−</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              No. Un chatbot convencional se limita a mostrar botones o responder textos fijos. Nuestro Agente de IA para Restaurantes entiende lenguaje natural (texto y audios), interpreta la intención del comensal (reserva, pedido, evento o consulta de alérgenos), valida disponibilidad en tu sistema en tiempo real y ejecuta acciones concretas como agendar mesas, calcular adicionales o derivar casos especiales.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Puede tomar reservas por WhatsApp e Instagram?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí, es totalmente omnicanal. Puede gestionar reservas de forma simultánea desde tu línea oficial de WhatsApp Business, mensajes directos de Instagram o el chat interactivo en tu sitio web, manteniendo la disponibilidad de mesas unificada en un solo lugar.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Puede manejar lista de espera cuando el local está lleno?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Exacto. Cuando los turnos o mesas están completos, el agente informa amablemente la situación y ofrece anotar al cliente en lista de espera. Si otra mesa cancela o se libera antes de lo previsto, el sistema contacta de inmediato al siguiente comensal en espera para confirmar su llegada.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Puede tomar pedidos para take away y delivery y enviar el estado?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí. El agente guía al cliente a través del menú, consultando variantes, adicionales y notas especiales. Una vez confirmado el pago, puede enviar notificaciones automáticas de estado ("Pedido recibido", "En preparación en cocina", "Listo para retirar" o "En camino").
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Qué pasa si el cliente pide algo fuera del menú o con modificaciones complejas?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Si el comensal solicita un cambio fuera de las opciones estándar del local o describe una alergia severa que requiere validación del chef, el agente pausa su respuesta automática y notifica de inmediato al encargado de salón o cocina con el detalle de la consulta para su aprobación.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cómo se deriva a un humano cuando es necesario?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Ante reclamos, pedidos de hablar con una persona o consultas de eventos corporativos grandes, el agente transfiere la conversación en segundos mediante alertas en el panel multiagente, WhatsApp interno o notificación al encargado, permitiendo tomar el control del chat al instante.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cuánto tarda la implementación?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              La puesta en marcha promedio lleva entre 1 y 2 semanas. En ese período relevamos tu menú, reglas de mesas y horarios, conectamos tus canales de mensajería y realizamos pruebas guiadas antes de abrir el flujo a comensales reales.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Se puede adaptar a varios locales o sucursales con menús distintos?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Totalmente. Diseñamos el agente para franquicias y cadenas gastronómicas: puede consultar la ubicación del comensal o permitirle elegir sucursal, aplicando la carta, precios, promociones y disponibilidad de mesas correspondiente a cada local.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 10. CTA FINAL (Conversión) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container cta-section" id="cta-final" data-aos="fade-up">
+      <div class="cta-card">
+        <div class="cta-glow-bg"></div>
+        
+        <div class="cta-badge">Sesión Estratégica Gastronómica</div>
+        
+        <h2 class="cta-title">
+          Atendé más rápido sin perder el toque humano
+        </h2>
+        
+        <p class="cta-description">
+          Te mostramos qué automatizar primero según tu volumen de mensajes y tu operación.
+        </p>
+
+        <div class="cta-actions-wrap">
+          <button type="button" class="btn btn-cta-primary" data-open-quote>
+            Reservar una demo
+          </button>
+          <button type="button" class="btn btn-cta-secondary" onclick="window.openDemoModal && window.openDemoModal()">
+            Ver demo en vivo
+          </button>
+        </div>
+
+        <div class="cta-guarantees-row">
+          <span class="guarantee-item">✓ Diagnóstico inicial sin costo</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Sin cambiar tus herramientas actuales</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Implementación guiada paso a paso</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <DemoModal />
+</Layout>
+
+<script>
+  function initRestaurantPage() {
+    // 1. TABS DEL RECORRIDO DEL COMENSAL
+    const tabButtons = document.querySelectorAll('.process-tab-btn');
+    const tabPanels = document.querySelectorAll('.process-tab-panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-tab');
+        
+        tabButtons.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        tabPanels.forEach(p => p.classList.remove('is-active'));
+
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        
+        if (targetId) {
+          const targetPanel = document.getElementById(targetId);
+          targetPanel?.classList.add('is-active');
+        }
+      });
+    });
+
+    // 2. FAQ ACCORDION
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        const item = btn.closest('.faq-item');
+        const icon = btn.querySelector('.faq-toggle-icon');
+        
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+        item?.classList.toggle('is-open', !isExpanded);
+        if (icon) {
+          icon.textContent = !isExpanded ? '−' : '+';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initRestaurantPage);
+  document.addEventListener('astro:page-load', initRestaurantPage);
+</script>
+
+<style>
+  /* ============================================================== */
+  /* VARIABLES & GENERAL LAYOUT                                     */
+  /* ============================================================== */
+  .restaurant-page {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-dark, #0f172a);
+    background-color: transparent;
+    padding-bottom: 2rem;
+  }
+
+  .section-container {
+    max-width: 1140px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 4.5rem 0;
+  }
+
+  .bg-subtle {
+    background-color: rgba(248, 250, 252, 0.7);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.15);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ============================================================== */
+  /* BUTTONS & TOKENS                                               */
+  /* ============================================================== */
+  .btn {
+    padding: 0.85rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .btn-navy {
+    background-color: #0b2591;
+    color: white;
+    box-shadow: 0 4px 16px rgba(11, 37, 145, 0.28);
+    border: none;
+  }
+
+  .btn-navy:hover {
+    background-color: #061868;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 37, 145, 0.38);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #1e293b;
+    border: 1.5px solid #cbd5e1;
+  }
+
+  .btn-outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 1. HERO SECTION                                                */
+  /* ============================================================== */
+  .hero-section {
+    padding: 0.75rem 0 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    max-width: 1240px;
+    width: 92%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.16);
+    color: #0b2591;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    animation: pulseGlow 2s infinite;
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 6px rgba(21, 198, 59, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0);
+    }
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 580px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-microcopy {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.86rem;
+    color: #64748b;
+  }
+
+  .microcopy-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .micro-icon {
+    color: #15C63B;
+    font-weight: 800;
+  }
+
+  .micro-sep {
+    color: #cbd5e1;
+  }
+
+  /* Hero Visual Column (Flow Glass Card) */
+  .flow-visual-wrapper {
+    position: relative;
+  }
+
+  .flow-glass-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    position: relative;
+  }
+
+  .flow-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(21, 198, 59, 0.8);
+  }
+
+  .live-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .channel-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+  }
+
+  .flow-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .flow-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+    padding: 0.6rem 0.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .flow-step-item:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+  }
+
+  .flow-icon-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .flow-icon-circle.blue-theme {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .flow-icon-circle.green-theme {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .flow-icon-circle.purple-theme {
+    background: rgba(124, 58, 237, 0.12);
+    color: #7c3aed;
+  }
+
+  .flow-step-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .flow-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flow-step-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #0b2591;
+  }
+
+  .flow-step-meta {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .flow-badge-ai {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .flow-badge-confirmed {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.12);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .chat-bubble {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+  }
+
+  .user-bubble {
+    background: #e2e8f0;
+    color: #1e293b;
+    border-bottom-left-radius: 2px;
+  }
+
+  .ai-bubble {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+
+  .ai-avatar {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    background: #0b2591;
+    color: #fff;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    margin-right: 0.35rem;
+    vertical-align: middle;
+  }
+
+  .property-match-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .prop-thumb {
+    font-size: 1.25rem;
+  }
+
+  .prop-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prop-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .prop-sub {
+    font-size: 0.72rem;
+    color: #64748b;
+  }
+
+  .prop-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .crm-sync-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .crm-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #475569;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .flow-line-connector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8px;
+    position: relative;
+  }
+
+  .connector-track {
+    width: 2px;
+    height: 100%;
+    background: #cbd5e1;
+  }
+
+  .connector-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #0b2591;
+    border-radius: 50%;
+  }
+
+  .flow-systems-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.74rem;
+  }
+
+  .systems-label {
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .system-tag {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* ============================================================== */
+  /* 2. EL PROBLEMA (Cards & Closing Banner)                        */
+  /* ============================================================== */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .problem-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 24px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .problem-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .problem-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .problem-content p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.55;
+  }
+
+  .problem-closing-banner {
+    background: linear-gradient(135deg, rgba(11, 37, 145, 0.06) 0%, rgba(21, 198, 59, 0.06) 100%);
+    border: 1.5px solid rgba(11, 37, 145, 0.15);
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+  }
+
+  .closing-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .closing-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #0b2591;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .closing-text {
+    font-size: 1.05rem;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+
+  .closing-text strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 3. COMPARATIVA (Chatbot vs Agente)                             */
+  /* ============================================================== */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+  }
+
+  .comp-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  .comp-card.bot-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+  }
+
+  .comp-card.featured {
+    border: 2px solid #0b2591;
+    box-shadow: 0 12px 30px -5px rgba(11, 37, 145, 0.15);
+  }
+
+  .comp-card.action {
+    border: 2px solid #15C63B;
+    box-shadow: 0 12px 30px -5px rgba(21, 198, 59, 0.15);
+  }
+
+  .comp-badge-recommended {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0b2591;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .comp-badge-recommended.action-badge {
+    background: #15C63B;
+    color: #0f172a;
+  }
+
+  .comp-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .comp-type-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .comp-type-badge.basic {
+    background: #e2e8f0;
+    color: #475569;
+  }
+
+  .comp-type-badge.premium {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .comp-type-badge.accent {
+    background: rgba(21, 198, 59, 0.15);
+    color: #0c8a26;
+  }
+
+  .comp-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  .comp-tagline {
+    font-size: 0.88rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .comp-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+  }
+
+  .comp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #334155;
+  }
+
+  .dot-icon {
+    font-weight: 800;
+    color: #94a3b8;
+    flex-shrink: 0;
+  }
+
+  .check-icon {
+    font-weight: 800;
+    color: #15C63B;
+    flex-shrink: 0;
+  }
+
+  .what-it-does-summary {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 2rem;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .what-it-does-summary p {
+    font-size: 0.98rem;
+    color: #334155;
+    line-height: 1.6;
+  }
+
+  .what-it-does-summary strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 4. BENEFICIOS                                                  */
+  /* ============================================================== */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .benefit-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .benefit-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-icon-wrapper.blue-bg {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .benefit-icon-wrapper.green-bg {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .benefit-card p {
+    font-size: 0.93rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ============================================================== */
+  /* 5. TABS DE AUTOMATIZACIONES Y RECORRIDO                        */
+  /* ============================================================== */
+  .process-tabs-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+  }
+
+  .process-tabs-nav {
+    display: flex;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    overflow-x: auto;
+  }
+
+  .process-tab-btn {
+    flex: 1;
+    min-width: 170px;
+    padding: 1.1rem 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn:hover {
+    background: #f1f5f9;
+  }
+
+  .process-tab-btn.is-active {
+    background: #ffffff;
+    border-bottom-color: #0b2591;
+  }
+
+  .tab-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn.is-active .tab-number {
+    background: #0b2591;
+    color: #ffffff;
+  }
+
+  .tab-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+    white-space: nowrap;
+  }
+
+  .process-tab-btn.is-active .tab-label {
+    color: #0b2591;
+  }
+
+  .process-tabs-content {
+    padding: 2.5rem;
+  }
+
+  .process-tab-panel {
+    display: none;
+  }
+
+  .process-tab-panel.is-active {
+    display: block;
+    animation: fadeInTab 0.3s ease forwards;
+  }
+
+  @keyframes fadeInTab {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .panel-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .panel-badge-step {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .panel-text h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  .panel-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .panel-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.94rem;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .check-circ {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(21, 198, 59, 0.15);
+    color: #15C63B;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Chat Mockup in Tabs */
+  .chat-mockup-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .mockup-header {
+    background: #ffffff;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .mockup-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+
+  .mockup-dot.red { background-color: #ef4444; }
+  .mockup-dot.yellow { background-color: #f59e0b; }
+  .mockup-dot.green { background-color: #10b981; }
+
+  .mockup-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #475569;
+    margin-left: 0.4rem;
+  }
+
+  .mockup-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .m-msg {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+
+  .m-msg.user {
+    background: #e2e8f0;
+    color: #1e293b;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+  }
+
+  .m-msg.ai {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+
+  .m-sender {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #0b2591;
+    margin-bottom: 0.25rem;
+  }
+
+  .m-meta-pill {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+
+  .m-meta-pill.accent {
+    background: rgba(234, 88, 12, 0.12);
+    color: #ea580c;
+  }
+
+  /* Bloque: Escala a un humano cuando... */
+  .human-escalation-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  }
+
+  .escalation-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .escalation-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
+
+  .escalation-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  .escalation-subtitle {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .escalation-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .escalation-case-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .escalation-case-card:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+  }
+
+  .case-number {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: rgba(11, 37, 145, 0.25);
+    margin-bottom: 0.4rem;
+  }
+
+  .escalation-case-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .escalation-case-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 6. CÓMO SE IMPLEMENTA                                          */
+  /* ============================================================== */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem 1.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 26px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .step-badge-number {
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+
+  .step-icon-wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-icon-wrap.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .step-icon-wrap.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .step-card h3 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .step-card p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .integration-notice-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .notice-content {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.55;
+  }
+
+  .notice-content strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 7. INTEGRACIONES                                               */
+  /* ============================================================== */
+  .integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .integration-tile {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  }
+
+  .integration-tile:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.06);
+  }
+
+  .tile-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tile-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .tile-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 8. CASOS DE USO                                                */
+  /* ============================================================== */
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .use-case-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .use-case-card.span-2-col {
+    grid-column: 1 / -1;
+  }
+
+  .use-case-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 26px -5px rgba(0, 0, 0, 0.07);
+  }
+
+  .case-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .case-tag {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .case-tag.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .case-tag.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .case-icon {
+    font-size: 1.25rem;
+  }
+
+  .case-card-title {
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  .case-scenario {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    background: #f8fafc;
+    border-left: 3px solid #0b2591;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .case-scenario strong {
+    color: #0f172a;
+  }
+
+  .case-solution-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .flow-pill {
+    font-size: 0.86rem;
+    color: #334155;
+    background: #f1f5f9;
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
+    line-height: 1.45;
+  }
+
+  /* ============================================================== */
+  /* 9. FAQ ACCORDION                                               */
+  /* ============================================================== */
+  .faq-accordion-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .faq-item.is-open {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  }
+
+  .faq-question-btn {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  .faq-question-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0b2591;
+    flex-shrink: 0;
+  }
+
+  .faq-answer-panel {
+    display: none;
+    padding: 0 1.5rem 1.35rem;
+    font-size: 0.94rem;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  .faq-item.is-open .faq-answer-panel {
+    display: block;
+    animation: fadeInFaq 0.25s ease forwards;
+  }
+
+  @keyframes fadeInFaq {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============================================================== */
+  /* 10. CTA FINAL                                                  */
+  /* ============================================================== */
+  .cta-section {
+    padding: 5rem 0 3rem;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, #0b2591 0%, #061868 100%);
+    border-radius: 24px;
+    padding: 4.5rem 2rem;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.4);
+  }
+
+  .cta-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(21, 198, 59, 0.25) 0%, rgba(11, 37, 145, 0) 70%);
+    pointer-events: none;
+  }
+
+  .cta-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-description {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-actions-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-cta-primary {
+    background-color: #15C63B;
+    color: #0f172a;
+    padding: 1rem 2.2rem;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 18px rgba(21, 198, 59, 0.4);
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-primary:hover {
+    background-color: #12ad33;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(21, 198, 59, 0.5);
+  }
+
+  .btn-cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .cta-guarantees-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: #94a3b8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .guarantee-item {
+    color: #e2e8f0;
+  }
+
+  .guarantee-sep {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* ============================================================== */
+  /* RESPONSIVE BREAKPOINTS (Mobile-First approach)                 */
+  /* ============================================================== */
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+    }
+
+    .problem-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .integrations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .escalation-cases-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-container {
+      padding: 3.5rem 0;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .problem-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .steps-grid,
+    .integrations-grid,
+    .use-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .escalation-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .process-tabs-nav {
+      justify-content: flex-start;
+    }
+
+    .process-tabs-content {
+      padding: 1.5rem;
+    }
+
+    .cta-card {
+      padding: 3.5rem 1.5rem;
+    }
+
+    .cta-title {
+      font-size: 1.85rem;
+    }
+
+    .cta-actions-wrap {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-secondary {
+      width: 100%;
+    }
+
+    .closing-banner-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

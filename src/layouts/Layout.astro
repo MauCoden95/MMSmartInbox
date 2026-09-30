@@ -90,6 +90,12 @@ const {
 			document.addEventListener('DOMContentLoaded', initAOS);
 			document.addEventListener('astro:page-load', initAOS);
 		</script>
+		<!-- Scroll to top on View Transition navigation -->
+		<script is:inline>
+		document.addEventListener('astro:after-swap', () => {
+			window.scrollTo({ top: 0 });
+		});
+		</script>
 		<!-- Script de contador de visitas (Invisible) -->
 		<script is:inline>
 			async function registrarVisitaInvaluable() {

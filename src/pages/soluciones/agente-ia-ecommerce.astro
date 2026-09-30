@@ -4,8 +4,8 @@ import DemoModal from '../../components/DemoModal.astro';
 ---
 
 <Layout
-  title="Agentes de IA para eCommerce | MM SmartInbox"
-  description="IA que ayuda a los compradores a completar el recorrido. Automatiza búsqueda, dudas de producto, carritos y postcompra conectado a tu catálogo, stock y pedidos."
+  title="Agentes de IA para eCommerce y Operaciones Internas | MM SmartInbox"
+  description="IA que ayuda a los compradores a completar el recorrido y automatiza tus operaciones internas: pedidos, stock, logística, devoluciones y reportes conectados a tu stack."
 >
   <div class="ecommerce-page">
 
@@ -19,7 +19,7 @@ import DemoModal from '../../components/DemoModal.astro';
         <div class="hero-text-col" data-aos="fade-right">
           <div class="hero-badge">
             <span class="badge-pulse"></span>
-            <span>Solución de IA para Tiendas Online</span>
+            <span>Agentes de IA para eCommerce, Tiendas Online y Marcas D2C</span>
           </div>
 
           <h1 class="hero-title">
@@ -34,15 +34,15 @@ import DemoModal from '../../components/DemoModal.astro';
             <button type="button" class="btn btn-navy" data-open-quote>
               Reservar una demo
             </button>
-            <a href="#journey" class="btn btn-outline">
-              Ver el recorrido
+            <a href="#automatizaciones" class="btn btn-outline">
+              Ver flujos internos
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </a>
           </div>
 
-          <!-- Microcopy de confianza -->
+          <!-- Microcopy bajo CTA -->
           <div class="hero-microcopy">
             <div class="microcopy-item">
               <span class="micro-icon">✓</span>
@@ -56,107 +56,136 @@ import DemoModal from '../../components/DemoModal.astro';
             <span class="micro-sep">•</span>
             <div class="microcopy-item">
               <span class="micro-icon">✓</span>
-              <span>Enfoque en resultados</span>
+              <span>IA aplicada a operación y ventas</span>
             </div>
           </div>
         </div>
 
-        <!-- Columna Derecha: Ilustración del Flujo del Journey -->
+        <!-- Columna Derecha: Visual Journey de eCommerce -->
         <div class="hero-visual-col" data-aos="fade-left" data-aos-delay="150">
-          <div class="journey-visual-wrapper">
-            <div class="journey-glass-card">
+          <div class="flow-visual-wrapper">
+            <div class="flow-glass-card">
               
-              <div class="journey-card-header">
+              <div class="flow-card-header">
                 <div class="live-indicator">
                   <span class="pulse-dot"></span>
-                  <span class="live-label">Agente de IA Conectado en Tiempo Real</span>
+                  <span class="live-label">Agente eCommerce IA Activo</span>
                 </div>
-                <span class="channel-pill">WhatsApp + Web</span>
+                <span class="channel-pill">WhatsApp • Web • ERP Sincronizado</span>
               </div>
 
-              <!-- Journey Steps Interactive Mockup -->
-              <div class="journey-flow-stream">
+              <!-- Pipeline Journey del Comprador -->
+              <div class="flow-stream">
                 
-                <!-- Etapa 1: Búsqueda -->
-                <div class="flow-node node-search">
-                  <div class="node-icon-box blue-theme">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <!-- Etapa 1: Consulta -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
                   </div>
-                  <div class="node-content">
-                    <div class="node-step-tag">1. Búsqueda y Selección</div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">1. Consulta</span>
+                      <span class="flow-step-meta">WhatsApp • 14:20 hs</span>
+                    </div>
                     <div class="chat-bubble user-bubble">
-                      "¿Tienen en talle M color negro y cuándo llega a Palermo?"
-                    </div>
-                    <div class="chat-bubble ai-bubble">
-                      <span class="ai-avatar">IA</span>
-                      <p>¡Sí! Tenemos <strong>4 unidades en stock</strong>. Si pedís antes de las 14hs, llega hoy con envío rápido.</p>
+                      "Hola! ¿Tienen stock en talle L negro? ¿Hacen envíos a Córdoba?"
                     </div>
                   </div>
                 </div>
 
-                <!-- Línea conectora animada -->
-                <div class="flow-connector">
-                  <div class="connector-line"></div>
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
                   <div class="connector-dot"></div>
                 </div>
 
-                <!-- Etapa 2: Carrito -->
-                <div class="flow-node node-cart">
-                  <div class="node-icon-box green-theme">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="8" cy="21" r="1"></circle>
-                      <circle cx="19" cy="21" r="1"></circle>
-                      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                <!-- Etapa 2: Carrito y Checkout -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                   </div>
-                  <div class="node-content">
-                    <div class="node-step-tag">2. Carrito y Checkout</div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">2. Carrito y Checkout</span>
+                      <span class="flow-badge-ai">Disponible en Tienda ✓</span>
+                    </div>
                     <div class="chat-bubble ai-bubble">
                       <span class="ai-avatar">IA</span>
-                      <p>Resolví tu duda: tenés <strong>3 cuotas sin interés</strong> con Mercado Pago. Apliqué tu cupón <em>BIENVENIDA</em> (-10%).</p>
-                    </div>
-                    <div class="action-badge-pill">
-                      <span>✓ Enlace de pago generado automáticamente</span>
+                      <p>¡Hola! Sí, tenemos stock en <strong>talle L negro</strong> con despacho en el día. Te dejo el link con <strong>3 cuotas sin interés</strong> y envío gratis:</p>
                     </div>
                   </div>
                 </div>
 
-                <!-- Línea conectora animada -->
-                <div class="flow-connector">
-                  <div class="connector-line"></div>
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
                   <div class="connector-dot"></div>
                 </div>
 
-                <!-- Etapa 3: Postcompra -->
-                <div class="flow-node node-post">
-                  <div class="node-icon-box purple-theme">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                <!-- Etapa 3: Operación y Despacho -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                     </svg>
                   </div>
-                  <div class="node-content">
-                    <div class="node-step-tag">3. Postcompra y Seguimiento</div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">3. Operación y Despacho</span>
+                      <span class="flow-step-meta">Sincronizado con WMS/ERP</span>
+                    </div>
+                    <div class="property-match-mini">
+                      <div class="prop-thumb">📦</div>
+                      <div class="prop-details">
+                        <span class="prop-title">Orden #4821 creada en Shopify</span>
+                        <span class="prop-sub">Etiqueta Andreani generada • Stock actualizado</span>
+                      </div>
+                      <span class="prop-badge">Completado</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 4: Postcompra y Tracking -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">4. Postcompra y Tracking</span>
+                      <span class="flow-badge-confirmed">Seguimiento 24/7</span>
+                    </div>
                     <div class="chat-bubble ai-bubble">
                       <span class="ai-avatar">IA</span>
-                      <p>Pedido <strong>#4829</strong> en camino con Andreani. Código: <em>AR-993821</em>. ¿Necesitas factura A o B?</p>
+                      <p>Tu pedido #4821 está en camino. Código de seguimiento: <strong>AR-99214</strong>. ¿Necesitás factura A o coordinar la entrega?</p>
                     </div>
                   </div>
                 </div>
 
               </div>
 
-              <!-- Integration Footer Pill inside Hero Visual -->
-              <div class="journey-systems-bar">
+              <!-- Barra de integraciones en el pie del Hero visual -->
+              <div class="flow-systems-bar">
                 <span class="systems-label">Sincronizado con:</span>
-                <span class="system-tag">Shopify</span>
-                <span class="system-tag">WooCommerce</span>
+                <span class="system-tag">Shopify / WooCommerce</span>
                 <span class="system-tag">Mercado Pago</span>
-                <span class="system-tag">Stock API</span>
+                <span class="system-tag">WMS / ERP</span>
+                <span class="system-tag">Andreani</span>
               </div>
 
             </div>
@@ -168,14 +197,70 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 2. EL PROBLEMA (Identificación) -->
+    <!-- 2. SECCIÓN: NO ES SOLO ATENCIÓN AL CLIENTE -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="problema" data-aos="fade-up">
+    <section class="section-container bg-subtle" id="operacion-real" data-aos="fade-up">
+      <div class="operational-impact-card">
+        <div class="section-badge">Automatización Operativa</div>
+        <h2 class="impact-title">
+          Atención al cliente es solo una parte. El mayor impacto está en la operación.
+        </h2>
+        
+        <p class="impact-lead">
+          Un chatbot convencional se limita a responder preguntas con mensajes fijos. Un <strong>Agente de IA</strong> consulta bases de datos en vivo, decide mediante reglas comerciales y ejecuta acciones concretas. La automatización integral conecta tus herramientas para eliminar tareas manuales repetitivas y erradicar la duplicación de información entre departamentos.
+        </p>
+
+        <!-- Mini lista sin tecnicismos -->
+        <div class="mini-capabilities-grid">
+          <div class="mini-cap-item">
+            <div class="cap-check">✓</div>
+            <div class="cap-info">
+              <strong>Actualiza pedidos</strong>
+              <span>Cambia estados en tu tienda y ERP al instante.</span>
+            </div>
+          </div>
+          <div class="mini-cap-item">
+            <div class="cap-check">✓</div>
+            <div class="cap-info">
+              <strong>Dispara tareas</strong>
+              <span>Crea recordatorios en CRM y órdenes en depósito.</span>
+            </div>
+          </div>
+          <div class="mini-cap-item">
+            <div class="cap-check">✓</div>
+            <div class="cap-info">
+              <strong>Genera reportes</strong>
+              <span>Consolida métricas semanales sin tocar planillas.</span>
+            </div>
+          </div>
+          <div class="mini-cap-item">
+            <div class="cap-check">✓</div>
+            <div class="cap-info">
+              <strong>Identifica incidencias</strong>
+              <span>Detecta paquetes demorados antes que el cliente.</span>
+            </div>
+          </div>
+          <div class="mini-cap-item">
+            <div class="cap-check">✓</div>
+            <div class="cap-info">
+              <strong>Sugiere próximos pasos</strong>
+              <span>Indica qué hacer ante quiebres de stock o reclamos.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 3. EL PROBLEMA (Identificación) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="el-problema" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">El Desafío Operativo</div>
-        <h2 class="section-title">Cuando la tienda crece, las preguntas se repiten</h2>
+        <div class="section-badge">El Desafío del Crecimiento</div>
+        <h2 class="section-title">Cuando crece el volumen, se multiplican los detalles</h2>
         <p class="section-subtitle">
-          El tráfico aumenta, pero la atención manual se convierte en un cuello de botella que ralentiza tus ventas y agota la energía de tu equipo.
+          El incremento en ventas trae consigo una avalancha de pequeñas tareas operativas que fragmentan el tiempo de tu equipo y generan errores evitables.
         </p>
       </div>
 
@@ -183,63 +268,35 @@ import DemoModal from '../../components/DemoModal.astro';
         
         <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
           <div class="problem-icon-wrap">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
           </div>
           <div class="problem-content">
-            <h3>Demoras críticas en preguntas de stock, talles y envíos</h3>
-            <p>Los compradores esperan inmediatez. Si tardas 20 minutos en confirmar si hay stock o cuánto demora el envío, van a buscarlo a otra tienda.</p>
+            <h3>Consultas repetidas de stock, envíos, cambios y medios de pago</h3>
+            <p>El personal responde una y otra vez lo mismo en WhatsApp o chat web mientras las consultas urgentes de ventas quedan en espera.</p>
           </div>
         </div>
 
         <div class="problem-card" data-aos="fade-up" data-aos-delay="150">
           <div class="problem-icon-wrap">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1"></circle>
+              <circle cx="19" cy="21" r="1"></circle>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
             </svg>
           </div>
           <div class="problem-content">
-            <h3>Carritos abandonados por dudas simples no resueltas</h3>
-            <p>Preguntas sobre costos de envío, cuotas de tarjetas o plazos de entrega frenan la decisión en el checkout sin que nadie asista al comprador.</p>
+            <h3>Carritos abandonados por dudas simples</h3>
+            <p>Costos de envío no claros, opciones de cuotas o compatibilidad de producto frenan la compra justo en el paso final del checkout.</p>
           </div>
         </div>
 
         <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
           <div class="problem-icon-wrap">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </div>
-          <div class="problem-content">
-            <h3>Equipos saturados respondiendo lo mismo todos los días</h3>
-            <p>Operadores valiosos consumen horas copiando y pegando datos de tablas de talles, links de seguimiento o medios de pago en lugar de vender.</p>
-          </div>
-        </div>
-
-        <div class="problem-card" data-aos="fade-up" data-aos-delay="250">
-          <div class="problem-icon-wrap">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-          </div>
-          <div class="problem-content">
-            <h3>Información repartida entre plataformas y planillas</h3>
-            <p>Catálogo en Shopify o WooCommerce, pedidos en el correo, stock en planillas y mensajes en WhatsApp: datos fragmentados que generan errores.</p>
-          </div>
-        </div>
-
-        <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="problem-icon-wrap">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="1" y="3" width="15" height="13"></rect>
               <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
               <circle cx="5.5" cy="18.5" r="2.5"></circle>
@@ -247,738 +304,248 @@ import DemoModal from '../../components/DemoModal.astro';
             </svg>
           </div>
           <div class="problem-content">
-            <h3>Postcompra con seguimiento manual y fricciones</h3>
-            <p>El cliente quiere saber dónde está su paquete o cómo gestionar un cambio, y la falta de tracking automatizado satura los canales de reclamos.</p>
+            <h3>Pedidos con incidencias no detectadas a tiempo</h3>
+            <p>Direcciones con altura incompleta, códigos postales erróneos, pagos rechazados o faltantes que salen a reparto destinados a fallar.</p>
           </div>
         </div>
 
-      </div>
-
-      <!-- Frase de cierre requerida -->
-      <div class="problem-highlight-banner" data-aos="zoom-in" data-aos-delay="350">
-        <div class="banner-icon-circle">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-          </svg>
-        </div>
-        <p class="highlight-phrase">
-          “La IA no reemplaza al equipo: le quita trabajo repetitivo para que se enfoque en lo importante.”
-        </p>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 3. QUÉ HACE UN AGENTE DE IA (Educación clara) -->
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="que-hace" data-aos="fade-up">
-      <div class="section-header text-center">
-        <div class="section-badge">Tecnología Inteligente vs. Bots Antiguos</div>
-        <h2 class="section-title">Más que responder: entiende, decide y ejecuta</h2>
-        <p class="section-subtitle max-w-700">
-          Nuestro agente de IA no recita textos fijos. Se conecta en tiempo real a tu catálogo de productos, políticas comerciales, pedidos y CRM para actuar con autonomía guiada y reglas claras.
-        </p>
-      </div>
-
-      <div class="comparison-grid">
-        
-        <!-- Card 1: Chatbot tradicional -->
-        <div class="comparison-card card-traditional" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-status-badge badge-neutral">Chatbot tradicional</div>
-          <h3 class="comparison-card-title">Responde</h3>
-          <p class="comparison-summary">
-            Árboles de opciones rígidos basados en palabras clave exactas.
-          </p>
-          
-          <ul class="comparison-list">
-            <li class="negative-item">
-              <span class="icon-cross">✕</span>
-              <span>Menús estáticos: "Presiona 1 para ver talles, 2 para envíos".</span>
-            </li>
-            <li class="negative-item">
-              <span class="icon-cross">✕</span>
-              <span>No sabe si hay stock real ni puede consultar variantes.</span>
-            </li>
-            <li class="negative-item">
-              <span class="icon-cross">✕</span>
-              <span>Se traba ante faltas de ortografía o preguntas compuestas.</span>
-            </li>
-            <li class="negative-item">
-              <span class="icon-cross">✕</span>
-              <span>Genera frustración y deriva todo a humanos sin contexto.</span>
-            </li>
-          </ul>
-          
-          <div class="comparison-footer">
-            <span class="tag-outcome outcome-bad">Limitado a guiones mecánicos</span>
-          </div>
-        </div>
-
-        <!-- Card 2: Agente de IA: Entiende -->
-        <div class="comparison-card card-ai-understand" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-status-badge badge-blue">Agente de IA</div>
-          <h3 class="comparison-card-title">Entiende el contexto</h3>
-          <p class="comparison-summary">
-            Comprende lenguaje natural, audios y las dudas implícitas del cliente.
-          </p>
-
-          <ul class="comparison-list">
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Interpreta intención de compra, dudas y modismos cotidianos.</span>
-            </li>
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Recuerda el hilo de la charla y el historial del comprador.</span>
-            </li>
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Identifica dudas antes de pagar (financiación, garantías).</span>
-            </li>
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Mantiene el tono de voz y la personalidad de tu marca.</span>
-            </li>
-          </ul>
-
-          <div class="comparison-footer">
-            <span class="tag-outcome outcome-blue">Conversación fluida y humana</span>
-          </div>
-        </div>
-
-        <!-- Card 3: Agente de IA: Ejecuta acciones -->
-        <div class="comparison-card card-ai-action featured-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="card-featured-pill">Máximo Impacto</div>
-          <div class="card-status-badge badge-green">Agente de IA Conectado</div>
-          <h3 class="comparison-card-title">Ejecuta acciones en tus sistemas</h3>
-          <p class="comparison-summary">
-            No solo habla: interactúa con tus herramientas y resuelve la operación.
-          </p>
-
-          <ul class="comparison-list">
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Consulta stock por variante en Shopify/WooCommerce en vivo.</span>
-            </li>
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Genera links de pago y aplica cupones según tus reglas comerciales.</span>
-            </li>
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Rastrea números de envío con correos y logística en segundos.</span>
-            </li>
-            <li class="positive-item">
-              <span class="icon-check">✓</span>
-              <span>Registra datos en tu CRM y escala casos sensibles al equipo.</span>
-            </li>
-          </ul>
-
-          <div class="comparison-footer">
-            <span class="tag-outcome outcome-green">Resolución completa de punta a punta</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 4. BENEFICIOS (Valor de negocio) -->
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="beneficios" data-aos="fade-up">
-      <div class="section-header text-center">
-        <div class="section-badge">Impacto Real</div>
-        <h2 class="section-title">Beneficios para tu tienda y tu equipo</h2>
-        <p class="section-subtitle">
-          Automatización que protege la rentabilidad de tu negocio y mejora la experiencia de tus compradores sin promesas irreales.
-        </p>
-      </div>
-
-      <div class="benefits-grid">
-        
-        <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="benefit-icon-box">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 14 14"></polyline>
-            </svg>
-          </div>
-          <h3>Respuestas consistentes 24/7</h3>
-          <p>Tus clientes reciben información precisa sobre stock, medidas y envíos al instante, incluso a la medianoche, feriados o durante campañas como Hot Sale.</p>
-        </div>
-
-        <div class="benefit-item" data-aos="fade-up" data-aos-delay="150">
-          <div class="benefit-icon-box">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
-              <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
-            </svg>
-          </div>
-          <h3>Menos tickets repetitivos</h3>
-          <p>Hasta el 70% de las consultas habituales de tu tienda son resueltas en el primer contacto, liberando tiempo para que tus agentes gestionen ventas de alto valor.</p>
-        </div>
-
-        <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="benefit-icon-box">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-          </div>
-          <h3>Mejor conversión asistida</h3>
-          <p>Acompaña a usuarios indecisos resolviendo preguntas de compatibilidad, cuotas y despacho justo en el segundo previo a abandonar la web.</p>
-        </div>
-
-        <div class="benefit-item" data-aos="fade-up" data-aos-delay="250">
-          <div class="benefit-icon-box">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <polyline points="16 11 18 13 22 9"></polyline>
-            </svg>
-          </div>
-          <h3>Recuperación de carritos contextual</h3>
-          <p>Seguimientos por WhatsApp o Email que van al grano: en lugar de un mensaje genérico, abordan el motivo real de la duda y facilitan el pago.</p>
-        </div>
-
-        <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
-          <div class="benefit-icon-box">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            </svg>
-          </div>
-          <h3>Mejor experiencia postcompra</h3>
-          <p>Estados de pedido actualizados, guías de cambios y devoluciones con pasos claros: tranquilidad inmediata para el comprador y menor tasa de reclamos.</p>
-        </div>
-
-        <div class="benefit-item" data-aos="fade-up" data-aos-delay="350">
-          <div class="benefit-icon-box">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10"></line>
-              <line x1="12" y1="20" x2="12" y2="4"></line>
-              <line x1="6" y1="20" x2="6" y2="14"></line>
-            </svg>
-          </div>
-          <h3>Visibilidad y orden analítico</h3>
-          <p>Descubre qué productos generan más dudas, qué talles faltan con mayor frecuencia y cuáles son las principales objeciones comerciales registradas.</p>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 5. AUTOMATIZACIONES A LO LARGO DEL RECORRIDO (Núcleo) -->
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="journey" data-aos="fade-up">
-      <div class="section-header text-center">
-        <div class="section-badge">El Recorrido del Comprador</div>
-        <h2 class="section-title">Automatización en cada momento del journey</h2>
-        <p class="section-subtitle">
-          Desde la primera visita hasta la entrega del producto: asistencia continua e inteligente conectada a tus herramientas.
-        </p>
-      </div>
-
-      <!-- Tabs Navigation -->
-      <div class="journey-tabs-nav" role="tablist">
-        <button type="button" class="journey-tab-btn is-active" data-tab="tab-search" role="tab" aria-selected="true" aria-controls="tab-search">
-          <span class="tab-num">01</span>
-          <span class="tab-label">Búsqueda y descubrimiento</span>
-        </button>
-        <button type="button" class="journey-tab-btn" data-tab="tab-product" role="tab" aria-selected="false" aria-controls="tab-product">
-          <span class="tab-num">02</span>
-          <span class="tab-label">Producto y decisión</span>
-        </button>
-        <button type="button" class="journey-tab-btn" data-tab="tab-cart" role="tab" aria-selected="false" aria-controls="tab-cart">
-          <span class="tab-num">03</span>
-          <span class="tab-label">Carrito y checkout</span>
-        </button>
-        <button type="button" class="journey-tab-btn" data-tab="tab-post" role="tab" aria-selected="false" aria-controls="tab-post">
-          <span class="tab-num">04</span>
-          <span class="tab-label">Postcompra</span>
-        </button>
-      </div>
-
-      <!-- Tabs Content Panels -->
-      <div class="journey-tabs-content">
-        
-        <!-- PANEL 1: Búsqueda -->
-        <div class="journey-tab-panel is-active" id="tab-search" role="tabpanel">
-          <div class="panel-layout">
-            <div class="panel-text">
-              <div class="panel-step-badge">Etapa 1</div>
-              <h3>Asistencia guiada para indecisos</h3>
-              <p>Muchos visitantes llegan con una necesidad en mente pero no saben exactamente qué producto elegir. El agente orienta la búsqueda como un asesor experto de salón.</p>
-              
-              <ul class="panel-features-list">
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Recomendaciones guiadas por necesidades:</strong>
-                    <span>"Busco zapatillas para correr en asfalto que sean livianas" → la IA filtra y muestra las 2 opciones más adecuadas.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Preguntas frecuentes de producto:</strong>
-                    <span>Resuelve al instante dudas de talles, medidas exactas, materiales de confección y compatibilidades técnicas.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Búsqueda conversacional:</strong>
-                    <span>Encuentra artículos sin necesidad de que el cliente escriba el nombre exacto de la referencia del catálogo.</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="panel-simulation">
-              <div class="sim-header">
-                <span class="sim-dot red"></span>
-                <span class="sim-dot yellow"></span>
-                <span class="sim-dot green"></span>
-                <span class="sim-title">Filtro Asistido de Catálogo</span>
-              </div>
-              <div class="sim-body">
-                <div class="sim-msg user">"¿Qué parlante me recomiendan para pileta y exterior que resista agua?"</div>
-                <div class="sim-thinking">
-                  <span class="sim-gear">⚙</span> Consultando catálogo por categoría 'Audio' + filtro 'IPX7 / Exterior'...
-                </div>
-                <div class="sim-msg bot">
-                  "Para exterior te recomiendo el <strong>BoomBass 300</strong>: tiene certificación IPX7 (resistente al agua) y 12h de batería. Lo tenemos con <strong>envío gratis</strong> hoy."
-                </div>
-                <div class="sim-action-chip">
-                  <span>🔗 Ver producto en la tienda →</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PANEL 2: Producto y Decisión -->
-        <div class="journey-tab-panel" id="tab-product" role="tabpanel">
-          <div class="panel-layout">
-            <div class="panel-text">
-              <div class="panel-step-badge">Etapa 2</div>
-              <h3>Certeza para tomar la decisión de compra</h3>
-              <p>En la página de producto, la falta de información rápida frena la conversión. El agente despeja las últimas dudas antes de que el usuario agregue al carrito.</p>
-              
-              <ul class="panel-features-list">
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Comparación directa entre productos:</strong>
-                    <span>Explica las diferencias de funcionalidades, tamaño o rendimiento entre dos modelos que el cliente está evaluando.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Disponibilidad por variante en tiempo real:</strong>
-                    <span>Confirma stock exacto por talle y color en la sucursal o depósito más cercano a su ubicación.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Tiempos y costos de entrega por código postal:</strong>
-                    <span>Calcula el costo y fecha estimada ingresando el CP sin obligar al usuario a iniciar un checkout complejo.</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="panel-simulation">
-              <div class="sim-header">
-                <span class="sim-dot red"></span>
-                <span class="sim-dot yellow"></span>
-                <span class="sim-dot green"></span>
-                <span class="sim-title">Consulta de Stock & Envío</span>
-              </div>
-              <div class="sim-body">
-                <div class="sim-msg user">"¿Tienen la campera impermeable en talle L negra? Vivo en Córdoba capital."</div>
-                <div class="sim-thinking">
-                  <span class="sim-gear">⚙</span> Verificando SKU: CMP-NE-L en stock central + cotizando Andreani CP 5000...
-                </div>
-                <div class="sim-msg bot">
-                  "¡Sí! Nos quedan 3 en talle L. A Córdoba capital llega en <strong>48 a 72hs hábiles</strong> por $2.900 o <strong>gratis</strong> si sumas $15.000 más a tu pedido."
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PANEL 3: Carrito y Checkout -->
-        <div class="journey-tab-panel" id="tab-cart" role="tabpanel">
-          <div class="panel-layout">
-            <div class="panel-text">
-              <div class="panel-step-badge">Etapa 3</div>
-              <h3>Resolución de fricciones y rescate de carritos</h3>
-              <p>El checkout es el momento más delicado. Dudas sobre medios de pago, promociones bancarias o costos extra causan la mayoría de los abandonos.</p>
-              
-              <ul class="panel-features-list">
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Resolución inmediata de fricciones:</strong>
-                    <span>Aclara promociones bancarias, cuotas con o sin interés, medios de pago disponibles y políticas de devolución.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Validación y asistencia con cupones:</strong>
-                    <span>Guía al comprador si un código de descuento no funciona o no cumple con el monto mínimo requerido.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Recuperación inteligente por WhatsApp / Email:</strong>
-                    <span>Envía un recordatorio contextual con el carrito guardado y ofrece resolver la duda que frenó la compra.</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="panel-simulation">
-              <div class="sim-header">
-                <span class="sim-dot red"></span>
-                <span class="sim-dot yellow"></span>
-                <span class="sim-dot green"></span>
-                <span class="sim-title">Recuperación Asistida de Carrito</span>
-              </div>
-              <div class="sim-body">
-                <div class="sim-thinking">
-                  <span class="sim-gear">⚙</span> Carrito abandonado hace 45 min con 'Mesa Nórdica 140cm'. Disparando WhatsApp...
-                </div>
-                <div class="sim-msg bot">
-                  "Hola Lucas! Notamos que estabas por comprar la Mesa Nórdica. ¿Tuviste alguna duda con las cuotas o el flete a tu zona? Puedo ayudarte a finalizar."
-                </div>
-                <div class="sim-msg user">"Sí, no sabía si entraba en 6 cuotas sin interés con Visa Santander."</div>
-                <div class="sim-msg bot">
-                  "¡Exacto! Entra en 6 cuotas fijas de $28.500. Acá te dejo tu link directo con las cuotas ya configuradas: [Completar Pedido Seguro]"
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PANEL 4: Postcompra -->
-        <div class="journey-tab-panel" id="tab-post" role="tabpanel">
-          <div class="panel-layout">
-            <div class="panel-text">
-              <div class="panel-step-badge">Etapa 4</div>
-              <h3>Tranquilidad y fidelización postcompra</h3>
-              <p>Una vez que el cliente pagó, el seguimiento proactivo marca la diferencia entre un cliente que vuelve a comprar y una catarata de reclamos.</p>
-              
-              <ul class="panel-features-list">
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>"¿Dónde está mi pedido?":</strong>
-                    <span>El comprador ingresa su número de orden o email y recibe el estado exacto del paquete y el tracking en vivo.</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Gestión guiada de cambios y devoluciones:</strong>
-                    <span>Indica los pasos a seguir según la política del negocio (plazos, embalaje, etiqueta de logística inversa).</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="feature-bullet"></div>
-                  <div>
-                    <strong>Soporte ágil y derivación ordenada:</strong>
-                    <span>Responde consultas de facturación y deriva a humanos solo cuando es estrictamente necesario.</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="panel-simulation">
-              <div class="sim-header">
-                <span class="sim-dot red"></span>
-                <span class="sim-dot yellow"></span>
-                <span class="sim-dot green"></span>
-                <span class="sim-title">Tracking en Tiempo Real</span>
-              </div>
-              <div class="sim-body">
-                <div class="sim-msg user">"Hola, compré ayer. ¿Dónde está mi pedido #5512?"</div>
-                <div class="sim-thinking">
-                  <span class="sim-gear">⚙</span> Consultando API de Correo Argentino / Paquetería...
-                </div>
-                <div class="sim-msg bot">
-                  "¡Hola Mariana! Tu pedido #5512 ya fue despachado. Actualmente se encuentra <strong>en centro de distribución local</strong>. La entrega está estimada para mañana entre las 10 y las 16hs."
-                </div>
-                <div class="sim-action-chip">
-                  <span>📦 Seguir envío en mapa en vivo →</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bloque destacado: Escalamiento a Humano -->
-      <div class="escalation-box" data-aos="fade-up" data-aos-delay="200">
-        <div class="escalation-header">
-          <div class="escalation-icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <polyline points="16 11 18 13 22 9"></polyline>
-            </svg>
-          </div>
-          <div>
-            <h3>Escala a un humano cuando…</h3>
-            <p>La IA reconoce sus propios límites. Si detecta situaciones fuera de protocolo, deriva la conversación inmediatamente con un resumen claro:</p>
-          </div>
-        </div>
-
-        <div class="escalation-cases-grid">
-          <div class="escalation-case">
-            <span class="case-number">1</span>
-            <div>
-              <strong>Reclamo sensible o cliente insatisfecho:</strong>
-              <p>Detecta frustración en el tono o palabras clave de disconformidad y transfiere la charla a un asesor con prioridad alta.</p>
-            </div>
-          </div>
-
-          <div class="escalation-case">
-            <span class="case-number">2</span>
-            <div>
-              <strong>Sospecha de anomalía o posible fraude:</strong>
-              <p>Discrepancias en datos de pago, tarjetas rechazadas reiteradas o direcciones de envío dudosas que exigen revisión humana.</p>
-            </div>
-          </div>
-
-          <div class="escalation-case">
-            <span class="case-number">3</span>
-            <div>
-              <strong>Caso fuera de la política comercial estándar:</strong>
-              <p>Pedidos de descuentos por volumen especial, excepciones de plazos de garantía o acuerdos corporativos a medida.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 6. CÓMO SE IMPLEMENTA (Proceso simple) -->
-    <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="implementacion" data-aos="fade-up">
-      <div class="section-header text-center">
-        <div class="section-badge">Puesta en Marcha</div>
-        <h2 class="section-title">Implementación guiada en 3 pasos</h2>
-        <p class="section-subtitle">
-          Un proceso ágil y estructurado para comenzar a automatizar sin fricciones y sin interrumpir las ventas diarias de tu tienda.
-        </p>
-      </div>
-
-      <div class="steps-grid">
-        
-        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="step-badge">Paso 1</div>
-          <div class="step-icon-wrap">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
               <line x1="16" y1="13" x2="8" y2="13"></line>
               <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
             </svg>
           </div>
-          <h3>Detectamos oportunidades y definimos reglas</h3>
-          <p>
-            Analizamos tus preguntas más frecuentes, políticas de envíos y devoluciones, objeciones típicas de compra y el tono de voz de tu marca. Configuramos los límites exactos de respuesta del agente.
-          </p>
+          <div class="problem-content">
+            <h3>Doble carga de información entre tienda, planillas, logística y CRM</h3>
+            <p>Operadores copiando y pegando números de guía, estados de pago y notas de clientes entre cuatro plataformas desconectadas.</p>
+          </div>
         </div>
 
-        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="step-badge">Paso 2</div>
-          <div class="step-icon-wrap">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-              <line x1="6" y1="6" x2="6.01" y2="6"></line>
-              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
             </svg>
           </div>
-          <h3>Conectamos tus sistemas</h3>
-          <p>
-            Integramos tu catálogo, stock, pedidos y canales de mensajería (Shopify, WooCommerce, Mercado Pago, WhatsApp, CRM). Todo queda sincronizado en tiempo real sin requerir cambios de software.
-          </p>
+          <div class="problem-content">
+            <h3>Devoluciones y cambios gestionados manualmente por mensajes</h3>
+            <p>Conversaciones caóticas por WhatsApp para coordinar recolecciones, revisar fotos de prendas y emitir notas de crédito o cupones.</p>
+          </div>
         </div>
 
-        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="step-badge">Paso 3</div>
-          <div class="step-icon-wrap">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="20" x2="18" y2="10"></line>
               <line x1="12" y1="20" x2="12" y2="4"></line>
               <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
           </div>
-          <h3>Medimos, ajustamos y ampliamos</h3>
-          <p>
-            Monitoreamos las primeras conversaciones en vivo, evaluamos la precisión de las respuestas, optimizamos la resolución y activamos nuevos flujos automáticos según los datos de tu negocio.
-          </p>
+          <div class="problem-content">
+            <h3>Reportes y conciliaciones que consumen horas cada semana</h3>
+            <p>Cruzar liquidaciones de pasarelas de pago contra ventas de la tienda y pedidos de logística exige días de trabajo de backoffice.</p>
+          </div>
         </div>
 
       </div>
 
-      <!-- Aclaración destacada -->
-      <div class="stack-clarification-banner" data-aos="fade-up" data-aos-delay="350">
-        <div class="clarification-icon">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#15C63B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
+      <!-- Cierre destacado requerido -->
+      <div class="problem-closing-banner" data-aos="zoom-in" data-aos-delay="400">
+        <div class="closing-banner-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#15C63B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
         </div>
-        <p>
-          <strong>No necesitas cambiar tu stack tecnológico:</strong> nos integramos de forma no invasiva a las herramientas que tu equipo ya utiliza todos los días.
+        <p class="closing-phrase">
+          “La IA no reemplaza al equipo: le quita trabajo repetitivo para que se enfoque en mejorar el negocio.”
         </p>
       </div>
     </section>
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 7. INTEGRACIONES (Sin tecnicismos excesivos) -->
+    <!-- 4. QUÉ HACE UN AGENTE DE IA EN ECOMMERCE -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="integraciones" data-aos="fade-up">
+    <section class="section-container bg-subtle" id="que-hace" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">Ecosistema Conectado</div>
-        <h2 class="section-title">Se conecta con las herramientas que ya usás</h2>
+        <div class="section-badge">Inteligencia y Ejecución</div>
+        <h2 class="section-title">Entiende el contexto y actúa</h2>
         <p class="section-subtitle">
-          Integramos por APIs y automatizaciones para mantener la información de tu catálogo, pagos y stock sincronizada en tiempo real.
+          El agente se conecta al catálogo, pedidos, stock, envíos y herramientas internas para resolver de punta a punta.
         </p>
       </div>
 
-      <div class="integrations-grid">
+      <div class="three-pillars-grid">
         
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <path d="M16 10a4 4 0 0 1-8 0"></path>
+        <!-- Card 1: Responde -->
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pillar-icon-box blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
           </div>
-          <span class="tile-title">Shopify</span>
-          <span class="tile-desc">Catálogo, pedidos y clientes</span>
+          <h3 class="pillar-title">Responde</h3>
+          <span class="pillar-subtitle">Información consistente 24/7</span>
+          <p class="pillar-desc">
+            Brinda respuestas exactas y actualizadas basadas en tus fichas de producto, políticas de cambio, tiempos de flete y medios de pago.
+          </p>
+          <ul class="pillar-bullets">
+            <li>✓ Consulta especificaciones técnicas y talles.</li>
+            <li>✓ Explica políticas de garantía sin contradicciones.</li>
+            <li>✓ Atiende simultáneamente en WhatsApp y web.</li>
+          </ul>
         </div>
 
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Card 2: Asiste la compra -->
+        <div class="pillar-card highlight-pillar" data-aos="fade-up" data-aos-delay="150">
+          <div class="pillar-icon-box green">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="9" cy="21" r="1"></circle>
               <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
           </div>
-          <span class="tile-title">WooCommerce</span>
-          <span class="tile-desc">Sincronización en WordPress</span>
+          <div class="pillar-tag">Foco en Conversión</div>
+          <h3 class="pillar-title">Asiste la compra</h3>
+          <span class="pillar-subtitle">Recomendaciones y objeciones</span>
+          <p class="pillar-desc">
+            Acompaña al cliente en su decisión como un vendedor experto: sugiere variantes, resuelve dudas antes del pago y destraba carritos.
+          </p>
+          <ul class="pillar-bullets">
+            <li>✓ Compara productos según necesidad del cliente.</li>
+            <li>✓ Recomienda accesorios y complementos (cross-selling).</li>
+            <li>✓ Genera enlaces de pago directo con promociones activas.</li>
+          </ul>
         </div>
 
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
-              <line x1="2" y1="10" x2="22" y2="10"></line>
+        <!-- Card 3: Automatiza internamente -->
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pillar-icon-box blue">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
             </svg>
           </div>
-          <span class="tile-title">Mercado Pago</span>
-          <span class="tile-desc">Links de pago y validación</span>
+          <h3 class="pillar-title">Automatiza internamente</h3>
+          <span class="pillar-subtitle">Pedidos, tickets, alertas y reportes</span>
+          <p class="pillar-desc">
+            No se queda en el chat: interactúa con tus sistemas internos para procesar órdenes, notificar al depósito y mantener sincronizada la operación.
+          </p>
+          <ul class="pillar-bullets">
+            <li>✓ Abre tickets en Helpdesk con datos completos del caso.</li>
+            <li>✓ Notifica quiebres de inventario al área de compras.</li>
+            <li>✓ Actualiza estados de devolución y libera notas de crédito.</li>
+          </ul>
         </div>
 
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-              <line x1="1" y1="10" x2="23" y2="10"></line>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 5. BENEFICIOS (Valor de Negocio) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="beneficios" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Impacto en Resultados</div>
+        <h2 class="section-title">Beneficios para ventas, soporte y operación</h2>
+        <p class="section-subtitle">
+          Una solución integral diseñada para multiplicar la eficiencia del equipo sin aumentar los costos de estructura.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
           </div>
-          <span class="tile-title">Stripe</span>
-          <span class="tile-desc">Cobros internacionales</span>
+          <h4>Menos consultas repetitivas</h4>
+          <p>Elimina hasta el 70% de las preguntas frecuentes sobre stock, envíos y medios de pago, liberando tiempo del personal.</p>
         </div>
 
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
           </div>
-          <span class="tile-title">WhatsApp Business</span>
-          <span class="tile-desc">Atención y notificaciones oficiales</span>
+          <h4>Respuestas y acciones 24/7</h4>
+          <p>Disponibilidad inmediata para atender a clientes nocturnos o fines de semana aplicando siempre las mismas reglas claras.</p>
         </div>
 
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22 6 12 13 2 6"></polyline>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
             </svg>
           </div>
-          <span class="tile-title">Email / Gmail</span>
-          <span class="tile-desc">Confirmaciones y seguimiento</span>
+          <h4>Mejor conversión asistida</h4>
+          <p>Resuelve las dudas decisivas justo en el checkout, disminuyendo carritos abandonados y aumentando el ticket promedio.</p>
         </div>
 
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 11 12 14 22 4"></polyline>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <h4>Gestión de pedidos más ordenada</h4>
+          <p>Menos errores humanos de tipeo o despacho equivocado gracias a la validación automática de datos de entrega y pago.</p>
+        </div>
+
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+          </div>
+          <h4>Postcompra más simple</h4>
+          <p>Seguimiento de envíos en tiempo real y flujo guiado de cambios o devoluciones que reduce fricciones y reclamos.</p>
+        </div>
+
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <h4>Información conectada</h4>
+          <p>Sincronización entre tu tienda online, el WMS de depósito y el CRM para evitar planillas intermedias y datos desfasados.</p>
+        </div>
+
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <h4>Visibilidad operativa en tiempo real</h4>
+          <p>Identificación inmediata de los motivos de consulta más frecuentes, fallas de logística y productos con incidencias.</p>
+        </div>
+
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="450">
+          <div class="benefit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
-          <span class="tile-title">HubSpot / CRM</span>
-          <span class="tile-desc">Perfil y trazabilidad de contactos</span>
-        </div>
-
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="8" y1="13" x2="16" y2="13"></line>
-              <line x1="8" y1="17" x2="16" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
-          <span class="tile-title">Google Sheets</span>
-          <span class="tile-desc">Planillas operativas y reportes</span>
-        </div>
-
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-            </svg>
-          </div>
-          <span class="tile-title">ERP & Facturación</span>
-          <span class="tile-desc">Sistemas de gestión contable</span>
-        </div>
-
-        <div class="integration-tile">
-          <div class="tile-icon-box">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-          </div>
-          <span class="tile-title">Helpdesk</span>
-          <span class="tile-desc">Zendesk, Freshdesk o propio</span>
+          <h4>Equipo enfocado en tareas de valor</h4>
+          <p>Tu equipo humano pasa de contestar mensajes mecánicos a negociar con proveedores, optimizar campañas y fidelizar clientes clave.</p>
         </div>
 
       </div>
@@ -986,93 +553,684 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 8. CASOS DE USO (Ejemplos concretos sin datos inflados) -->
+    <!-- 6. SECCIÓN CLAVE: AUTOMATIZACIONES INTERNAS (BACKOFFICE) -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="casos-uso" data-aos="fade-up">
+    <section class="section-container bg-subtle" id="automatizaciones" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">Casos de Uso Concretos</div>
-        <h2 class="section-title">Ejemplos reales de automatización en una tienda online</h2>
+        <div class="section-badge">Operación y Backoffice</div>
+        <h2 class="section-title">Flujos internos que se pueden automatizar</h2>
         <p class="section-subtitle">
-          Situaciones habituales donde el agente de IA absorbe la carga operativa y agiliza la venta.
+          Casos reales de automatización de procesos internos para eliminar la carga manual, conectar herramientas y asegurar trazabilidad.
+        </p>
+      </div>
+
+      <!-- Grid de 10 cards con ejemplos concretos (cada card: título + 2 bullets) -->
+      <div class="ten-automations-grid">
+        
+        <!-- Card 1: Gestión de pedidos -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="auto-card-top">
+            <div class="auto-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <span class="auto-tag">Ventas & Depósito</span>
+          </div>
+          <h3 class="auto-title">Gestión de pedidos</h3>
+          <ul class="auto-bullets">
+            <li>Detectar pedidos “en riesgo” (pago pendiente, stock bajo o direcciones dudosas).</li>
+            <li>Crear tareas internas automáticamente en el tablero de preparación y despacho.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Sincronización de stock -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="auto-card-top">
+            <div class="auto-icon green">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <span class="auto-tag">Inventario</span>
+          </div>
+          <h3 class="auto-title">Sincronización de stock</h3>
+          <ul class="auto-bullets">
+            <li>Alertas proactivas por quiebres inminentes enviadas a compras y proveedores.</li>
+            <li>Sincronizar inventario en tiempo real entre múltiples canales de venta (tienda web, marketplaces y local físico).</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Incidencias de envío -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="auto-card-top">
+            <div class="auto-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <span class="auto-tag">Logística</span>
+          </div>
+          <h3 class="auto-title">Incidencias de envío</h3>
+          <ul class="auto-bullets">
+            <li>Identificar demoras y estados anómalos en los portales de los transportistas.</li>
+            <li>Abrir ticket en helpdesk y notificar al cliente con contexto antes de que reclame.</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Devoluciones y cambios (RMA) -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="auto-card-top">
+            <div class="auto-icon green">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+              </svg>
+            </div>
+            <span class="auto-tag">Postventa</span>
+          </div>
+          <h3 class="auto-title">Devoluciones y cambios (RMA)</h3>
+          <ul class="auto-bullets">
+            <li>Guiar pasos de embalaje y generar etiquetas de logística inversa automáticamente.</li>
+            <li>Registrar el motivo del cambio y actualizar el estado contable en la tienda.</li>
+          </ul>
+        </div>
+
+        <!-- Card 5: Pagos y conciliación -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="auto-card-top">
+            <div class="auto-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <span class="auto-tag">Administración</span>
+          </div>
+          <h3 class="auto-title">Pagos y conciliación</h3>
+          <ul class="auto-bullets">
+            <li>Detectar cobros rechazados, cancelaciones sospechosas o inconsistencias de importe.</li>
+            <li>Preparar reporte automático de conciliación bancaria para el equipo de finanzas.</li>
+          </ul>
+        </div>
+
+        <!-- Card 6: Catálogo y fichas de producto -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="auto-card-top">
+            <div class="auto-icon green">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <span class="auto-tag">Contenido</span>
+          </div>
+          <h3 class="auto-title">Catálogo y fichas de producto</h3>
+          <ul class="auto-bullets">
+            <li>Checklist automático de calidad (validación de fotos, descripciones y atributos).</li>
+            <li>Sugerencias al equipo para completar información faltante antes de lanzar campañas.</li>
+          </ul>
+        </div>
+
+        <!-- Card 7: Atención interna / helpdesk -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="auto-card-top">
+            <div class="auto-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <span class="auto-tag">Soporte Interno</span>
+          </div>
+          <h3 class="auto-title">Atención interna / helpdesk</h3>
+          <ul class="auto-bullets">
+            <li>Clasificar tickets por motivo y prioridad de SLA sin intervención manual.</li>
+            <li>Sugerir borradores de respuesta base y derivar al operador con historial unificado.</li>
+          </ul>
+        </div>
+
+        <!-- Card 8: Automatización comercial -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="450">
+          <div class="auto-card-top">
+            <div class="auto-icon green">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="17 11 19 13 23 9"></polyline>
+              </svg>
+            </div>
+            <span class="auto-tag">Ventas B2B</span>
+          </div>
+          <h3 class="auto-title">Automatización comercial</h3>
+          <ul class="auto-bullets">
+            <li>Seguimiento automático a consultas de clientes mayoristas o dadores de volumen.</li>
+            <li>Creación de recordatorios, cotizaciones borrador y tareas de cierre en el CRM.</li>
+          </ul>
+        </div>
+
+        <!-- Card 9: Reportes automáticos -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="auto-card-top">
+            <div class="auto-icon blue">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <span class="auto-tag">Dirección & KPIs</span>
+          </div>
+          <h3 class="auto-title">Reportes automáticos</h3>
+          <ul class="auto-bullets">
+            <li>Resumen diario o semanal de ventas, incidencias de despacho y motivos de contacto.</li>
+            <li>Alertas inmediatas por caídas de conversión en checkout o picos anómalos de reclamos.</li>
+          </ul>
+        </div>
+
+        <!-- Card 10: Cumplimiento y políticas -->
+        <div class="auto-card" data-aos="fade-up" data-aos-delay="550">
+          <div class="auto-card-top">
+            <div class="auto-icon green">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <span class="auto-tag">Seguridad & Reglas</span>
+          </div>
+          <h3 class="auto-title">Cumplimiento y políticas</h3>
+          <ul class="auto-bullets">
+            <li>Garantizar respuestas consistentes estrictamente alineadas a tus políticas de envío.</li>
+            <li>Derivación automática a supervisores humanos en situaciones que excedan los límites definidos.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Aclaración requerida -->
+      <div class="integration-notice-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="notice-icon">⚙️</div>
+        <p class="notice-text">
+          <strong>Arquitectura flexible:</strong> Integramos por APIs y herramientas de automatización (por ejemplo <em>n8n</em>, webhooks o Make) con tus herramientas actuales, sin obligarte a cambiar de plataforma.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 7. AUTOMATIZACIÓN DEL RECORRIDO DEL COMPRADOR (FRONT + OPERACIÓN) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="recorrido" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Flujo Integral de Punta a Punta</div>
+        <h2 class="section-title">Un flujo continuo: del descubrimiento a la postcompra</h2>
+        <p class="section-subtitle">
+          Descubre cómo cada interacción del cliente en los canales de venta activa acciones operativas coordinadas en tu backoffice.
+        </p>
+      </div>
+
+      <!-- Navegación de Tabs por Etapas -->
+      <div class="journey-tabs-wrapper">
+        <div class="journey-tabs-nav" role="tablist">
+          <button type="button" class="journey-tab-btn is-active" data-tab="tab-descubrimiento" role="tab" aria-selected="true" aria-controls="tab-descubrimiento">
+            <span class="tab-badge">01</span>
+            <span class="tab-label">Descubrimiento y Producto</span>
+          </button>
+          <button type="button" class="journey-tab-btn" data-tab="tab-carrito" role="tab" aria-selected="false" aria-controls="tab-carrito">
+            <span class="tab-badge">02</span>
+            <span class="tab-label">Carrito y Checkout</span>
+          </button>
+          <button type="button" class="journey-tab-btn" data-tab="tab-postcompra" role="tab" aria-selected="false" aria-controls="tab-postcompra">
+            <span class="tab-badge">03</span>
+            <span class="tab-label">Postcompra y Soporte</span>
+          </button>
+          <button type="button" class="journey-tab-btn" data-tab="tab-reactivacion" role="tab" aria-selected="false" aria-controls="tab-reactivacion">
+            <span class="tab-badge">04</span>
+            <span class="tab-label">Reactivación y Recompra</span>
+          </button>
+        </div>
+
+        <!-- Contenido de las Tabs -->
+        <div class="journey-tabs-content">
+          
+          <!-- Tab 1: Descubrimiento y Producto -->
+          <div class="journey-tab-panel is-active" id="tab-descubrimiento" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-col panel-front">
+                <div class="panel-col-header">
+                  <span class="col-pill blue">Front • Lo que vive el comprador</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Consulta instantánea de variantes:</strong>
+                    <span>Pregunta por WhatsApp o chat web si hay talle, color o compatibilidad y recibe fotos y detalles al instante.</span>
+                  </li>
+                  <li>
+                    <strong>Asesoramiento a medida:</strong>
+                    <span>El agente comprende el uso que el cliente busca y recomienda la mejor opción del catálogo con enlaces directos.</span>
+                  </li>
+                  <li>
+                    <strong>Claridad de tiempos:</strong>
+                    <span>Calcula en el momento el plazo y costo estimado de entrega ingresando código postal o ciudad.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel-col panel-back">
+                <div class="panel-col-header">
+                  <span class="col-pill green">Backoffice • Lo que se automatiza internamente</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Consulta directa a stock:</strong>
+                    <span>Lee el inventario disponible en Shopify/ERP sin requerir que un operador abra el sistema central.</span>
+                  </li>
+                  <li>
+                    <strong>Registro de intención:</strong>
+                    <span>Registra en el CRM qué productos y marcas están generando mayor interés o dudas sin resolver.</span>
+                  </li>
+                  <li>
+                    <strong>Alerta de quiebre potencial:</strong>
+                    <span>Si un artículo consultado tiene menos de 3 unidades, notifica internamente al área de reposición.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Carrito y Checkout -->
+          <div class="journey-tab-panel" id="tab-carrito" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-col panel-front">
+                <div class="panel-col-header">
+                  <span class="col-pill blue">Front • Lo que vive el comprador</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Resolución de objeciones de pago:</strong>
+                    <span>El agente aclara promociones bancarias, cuotas con tarjeta y ayuda a aplicar cupones promocionales.</span>
+                  </li>
+                  <li>
+                    <strong>Asistencia en checkout trabado:</strong>
+                    <span>Si el pago es rechazado, le envía un link alternativo o le ofrece transferir mediante alias CBU con comprobante.</span>
+                  </li>
+                  <li>
+                    <strong>Confirmación de pedido:</strong>
+                    <span>Mensaje inmediato con resumen de compra y número de orden verificado.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel-col panel-back">
+                <div class="panel-col-header">
+                  <span class="col-pill green">Backoffice • Lo que se automatiza internamente</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Reserva de inventario:</strong>
+                    <span>Bloquea la unidad en almacén para evitar ventas duplicadas mientras se finaliza la transacción.</span>
+                  </li>
+                  <li>
+                    <strong>Flujo de recuperación con reglas:</strong>
+                    <span>Programa un recordatorio amigable a las 2 horas si el carrito quedó pendiente, solo si hay stock asegurado.</span>
+                  </li>
+                  <li>
+                    <strong>Creación de orden en ERP:</strong>
+                    <span>Impacta la venta con datos fiscales validados en la base administrativa para posterior facturación.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Postcompra y Soporte -->
+          <div class="journey-tab-panel" id="tab-postcompra" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-col panel-front">
+                <div class="panel-col-header">
+                  <span class="col-pill blue">Front • Lo que vive el comprador</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Seguimiento de envío en 1 clic:</strong>
+                    <span>El comprador escribe "¿dónde está mi pedido?" y recibe el estado exacto del transportista sin demoras.</span>
+                  </li>
+                  <li>
+                    <strong>Gestión guiada de cambios:</strong>
+                    <span>Si necesita cambiar de talle, el agente le explica los pasos, valida el plazo de cambio y recibe fotos de la prenda.</span>
+                  </li>
+                  <li>
+                    <strong>Avisos proactivos:</strong>
+                    <span>Notificación cuando el paquete sale a reparto o si hubo un retraso justificado en la ruta.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel-col panel-back">
+                <div class="panel-col-header">
+                  <span class="col-pill green">Backoffice • Lo que se automatiza internamente</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Sincronización con carriers:</strong>
+                    <span>Monitorea estados de guías de Andreani, Correo Argentino u otros sin que nadie revise manualmente las webs.</span>
+                  </li>
+                  <li>
+                    <strong>Generación de ticket RMA:</strong>
+                    <span>Crea el caso de devolución en el Helpdesk con fotos del producto, motivo clasificado y etiqueta de reenvío.</span>
+                  </li>
+                  <li>
+                    <strong>Actualización de TMS/Depósito:</strong>
+                    <span>Avisa al centro logístico para esperar el paquete entrante y liberar el nuevo despacho tras la revisión.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Reactivación y Recompra -->
+          <div class="journey-tab-panel" id="tab-reactivacion" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-col panel-front">
+                <div class="panel-col-header">
+                  <span class="col-pill blue">Front • Lo que vive el comprador</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Sugerencias contextuales útiles:</strong>
+                    <span>Recomendaciones periódicas basadas en compras previas (ej. repuestos, consumibles o nueva temporada).</span>
+                  </li>
+                  <li>
+                    <strong>Canal de recompra ágil:</strong>
+                    <span>Permite volver a pedir el producto habitual con un simple mensaje confirmatorio de WhatsApp.</span>
+                  </li>
+                  <li>
+                    <strong>Beneficios por fidelidad:</strong>
+                    <span>Aviso exclusivo de acceso prioritario a liquidaciones o descuentos por cliente frecuente.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel-col panel-back">
+                <div class="panel-col-header">
+                  <span class="col-pill green">Backoffice • Lo que se automatiza internamente</span>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <strong>Segmentación en CRM:</strong>
+                    <span>Etiqueta clientes según ticket promedio, frecuencia de compra y categorías preferidas.</span>
+                  </li>
+                  <li>
+                    <strong>Control de frecuencia de contacto:</strong>
+                    <span>Evita spam no deseado respetando límites estrictos de cadencia y reglas de opt-out.</span>
+                  </li>
+                  <li>
+                    <strong>Métricas de LTV:</strong>
+                    <span>Alimenta los paneles directivos con la tasa de recurrencia y valor de vida del cliente generado por IA.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bloque crítico: Escala a humano cuando... -->
+      <div class="escalation-wrapper" data-aos="fade-up" data-aos-delay="200">
+        <div class="escalation-header">
+          <div class="escalation-badge">Seguridad Operativa</div>
+          <h3 class="escalation-title">Escala a un operador humano cuando…</h3>
+          <p class="escalation-desc">
+            El agente no improvisa. Cuando una situación supera los parámetros o requiere empatía y criterio especial, transfiere la conversación de inmediato con el historial completo.
+          </p>
+        </div>
+
+        <div class="escalation-grid">
+          
+          <div class="escalation-card">
+            <div class="esc-num">01</div>
+            <h4>Reclamo sensible</h4>
+            <p>Clientes inconformes, pedidos muy demorados o situaciones con frustración donde la atención personalizada es clave.</p>
+          </div>
+
+          <div class="escalation-card">
+            <div class="esc-num">02</div>
+            <h4>Sospecha de fraude</h4>
+            <p>Inconsistencias reiteradas en tarjetas de crédito, transacciones bloqueadas por la pasarela o datos fiscales dudosos.</p>
+          </div>
+
+          <div class="escalation-card">
+            <div class="esc-num">03</div>
+            <h4>Excepción de garantía o política</h4>
+            <p>Solicitudes fuera de plazo pero con motivos especiales que requieren autorización comercial de un gerente.</p>
+          </div>
+
+          <div class="escalation-card">
+            <div class="esc-num">04</div>
+            <h4>Caso VIP o cliente mayorista</h4>
+            <p>Dadores de alto volumen o cuentas corporativas que requieren condiciones de cotización y despacho negociadas.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 8. INTEGRACIONES (Se conecta con tu stack) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="integraciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Compatibilidad Total</div>
+        <h2 class="section-title">Se conecta con tu stack</h2>
+        <p class="section-subtitle">
+          Conectamos herramientas para eliminar la doble carga y tener una única fuente de verdad en toda tu operación de eCommerce.
+        </p>
+      </div>
+
+      <div class="integrations-grid">
+        
+        <!-- 1. Tiendas -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="100">
+          <div class="tile-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </div>
+          <h4>Shopify / WooCommerce</h4>
+          <p>Sincronización de catálogo, variantes, precios, inventario y estados de pedidos.</p>
+        </div>
+
+        <!-- 2. Pagos -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="150">
+          <div class="tile-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <h4>Mercado Pago / Stripe</h4>
+          <p>Detección de pagos aprobados, verificación de cuotas y recuperación de cobros.</p>
+        </div>
+
+        <!-- 3. Canales -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="200">
+          <div class="tile-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h4>Email / WhatsApp Business</h4>
+          <p>Líneas oficiales verificadas y correos transaccionales para comunicación fluida.</p>
+        </div>
+
+        <!-- 4. CRM -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="250">
+          <div class="tile-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h4>CRM Comercial</h4>
+          <p>HubSpot, Salesforce, Zoho o CRM propietario para historial de clientes y compras.</p>
+        </div>
+
+        <!-- 5. Helpdesk -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="300">
+          <div class="tile-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h4>Helpdesk & Soporte</h4>
+          <p>Zendesk, Gorgias, Freshdesk y sistemas de tickets internos con categorización.</p>
+        </div>
+
+        <!-- 6. ERP / WMS -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="350">
+          <div class="tile-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <h4>ERP / WMS</h4>
+          <p>Sistemas de almacén y contables para control de stock físico y emisión fiscal.</p>
+        </div>
+
+        <!-- 7. Google Sheets -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="400">
+          <div class="tile-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22 6 12 13 2 6"></polyline>
+            </svg>
+          </div>
+          <h4>Google Sheets / Airtable</h4>
+          <p>Alimentación automática de tablas de control, auditoría rápida y resúmenes de datos.</p>
+        </div>
+
+        <!-- 8. Logística -->
+        <div class="int-tile" data-aos="fade-up" data-aos-delay="450">
+          <div class="tile-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+          </div>
+          <h4>Logística y Tracking</h4>
+          <p>Conexión por webhooks con Andreani, Correo Argentino, Shipnow o couriers propios.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 9. CASOS DE USO REALES (Sin números inventados) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="casos-de-uso" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Aplicación Práctica</div>
+        <h2 class="section-title">Ejemplos reales de automatización en eCommerce</h2>
+        <p class="section-subtitle">
+          Casos concretos donde la unión de IA conversacional y automatización de procesos genera orden y velocidad de respuesta.
         </p>
       </div>
 
       <div class="use-cases-grid">
         
-        <!-- Caso 1: Soporte -->
+        <!-- Caso 1 -->
         <div class="use-case-card" data-aos="fade-up" data-aos-delay="100">
           <div class="case-header">
-            <span class="case-tag tag-blue">Soporte & Atención</span>
-            <div class="case-icon-mini">💬</div>
+            <span class="case-tag blue">Soporte y Atención</span>
+            <div class="case-icon">💬</div>
           </div>
-          <h3 class="case-title">Soporte: 60% de consultas son repetidas → el agente las resuelve y deriva excepciones</h3>
-          <div class="case-body">
-            <div class="case-scenario">
-              <span class="scenario-label">Situación:</span>
-              <p>El equipo perdía 4 horas diarias contestando preguntas sobre horarios de despacho, tabla de medidas y formas de pago.</p>
-            </div>
-            <div class="case-resolution">
-              <span class="scenario-label">Cómo actúa el agente:</span>
-              <p>Responde en 3 segundos consultando el stock y políticas vigentes. Si un cliente reporta una falla de fábrica, solicita la foto y transfiere el ticket directamente al responsable de cambios.</p>
-            </div>
-          </div>
+          <h3 class="case-title">Soporte: estado de pedido + incidencias con derivación</h3>
+          <p class="case-desc">
+            El cliente consulta por su paquete en WhatsApp. El agente lee la API del carrier, informa la ubicación actual y, si detecta una demora anómala superior a 48 hs, abre un ticket prioritario y lo transfiere a un operador con toda la ficha.
+          </p>
         </div>
 
-        <!-- Caso 2: Carritos -->
+        <!-- Caso 2 -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="case-header">
+            <span class="case-tag green">Operación & Finanzas</span>
+            <div class="case-icon">💳</div>
+          </div>
+          <h3 class="case-title">Operación: pedidos con pago pendiente → recordatorio + tarea interna</h3>
+          <p class="case-desc">
+            Ante una transferencia o cupón en efectivo no acreditado tras 12 horas, envía un mensaje amigable con los datos bancarios. Si tras 24 horas no hay comprobante, genera una tarea de revisión y libera el stock para no bloquear ventas.
+          </p>
+        </div>
+
+        <!-- Caso 3 -->
         <div class="use-case-card" data-aos="fade-up" data-aos-delay="200">
           <div class="case-header">
-            <span class="case-tag tag-green">Ventas & Conversión</span>
-            <div class="case-icon-mini">🛒</div>
+            <span class="case-tag blue">Logística Inversa</span>
+            <div class="case-icon">📦</div>
           </div>
-          <h3 class="case-title">Carritos: recordatorios con contexto → recupera dudas antes del pago</h3>
-          <div class="case-body">
-            <div class="case-scenario">
-              <span class="scenario-label">Situación:</span>
-              <p>Usuarios que completaban sus datos de envío pero no finalizaban la compra por dudas en las opciones de financiación con tarjeta.</p>
-            </div>
-            <div class="case-resolution">
-              <span class="scenario-label">Cómo actúa el agente:</span>
-              <p>Envía un recordatorio amistoso por WhatsApp con el producto reservado y pregunta específicamente si tuvo problemas con las cuotas, enviando el botón de pago listo para cobrar.</p>
-            </div>
-          </div>
+          <h3 class="case-title">Devoluciones: flujo guiado + registro de motivo</h3>
+          <p class="case-desc">
+            El comprador solicita un cambio de prenda. El agente valida el plazo transcurrido desde la entrega, solicita foto del producto en su embalaje original, genera el rótulo de logística inversa y registra en el ERP el motivo exacto para análisis.
+          </p>
         </div>
 
-        <!-- Caso 3: Postcompra -->
+        <!-- Caso 4 -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="case-header">
+            <span class="case-tag green">Gestión de Catálogo</span>
+            <div class="case-icon">🏷️</div>
+          </div>
+          <h3 class="case-title">Catálogo: control de calidad de fichas antes de campañas</h3>
+          <p class="case-desc">
+            Antes de un Hot Sale o CyberMonday, el agente audita tus productos: identifica cuáles carecen de guía de talles, fotos en alta resolución o descripción de materiales, enviando una lista estructurada al equipo de marketing.
+          </p>
+        </div>
+
+        <!-- Caso 5 -->
         <div class="use-case-card" data-aos="fade-up" data-aos-delay="300">
           <div class="case-header">
-            <span class="case-tag tag-purple">Postcompra</span>
-            <div class="case-icon-mini">📦</div>
+            <span class="case-tag blue">Ventas & Marketing</span>
+            <div class="case-icon">🛒</div>
           </div>
-          <h3 class="case-title">Postcompra: estado de envío y cambios → menos tickets</h3>
-          <div class="case-body">
-            <div class="case-scenario">
-              <span class="scenario-label">Situación:</span>
-              <p>Cientos de mensajes con "¿Dónde está mi compra?" tras cada fin de semana, colapsando el canal de atención al cliente.</p>
-            </div>
-            <div class="case-resolution">
-              <span class="scenario-label">Cómo actúa el agente:</span>
-              <p>El comprador solo escribe su número de orden o DNI; el agente consulta la API del transportista y devuelve el estado exacto sin intervención humana.</p>
-            </div>
-          </div>
+          <h3 class="case-title">Marketing/ventas: recuperación de carrito con reglas</h3>
+          <p class="case-desc">
+            En lugar de mensajes genéricos, el agente detecta qué producto quedó en el carrito y qué duda frenó al comprador (costo de flete, cuotas o color) para ofrecer una solución puntual y un enlace directo a la pasarela.
+          </p>
         </div>
 
-        <!-- Caso 4: Ventas -->
-        <div class="use-case-card" data-aos="fade-up" data-aos-delay="400">
+        <!-- Caso 6 -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="350">
           <div class="case-header">
-            <span class="case-tag tag-amber">Asesoramiento</span>
-            <div class="case-icon-mini">✨</div>
+            <span class="case-tag green">Dirección & Estrategia</span>
+            <div class="case-icon">📊</div>
           </div>
-          <h3 class="case-title">Ventas: guía de producto → mejor experiencia para indecisos</h3>
-          <div class="case-body">
-            <div class="case-scenario">
-              <span class="scenario-label">Situación:</span>
-              <p>Clientes que buscan un regalo o producto técnico (ej. cosmética, tecnología o indumentaria) y abandonan la página por indecisión.</p>
-            </div>
-            <div class="case-resolution">
-              <span class="scenario-label">Cómo actúa el agente:</span>
-              <p>Realiza 2 preguntas clave para entender el perfil y presupuesto, recomendando las 2 opciones mejor valoradas con link directo a la compra.</p>
-            </div>
-          </div>
+          <h3 class="case-title">Dirección: reporte semanal de motivos de contacto e incidencias</h3>
+          <p class="case-desc">
+            Consolida todas las conversaciones, fallas de transportistas y quiebres de inventario en un informe ejecutivo semanal para dueños y gerentes, indicando qué áreas operativas requieren ajustes prioritarios.
+          </p>
         </div>
 
       </div>
@@ -1080,28 +1238,28 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 9. PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- 10. PREGUNTAS FRECUENTES (FAQ) -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="section-container" id="faq" data-aos="fade-up">
+    <section class="section-container bg-subtle" id="faq" data-aos="fade-up">
       <div class="section-header text-center">
-        <div class="section-badge">Preguntas Frecuentes</div>
-        <h2 class="section-title">Respuestas a dudas comunes</h2>
+        <div class="section-badge">Dudas Habituales</div>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
         <p class="section-subtitle">
-          Todo lo que necesitas saber antes de implementar un agente de IA en tu tienda.
+          Respuestas claras sobre la tecnología, la integración con tu tienda y las tareas automatizadas.
         </p>
       </div>
 
-      <div class="faq-accordion-container">
+      <div class="faq-container">
         
         <!-- FAQ 1 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span>¿Esto es solo un chatbot?</span>
-            <span class="faq-chevron">▾</span>
+            <span class="faq-question-text">¿Esto es solo un chatbot?</span>
+            <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              No. Un chatbot tradicional solo responde textos preconfigurados ante palabras clave exactas. Un <strong>Agente de IA</strong> entiende la intención del comprador en lenguaje natural, consulta en tiempo real las bases de datos de tu tienda (Shopify, WooCommerce, stock, órdenes) y ejecuta acciones como generar enlaces de pago, aplicar cupones o rastrear paquetes.
+              No. Un chatbot tradicional solo muestra textos fijos mediante opciones estáticas. Nuestra propuesta combina un <strong>Agente de IA</strong> que entiende contexto con <strong>automatizaciones de backoffice</strong>: consulta stock en tiempo real en tu tienda o ERP, actualiza pedidos, abre tickets en tu Helpdesk, genera etiquetas de logística y coordina tareas internas sin intervención humana.
             </p>
           </div>
         </div>
@@ -1109,12 +1267,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 2 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span>¿Puede hablar por WhatsApp y en el sitio web al mismo tiempo?</span>
-            <span class="faq-chevron">▾</span>
+            <span class="faq-question-text">¿Puede conectarse a mi tienda y ver pedidos y stock?</span>
+            <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Sí, perfectamente. El agente es omnicanal: se conecta tanto al widget de chat de tu tienda online como a tu línea oficial de WhatsApp Business (y si lo requieres, a mensajes directos de Instagram o Facebook), manteniendo el mismo conocimiento y contexto unificado en todos los canales.
+              Sí. Se conecta de forma segura mediante APIs oficiales y webhooks a plataformas como Shopify, WooCommerce, Tiendanube, Magento o ERPs propios. Esto le permite consultar el catálogo, validar existencias por variante y conocer el estado exacto de cada orden al instante.
             </p>
           </div>
         </div>
@@ -1122,12 +1280,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 3 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span>¿Qué pasa si el agente no sabe una respuesta?</span>
-            <span class="faq-chevron">▾</span>
+            <span class="faq-question-text">¿Qué acciones puede ejecutar automáticamente?</span>
+            <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              El agente está configurado bajo límites estrictos para nunca inventar información. Si se presenta una duda fuera de su base de conocimiento o un reclamo delicado, informa con naturalidad al comprador y transfiere la conversación a un operador de tu equipo con un resumen previo del caso.
+              Puede actualizar estados de órdenes, disparar recordatorios de pago pendiente, solicitar etiquetas de logística inversa para cambios de producto, crear tickets categorizados en tu helpdesk, alertar sobre quiebres de stock y enviar reportes ejecutivos semanales sin que nadie deba cargar planillas.
             </p>
           </div>
         </div>
@@ -1135,12 +1293,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 4 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span>¿Se puede entrenar con mis políticas de envíos y devoluciones?</span>
-            <span class="faq-chevron">▾</span>
+            <span class="faq-question-text">¿Cómo se controla lo que el agente puede o no puede hacer?</span>
+            <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Exactamente. Durante la configuración inicial cargamos las políticas comerciales exclusivas de tu tienda: tiempos de entrega por zona, plazos de cambios, garantías, condiciones de devolución y preguntas frecuentes específicas de tu rubro.
+              Se configuran reglas de negocio y límites estrictos: políticas de devolución por cantidad de días, montos máximos autorizados para cupones, canales habilitados y permisos por rol. El agente nunca toma decisiones financieras o excepcionales sin pasar por los filtros previamente aprobados por tu gerencia.
             </p>
           </div>
         </div>
@@ -1148,12 +1306,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 5 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span>¿Cuánto tarda en implementarse?</span>
-            <span class="faq-chevron">▾</span>
+            <span class="faq-question-text">¿Qué pasa cuando no sabe o hay una excepción?</span>
+            <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Una integración típica para eCommerce suele estar operativa en pocos días hábiles. El proceso incluye la conexión de tus canales, la calibración de las respuestas con tus datos y un período de pruebas antes del lanzamiento definitivo.
+              El sistema cuenta con un protocolo de derivación inmediata. Si detecta un caso fuera de política, sospecha de fraude o un reclamo delicado, notifica al operador de turno asignándole la conversación con un resumen claro del cliente, antecedentes de compra y pasos sugeridos.
             </p>
           </div>
         </div>
@@ -1161,12 +1319,12 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 6 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span>¿Cómo se mide el impacto en el negocio?</span>
-            <span class="faq-chevron">▾</span>
+            <span class="faq-question-text">¿Se integra con WhatsApp y con mi helpdesk?</span>
+            <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Dispones de un panel de métricas donde puedes ver la cantidad de consultas atendidas, el porcentaje de resolución automática sin intervención humana, los carritos reactivados y los motivos más consultados por tus compradores.
+              Totalmente. Trabajamos con la API oficial de WhatsApp Business (Meta) para garantizar estabilidad y cumplimiento, y sincronizamos bidireccionalmente con herramientas de soporte como Zendesk, Freshdesk, Gorgias o Slack para que tu equipo mantenga un único buzón central.
             </p>
           </div>
         </div>
@@ -1174,12 +1332,25 @@ import DemoModal from '../../components/DemoModal.astro';
         <!-- FAQ 7 -->
         <div class="faq-item">
           <button type="button" class="faq-question-btn" aria-expanded="false">
-            <span>¿Nuestros operadores humanos pueden intervenir cuando quieran?</span>
-            <span class="faq-chevron">▾</span>
+            <span class="faq-question-text">¿Cuánto tarda en implementarse?</span>
+            <span class="faq-toggle-icon">+</span>
           </button>
           <div class="faq-answer-panel">
             <p>
-              Totalmente. Tu equipo tiene el control en todo momento. En cuanto un agente humano toma una conversación desde la bandeja de entrada, la IA pausa sus respuestas automáticas para ese cliente de manera inmediata y transparente.
+              Un despliegue típico toma entre 2 y 3 semanas. Esto incluye la conexión con tu tienda y canales, la calibración de las reglas de negocio, la configuración de los flujos de automatización interna y un período de pruebas guiadas antes del lanzamiento oficial.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Necesito cambiar mi stack de herramientas actual?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              No. Diseñamos la solución para que se acople de manera no invasiva a las herramientas que tu equipo ya utiliza a diario (Shopify, WooCommerce, pasarelas de pago, planillas, transportistas). No tenés que migrar datos ni cambiar de proveedores de software.
             </p>
           </div>
         </div>
@@ -1189,17 +1360,23 @@ import DemoModal from '../../components/DemoModal.astro';
 
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <!-- 10. CTA FINAL (Conversión) -->
+    <!-- 11. CTA FINAL -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
-    <section class="cta-section" id="contacto" data-aos="fade-up">
-      <div class="cta-inner-card">
-        <div class="cta-badge">Paso Siguiente</div>
-        <h2 class="cta-title">Automatizá tu tienda sin perder el toque humano</h2>
+    <section class="section-container cta-section" id="cta-final" data-aos="fade-up">
+      <div class="cta-card">
+        <div class="cta-glow-bg"></div>
+        
+        <div class="cta-badge">Plan de Eficiencia Operativa</div>
+        
+        <h2 class="cta-title">
+          Automatizá tu eCommerce por dentro y por fuera
+        </h2>
+        
         <p class="cta-description">
-          Contanos tu operación y te mostramos qué automatizar primero.
+          Te mostramos qué automatizar primero para reducir carga operativa y mejorar la experiencia.
         </p>
 
-        <div class="cta-buttons">
+        <div class="cta-actions-wrap">
           <button type="button" class="btn btn-cta-primary" data-open-quote>
             Reservar una demo
           </button>
@@ -1208,12 +1385,12 @@ import DemoModal from '../../components/DemoModal.astro';
           </button>
         </div>
 
-        <div class="cta-guarantees">
-          <span>✓ Diagnóstico inicial sin costo</span>
-          <span class="sep">•</span>
-          <span>✓ Sin cambiar tu plataforma</span>
-          <span class="sep">•</span>
-          <span>✓ Respuesta en menos de 24 horas</span>
+        <div class="cta-guarantees-row">
+          <span class="guarantee-item">✓ Diagnóstico operativo inicial sin cargo</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Integración con tus sistemas actuales</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Asistencia y acompañamiento técnico</span>
         </div>
       </div>
     </section>
@@ -1225,7 +1402,7 @@ import DemoModal from '../../components/DemoModal.astro';
 
 <script>
   function initEcommercePage() {
-    // 1. TABS DEL JOURNEY
+    // 1. TABS DEL RECORRIDO DEL COMPRADOR
     const tabButtons = document.querySelectorAll('.journey-tab-btn');
     const tabPanels = document.querySelectorAll('.journey-tab-panel');
 
@@ -1255,77 +1432,110 @@ import DemoModal from '../../components/DemoModal.astro';
       btn.addEventListener('click', () => {
         const isExpanded = btn.getAttribute('aria-expanded') === 'true';
         const item = btn.closest('.faq-item');
-        
-        // Toggle current
-        btn.setAttribute('aria-expanded', String(!isExpanded));
-        item?.classList.toggle('is-open', !isExpanded);
+
+        // Cerrar otros si se desea acordeón estricto
+        faqButtons.forEach(otherBtn => {
+          if (otherBtn !== btn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherBtn.closest('.faq-item')?.classList.remove('is-open');
+          }
+        });
+
+        if (isExpanded) {
+          btn.setAttribute('aria-expanded', 'false');
+          item?.classList.remove('is-open');
+        } else {
+          btn.setAttribute('aria-expanded', 'true');
+          item?.classList.add('is-open');
+        }
       });
     });
   }
 
-  document.addEventListener('DOMContentLoaded', initEcommercePage);
+  // Inicializar al cargar y en navegación Astro
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEcommercePage);
+  } else {
+    initEcommercePage();
+  }
   document.addEventListener('astro:page-load', initEcommercePage);
 </script>
 
 <style>
-  /* ============================================================== */
-  /* VARIABLES & GENERAL LAYOUT                                     */
-  /* ============================================================== */
+  /* ═══════════════════════════════════════════════════════════════
+     ESTILOS GENERALES Y TOKENS DE MARCA
+     ═══════════════════════════════════════════════════════════════ */
+  :root {
+    --primary-color: #0b2591;
+    --primary-dark: #061868;
+    --accent-color: #15C63B;
+    --accent-light: #72e475;
+    --accent-hover: #12ab33;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+    --bg-subtle: #f1f5f9;
+    --card-border: #e2e8f0;
+    --card-hover-border: #cbd5e1;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
   .ecommerce-page {
-    font-family: 'Inter', sans-serif;
-    color: var(--color-text-dark, #0f172a);
-    background-color: transparent;
-    padding-bottom: 2rem;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: transparent;
+    overflow-x: hidden;
   }
 
   .section-container {
-    max-width: 1140px;
-    width: 92%;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 4.5rem 0;
+    padding: 5rem 1.5rem;
   }
 
-  .text-center {
-    text-align: center;
+  .bg-subtle {
+    background-color: var(--bg-light);
   }
 
   .section-header {
     margin-bottom: 3.5rem;
   }
 
+  .section-header.text-center {
+    text-align: center;
+  }
+
   .section-badge {
     display: inline-block;
-    font-size: 0.8rem;
+    padding: 0.35rem 1rem;
+    font-size: 0.82rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
-    color: #0b2591;
-    background: rgba(11, 37, 145, 0.08);
-    border: 1px solid rgba(11, 37, 145, 0.15);
-    padding: 0.35rem 1rem;
-    border-radius: 999px;
+    letter-spacing: 0.05em;
+    color: var(--primary-color);
+    background-color: #e0e7ff;
+    border-radius: 9999px;
     margin-bottom: 1rem;
   }
 
   .section-title {
+    font-family: var(--font-heading);
     font-size: 2.35rem;
     font-weight: 800;
-    letter-spacing: -0.8px;
-    color: #0f172a;
-    line-height: 1.2;
+    line-height: 1.25;
+    color: var(--text-dark);
     margin-bottom: 1rem;
+    letter-spacing: -0.02em;
   }
 
   .section-subtitle {
-    font-size: 1.05rem;
-    color: #475569;
-    line-height: 1.65;
-    max-width: 680px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 720px;
     margin: 0 auto;
-  }
-
-  .max-w-700 {
-    max-width: 700px;
+    line-height: 1.6;
   }
 
   /* ============================================================== */
@@ -1335,6 +1545,7 @@ import DemoModal from '../../components/DemoModal.astro';
     padding: 0.75rem 0 3.5rem;
     position: relative;
     overflow: hidden;
+    background: transparent;
   }
 
   .hero-container {
@@ -1351,64 +1562,67 @@ import DemoModal from '../../components/DemoModal.astro';
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.84rem;
-    font-weight: 700;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.16);
     color: #0b2591;
-    background: rgba(11, 37, 145, 0.06);
-    border: 1px solid rgba(11, 37, 145, 0.15);
-    padding: 0.35rem 0.95rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
     border-radius: 999px;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.25rem;
   }
 
   .badge-pulse {
     width: 8px;
     height: 8px;
-    background-color: var(--color-primary-green, #15C63B);
+    background-color: #15C63B;
     border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.6);
+    box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
     animation: pulseGlow 2s infinite;
   }
 
   @keyframes pulseGlow {
     0% {
-      transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
     }
     70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 8px rgba(21, 198, 59, 0);
+      box-shadow: 0 0 0 6px rgba(21, 198, 59, 0);
     }
     100% {
-      transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(21, 198, 59, 0);
     }
   }
 
   .hero-title {
-    font-size: 3.1rem;
+    font-size: 2.75rem;
     font-weight: 800;
     line-height: 1.15;
-    letter-spacing: -1.2px;
+    letter-spacing: -1px;
     color: #0f172a;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-description {
-    font-size: 1.12rem;
-    line-height: 1.65;
+    font-size: 1.1rem;
     color: #475569;
-    margin-bottom: 2.2rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 580px;
   }
 
   .hero-actions {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 1.8rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
   }
 
   .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 0.85rem 1.8rem;
     border-radius: 8px;
     font-weight: 700;
@@ -1417,17 +1631,13 @@ import DemoModal from '../../components/DemoModal.astro';
     transition: all 0.25s ease;
     cursor: pointer;
     font-family: inherit;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
+    border: none;
   }
 
   .btn-navy {
     background-color: #0b2591;
     color: white;
     box-shadow: 0 4px 16px rgba(11, 37, 145, 0.28);
-    border: none;
   }
 
   .btn-navy:hover {
@@ -1464,7 +1674,7 @@ import DemoModal from '../../components/DemoModal.astro';
   }
 
   .micro-icon {
-    color: var(--color-primary-green, #15C63B);
+    color: #15C63B;
     font-weight: 800;
   }
 
@@ -1472,179 +1682,234 @@ import DemoModal from '../../components/DemoModal.astro';
     color: #cbd5e1;
   }
 
-  /* Hero Visual Column (Journey Stream) */
-  .journey-glass-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 1rem;
-    box-shadow: 0 20px 45px -12px rgba(11, 37, 145, 0.12), 0 0 1px rgba(0, 0, 0, 0.05);
+  /* Hero Visual Column (Flow Glass Card) */
+  .flow-visual-wrapper {
     position: relative;
   }
 
-  .journey-card-header {
+  .flow-glass-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.55rem;
+    position: relative;
+  }
+
+  .flow-card-header {
+    display: flex;
     align-items: center;
-    border-bottom: 1px solid #f1f5f9;
+    justify-content: space-between;
     padding-bottom: 0.6rem;
-    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #f1f5f9;
   }
 
   .live-indicator {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
   }
 
   .pulse-dot {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     background-color: #15C63B;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(21, 198, 59, 0.2);
+    box-shadow: 0 0 8px rgba(21, 198, 59, 0.8);
   }
 
   .live-label {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 700;
     color: #0f172a;
-    letter-spacing: -0.2px;
   }
 
   .channel-pill {
     font-size: 0.75rem;
     font-weight: 600;
     color: #0b2591;
-    background: #eff6ff;
+    background: rgba(11, 37, 145, 0.08);
     padding: 0.25rem 0.65rem;
-    border-radius: 6px;
-    border: 1px solid #dbeafe;
+    border-radius: 999px;
   }
 
-  .journey-flow-stream {
+  .flow-stream {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0.4rem;
   }
 
-  .flow-node {
+  .flow-step-item {
     display: flex;
     align-items: flex-start;
-    gap: 0.7rem;
-    padding: 0.55rem 0.75rem;
-    border-radius: 10px;
+    gap: 0.65rem;
     background: #f8fafc;
-    border: 1px solid #edf2f7;
-    transition: all 0.2s ease;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+    padding: 0.6rem 0.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
   }
 
-  .flow-node:hover {
-    background: #ffffff;
+  .flow-step-item:hover {
     border-color: #cbd5e1;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transform: translateY(-1px);
   }
 
-  .node-icon-box {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
+  .flow-icon-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-top: 1px;
   }
 
-  .node-icon-box.blue-theme {
-    background: rgba(11, 37, 145, 0.08);
+  .flow-icon-circle.blue-theme {
+    background: rgba(11, 37, 145, 0.1);
     color: #0b2591;
   }
 
-  .node-icon-box.green-theme {
+  .flow-icon-circle.green-theme {
     background: rgba(21, 198, 59, 0.12);
     color: #15C63B;
   }
 
-  .node-icon-box.purple-theme {
-    background: rgba(124, 58, 237, 0.1);
+  .flow-icon-circle.purple-theme {
+    background: rgba(124, 58, 237, 0.12);
     color: #7c3aed;
   }
 
-  .node-content {
+  .flow-step-body {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
   }
 
-  .node-step-tag {
-    font-size: 0.72rem;
+  .flow-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flow-step-tag {
+    font-size: 0.76rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4px;
-    color: #64748b;
+    color: #0b2591;
+  }
+
+  .flow-step-meta {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .flow-badge-ai {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .flow-badge-confirmed {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.12);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
   }
 
   .chat-bubble {
-    font-size: 0.77rem;
+    font-size: 0.78rem;
     line-height: 1.4;
-    padding: 0.4rem 0.65rem;
-    border-radius: 7px;
-    max-width: 100%;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
   }
 
   .user-bubble {
     background: #e2e8f0;
     color: #1e293b;
-    align-self: flex-start;
-    font-style: italic;
+    border-bottom-left-radius: 2px;
   }
 
   .ai-bubble {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     color: #0f172a;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
   }
 
   .ai-avatar {
-    background: #0b2591;
-    color: white;
-    font-size: 0.65rem;
+    display: inline-block;
+    font-size: 0.68rem;
     font-weight: 800;
-    padding: 0.15rem 0.35rem;
+    background: #0b2591;
+    color: #fff;
+    padding: 0.1rem 0.35rem;
     border-radius: 4px;
-    flex-shrink: 0;
-    margin-top: 1px;
+    margin-right: 0.35rem;
+    vertical-align: middle;
   }
 
-  .action-badge-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    background: #e8faed;
-    color: #0c7524;
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
-    align-self: flex-start;
-    margin-top: 0.15rem;
-  }
-
-  .flow-connector {
+  .property-match-mini {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 8px;
+    gap: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
   }
 
-  .connector-line {
+  .prop-thumb {
+    font-size: 1.25rem;
+  }
+
+  .prop-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prop-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .prop-sub {
+    font-size: 0.72rem;
+    color: #64748b;
+  }
+
+  .prop-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .flow-line-connector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8px;
+    position: relative;
+  }
+
+  .connector-track {
     width: 2px;
     height: 100%;
     background: #cbd5e1;
@@ -1654,395 +1919,530 @@ import DemoModal from '../../components/DemoModal.astro';
     position: absolute;
     width: 6px;
     height: 6px;
-    background: #15C63B;
+    background-color: #0b2591;
     border-radius: 50%;
   }
 
-  .journey-systems-bar {
+  .flow-systems-bar {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-top: 1.2rem;
-    padding-top: 0.9rem;
-    border-top: 1px dashed #e2e8f0;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.74rem;
   }
 
   .systems-label {
-    font-size: 0.75rem;
-    font-weight: 600;
     color: #64748b;
+    font-weight: 600;
   }
 
   .system-tag {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #1e293b;
     background: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
     padding: 0.2rem 0.55rem;
-    border-radius: 6px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
   }
 
-  /* ============================================================== */
-  /* 2. PROBLEMA (Identificación)                                   */
-  /* ============================================================== */
+  /* ═══════════════════════════════════════════════════════════════
+     2. SECCIÓN: NO ES SOLO ATENCIÓN AL CLIENTE
+     ═══════════════════════════════════════════════════════════════ */
+  .operational-impact-card {
+    background: #ffffff;
+    border: 1.5px solid var(--card-border);
+    border-radius: 1.25rem;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  }
+
+  .impact-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-dark);
+    margin: 0.75rem 0 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .impact-lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 900px;
+  }
+
+  .mini-capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .mini-cap-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background-color: var(--bg-light);
+    border: 1px solid var(--card-border);
+    padding: 1.1rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+  }
+
+  .mini-cap-item:hover {
+    border-color: #bfdbfe;
+    transform: translateY(-2px);
+    background-color: #f8fafc;
+  }
+
+  .cap-check {
+    width: 24px;
+    height: 24px;
+    background-color: #eafaf1;
+    color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .cap-info strong {
+    display: block;
+    font-size: 0.92rem;
+    color: var(--text-dark);
+    margin-bottom: 0.2rem;
+  }
+
+  .cap-info span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     3. EL PROBLEMA (Identificación)
+     ═══════════════════════════════════════════════════════════════ */
   .problem-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.4rem;
-    margin-bottom: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   .problem-card {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 1.6rem;
-    display: flex;
-    gap: 1.1rem;
-    align-items: flex-start;
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.75rem;
     transition: all 0.25s ease;
   }
 
   .problem-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border-color: #cbd5e1;
+    border-color: #fca5a5;
+    box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.08);
+    transform: translateY(-3px);
   }
 
   .problem-icon-wrap {
     width: 44px;
     height: 44px;
-    background: rgba(239, 68, 68, 0.08);
+    background-color: #fef2f2;
     color: #ef4444;
-    border-radius: 12px;
+    border-radius: 0.65rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    margin-bottom: 1.25rem;
   }
 
   .problem-content h3 {
     font-size: 1.05rem;
     font-weight: 700;
-    color: #0f172a;
-    line-height: 1.35;
-    margin-bottom: 0.4rem;
+    color: var(--text-dark);
+    margin-bottom: 0.65rem;
+    line-height: 1.4;
   }
 
   .problem-content p {
-    font-size: 0.88rem;
-    color: #64748b;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
   }
 
-  .problem-highlight-banner {
-    background: linear-gradient(135deg, #071548, #0b2591);
-    color: white;
-    border-radius: 18px;
-    padding: 2.2rem 2.8rem;
+  .problem-closing-banner {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
-    box-shadow: 0 16px 36px rgba(11, 37, 145, 0.18);
+    gap: 1.25rem;
+    background: linear-gradient(135deg, #f0fdf4 0%, #eafaf1 100%);
+    border: 1.5px solid #bbf7d0;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
   }
 
-  .banner-icon-circle {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  .closing-banner-icon {
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(21, 198, 59, 0.15);
   }
 
-  .highlight-phrase {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.5;
-    color: #ffffff;
+  .closing-phrase {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #14532d;
     margin: 0;
-  }
-
-  /* ============================================================== */
-  /* 3. COMPARATIVA (Qué hace el Agente)                            */
-  /* ============================================================== */
-  .comparison-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .comparison-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 2rem 1.8rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  .comparison-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.06);
-  }
-
-  .card-featured-pill {
-    position: absolute;
-    top: -12px;
-    right: 24px;
-    background: var(--color-primary-green, #15C63B);
-    color: #ffffff;
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    box-shadow: 0 3px 10px rgba(21, 198, 59, 0.35);
-  }
-
-  .featured-card {
-    border: 2px solid #15C63B;
-    background: #fcfffd;
-  }
-
-  .card-status-badge {
-    display: inline-block;
-    align-self: flex-start;
-    font-size: 0.74rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.3rem 0.7rem;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-  }
-
-  .badge-neutral {
-    background: #f1f5f9;
-    color: #64748b;
-  }
-
-  .badge-blue {
-    background: rgba(11, 37, 145, 0.08);
-    color: #0b2591;
-  }
-
-  .badge-green {
-    background: rgba(21, 198, 59, 0.12);
-    color: #0c7524;
-  }
-
-  .comparison-card-title {
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: #0f172a;
-    line-height: 1.25;
-    margin-bottom: 0.6rem;
-  }
-
-  .comparison-summary {
-    font-size: 0.88rem;
-    color: #64748b;
-    line-height: 1.55;
-    margin-bottom: 1.4rem;
-    min-height: 44px;
-  }
-
-  .comparison-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.8rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-    flex: 1;
-  }
-
-  .comparison-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.7rem;
-    font-size: 0.86rem;
     line-height: 1.5;
   }
 
-  .negative-item {
-    color: #64748b;
-  }
-
-  .negative-item .icon-cross {
-    color: #ef4444;
-    font-weight: 800;
-    margin-top: 1px;
-  }
-
-  .positive-item {
-    color: #1e293b;
-  }
-
-  .positive-item .icon-check {
-    color: var(--color-primary-green, #15C63B);
-    font-weight: 800;
-    margin-top: 1px;
-  }
-
-  .comparison-footer {
-    padding-top: 1.2rem;
-    border-top: 1px solid #f1f5f9;
-  }
-
-  .tag-outcome {
-    font-size: 0.78rem;
-    font-weight: 700;
-    display: block;
-    text-align: center;
-    padding: 0.45rem;
-    border-radius: 6px;
-  }
-
-  .outcome-bad {
-    background: #fee2e2;
-    color: #991b1b;
-  }
-
-  .outcome-blue {
-    background: #eff6ff;
-    color: #0b2591;
-  }
-
-  .outcome-green {
-    background: #e8faed;
-    color: #0c7524;
-  }
-
-  /* ============================================================== */
-  /* 4. BENEFICIOS                                                  */
-  /* ============================================================== */
-  .benefits-grid {
+  /* ═══════════════════════════════════════════════════════════════
+     4. QUÉ HACE UN AGENTE DE IA EN ECOMMERCE
+     ═══════════════════════════════════════════════════════════════ */
+  .three-pillars-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+    gap: 2rem;
   }
 
-  .benefit-item {
+  .pillar-card {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 18px;
-    padding: 2rem 1.6rem;
+    border: 1px solid var(--card-border);
+    border-radius: 1.25rem;
+    padding: 2.25rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     transition: all 0.25s ease;
   }
 
-  .benefit-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-    border-color: #cbd5e1;
+  .pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
   }
 
-  .benefit-icon-box {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    background: rgba(11, 37, 145, 0.08);
-    color: #0b2591;
+  .pillar-card.highlight-pillar {
+    border: 2px solid var(--primary-color);
+    background: #ffffff;
+  }
+
+  .pillar-tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+
+  .pillar-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pillar-icon-box.blue {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+  }
+
+  .pillar-icon-box.green {
+    background-color: #eafaf1;
+    color: var(--accent-color);
+  }
+
+  .pillar-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+  }
+
+  .pillar-subtitle {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .pillar-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .pillar-bullets {
+    list-style: none;
+    padding: 0;
+    margin: auto 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .pillar-bullets li {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     5. BENEFICIOS (Grid 8)
+     ═══════════════════════════════════════════════════════════════ */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .benefit-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.75rem 1.5rem;
     transition: all 0.25s ease;
   }
 
-  .benefit-item:hover .benefit-icon-box {
-    background: #0b2591;
-    color: #ffffff;
+  .benefit-card:hover {
+    border-color: #bfdbfe;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(11, 37, 145, 0.06);
   }
 
-  .benefit-item h3 {
-    font-size: 1.15rem;
+  .benefit-icon-box {
+    width: 44px;
+    height: 44px;
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    border-radius: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .benefit-card h4 {
+    font-size: 1.05rem;
     font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 0.6rem;
-    line-height: 1.3;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
   }
 
-  .benefit-item p {
+  .benefit-card p {
     font-size: 0.88rem;
-    color: #64748b;
-    line-height: 1.6;
+    color: var(--text-muted);
+    line-height: 1.55;
     margin: 0;
   }
 
-  /* ============================================================== */
-  /* 5. JOURNEY TABS (Núcleo)                                       */
-  /* ============================================================== */
+  /* ═══════════════════════════════════════════════════════════════
+     6. AUTOMATIZACIONES INTERNAS (Grid 10 Cards)
+     ═══════════════════════════════════════════════════════════════ */
+  .ten-automations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .auto-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .auto-card:hover {
+    border-color: #bfdbfe;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+  }
+
+  .auto-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .auto-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .auto-icon.blue {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+  }
+
+  .auto-icon.green {
+    background-color: #eafaf1;
+    color: var(--accent-color);
+  }
+
+  .auto-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background-color: var(--bg-light);
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+  }
+
+  .auto-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.35;
+  }
+
+  .auto-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .auto-bullets li {
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .auto-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .integration-notice-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0.75rem;
+    padding: 1.4rem 1.75rem;
+  }
+
+  .notice-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  .notice-text {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     7. RECORRIDO DEL COMPRADOR (Tabs & Escalation)
+     ═══════════════════════════════════════════════════════════════ */
+  .journey-tabs-wrapper {
+    margin-bottom: 3.5rem;
+  }
+
   .journey-tabs-nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.8rem;
+    gap: 0.75rem;
+    background-color: var(--bg-light);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--card-border);
     margin-bottom: 2rem;
   }
 
   .journey-tab-btn {
-    background: #ffffff;
-    border: 1.5px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1rem 1.2rem;
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 1rem 0.75rem;
+    background: transparent;
+    border: none;
+    border-radius: 0.75rem;
     cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-muted);
     transition: all 0.2s ease;
-    text-align: left;
-    font-family: inherit;
   }
 
   .journey-tab-btn:hover {
-    border-color: #cbd5e1;
-    background: #f8fafc;
+    color: var(--text-dark);
+    background-color: rgba(255, 255, 255, 0.6);
   }
 
   .journey-tab-btn.is-active {
-    background: #0b2591;
-    border-color: #0b2591;
-    color: #ffffff;
-    box-shadow: 0 8px 20px rgba(11, 37, 145, 0.2);
+    background-color: #ffffff;
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
   }
 
-  .journey-tab-btn .tab-num {
-    font-size: 0.95rem;
-    font-weight: 800;
-    opacity: 0.6;
-  }
-
-  .journey-tab-btn.is-active .tab-num {
-    opacity: 0.9;
-    color: #15C63B;
-  }
-
-  .journey-tab-btn .tab-label {
-    font-size: 0.88rem;
+  .tab-badge {
+    font-size: 0.75rem;
     font-weight: 700;
-    color: #1e293b;
-    line-height: 1.3;
+    padding: 0.2rem 0.5rem;
+    background-color: #f1f5f9;
+    border-radius: 9999px;
+    color: var(--text-muted);
   }
 
-  .journey-tab-btn.is-active .tab-label {
-    color: #ffffff;
+  .journey-tab-btn.is-active .tab-badge {
+    background-color: #eff6ff;
+    color: var(--primary-color);
   }
 
   .journey-tabs-content {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 24px;
-    padding: 2.8rem;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
-    margin-bottom: 2.5rem;
+    border: 1px solid var(--card-border);
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
   }
 
   .journey-tab-panel {
@@ -2051,7 +2451,7 @@ import DemoModal from '../../components/DemoModal.astro';
 
   .journey-tab-panel.is-active {
     display: block;
-    animation: fadeIn 0.35s ease;
+    animation: fadeIn 0.3s ease;
   }
 
   @keyframes fadeIn {
@@ -2061,493 +2461,276 @@ import DemoModal from '../../components/DemoModal.astro';
 
   .panel-layout {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
   }
 
-  .panel-step-badge {
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #0b2591;
-    background: rgba(11, 37, 145, 0.08);
-    padding: 0.25rem 0.65rem;
-    border-radius: 6px;
+  .panel-col {
+    background-color: var(--bg-light);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.75rem;
+  }
+
+  .panel-col-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .col-pill {
     display: inline-block;
-    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
   }
 
-  .panel-text h3 {
-    font-size: 1.7rem;
-    font-weight: 800;
-    color: #0f172a;
-    line-height: 1.25;
-    margin-bottom: 0.8rem;
+  .col-pill.blue {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    border: 1px solid #bfdbfe;
   }
 
-  .panel-text > p {
-    font-size: 0.95rem;
-    color: #475569;
-    line-height: 1.65;
-    margin-bottom: 1.6rem;
+  .col-pill.green {
+    background-color: #eafaf1;
+    color: #166534;
+    border: 1px solid #bbf7d0;
   }
 
-  .panel-features-list {
+  .col-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 1.25rem;
   }
 
-  .panel-features-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.85rem;
-    font-size: 0.88rem;
-    line-height: 1.55;
-    color: #334155;
-  }
-
-  .feature-bullet {
-    width: 8px;
-    height: 8px;
-    background: var(--color-primary-green, #15C63B);
-    border-radius: 50%;
-    margin-top: 6px;
-    flex-shrink: 0;
-  }
-
-  .panel-features-list strong {
-    color: #0f172a;
+  .col-list li strong {
     display: block;
-    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
   }
 
-  /* Simulation Terminal Box */
-  .panel-simulation {
-    background: #0f172a;
-    border-radius: 16px;
-    border: 1px solid #1e293b;
-    overflow: hidden;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+  .col-list li span {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
   }
 
-  .sim-header {
-    background: #1e293b;
-    padding: 0.65rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .sim-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-  }
-
-  .sim-dot.red { background: #ef4444; }
-  .sim-dot.yellow { background: #f59e0b; }
-  .sim-dot.green { background: #10b981; }
-
-  .sim-title {
-    font-size: 0.72rem;
-    color: #94a3b8;
-    margin-left: 0.6rem;
-    font-weight: 600;
-  }
-
-  .sim-body {
-    padding: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    font-size: 0.84rem;
-  }
-
-  .sim-msg {
-    padding: 0.6rem 0.85rem;
-    border-radius: 8px;
-    line-height: 1.45;
-  }
-
-  .sim-msg.user {
-    background: #334155;
-    color: #f1f5f9;
-    align-self: flex-start;
-  }
-
-  .sim-msg.bot {
-    background: rgba(11, 37, 145, 0.4);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    color: #ffffff;
-  }
-
-  .sim-thinking {
-    font-size: 0.75rem;
-    color: #72e475;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-family: monospace;
-  }
-
-  .sim-gear {
-    animation: spin 3s linear infinite;
-    display: inline-block;
-  }
-
-  @keyframes spin {
-    100% { transform: rotate(360deg); }
-  }
-
-  .sim-action-chip {
-    font-size: 0.74rem;
-    color: #38bdf8;
-    background: rgba(56, 189, 248, 0.12);
-    padding: 0.35rem 0.65rem;
-    border-radius: 6px;
-    align-self: flex-start;
-  }
-
-  /* Escalation Callout Box */
-  .escalation-box {
-    background: #f8faff;
-    border: 1.5px solid #dbeafe;
-    border-radius: 20px;
-    padding: 2.2rem 2.4rem;
+  /* ESCALATION BLOCK */
+  .escalation-wrapper {
+    background: #ffffff;
+    border: 1.5px solid #fecaca;
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.05);
   }
 
   .escalation-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.2rem;
-    margin-bottom: 1.8rem;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
   }
 
-  .escalation-icon {
-    width: 48px;
-    height: 48px;
-    background: #ffffff;
-    border: 1px solid #bfdbfe;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .escalation-header h3 {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #0b2591;
-    margin-bottom: 0.3rem;
-  }
-
-  .escalation-header p {
-    font-size: 0.9rem;
-    color: #475569;
-    margin: 0;
-  }
-
-  .escalation-cases-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.4rem;
-  }
-
-  .escalation-case {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 1.2rem 1.4rem;
-    display: flex;
-    gap: 0.9rem;
-  }
-
-  .case-number {
-    width: 28px;
-    height: 28px;
-    background: rgba(11, 37, 145, 0.08);
-    color: #0b2591;
-    font-weight: 800;
-    font-size: 0.85rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  .escalation-case strong {
-    font-size: 0.88rem;
-    color: #0f172a;
-    display: block;
-    margin-bottom: 0.25rem;
-    line-height: 1.35;
-  }
-
-  .escalation-case p {
-    font-size: 0.82rem;
-    color: #64748b;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  /* ============================================================== */
-  /* 6. IMPLEMENTACIÓN                                              */
-  /* ============================================================== */
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.8rem;
-    margin-bottom: 2.2rem;
-  }
-
-  .step-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 2.4rem 1.8rem;
-    position: relative;
-    transition: all 0.25s ease;
-  }
-
-  .step-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-    border-color: #cbd5e1;
-  }
-
-  .step-badge {
-    position: absolute;
-    top: 1.8rem;
-    right: 1.8rem;
-    font-size: 0.74rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #0b2591;
-    background: rgba(11, 37, 145, 0.08);
-    padding: 0.25rem 0.65rem;
-    border-radius: 6px;
-  }
-
-  .step-icon-wrap {
-    width: 52px;
-    height: 52px;
-    background: rgba(21, 198, 59, 0.12);
-    color: #15C63B;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .step-card h3 {
-    font-size: 1.25rem;
+  .escalation-badge {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    color: #0f172a;
-    line-height: 1.35;
-    margin-bottom: 0.8rem;
+    color: #b91c1c;
+    background-color: #fef2f2;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
   }
 
-  .step-card p {
-    font-size: 0.88rem;
-    color: #64748b;
+  .escalation-title {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .escalation-desc {
+    font-size: 0.98rem;
+    color: var(--text-muted);
     line-height: 1.6;
     margin: 0;
   }
 
-  .stack-clarification-banner {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid var(--color-primary-green, #15C63B);
-    border-radius: 12px;
-    padding: 1.2rem 1.6rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  .escalation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
 
-  .clarification-icon {
-    width: 32px;
-    height: 32px;
+  .escalation-card {
+    background-color: #fffaf0;
+    border: 1px solid #fed7aa;
+    border-radius: 0.85rem;
+    padding: 1.4rem;
+  }
+
+  .esc-num {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #c2410c;
+    background-color: #ffedd5;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    background: rgba(21, 198, 59, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    margin-bottom: 0.85rem;
   }
 
-  .stack-clarification-banner p {
-    font-size: 0.92rem;
-    color: #334155;
+  .escalation-card h4 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .escalation-card p {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.5;
     margin: 0;
   }
 
-  /* ============================================================== */
-  /* 7. INTEGRACIONES                                               */
-  /* ============================================================== */
+  /* ═══════════════════════════════════════════════════════════════
+     8. INTEGRACIONES
+     ═══════════════════════════════════════════════════════════════ */
   .integrations-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
   }
 
-  .integration-tile {
+  .int-tile {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 1.6rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    padding: 1.75rem 1.5rem;
     transition: all 0.25s ease;
   }
 
-  .integration-tile:hover {
+  .int-tile:hover {
+    border-color: #bfdbfe;
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border-color: #cbd5e1;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
   }
 
-  .tile-icon-box {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: #f8fafc;
-    border: 1px solid #edf2f7;
+  .tile-icon-wrap {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.9rem;
-    transition: transform 0.2s ease;
+    margin-bottom: 1.25rem;
   }
 
-  .integration-tile:hover .tile-icon-box {
-    transform: scale(1.08);
+  .tile-icon-wrap.blue {
+    background-color: #eff6ff;
+    color: var(--primary-color);
   }
 
-  .tile-title {
-    font-size: 0.95rem;
+  .tile-icon-wrap.green {
+    background-color: #eafaf1;
+    color: var(--accent-color);
+  }
+
+  .int-tile h4 {
+    font-size: 1.05rem;
     font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+    margin-bottom: 0.45rem;
   }
 
-  .tile-desc {
-    font-size: 0.76rem;
-    color: #64748b;
-    line-height: 1.4;
+  .int-tile p {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
   }
 
-  /* ============================================================== */
-  /* 8. CASOS DE USO                                                */
-  /* ============================================================== */
+  /* ═══════════════════════════════════════════════════════════════
+     9. CASOS DE USO REALES
+     ═══════════════════════════════════════════════════════════════ */
   .use-cases-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.8rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
   }
 
   .use-case-card {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 2.2rem 2rem;
+    border: 1px solid var(--card-border);
+    border-radius: 1.1rem;
+    padding: 1.85rem;
+    transition: all 0.25s ease;
     display: flex;
     flex-direction: column;
-    transition: all 0.25s ease;
   }
 
   .use-case-card:hover {
+    border-color: #bfdbfe;
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-    border-color: #cbd5e1;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   }
 
   .case-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.25rem;
   }
 
   .case-tag {
-    font-size: 0.74rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    font-weight: 700;
     padding: 0.25rem 0.65rem;
-    border-radius: 6px;
+    border-radius: 9999px;
   }
 
-  .tag-blue { background: #eff6ff; color: #0b2591; }
-  .tag-green { background: #e8faed; color: #0c7524; }
-  .tag-purple { background: #f5f3ff; color: #6d28d9; }
-  .tag-amber { background: #fef3c7; color: #b45309; }
+  .case-tag.blue {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+  }
 
-  .case-icon-mini {
-    font-size: 1.3rem;
+  .case-tag.green {
+    background-color: #eafaf1;
+    color: #166534;
+  }
+
+  .case-icon {
+    font-size: 1.4rem;
   }
 
   .case-title {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #0f172a;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.85rem;
     line-height: 1.35;
-    margin-bottom: 1.4rem;
   }
 
-  .case-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 0.88rem;
+  .case-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
     line-height: 1.6;
-  }
-
-  .scenario-label {
-    font-size: 0.76rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: block;
-    margin-bottom: 0.2rem;
-  }
-
-  .case-scenario .scenario-label {
-    color: #ef4444;
-  }
-
-  .case-resolution .scenario-label {
-    color: #15C63B;
-  }
-
-  .case-scenario p {
-    color: #64748b;
     margin: 0;
   }
 
-  .case-resolution p {
-    color: #1e293b;
-    margin: 0;
-  }
-
-  /* ============================================================== */
-  /* 9. FAQ ACCORDION                                               */
-  /* ============================================================== */
-  .faq-accordion-container {
+  /* ═══════════════════════════════════════════════════════════════
+     10. FAQ
+     ═══════════════════════════════════════════════════════════════ */
+  .faq-container {
     max-width: 860px;
     margin: 0 auto;
     display: flex;
@@ -2557,260 +2740,273 @@ import DemoModal from '../../components/DemoModal.astro';
 
   .faq-item {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 0.85rem;
     overflow: hidden;
     transition: all 0.2s ease;
   }
 
-  .faq-item:hover {
-    border-color: #cbd5e1;
-  }
-
   .faq-item.is-open {
-    border-color: #0b2591;
-    box-shadow: 0 4px 18px rgba(11, 37, 145, 0.08);
+    border-color: #bfdbfe;
+    box-shadow: 0 6px 18px rgba(11, 37, 145, 0.06);
   }
 
   .faq-question-btn {
     width: 100%;
-    padding: 1.4rem 1.6rem;
-    background: none;
-    border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #0f172a;
-    cursor: pointer;
+    padding: 1.35rem 1.75rem;
+    background: transparent;
+    border: none;
     text-align: left;
-    font-family: inherit;
+    cursor: pointer;
     gap: 1rem;
   }
 
-  .faq-chevron {
-    font-size: 1.2rem;
-    color: #64748b;
+  .faq-question-text {
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
     transition: transform 0.25s ease;
   }
 
-  .faq-item.is-open .faq-chevron {
-    transform: rotate(180deg);
-    color: #0b2591;
+  .faq-item.is-open .faq-toggle-icon {
+    transform: rotate(45deg);
   }
 
   .faq-answer-panel {
     display: none;
-    padding: 0 1.6rem 1.4rem;
+    padding: 0 1.75rem 1.35rem;
+    border-top: 1px solid #f8fafc;
   }
 
   .faq-item.is-open .faq-answer-panel {
     display: block;
-    animation: fadeIn 0.25s ease;
   }
 
   .faq-answer-panel p {
-    font-size: 0.92rem;
-    color: #475569;
+    font-size: 0.95rem;
+    color: var(--text-muted);
     line-height: 1.65;
     margin: 0;
   }
 
-  /* ============================================================== */
-  /* 10. CTA FINAL                                                  */
-  /* ============================================================== */
+  /* ═══════════════════════════════════════════════════════════════
+     11. CTA FINAL
+     ═══════════════════════════════════════════════════════════════ */
   .cta-section {
-    max-width: 1140px;
-    width: 92%;
-    margin: 4.5rem auto 2rem;
+    padding-bottom: 6rem;
   }
 
-  .cta-inner-card {
-    background: linear-gradient(135deg, #071548 0%, #0b2591 100%);
-    border-radius: 28px;
+  .cta-card {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    border-radius: 1.5rem;
     padding: 4.5rem 3rem;
     text-align: center;
     color: #ffffff;
-    box-shadow: 0 20px 50px rgba(11, 37, 145, 0.25);
-    position: relative;
     overflow: hidden;
+    box-shadow: 0 24px 48px -12px rgba(11, 37, 145, 0.35);
+  }
+
+  .cta-glow-bg {
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 140%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(21, 198, 59, 0.15) 0%, rgba(255,255,255,0) 65%);
+    pointer-events: none;
   }
 
   .cta-badge {
     display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 800;
+    padding: 0.4rem 1.1rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
-    color: #72e475;
-    background: rgba(114, 228, 117, 0.12);
-    border: 1px solid rgba(114, 228, 117, 0.25);
-    padding: 0.3rem 0.9rem;
-    border-radius: 999px;
-    margin-bottom: 1.2rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
   }
 
   .cta-title {
-    font-size: 2.6rem;
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
     font-weight: 800;
     line-height: 1.2;
-    letter-spacing: -0.8px;
-    color: #ffffff;
-    max-width: 720px;
-    margin: 0 auto 1.2rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
   }
 
   .cta-description {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.88);
-    max-width: 580px;
-    margin: 0 auto 2.4rem;
+    font-size: 1.2rem;
+    max-width: 680px;
+    margin: 0 auto 2.5rem;
+    color: #cbd5e1;
     line-height: 1.6;
   }
 
-  .cta-buttons {
+  .cta-actions-wrap {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1.2rem;
-    margin-bottom: 2.4rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .btn-cta-primary {
-    background-color: var(--color-primary-green, #15C63B);
+    background-color: var(--accent-color);
     color: #ffffff;
     font-size: 1.05rem;
-    padding: 0.95rem 2.2rem;
-    box-shadow: 0 6px 20px rgba(21, 198, 59, 0.35);
-    border: none;
-    border-radius: 8px;
+    padding: 0.95rem 2.25rem;
+    border-radius: 0.65rem;
     font-weight: 700;
+    border: none;
     cursor: pointer;
-    font-family: inherit;
+    box-shadow: 0 6px 20px rgba(21, 198, 59, 0.4);
     transition: all 0.25s ease;
   }
 
   .btn-cta-primary:hover {
-    background-color: #12ad33;
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(21, 198, 59, 0.45);
+    box-shadow: 0 8px 25px rgba(21, 198, 59, 0.5);
   }
 
   .btn-cta-secondary {
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.12);
     color: #ffffff;
-    border: 1.5px solid rgba(255, 255, 255, 0.25);
     font-size: 1.05rem;
-    padding: 0.95rem 2.2rem;
-    border-radius: 8px;
-    font-weight: 700;
+    padding: 0.95rem 2rem;
+    border-radius: 0.65rem;
+    font-weight: 600;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
-    font-family: inherit;
     transition: all 0.25s ease;
   }
 
   .btn-cta-secondary:hover {
-    background: rgba(255, 255, 255, 0.18);
-    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
   }
 
-  .cta-guarantees {
+  .cta-guarantees-row {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    font-size: 0.86rem;
-    color: rgba(255, 255, 255, 0.75);
+    gap: 1rem;
+    font-size: 0.88rem;
+    color: #94a3b8;
   }
 
-  .cta-guarantees .sep {
-    opacity: 0.4;
+  .guarantee-sep {
+    color: #64748b;
   }
 
-  /* ============================================================== */
-  /* RESPONSIVE DESIGN                                              */
-  /* ============================================================== */
-  @media (max-width: 1080px) {
+  /* ═══════════════════════════════════════════════════════════════
+     RESPONSIVE (MOBILE-FIRST)
+     ═══════════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
     .hero-container {
       grid-template-columns: 1fr;
       gap: 3rem;
     }
-    .hero-title {
-      font-size: 2.6rem;
+    .problem-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
-    .comparison-grid {
+    .three-pillars-grid {
       grid-template-columns: 1fr;
+    }
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .integrations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .use-cases-grid {
+      grid-template-columns: 1fr;
+    }
+    .escalation-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
     .journey-tabs-nav {
       grid-template-columns: repeat(2, 1fr);
     }
     .panel-layout {
       grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    .escalation-cases-grid {
-      grid-template-columns: 1fr;
-    }
-    .integrations-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .steps-grid {
-      grid-template-columns: 1fr;
-    }
-    .benefits-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (max-width: 768px) {
     .section-container {
-      padding: 3.5rem 0;
+      padding: 3.5rem 1.25rem;
+    }
+    .hero-section {
+      padding: 0 1.25rem 2.5rem;
+      margin-top: -1.5rem;
     }
     .hero-title {
       font-size: 2.2rem;
     }
     .hero-actions {
       flex-direction: column;
-      align-items: stretch;
-    }
-    .btn {
       width: 100%;
     }
-    .journey-tabs-nav {
-      grid-template-columns: 1fr;
+    .hero-actions .btn {
+      width: 100%;
     }
-    .journey-tabs-content {
-      padding: 1.8rem 1.4rem;
+    .problem-grid {
+      grid-template-columns: 1fr;
     }
     .benefits-grid {
       grid-template-columns: 1fr;
     }
-    .use-cases-grid {
+    .ten-automations-grid {
+      grid-template-columns: 1fr;
+    }
+    .journey-tabs-nav {
+      grid-template-columns: 1fr;
+    }
+    .escalation-grid {
       grid-template-columns: 1fr;
     }
     .integrations-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
-    .problem-highlight-banner {
-      flex-direction: column;
-      text-align: center;
-      padding: 1.8rem 1.4rem;
-    }
-    .cta-inner-card {
+    .cta-card {
       padding: 3rem 1.5rem;
     }
     .cta-title {
       font-size: 2rem;
     }
-    .cta-buttons {
+    .cta-actions-wrap {
       flex-direction: column;
       width: 100%;
     }
     .btn-cta-primary, .btn-cta-secondary {
       width: 100%;
+    }
+    .operational-impact-card {
+      padding: 2rem 1.25rem;
+    }
+    .impact-title {
+      font-size: 1.75rem;
+    }
+    .problem-closing-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
     }
   }
 </style>
