@@ -1,0 +1,3108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DemoModal from '../../components/DemoModal.astro';
+---
+
+<Layout
+  title="Agente de IA para Bienes Raíces e Inmobiliarias | MM SmartInbox"
+  description="IA que acompaña a los interesados hasta concretar una visita. Califica leads, responde consultas clave, agenda visitas y mantiene el seguimiento conectado a tu CRM e inventario."
+>
+  <div class="real-estate-page">
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 1. HERO / BANNER -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        
+        <!-- Columna Izquierda: Texto y CTA -->
+        <div class="hero-text-col" data-aos="fade-right">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span>Agente de IA para Inmobiliarias, Brokers y Desarrolladoras</span>
+          </div>
+
+          <h1 class="hero-title">
+            IA que acompaña a los interesados hasta concretar una visita
+          </h1>
+
+          <p class="hero-description">
+            Convierte consultas de portales, WhatsApp y redes en conversaciones útiles: el agente califica, responde dudas clave, sugiere propiedades, agenda visitas y mantiene el seguimiento para que tu equipo cierre más y persiga menos.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-navy" data-open-quote>
+              Reservar una demo
+            </button>
+            <a href="#automatizaciones" class="btn btn-outline">
+              Ver etapas del proceso
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Microcopy de confianza -->
+          <div class="hero-microcopy">
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Implementación guiada</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Integración con tu CRM</span>
+            </div>
+            <span class="micro-sep">•</span>
+            <div class="microcopy-item">
+              <span class="micro-icon">✓</span>
+              <span>Enfoque en operación comercial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Flujo interactivo del Agente (Consulta → Calificación → Propiedades → Agenda visita → Seguimiento) -->
+        <div class="hero-visual-col" data-aos="fade-left" data-aos-delay="150">
+          <div class="flow-visual-wrapper">
+            <div class="flow-glass-card">
+              
+              <div class="flow-card-header">
+                <div class="live-indicator">
+                  <span class="pulse-dot"></span>
+                  <span class="live-label">Agente Inmobiliario IA Activo</span>
+                </div>
+                <span class="channel-pill">Portales + WhatsApp + CRM</span>
+              </div>
+
+              <!-- Pipeline de 5 etapas con íconos de marca y contexto inmobiliario -->
+              <div class="flow-stream">
+                
+                <!-- Etapa 1: Consulta -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">1. Consulta entrante</span>
+                      <span class="flow-step-meta">Zonaprop • 21:40 hs</span>
+                    </div>
+                    <div class="chat-bubble user-bubble">
+                      "Hola, ¿sigue disponible el departamento en Palermo? ¿Aceptan mascotas y cuánto son las expensas?"
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 2: Calificación -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">2. Calificación de intención</span>
+                      <span class="flow-badge-ai">IA Calificando</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>¡Hola Lucas! Sí, está disponible y <strong>es pet friendly</strong>. Expensas: <strong>$68.000</strong>. ¿Buscás mudarte en los próximos 30 días o estás evaluando opciones?</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 3: Propiedades -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle blue-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">3. Match con inventario</span>
+                      <span class="flow-step-meta">Conectado a inventario</span>
+                    </div>
+                    <div class="property-match-mini">
+                      <div class="prop-thumb">🏢</div>
+                      <div class="prop-details">
+                        <span class="prop-title">Palermo Soho • 2 amb c/ Balcón</span>
+                        <span class="prop-sub">USD 145.000 • Cochera opcional</span>
+                      </div>
+                      <span class="prop-badge">Match 98%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 4: Agenda Visita -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle green-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">4. Agenda de visita</span>
+                      <span class="flow-badge-confirmed">✓ Visita confirmada</span>
+                    </div>
+                    <div class="chat-bubble ai-bubble">
+                      <span class="ai-avatar">IA</span>
+                      <p>¡Perfecto! Te agendé para el <strong>Jueves a las 16:30 hs</strong> con Martín, asesor de la zona. Te envié la ubicación exacta y ficha técnica por WhatsApp.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conector -->
+                <div class="flow-line-connector">
+                  <div class="connector-track"></div>
+                  <div class="connector-dot"></div>
+                </div>
+
+                <!-- Etapa 5: Seguimiento y CRM -->
+                <div class="flow-step-item">
+                  <div class="flow-icon-circle purple-theme">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  </div>
+                  <div class="flow-step-body">
+                    <div class="flow-step-header">
+                      <span class="flow-step-tag">5. Seguimiento y CRM</span>
+                      <span class="flow-step-meta">CRM Sincronizado</span>
+                    </div>
+                    <div class="crm-sync-box">
+                      <span class="crm-tag">Lead Calificado</span>
+                      <span class="crm-tag">Visita Agendada</span>
+                      <span class="crm-tag">Recordatorio programado 2h antes</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Barra de integraciones en el pie del Hero visual -->
+              <div class="flow-systems-bar">
+                <span class="systems-label">Sincronizado con:</span>
+                <span class="system-tag">Tokko Broker</span>
+                <span class="system-tag">WhatsApp API</span>
+                <span class="system-tag">Google Calendar</span>
+                <span class="system-tag">Zonaprop / Portales</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 2. EL PROBLEMA (Identificación de situaciones reales) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="problema" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Reto de la Operación Inmobiliaria</div>
+        <h2 class="section-title">Cuando llegan consultas, el cuello de botella es el seguimiento</h2>
+        <p class="section-subtitle">
+          Invertir en portales y pauta digital genera volumen de contactos, pero la respuesta manual y la falta de calificación terminan dispersando las oportunidades de cierre.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        
+        <!-- Problema 1 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Leads preguntando lo mismo y la respuesta llega tarde</h3>
+            <p>Precio, expensas, ubicación precisa y requisitos de ingreso. Cuando un asesor tarda horas en contestar, el interesado ya consultó en tres inmobiliarias más.</p>
+          </div>
+        </div>
+
+        <!-- Problema 2 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Consultas fuera de horario que se enfrían</h3>
+            <p>La mayor parte de los compradores e inquilinos buscan propiedades por la noche y fines de semana. Si no hay respuesta inmediata, ese contacto se pierde.</p>
+          </div>
+        </div>
+
+        <!-- Problema 3 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <line x1="18" y1="8" x2="23" y2="13"></line>
+              <line x1="23" y1="8" x2="18" y2="13"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Leads sin calificar que consumen tiempo del equipo</h3>
+            <p>Asesores comerciales dedicando horas valiosas a coordinar visitas con personas que no cuentan con el presupuesto, la garantía requerida o urgencia real.</p>
+          </div>
+        </div>
+
+        <!-- Problema 4 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Agendas desordenadas: idas y vueltas por chat</h3>
+            <p>Coordinar día y hora por mensajes cruzados genera cancelaciones de último momento, ausencias en visitas fijadas y huecos improductivos en el calendario.</p>
+          </div>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Falta de registro: nadie sabe en qué etapa está cada uno</h3>
+            <p>Conversaciones que quedan en los WhatsApp personales de cada vendedor sin sincronizarse con el CRM, impidiendo tener visibilidad de la cartera comercial.</p>
+          </div>
+        </div>
+
+        <!-- Problema 6 -->
+        <div class="problem-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="problem-icon-wrap">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+              <line x1="12" y1="2" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="problem-content">
+            <h3>Seguimientos olvidados que enfrían operaciones</h3>
+            <p>Tras una primera visita o consulta inicial, el asesor no recontacta a tiempo. Operaciones con alto potencial de cierre se apagan por falta de cadencia comercial.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cierre destacado de la sección -->
+      <div class="problem-closing-banner" data-aos="fade-up">
+        <div class="closing-banner-inner">
+          <div class="closing-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <p class="closing-text">
+            <strong>La IA no reemplaza a tu equipo:</strong> elimina tareas repetitivas para que tus asesores se enfoquen en negociar, mostrar inmuebles y cerrar operaciones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 3. QUÉ HACE UN AGENTE DE IA (Comparativa Chatbot vs Agente) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="que-hace" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Evolución Tecnológica</div>
+        <h2 class="section-title">Más que responder: entiende, decide y ejecuta</h2>
+        <p class="section-subtitle">
+          Un chatbot convencional se limita a mostrar botones o textos pregrabados. Un Agente de IA para Real Estate razona con contexto, consulta tu inventario disponible y avanza el trámite en tu CRM.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        
+        <!-- Card 1: Chatbot convencional -->
+        <div class="comp-card bot-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="comp-header">
+            <span class="comp-type-badge basic">Enfoque Limitado</span>
+            <h3 class="comp-title">Chatbot tradicional</h3>
+            <p class="comp-tagline">Responde preguntas aisladas</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>Menús rígidos con opciones numéricas ("Marca 1 para ventas, 2 para alquiler").</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>Respuestas estáticas de texto sin verificar si la propiedad sigue disponible.</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>No comprende preguntas complejas ("Busco 3 amb con balcón aterrazado y apto crédito").</span>
+            </li>
+            <li class="comp-item neutral">
+              <span class="dot-icon">✕</span>
+              <span>No agenda turnos ni actualiza la ficha del cliente en el CRM.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Agente IA - Entiende intención -->
+        <div class="comp-card agent-card featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="comp-badge-recommended">Inteligencia y Contexto</div>
+          <div class="comp-header">
+            <span class="comp-type-badge premium">Agente de IA</span>
+            <h3 class="comp-title">Entiende intención y contexto</h3>
+            <p class="comp-tagline">Perfil, presupuesto, zona y urgencia</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Interpreta lenguaje natural en audio y texto sin obligar al usuario a elegir botones.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Recuerda el historial de la charla y las preferencias particulares del comprador.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Identifica el nivel de urgencia, motivo de búsqueda y capacidad financiera real.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Adapta el tono de comunicación a la identidad de tu inmobiliaria o desarrollo.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Agente IA - Ejecuta acciones -->
+        <div class="comp-card agent-card action" data-aos="fade-up" data-aos-delay="300">
+          <div class="comp-badge-recommended action-badge">Capacidad Operativa</div>
+          <div class="comp-header">
+            <span class="comp-type-badge accent">Agente de IA</span>
+            <h3 class="comp-title">Ejecuta acciones comerciales</h3>
+            <p class="comp-tagline">Califica, agenda, registra y deriva</p>
+          </div>
+          <ul class="comp-features">
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Consulta inventario de propiedades en tiempo real (precio, estado y expensas).</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Resuelve dudas sobre políticas, garantías aceptadas, anticipos y plazos de entrega.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Cruza la disponibilidad de la agenda del asesor y fija la cita de visita sin fricción.</span>
+            </li>
+            <li class="comp-item positive">
+              <span class="check-icon">✓</span>
+              <span>Crea el lead en el CRM inmobiliario con notas completas y dispara recordatorios.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Texto simple complementario -->
+      <div class="what-it-does-summary" data-aos="fade-up">
+        <p>
+          El agente puede <strong>consultar inventario de propiedades</strong> en vivo, <strong>explicar políticas y requisitos</strong>, <strong>verificar disponibilidad de agenda</strong> y <strong>actualizar tu CRM</strong> de forma autónoma en cada conversación.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 4. BENEFICIOS PARA LA OPERACIÓN COMERCIAL -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="beneficios" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Impacto en el Negocio</div>
+        <h2 class="section-title">Beneficios para tu operación comercial</h2>
+        <p class="section-subtitle">
+          Diseñado para que brokers independientes, inmobiliarias consolidadas y desarrolladoras escalen su atención sin inflar costos fijos.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <!-- Beneficio 1 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Respuesta inmediata 24/7 a consultas entrantes</h3>
+          <p>
+            Atención instantánea a interesados de Zonaprop, Argenprop, Instagram y WhatsApp, incluso domingos a medianoche o días feriados.
+          </p>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Calificación automática y precisa</h3>
+          <p>
+            Identifica presupuesto, zona deseada, ambientes requeridos, plazos de mudanza y motivo de compra antes de pasar el lead a un asesor.
+          </p>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Agenda de visitas sin fricción</h3>
+          <p>
+            Ofrece horarios libres en la agenda del asesor, coordina el encuentro, envía indicaciones de llegada y reduce ausencias con recordatorios.
+          </p>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+          </div>
+          <h3>Seguimiento automatizado continuo</h3>
+          <p>
+            Recontacta a prospectos con consultas pendientes, recopila impresiones tras la visita y reanima conversaciones sin perder interesados.
+          </p>
+        </div>
+
+        <!-- Beneficio 5 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon-wrapper blue-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <path d="M16 13H8"></path>
+              <path d="M16 17H8"></path>
+              <path d="M10 9H8"></path>
+            </svg>
+          </div>
+          <h3>Registro y trazabilidad en tu CRM</h3>
+          <p>
+            Cada dato obtenido, objeción y próxima acción queda asentado en tu CRM o base de datos. Fin de la información dispersa en chats personales.
+          </p>
+        </div>
+
+        <!-- Beneficio 6 -->
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="benefit-icon-wrapper green-bg">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Mejor experiencia para el interesado</h3>
+          <p>
+            Respuestas al instante, información clara sobre expensas y requisitos, y trato profesional que transmite seriedad y acelera la decisión.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 5. AUTOMATIZACIONES POR ETAPA DEL PROCESO (Núcleo) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="automatizaciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">El Recorrido Comercial</div>
+        <h2 class="section-title">Automatización de punta a punta: del lead a la firma</h2>
+        <p class="section-subtitle">
+          Descubre cómo interactúa el Agente de IA en cada fase del ciclo inmobiliario para asegurar fluidez, orden y máxima tasa de conversión.
+        </p>
+      </div>
+
+      <!-- Tabs de Etapas -->
+      <div class="process-tabs-container">
+        <div class="process-tabs-nav" role="tablist">
+          <button type="button" class="process-tab-btn is-active" data-tab="tab-captacion" role="tab" aria-selected="true">
+            <span class="tab-number">1</span>
+            <span class="tab-label">Captación y Respuesta</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-calificacion" role="tab" aria-selected="false">
+            <span class="tab-number">2</span>
+            <span class="tab-label">Calificación y Match</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-visitas" role="tab" aria-selected="false">
+            <span class="tab-number">3</span>
+            <span class="tab-label">Coordinación de Visitas</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-seguimiento" role="tab" aria-selected="false">
+            <span class="tab-number">4</span>
+            <span class="tab-label">Seguimiento Comercial</span>
+          </button>
+          <button type="button" class="process-tab-btn" data-tab="tab-postvisita" role="tab" aria-selected="false">
+            <span class="tab-number">5</span>
+            <span class="tab-label">Post-visita y Cierre</span>
+          </button>
+        </div>
+
+        <div class="process-tabs-content">
+          
+          <!-- Panel 1: Captación -->
+          <div class="process-tab-panel is-active" id="tab-captacion" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa A • Primer Contacto</div>
+                <h3>Captación y primera respuesta inmediata</h3>
+                <p class="panel-desc">
+                  El momento de mayor interés es cuando el usuario consulta. El agente toma la delantera antes de que la atención se desvíe.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Respuestas omnicanal unificadas:</strong> Atiende consultas provenientes de Zonaprop, Argenprop, Mercado Libre Inmuebles, Instagram DMs, web chat y WhatsApp oficial.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Preguntas clave en 1–2 minutos:</strong> Sin cuestionarios eternos que aburran; indaga con tono conversacional ágil y empático.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Detección de intención profunda:</strong> Identifica si es compra o alquiler, uso residencial o comercial, perfil inversor o vivienda familiar, y qué tan urgente es su necesidad de mudanza.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-title">Captación en WhatsApp Business</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg user">
+                      Hola, vi un depto publicado en Av. Libertador. ¿Me pasan precio y si tiene cochera?
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente IA</span>
+                      ¡Hola! El departamento en Av. Libertador al 4200 tiene un valor de USD 210.000 e <strong>incluye cochera fija cubierta</strong> y baulera.<br><br>¿Estás buscando para mudarte vos o para renta/inversión?
+                    </div>
+                    <div class="m-msg user">
+                      Para mudarme con mi familia en unos meses.
+                    </div>
+                    <div class="m-meta-pill">✓ Intención: Compra Residencial • Plazo: Mediano</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Calificación y Match -->
+          <div class="process-tab-panel" id="tab-calificacion" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa B • Criterio de Selección</div>
+                <h3>Calificación y match con propiedades disponibles</h3>
+                <p class="panel-desc">
+                  No envíes a ciegas todo el catálogo. El agente presenta opciones con alta probabilidad de interés real.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Filtro según criterios clave:</strong> Clasifica por presupuesto exacto, zonas o barrios prioritarios, cantidad de ambientes, aptitud para mascotas, cochera, piso y amenities indispensables.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Sugerencia de 3 a 5 propiedades afines:</strong> Muestra fichas resumidas con fotos, plano y características, consultando la confirmación de interés del lead.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Resolución de dudas frecuentes al instante:</strong> Responde sobre garantías aceptadas (Finaer, seguro de caución, propietaria), expensas ordinarias/extraordinarias, plazos y documentación para reservar.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Match inteligente con inventario</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente IA</span>
+                      Tengo 2 opciones que cumplen exactamente con lo que me pedís en Belgrano:<br><br>
+                      📍 <strong>Opción 1:</strong> 3 amb, 78m², balcón terraza, amenities. USD 178.000.<br>
+                      📍 <strong>Opción 2:</strong> 3 amb, 84m², cocina independiente, cochera. USD 185.000.<br><br>
+                      ¿Te gustaría ver las fotos y la ficha completa de alguna de ellas?
+                    </div>
+                    <div class="m-msg user">
+                      Me gusta mucho la Opción 1. ¿Qué expensas tiene?
+                    </div>
+                    <div class="m-meta-pill">✓ Inventario validado en tiempo real</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Visitas -->
+          <div class="process-tab-panel" id="tab-visitas" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa C • Coordinación en Agenda</div>
+                <h3>Coordinación y agenda de visitas presenciales</h3>
+                <p class="panel-desc">
+                  Elimina los chats interminables para encontrar un hueco. La cita queda fijada en el calendario del asesor.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Propuesta de horarios en tiempo real:</strong> Lee la disponibilidad de Google Calendar o Calendly del asesor de la propiedad y propone opciones concretas.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Confirmación y envío de datos útiles:</strong> Envía automáticamente la dirección exacta, instrucciones para estacionar, ubicación en Google Maps y contacto del asesor en el edificio.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Reprogramaciones automáticas con reglas:</strong> Si el interesado tiene un imprevisto, puede reprogramar desde el mismo chat sin dejar al asesor esperando.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Sincronización de Agenda</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente IA</span>
+                      Nuestra asesora Laura estará mostrando la propiedad este jueves. ¿Qué horario te queda más cómodo?<br><br>
+                      🗓 <strong>Jueves 15:00 hs</strong><br>
+                      🗓 <strong>Jueves 17:30 hs</strong>
+                    </div>
+                    <div class="m-msg user">
+                      Jueves a las 17:30 me va perfecto.
+                    </div>
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente IA</span>
+                      ¡Excelente! Visita agendada para el <strong>Jueves 17:30 hs</strong>. Te adjunto la ubicación en Maps. Laura te estará esperando en el hall del edificio.
+                    </div>
+                    <div class="m-meta-pill">✓ Evento creado en Google Calendar</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Seguimiento comercial -->
+          <div class="process-tab-panel" id="tab-seguimiento" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa D • Maduración del Lead</div>
+                <h3>Seguimiento comercial automatizado y oportuno</h3>
+                <p class="panel-desc">
+                  Mantiene encendido el contacto sin ser invasivo, adaptando la cadencia según el estado real de la conversación.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Mensajes según fase comercial:</strong> Seguimientos diferenciados para quien mostró interés inicial, quien realizó una visita o quien está comparando opciones con su pareja o socio.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Resumen para el asesor con próximo paso:</strong> Sintetiza al vendedor: "El interesado visitó ayer, le gustó la luz pero duda del valor de expensas; próximo paso: acercar informe de liquidación".
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Derivación inteligente a humano:</strong> Cuando detecta intención de negociación, dudas jurídicas o una oferta, alerta al asesor para tomar la conversación.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Ficha de Resumen para el Asesor</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="crm-lead-summary">
+                      <div class="summary-row">
+                        <span class="s-label">Interesado:</span>
+                        <span class="s-val">Lucas Benítez</span>
+                      </div>
+                      <div class="summary-row">
+                        <span class="s-label">Propiedad:</span>
+                        <span class="s-val">Palermo Soho 3 amb (Ref #1042)</span>
+                      </div>
+                      <div class="summary-row">
+                        <span class="s-label">Estado:</span>
+                        <span class="s-badge-hot">🔥 Muy Interesado / Calificado</span>
+                      </div>
+                      <div class="summary-row">
+                        <span class="s-label">Próximo paso:</span>
+                        <span class="s-val highlight">Enviar detalle de expensas y coordinar llamada para propuesta.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 5: Post-visita y avance -->
+          <div class="process-tab-panel" id="tab-postvisita" role="tabpanel">
+            <div class="panel-layout">
+              <div class="panel-text">
+                <div class="panel-badge-step">Etapa E • Cierre de Operación</div>
+                <h3>Post-visita y avance hacia la reserva</h3>
+                <p class="panel-desc">
+                  El trabajo no termina en la visita. El agente releva feedback de valor y prepara el terreno para la seña o firma.
+                </p>
+                <ul class="panel-checklist">
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Recolección de feedback estructurado:</strong> Pregunta qué le gustó de la unidad y qué aspectos le generaron reparos, permitiendo reorientar la búsqueda si no fue la indicada.
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Envío de checklist de documentación:</strong> Comparte la lista de requisitos y papeles necesarios para formalizar la reserva (en tono informativo y orientativo).
+                    </div>
+                  </li>
+                  <li>
+                    <span class="check-circ">✓</span>
+                    <div>
+                      <strong>Coordinación de llamada de cierre:</strong> Cuando el prospecto confirma que quiere avanzar, coordina de inmediato la llamada con el broker para ultimar detalles.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <div class="chat-mockup-card">
+                  <div class="mockup-header">
+                    <span class="mockup-title">Feedback Post-Visita Automatizado</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="m-msg ai">
+                      <span class="m-sender">Agente IA</span>
+                      ¡Hola Lucas! ¿Cómo viste la visita con Laura en el departamento de Palermo? ¿Sentís que se adapta a lo que tu familia necesita?
+                    </div>
+                    <div class="m-msg user">
+                      Nos encantó la distribución y el balcón. Queremos consultar si el propietario aceptaría una oferta de USD 170.000.
+                    </div>
+                    <div class="m-meta-pill accent">⚡ Alerta: Notificando al broker para llamado inmediato</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bloque destacado: Escala a un humano cuando... -->
+      <div class="human-escalation-box" data-aos="fade-up">
+        <div class="escalation-header">
+          <div class="escalation-badge">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+            <span>Traspaso Inteligente</span>
+          </div>
+          <h3 class="escalation-title">Escala a un asesor humano cuando…</h3>
+          <p class="escalation-subtitle">
+            El agente sabe exactamente cuáles son sus límites y deriva la conversación de inmediato en situaciones críticas:
+          </p>
+        </div>
+
+        <div class="escalation-cases-grid">
+          
+          <div class="escalation-case-card">
+            <div class="case-number">01</div>
+            <h4>Quiere negociar precio o condiciones</h4>
+            <p>Propuestas de contraoferta, formas de pago especiales, plazos de posesión o detalles de la seña económica.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">02</div>
+            <h4>Presenta un caso especial de garantías</h4>
+            <p>Garantías de otras provincias, recibos de ingresos combinados, fideicomisos o situaciones que requieren análisis directivo.</p>
+          </div>
+
+          <div class="escalation-case-card">
+            <div class="case-number">03</div>
+            <h4>Pide asesoramiento legal o contractual</h4>
+            <p>Consultas sobre boletos de compraventa, poderes especiales, sucesiones o condiciones registrales específicas.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 6. CÓMO SE IMPLEMENTA (Implementación guiada en 3 pasos) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="implementacion" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Puesta en Marcha</div>
+        <h2 class="section-title">Implementación guiada en 3 pasos</h2>
+        <p class="section-subtitle">
+          Un proceso ágil y profesional para poner a punto tu agente sin complejidades técnicas para tu equipo.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <!-- Paso 1 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-badge-number">Paso 01</div>
+          <div class="step-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3>Relevamos tu proceso comercial y definimos criterios</h3>
+          <p>
+            Analizamos tus preguntas habituales, tipos de inmuebles, barrios foco, requisitos de alquiler/venta y las reglas de calificación que debe aplicar el agente.
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-badge-number">Paso 02</div>
+          <div class="step-icon-wrap green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Conectamos canales y sistemas</h3>
+          <p>
+            Integramos tu WhatsApp oficial, portales, inventario de propiedades, agendas de los asesores comerciales y tu CRM para sincronizar datos sin fricción.
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-badge-number">Paso 03</div>
+          <div class="step-icon-wrap blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <h3>Lanzamos, medimos y optimizamos</h3>
+          <p>
+            Activamos el agente, monitoreamos las primeras conversaciones reales y calibramos respuestas y disparadores para maximizar visitas agendadas.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Aclaración destacada -->
+      <div class="integration-notice-card" data-aos="fade-up">
+        <div class="notice-icon">💡</div>
+        <div class="notice-content">
+          <strong>No necesitás cambiar tus herramientas actuales:</strong> nos integramos directamente a tu CRM, calendario y canales existentes. Tu equipo continúa usando lo que ya conoce.
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 7. INTEGRACIONES (Se conecta con tu stack actual) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="integraciones" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Ecosistema Conectado</div>
+        <h2 class="section-title">Se conecta con tu stack actual</h2>
+        <p class="section-subtitle">
+          Integramos por APIs y automatizaciones para mantener datos consistentes y seguimiento ordenado sin duplicar tareas manuales.
+        </p>
+      </div>
+
+      <div class="integrations-grid">
+        
+        <!-- Tile 1: CRM Inmobiliario -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="100">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>CRM Inmobiliario y General</h4>
+            <p>Tokko Broker, Salesforce, HubSpot, Zoho, Monday o soluciones a medida.</p>
+          </div>
+        </div>
+
+        <!-- Tile 2: WhatsApp Business -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="150">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>WhatsApp Business API</h4>
+            <p>Línea oficial verificada, soporte multiagente y respuestas automáticas 24/7.</p>
+          </div>
+        </div>
+
+        <!-- Tile 3: Redes Sociales y Web -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="200">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Instagram y Web Chat</h4>
+            <p>Atención directa de mensajes directos, comentarios y widget en tu sitio web.</p>
+          </div>
+        </div>
+
+        <!-- Tile 4: Calendarios -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="250">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Google Calendar y Calendly</h4>
+            <p>Consulta de disponibilidad por asesor y bloqueo automático de franjas horarias.</p>
+          </div>
+        </div>
+
+        <!-- Tile 5: Bases y Correo -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="300">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0b2591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22 6 12 13 2 6"></polyline>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Email, Sheets y Airtable</h4>
+            <p>Respaldos automáticos, reportes diarios y notificaciones inmediatas a tu casilla.</p>
+          </div>
+        </div>
+
+        <!-- Tile 6: Portales y Catálogo -->
+        <div class="integration-tile" data-aos="fade-up" data-aos-delay="350">
+          <div class="tile-icon-box">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#15C63B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <div class="tile-info">
+            <h4>Portales Inmobiliarios y Web</h4>
+            <p>Conexión vía webhooks y correos de notificación de Zonaprop, Argenprop y tu portal.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 8. CASOS DE USO EN INMOBILIARIAS (Historias reales) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container" id="casos-de-uso" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Casos de Uso Prácticos</div>
+        <h2 class="section-title">Ejemplos de uso en inmobiliarias</h2>
+        <p class="section-subtitle">
+          Situaciones concretas donde el Agente de IA genera orden operativo y acelera la concreción de visitas.
+        </p>
+      </div>
+
+      <div class="use-cases-grid">
+        
+        <!-- Caso 1 -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="case-card-header">
+            <span class="case-tag blue">Portales Inmobiliarios</span>
+            <div class="case-icon">⚡</div>
+          </div>
+          <h3 class="case-card-title">Leads de portales: respuesta inmediata y derivación</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Un interesado consulta un domingo por la tarde desde un portal por un departamento en venta.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. IA inicia contacto en menos de 2 minutos vía WhatsApp.</div>
+            <div class="flow-pill">2. Valida presupuesto, zona de búsqueda y urgencia de mudanza.</div>
+            <div class="flow-pill">3. Asigna el prospecto calificado al asesor especialista de esa zona con ficha completa.</div>
+          </div>
+        </div>
+
+        <!-- Caso 2 -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="case-card-header">
+            <span class="case-tag green">Gestión de Alquileres</span>
+            <div class="case-icon">🔑</div>
+          </div>
+          <h3 class="case-card-title">Alquileres: requisitos claros y visitas coordinadas</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Una propiedad en alquiler recibe decenas de consultas por día que saturan el teléfono comercial.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Comunica requisitos de ingreso, expensas y garantías aceptadas de forma transparente.</div>
+            <div class="flow-pill">2. Habilita el agendado de visitas únicamente a quienes cumplen las condiciones.</div>
+            <div class="flow-pill">3. Envía recordatorio previo por WhatsApp reduciendo visitas vacías a cero.</div>
+          </div>
+        </div>
+
+        <!-- Caso 3 -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="case-card-header">
+            <span class="case-tag blue">Compra e Inversión</span>
+            <div class="case-icon">📈</div>
+          </div>
+          <h3 class="case-card-title">Compra: recomendación afinada y seguimiento post-visita</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Un comprador busca una unidad para inversión pero ninguna de las vistas le convence de inmediato.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Consulta preferencias de rentabilidad, tipología y tickets de inversión disponibles.</div>
+            <div class="flow-pill">2. Sugiere 3 alternativas afines en desarrollos en pozo y entrega inmediata.</div>
+            <div class="flow-pill">3. Realiza seguimiento post-visita relevando dudas puntuales para el cierre.</div>
+          </div>
+        </div>
+
+        <!-- Caso 4 -->
+        <div class="use-case-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="case-card-header">
+            <span class="case-tag green">Administración Comercial</span>
+            <div class="case-icon">📊</div>
+          </div>
+          <h3 class="case-card-title">Administración: registro en CRM y próximos pasos</h3>
+          <p class="case-scenario">
+            <strong>Escenario:</strong> Varios asesores atienden canales por separado y la dirección pierde visibilidad del pipeline.
+          </p>
+          <div class="case-solution-flow">
+            <div class="flow-pill">1. Cada conversación crea o actualiza el contacto en el CRM con etiquetas estandarizadas.</div>
+            <div class="flow-pill">2. Programa tareas y alertas automáticas de seguimiento para los asesores.</div>
+            <div class="flow-pill">3. Brinda al líder de ventas una visión ordenada de la cartera activa en todo momento.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 9. PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container bg-subtle" id="faq" data-aos="fade-up">
+      <div class="section-header text-center">
+        <div class="section-badge">Dudas Habituales</div>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">
+          Respuestas claras sobre cómo opera el agente, su integración y la convivencia con tu equipo.
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrapper">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item is-open">
+          <button type="button" class="faq-question-btn" aria-expanded="true">
+            <span class="faq-question-text">¿Esto es solo un chatbot?</span>
+            <span class="faq-toggle-icon">−</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              No. Un chatbot tradicional solo responde textos predefinidos o muestra menús rígidos con botones. Nuestro Agente de IA razona con lenguaje natural, interpreta el perfil y presupuesto del interesado, consulta el inventario en tiempo real, propone horarios de visitas en la agenda del asesor y actualiza tu CRM automáticamente.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Puede atender por WhatsApp y web al mismo tiempo?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí, es completamente omnicanal. Puede atender consultas que ingresan por WhatsApp Business oficial, mensajes directos de Instagram, el chat de tu sitio web e incluso procesar leads que llegan por notificación desde portales inmobiliarios (Zonaprop, Argenprop, etc.), manteniendo el historial unificado.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cómo califica a un lead?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              A través de una conversación fluida de 2 a 3 intercambios, el agente identifica: intención (compra, alquiler o inversión), presupuesto estimado, barrios o zonas de preferencia, cantidad de ambientes requeridos, necesidad de cochera/mascotas y plazo deseado de mudanza. Si no cumple los parámetros mínimos, se le informa cortésmente sin comprometer el tiempo de tus asesores.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Qué pasa si no encuentra una propiedad ideal en el inventario?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              En lugar de cortar el diálogo, el agente guarda la búsqueda y los criterios del interesado en una lista de espera calificada dentro de tu CRM. Cuando ingresa una nueva propiedad afín a su perfil, el sistema puede avisarle automáticamente o sugerir opciones cercanas en zonas aledañas.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Se puede adaptar a mis requisitos y guiones comerciales específicos?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Totalmente. Calibramos el tono de comunicación (formal, descontracturado, corporativo), los requisitos obligatorios de tu inmobiliaria (garantías aceptadas, anticipos para señas, políticas de alquiler temporal o tradicional) y los criterios con los que deben asignarse los prospectos a cada miembro de tu equipo.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cuánto tarda en implementarse?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              La implementación suele llevar entre 1 y 2 semanas dependiendo del nivel de integración requerido (conexión con CRM, catálogo de propiedades y canales de mensajería). Nuestro equipo realiza el relevamiento, la configuración y los ensayos de prueba guiados de punta a punta.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Cómo se deriva al equipo humano?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Cuando el prospecto solicita una llamada, inicia una negociación sobre precio, presenta una situación contractual especial o simplemente pide hablar con una persona, el agente pausa su respuesta autónoma y transfiere la conversación al asesor asignado, notificándolo por WhatsApp, correo o CRM con el resumen del caso.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question-btn" aria-expanded="false">
+            <span class="faq-question-text">¿Queda registro de todas las conversaciones?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Sí. Todas las conversaciones, datos recabados, visitas acordadas y notas de seguimiento quedan debidamente registrados en tu CRM o base de datos. De esta forma, cualquier miembro de tu equipo comercial puede retomar la atención con contexto completo.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 10. CTA FINAL (Conversión) -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <section class="section-container cta-section" id="cta-final" data-aos="fade-up">
+      <div class="cta-card">
+        <div class="cta-glow-bg"></div>
+        
+        <div class="cta-badge">Agendá una sesión estratégica</div>
+        
+        <h2 class="cta-title">
+          Ordená tu operación comercial sin perder el trato humano
+        </h2>
+        
+        <p class="cta-description">
+          Te mostramos qué automatizar primero según tu volumen de consultas y tu proceso.
+        </p>
+
+        <div class="cta-actions-wrap">
+          <button type="button" class="btn btn-cta-primary" data-open-quote>
+            Reservar una demo
+          </button>
+          <button type="button" class="btn btn-cta-secondary" onclick="window.openDemoModal && window.openDemoModal()">
+            Ver demo en vivo
+          </button>
+        </div>
+
+        <div class="cta-guarantees-row">
+          <span class="guarantee-item">✓ Diagnóstico inicial sin costo</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Sin cambiar tu CRM o herramientas</span>
+          <span class="guarantee-sep">•</span>
+          <span class="guarantee-item">✓ Respuesta en menos de 24 horas</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <DemoModal />
+</Layout>
+
+<script>
+  function initRealEstatePage() {
+    // 1. TABS DEL PROCESO
+    const tabButtons = document.querySelectorAll('.process-tab-btn');
+    const tabPanels = document.querySelectorAll('.process-tab-panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-tab');
+        
+        tabButtons.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        tabPanels.forEach(p => p.classList.remove('is-active'));
+
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        
+        if (targetId) {
+          const targetPanel = document.getElementById(targetId);
+          targetPanel?.classList.add('is-active');
+        }
+      });
+    });
+
+    // 2. FAQ ACCORDION
+    const faqButtons = document.querySelectorAll('.faq-question-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        const item = btn.closest('.faq-item');
+        const icon = btn.querySelector('.faq-toggle-icon');
+        
+        // Toggle current
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+        item?.classList.toggle('is-open', !isExpanded);
+        if (icon) {
+          icon.textContent = !isExpanded ? '−' : '+';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initRealEstatePage);
+  document.addEventListener('astro:page-load', initRealEstatePage);
+</script>
+
+<style>
+  /* ============================================================== */
+  /* VARIABLES & GENERAL LAYOUT                                     */
+  /* ============================================================== */
+  .real-estate-page {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-dark, #0f172a);
+    background-color: transparent;
+    padding-bottom: 2rem;
+  }
+
+  .section-container {
+    max-width: 1140px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 4.5rem 0;
+  }
+
+  .bg-subtle {
+    background-color: rgba(248, 250, 252, 0.7);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.15);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ============================================================== */
+  /* BUTTONS & TOKENS                                               */
+  /* ============================================================== */
+  .btn {
+    padding: 0.85rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .btn-navy {
+    background-color: #0b2591;
+    color: white;
+    box-shadow: 0 4px 16px rgba(11, 37, 145, 0.28);
+    border: none;
+  }
+
+  .btn-navy:hover {
+    background-color: #061868;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 37, 145, 0.38);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #1e293b;
+    border: 1.5px solid #cbd5e1;
+  }
+
+  .btn-outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 1. HERO SECTION                                                */
+  /* ============================================================== */
+  .hero-section {
+    padding: 4.5rem 0 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    max-width: 1240px;
+    width: 92%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(11, 37, 145, 0.08);
+    border: 1px solid rgba(11, 37, 145, 0.16);
+    color: #0b2591;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .badge-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    animation: pulseGlow 2s infinite;
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 6px rgba(21, 198, 59, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(21, 198, 59, 0);
+    }
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 580px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-microcopy {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.86rem;
+    color: #64748b;
+  }
+
+  .microcopy-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .micro-icon {
+    color: #15C63B;
+    font-weight: 800;
+  }
+
+  .micro-sep {
+    color: #cbd5e1;
+  }
+
+  /* Hero Visual Column (Pipeline Flow Card) */
+  .flow-visual-wrapper {
+    position: relative;
+  }
+
+  .flow-glass-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .flow-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #15C63B;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(21, 198, 59, 0.8);
+  }
+
+  .live-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .channel-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+  }
+
+  .flow-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .flow-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 0.85rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .flow-step-item:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+  }
+
+  .flow-icon-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .flow-icon-circle.blue-theme {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .flow-icon-circle.green-theme {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .flow-icon-circle.purple-theme {
+    background: rgba(124, 58, 237, 0.12);
+    color: #7c3aed;
+  }
+
+  .flow-step-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .flow-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flow-step-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #0b2591;
+  }
+
+  .flow-step-meta {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .flow-badge-ai {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .flow-badge-confirmed {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.12);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .chat-bubble {
+    font-size: 0.84rem;
+    line-height: 1.45;
+    padding: 0.6rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .user-bubble {
+    background: #e2e8f0;
+    color: #1e293b;
+    border-bottom-left-radius: 2px;
+  }
+
+  .ai-bubble {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+
+  .ai-avatar {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    background: #0b2591;
+    color: #fff;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    margin-right: 0.35rem;
+    vertical-align: middle;
+  }
+
+  .property-match-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+  }
+
+  .prop-thumb {
+    font-size: 1.25rem;
+  }
+
+  .prop-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prop-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .prop-sub {
+    font-size: 0.72rem;
+    color: #64748b;
+  }
+
+  .prop-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #15C63B;
+    background: rgba(21, 198, 59, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .crm-sync-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .crm-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #475569;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .flow-line-connector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12px;
+    position: relative;
+  }
+
+  .connector-track {
+    width: 2px;
+    height: 100%;
+    background: #cbd5e1;
+  }
+
+  .connector-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #0b2591;
+    border-radius: 50%;
+  }
+
+  .flow-systems-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.74rem;
+  }
+
+  .systems-label {
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .system-tag {
+    background: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* ============================================================== */
+  /* 2. EL PROBLEMA (Cards & Closing Banner)                        */
+  /* ============================================================== */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .problem-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 24px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .problem-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .problem-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .problem-content p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.55;
+  }
+
+  .problem-closing-banner {
+    background: linear-gradient(135deg, rgba(11, 37, 145, 0.06) 0%, rgba(21, 198, 59, 0.06) 100%);
+    border: 1.5px solid rgba(11, 37, 145, 0.15);
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+  }
+
+  .closing-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .closing-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #0b2591;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .closing-text {
+    font-size: 1.05rem;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+
+  .closing-text strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 3. COMPARATIVA (Chatbot vs Agente)                             */
+  /* ============================================================== */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+  }
+
+  .comp-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  .comp-card.bot-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+  }
+
+  .comp-card.featured {
+    border: 2px solid #0b2591;
+    box-shadow: 0 12px 30px -5px rgba(11, 37, 145, 0.15);
+  }
+
+  .comp-card.action {
+    border: 2px solid #15C63B;
+    box-shadow: 0 12px 30px -5px rgba(21, 198, 59, 0.15);
+  }
+
+  .comp-badge-recommended {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0b2591;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .comp-badge-recommended.action-badge {
+    background: #15C63B;
+    color: #0f172a;
+  }
+
+  .comp-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .comp-type-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .comp-type-badge.basic {
+    background: #e2e8f0;
+    color: #475569;
+  }
+
+  .comp-type-badge.premium {
+    background: rgba(11, 37, 145, 0.1);
+    color: #0b2591;
+  }
+
+  .comp-type-badge.accent {
+    background: rgba(21, 198, 59, 0.15);
+    color: #0c8a26;
+  }
+
+  .comp-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+  }
+
+  .comp-tagline {
+    font-size: 0.88rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .comp-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+  }
+
+  .comp-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #334155;
+  }
+
+  .dot-icon {
+    font-weight: 800;
+    color: #94a3b8;
+    flex-shrink: 0;
+  }
+
+  .check-icon {
+    font-weight: 800;
+    color: #15C63B;
+    flex-shrink: 0;
+  }
+
+  .what-it-does-summary {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 2rem;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .what-it-does-summary p {
+    font-size: 0.98rem;
+    color: #334155;
+    line-height: 1.6;
+  }
+
+  .what-it-does-summary strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 4. BENEFICIOS                                                  */
+  /* ============================================================== */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .benefit-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .benefit-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-icon-wrapper.blue-bg {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .benefit-icon-wrapper.green-bg {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .benefit-card p {
+    font-size: 0.93rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ============================================================== */
+  /* 5. TABS DE AUTOMATIZACIONES Y ESCALACIÓN                       */
+  /* ============================================================== */
+  .process-tabs-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+  }
+
+  .process-tabs-nav {
+    display: flex;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    overflow-x: auto;
+  }
+
+  .process-tab-btn {
+    flex: 1;
+    min-width: 170px;
+    padding: 1.1rem 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn:hover {
+    background: #f1f5f9;
+  }
+
+  .process-tab-btn.is-active {
+    background: #ffffff;
+    border-bottom-color: #0b2591;
+  }
+
+  .tab-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .process-tab-btn.is-active .tab-number {
+    background: #0b2591;
+    color: #ffffff;
+  }
+
+  .tab-label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #475569;
+    white-space: nowrap;
+  }
+
+  .process-tab-btn.is-active .tab-label {
+    color: #0b2591;
+  }
+
+  .process-tabs-content {
+    padding: 2.5rem;
+  }
+
+  .process-tab-panel {
+    display: none;
+  }
+
+  .process-tab-panel.is-active {
+    display: block;
+    animation: fadeInTab 0.3s ease forwards;
+  }
+
+  @keyframes fadeInTab {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .panel-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .panel-badge-step {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .panel-text h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  .panel-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .panel-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.94rem;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .check-circ {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(21, 198, 59, 0.15);
+    color: #15C63B;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Chat Mockup in Tabs */
+  .chat-mockup-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .mockup-header {
+    background: #ffffff;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .mockup-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+
+  .mockup-dot.red { background-color: #ef4444; }
+  .mockup-dot.yellow { background-color: #f59e0b; }
+  .mockup-dot.green { background-color: #10b981; }
+
+  .mockup-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #475569;
+    margin-left: 0.4rem;
+  }
+
+  .mockup-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .m-msg {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    max-width: 90%;
+  }
+
+  .m-msg.user {
+    background: #e2e8f0;
+    color: #1e293b;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+  }
+
+  .m-msg.ai {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+
+  .m-sender {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #0b2591;
+    margin-bottom: 0.25rem;
+  }
+
+  .m-meta-pill {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+
+  .m-meta-pill.accent {
+    background: rgba(234, 88, 12, 0.12);
+    color: #ea580c;
+  }
+
+  /* CRM Lead Summary Mockup */
+  .crm-lead-summary {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.84rem;
+    gap: 0.5rem;
+  }
+
+  .s-label {
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .s-val {
+    color: #0f172a;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .s-val.highlight {
+    color: #0b2591;
+    font-size: 0.8rem;
+  }
+
+  .s-badge-hot {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  /* Bloque: Escala a un humano cuando... */
+  .human-escalation-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  }
+
+  .escalation-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .escalation-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
+
+  .escalation-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  .escalation-subtitle {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .escalation-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .escalation-case-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .escalation-case-card:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+  }
+
+  .case-number {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: rgba(11, 37, 145, 0.25);
+    margin-bottom: 0.4rem;
+  }
+
+  .escalation-case-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .escalation-case-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 6. CÓMO SE IMPLEMENTA                                          */
+  /* ============================================================== */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.25rem 1.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 26px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  .step-badge-number {
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0b2591;
+    background: rgba(11, 37, 145, 0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+
+  .step-icon-wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-icon-wrap.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .step-icon-wrap.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .step-card h3 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .step-card p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  .integration-notice-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .notice-content {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.55;
+  }
+
+  .notice-content strong {
+    color: #0b2591;
+  }
+
+  /* ============================================================== */
+  /* 7. INTEGRACIONES                                               */
+  /* ============================================================== */
+  .integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .integration-tile {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  }
+
+  .integration-tile:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.06);
+  }
+
+  .tile-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tile-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .tile-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ============================================================== */
+  /* 8. CASOS DE USO                                                */
+  /* ============================================================== */
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .use-case-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .use-case-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 12px 26px -5px rgba(0, 0, 0, 0.07);
+  }
+
+  .case-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .case-tag {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .case-tag.blue {
+    background: rgba(11, 37, 145, 0.08);
+    color: #0b2591;
+  }
+
+  .case-tag.green {
+    background: rgba(21, 198, 59, 0.12);
+    color: #15C63B;
+  }
+
+  .case-icon {
+    font-size: 1.25rem;
+  }
+
+  .case-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  .case-scenario {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    background: #f8fafc;
+    border-left: 3px solid #0b2591;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .case-scenario strong {
+    color: #0f172a;
+  }
+
+  .case-solution-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .flow-pill {
+    font-size: 0.86rem;
+    color: #334155;
+    background: #f1f5f9;
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
+    line-height: 1.45;
+  }
+
+  /* ============================================================== */
+  /* 9. FAQ ACCORDION                                               */
+  /* ============================================================== */
+  .faq-accordion-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .faq-item.is-open {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  }
+
+  .faq-question-btn {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  .faq-question-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0b2591;
+    flex-shrink: 0;
+  }
+
+  .faq-answer-panel {
+    display: none;
+    padding: 0 1.5rem 1.35rem;
+    font-size: 0.94rem;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  .faq-item.is-open .faq-answer-panel {
+    display: block;
+    animation: fadeInFaq 0.25s ease forwards;
+  }
+
+  @keyframes fadeInFaq {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============================================================== */
+  /* 10. CTA FINAL                                                  */
+  /* ============================================================== */
+  .cta-section {
+    padding: 5rem 0 3rem;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, #0b2591 0%, #061868 100%);
+    border-radius: 24px;
+    padding: 4.5rem 2rem;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 45px -10px rgba(11, 37, 145, 0.4);
+  }
+
+  .cta-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(21, 198, 59, 0.25) 0%, rgba(11, 37, 145, 0) 70%);
+    pointer-events: none;
+  }
+
+  .cta-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-description {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-actions-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-cta-primary {
+    background-color: #15C63B;
+    color: #0f172a;
+    padding: 1rem 2.2rem;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 18px rgba(21, 198, 59, 0.4);
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-primary:hover {
+    background-color: #12ad33;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(21, 198, 59, 0.5);
+  }
+
+  .btn-cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+  }
+
+  .btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .cta-guarantees-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: #94a3b8;
+    position: relative;
+    z-index: 1;
+  }
+
+  .guarantee-item {
+    color: #e2e8f0;
+  }
+
+  .guarantee-sep {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* ============================================================== */
+  /* RESPONSIVE BREAKPOINTS (Mobile-First approach)                 */
+  /* ============================================================== */
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+    }
+
+    .problem-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .steps-grid,
+    .integrations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .escalation-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .panel-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-container {
+      padding: 3.5rem 0;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .problem-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .steps-grid,
+    .integrations-grid,
+    .use-cases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .process-tabs-nav {
+      justify-content: flex-start;
+    }
+
+    .process-tabs-content {
+      padding: 1.5rem;
+    }
+
+    .cta-card {
+      padding: 3.5rem 1.5rem;
+    }
+
+    .cta-title {
+      font-size: 1.85rem;
+    }
+
+    .cta-actions-wrap {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-secondary {
+      width: 100%;
+    }
+
+    .closing-banner-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
